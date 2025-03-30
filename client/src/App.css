@@ -1,0 +1,32 @@
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.app-container {
+  min-height: calc(100vh - 150px);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  border-color: #0066cc;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+} 
