@@ -241,6 +241,23 @@
                                 </div>
                             </div>
 
+                            <details class="guide-box">
+                                <summary class="guide-header">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                    What are criteria?
+                                </summary>
+                                <div class="guide-content">
+                                    <p><strong>Criteria</strong> are the factors that matter most in your decision. They're the standards you'll use to evaluate each option.</p>
+                                    <p><strong>Examples:</strong> For choosing a laptop, criteria might include "Performance," "Battery Life," "Price," and "Build Quality."</p>
+                                    <p><strong>Weight:</strong> Assign higher weights (1.0-3.0) to criteria that matter more. For example, if price is critical, give it a weight of 2.5.</p>
+                                    <p><strong>Tip:</strong> Add 3-6 criteria for best results. Too few oversimplifies, too many creates analysis paralysis!</p>
+                                </div>
+                            </details>
+
                             <div class="criteria-list" id="criteriaList">
                                 <!-- Populated dynamically -->
                             </div>
@@ -282,6 +299,23 @@
                                 </div>
                             </div>
 
+                            <details class="guide-box">
+                                <summary class="guide-header">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                    What are alternatives?
+                                </summary>
+                                <div class="guide-content">
+                                    <p><strong>Alternatives</strong> are the different options you're choosing between. These are your potential choices.</p>
+                                    <p><strong>Examples:</strong> If you're buying a laptop, your alternatives might be "MacBook Pro," "Dell XPS 15," "Lenovo ThinkPad," etc.</p>
+                                    <p><strong>Details:</strong> Add a brief description and list the key pros and cons of each option to help guide your evaluation.</p>
+                                    <p><strong>Tip:</strong> Include 2-5 realistic alternatives. More than that and decision-making becomes overwhelming!</p>
+                                </div>
+                            </details>
+
                             <div class="alternatives-grid" id="alternativesList">
                                 <!-- Populated dynamically -->
                             </div>
@@ -317,7 +351,7 @@
                             <div class="step-header">
                                 <div class="step-header-left">
                                     <h2>Evaluate Your Options</h2>
-                                    <p>Rate each alternative against your criteria (1-10 scale).</p>
+                                    <p>Rate each alternative against your criteria using stars.</p>
                                 </div>
                                 <div class="step-header-actions">
                                     <button class="btn btn-ai" id="aiEvaluateAllBtn">
@@ -345,6 +379,29 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <details class="guide-box">
+                                <summary class="guide-header">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                    How to evaluate?
+                                </summary>
+                                <div class="guide-content">
+                                    <p><strong>Evaluation</strong> is where you rate each alternative against each criterion using a 1-5 star rating system.</p>
+                                    <p><strong>Rating Guide:</strong></p>
+                                    <ul>
+                                        <li>⭐ (1 star) = Poor - Does not meet this criterion well</li>
+                                        <li>⭐⭐ (2 stars) = Below Average - Falls short in this area</li>
+                                        <li>⭐⭐⭐ (3 stars) = Good - Meets the criterion adequately</li>
+                                        <li>⭐⭐⭐⭐ (4 stars) = Very Good - Exceeds expectations</li>
+                                        <li>⭐⭐⭐⭐⭐ (5 stars) = Excellent - Outstanding in this criterion</li>
+                                    </ul>
+                                    <p><strong>Tip:</strong> Click on the stars to rate. The AI can also help by evaluating all options automatically based on your criteria!</p>
+                                </div>
+                            </details>
 
                             <div class="evaluation-container">
                                 <div class="matrix-view" id="matrixView">

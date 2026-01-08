@@ -781,20 +781,16 @@ function renderEvaluationMatrix() {
                 totalScore += parseFloat(score) * criterion.weight;
             }
             
-            const colorClass = score !== '' ? getScoreColorClass(parseFloat(score), maxScore) : '';
+            // Generate star rating (1-5 stars)
+            const currentScore = score !== '' ? parseInt(score) : 0;
+            let starsHtml = '<div class="star-rating" data-alt="' + alt.id + '" data-criterion="' + criterion.id + '" title="' + escapeHtml(explanation) + '">';
+            for (let i = 1; i <= maxScore; i++) {
+                const filled = i <= currentScore ? 'filled' : '';
+                starsHtml += `<span class="star ${filled}" data-value="${i}">★</span>`;
+            }
+            starsHtml += '</div>';
             
-            html += `
-                <td class="score-cell">
-                    <input type="number" class="score-input ${colorClass}" 
-                        value="${score}" 
-                        min="1" max="${maxScore}" 
-                        placeholder="-"
-                        title="${escapeHtml(explanation)}"
-                        data-alt="${alt.id}" 
-                        data-criterion="${criterion.id}"
-                        onchange="window.app.setScore('${alt.id}', '${criterion.id}', this.value)">
-                </td>
-            `;
+            html += `<td class="score-cell">${starsHtml}</td>`;
         }
         
         html += `<td class="total-cell">${totalScore.toFixed(1)}</td>`;
@@ -804,6 +800,46 @@ function renderEvaluationMatrix() {
     html += `</tbody>`;
     elements.evaluationMatrix.innerHTML = html;
     
+    // Add event listeners for star ratings
+    document.querySelectorAll('.star-rating').forEach(rating => {
+        const altId = rating.dataset.alt;
+        const criterionId = rating.dataset.criterion;
+        
+        rating.addEventListener('click', (e) => {
+            if (e.target.classList.contains('star')) {
+                const value = e.target.dataset.value;
+                setScore(altId, criterionId, value);
+            }
+        });
+        
+        // Visual hover effect
+        const stars = rating.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', () => {
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.style.color = '#fbbf24';
+                    } else {
+                        s.style.color = '';
+                    }
+                });
+            });
+        });
+        
+        rating.addEventListener('mouseleave', () => {
+            // Reset to current score
+            const scoreData = scores[altId]?.[criterionId];
+            const currentScore = scoreData?.value || 0;
+            stars.forEach((s, i) => {
+                if (i < currentScore) {
+                    s.style.color = '#fbbf24';
+                } else {
+                    s.style.color = '';
+                }
+            });
+        });
+    });
+    
     // Update progress
     const progress = totalCells > 0 ? Math.round((filledCells / totalCells) * 100) : 0;
     elements.evaluationProgress.style.width = `${progress}%`;
@@ -812,15 +848,22 @@ function renderEvaluationMatrix() {
 
 async function setScore(altId, criterionId, value) {
     const state = StateManager.getState();
-    const maxScore = state.settings.scoreScale || 10;
+    const maxScore = state.settings.scoreScale || 5;
     const validatedScore = validateScore(value, maxScore);
     
     await StateManager.setScore(altId, criterionId, validatedScore);
     
-    // Update the input styling
-    const input = document.querySelector(`input[data-alt="${altId}"][data-criterion="${criterionId}"]`);
-    if (input) {
-        input.className = `score-input ${getScoreColorClass(validatedScore, maxScore)}`;
+    // Update the star rating display
+    const rating = document.querySelector(`.star-rating[data-alt="${altId}"][data-criterion="${criterionId}"]`);
+    if (rating) {
+        const stars = rating.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            if (index < validatedScore) {
+                star.classList.add('filled');
+            } else {
+                star.classList.remove('filled');
+            }
+        });
     }
     
     // Update total for this row
@@ -1041,10 +1084,10 @@ function renderRadarChart(results, criteria) {
                         color: tickColor,
                         backdropColor: 'transparent',
                         font: { size: 11 },
-                        stepSize: 2
+                        stepSize: 1
                     },
                     suggestedMin: 0,
-                    suggestedMax: 10
+                    suggestedMax: 5
                 }
             }
         }

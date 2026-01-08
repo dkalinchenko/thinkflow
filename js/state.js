@@ -30,7 +30,7 @@ const state = {
     settings: {
         aiProvider: 'deepseek',
         apiKey: '',
-        scoreScale: 10
+        scoreScale: 5 // 5-star rating system
     },
     
     // Listeners for state changes
@@ -470,7 +470,7 @@ export const StateManager = {
      */
     _findStrengths(scores, criteria) {
         return criteria
-            .filter(c => (scores[c.id] || 0) >= 7)
+            .filter(c => (scores[c.id] || 0) >= 4) // 4-5 stars
             .sort((a, b) => (scores[b.id] || 0) - (scores[a.id] || 0))
             .slice(0, 3)
             .map(c => c.name);
@@ -481,7 +481,7 @@ export const StateManager = {
      */
     _findWeaknesses(scores, criteria) {
         return criteria
-            .filter(c => (scores[c.id] || 0) <= 4)
+            .filter(c => (scores[c.id] || 0) <= 2) // 1-2 stars
             .sort((a, b) => (scores[a.id] || 0) - (scores[b.id] || 0))
             .slice(0, 3)
             .map(c => c.name);

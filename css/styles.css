@@ -699,6 +699,73 @@ input, select, textarea {
 }
 
 /* ========================================
+   Guide Box
+   ======================================== */
+
+.guide-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0;
+    margin-bottom: var(--spacing-xl);
+    overflow: hidden;
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+    transition: background var(--transition-fast);
+    list-style: none;
+}
+
+.guide-header::-webkit-details-marker {
+    display: none;
+}
+
+.guide-header:hover {
+    background: var(--bg-hover);
+}
+
+.guide-header svg {
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.guide-content {
+    padding: var(--spacing-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.guide-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.guide-content p:last-child {
+    margin-bottom: 0;
+}
+
+.guide-content strong {
+    color: var(--text-primary);
+}
+
+.guide-content ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+}
+
+.guide-content li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ========================================
    Step Content
    ======================================== */
 
@@ -1110,6 +1177,47 @@ input, select, textarea {
 
 .score-cell {
     position: relative;
+}
+
+/* Star Rating System */
+.star-rating {
+    display: inline-flex;
+    gap: 4px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.star {
+    font-size: 20px;
+    color: #ddd;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    user-select: none;
+}
+
+[data-theme="dark"] .star {
+    color: #4a4a6a;
+}
+
+.star.filled {
+    color: #fbbf24;
+}
+
+.star:hover,
+.star-rating:hover .star {
+    transform: scale(1.1);
+}
+
+.star-rating:hover .star.filled {
+    color: #fbbf24;
+}
+
+.star-rating .star:hover ~ .star {
+    color: #ddd;
+}
+
+[data-theme="dark"] .star-rating .star:hover ~ .star {
+    color: #4a4a6a;
 }
 
 .score-input {

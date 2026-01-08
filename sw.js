@@ -3,7 +3,7 @@
  * Enables offline functionality and caching
  */
 
-const CACHE_NAME = 'thinkflow-v6';
+const CACHE_NAME = 'thinkflow-v7';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
