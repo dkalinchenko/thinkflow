@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ThinkFlow - Smart decision-making powered by AI. Make better choices with weighted criteria analysis.">
+    <meta name="theme-color" content="#f8f9fc">
+    
+    <title>ThinkFlow - Smart Decision Making</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/dexie@3.2.4/dist/dexie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <button class="btn-icon sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="logo">
+                    <span class="logo-icon">🧠</span>
+                    <span class="logo-text">ThinkFlow</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="decision-title-container" id="decisionTitleContainer" style="display: none;">
+                    <input type="text" class="decision-title-input" id="decisionTitleInput" placeholder="Decision Title">
+                    <span class="save-status" id="saveStatus">Saved</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="app-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <button class="btn btn-primary btn-new-decision" id="newDecisionBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        New Decision
+                    </button>
+                </div>
+                
+                <div class="sidebar-search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search decisions..." id="decisionSearch">
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-section-header">
+                            <span>Recent Decisions</span>
+                        </div>
+                        <ul class="decision-list" id="decisionList">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <div class="nav-section-header">
+                            <span>Templates</span>
+                        </div>
+                        <ul class="template-list" id="templateList">
+                            <li class="nav-item" data-template="job-offer">
+                                <span class="nav-icon">💼</span>
+                                <span>Job Offer Comparison</span>
+                            </li>
+                            <li class="nav-item" data-template="housing">
+                                <span class="nav-icon">🏠</span>
+                                <span>Housing Decision</span>
+                            </li>
+                            <li class="nav-item" data-template="technology">
+                                <span class="nav-icon">💻</span>
+                                <span>Tech Purchase</span>
+                            </li>
+                            <li class="nav-item" data-template="vendor">
+                                <span class="nav-icon">🤝</span>
+                                <span>Vendor Selection</span>
+                            </li>
+                            <li class="nav-item" data-template="education">
+                                <span class="nav-icon">🎓</span>
+                                <span>Education Program</span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <button class="btn btn-ghost btn-sm" id="exportAllBtn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Export All
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content" id="mainContent">
+                <!-- Welcome Screen (Default View) -->
+                <section class="view welcome-view active" id="welcomeView">
+                    <div class="welcome-container">
+                        <div class="welcome-hero">
+                            <div class="welcome-icon">🧠</div>
+                            <h1>Make Better Decisions with AI</h1>
+                            <p>ThinkFlow helps you analyze complex choices using weighted criteria and AI-powered insights. Your data stays private, right in your browser.</p>
+                        </div>
+                        
+                        <div class="welcome-actions">
+                            <button class="btn btn-primary btn-lg" id="welcomeNewBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                Start New Decision
+                            </button>
+                            <button class="btn btn-secondary btn-lg" id="welcomeTemplateBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                                Browse Templates
+                            </button>
+                        </div>
+
+                        <div class="welcome-features">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h3>AI-Powered</h3>
+                                <p>Get smart suggestions for criteria, alternatives, and evaluations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h3>Privacy First</h3>
+                                <p>All data stays in your browser - no accounts needed</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h3>Visual Analysis</h3>
+                                <p>Beautiful charts and insights to support your decision</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔗</div>
+                                <h3>Easy Sharing</h3>
+                                <p>Share decisions via URL without any server</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Decision Editor View -->
+                <section class="view decision-view" id="decisionView">
+                    <!-- Progress Steps -->
+                    <div class="progress-steps">
+                        <div class="step active" data-step="criteria">
+                            <div class="step-number">1</div>
+                            <span>Criteria</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step" data-step="alternatives">
+                            <div class="step-number">2</div>
+                            <span>Alternatives</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step" data-step="evaluation">
+                            <div class="step-number">3</div>
+                            <span>Evaluation</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step" data-step="results">
+                            <div class="step-number">4</div>
+                            <span>Results</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Content Container -->
+                    <div class="step-content-container">
+                        <!-- Step 1: Criteria -->
+                        <div class="step-content active" id="criteriaStep">
+                            <div class="step-header">
+                                <div class="step-header-left">
+                                    <h2>Define Your Criteria</h2>
+                                    <p>What factors matter in this decision? Add at least 2 criteria.</p>
+                                </div>
+                                <div class="step-header-actions">
+                                    <button class="btn btn-ai" id="generateCriteriaBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        Generate with AI
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="criteria-list" id="criteriaList">
+                                <!-- Populated dynamically -->
+                            </div>
+
+                            <button class="btn btn-ghost btn-add-item" id="addCriterionBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                Add Criterion
+                            </button>
+
+                            <div class="step-navigation">
+                                <div></div>
+                                <button class="btn btn-primary" id="toCriteriaNext" disabled>
+                                    Continue to Alternatives
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Alternatives -->
+                        <div class="step-content" id="alternativesStep">
+                            <div class="step-header">
+                                <div class="step-header-left">
+                                    <h2>Add Your Alternatives</h2>
+                                    <p>What options are you considering? Add at least 2 alternatives.</p>
+                                </div>
+                                <div class="step-header-actions">
+                                    <button class="btn btn-ai" id="generateAlternativesBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        Suggest with AI
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="alternatives-grid" id="alternativesList">
+                                <!-- Populated dynamically -->
+                            </div>
+
+                            <button class="btn btn-ghost btn-add-item" id="addAlternativeBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                Add Alternative
+                            </button>
+
+                            <div class="step-navigation">
+                                <button class="btn btn-ghost" id="toAlternativesPrev">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                    </svg>
+                                    Back to Criteria
+                                </button>
+                                <button class="btn btn-primary" id="toAlternativesNext" disabled>
+                                    Continue to Evaluation
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Evaluation -->
+                        <div class="step-content" id="evaluationStep">
+                            <div class="step-header">
+                                <div class="step-header-left">
+                                    <h2>Evaluate Your Options</h2>
+                                    <p>Rate each alternative against your criteria (1-10 scale).</p>
+                                </div>
+                                <div class="step-header-actions">
+                                    <button class="btn btn-ai" id="aiEvaluateAllBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        AI Evaluate All
+                                    </button>
+                                    <div class="view-toggle">
+                                        <button class="view-btn active" data-view="matrix" title="Matrix View">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="3" width="7" height="7"></rect>
+                                                <rect x="14" y="3" width="7" height="7"></rect>
+                                                <rect x="14" y="14" width="7" height="7"></rect>
+                                                <rect x="3" y="14" width="7" height="7"></rect>
+                                            </svg>
+                                        </button>
+                                        <button class="view-btn" data-view="cards" title="Card View">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="evaluation-container">
+                                <div class="matrix-view" id="matrixView">
+                                    <div class="matrix-wrapper">
+                                        <table class="evaluation-matrix" id="evaluationMatrix">
+                                            <!-- Populated dynamically -->
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="cards-view" id="cardsView" style="display: none;">
+                                    <!-- Card-by-card evaluation view -->
+                                </div>
+                            </div>
+
+                            <div class="evaluation-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="evaluationProgress"></div>
+                                </div>
+                                <span class="progress-text" id="evaluationProgressText">0% complete</span>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button class="btn btn-ghost" id="toEvaluationPrev">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                    </svg>
+                                    Back to Alternatives
+                                </button>
+                                <button class="btn btn-primary" id="toEvaluationNext">
+                                    See Results
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Results -->
+                        <div class="step-content" id="resultsStep">
+                            <div class="step-header">
+                                <div class="step-header-left">
+                                    <h2>Decision Results</h2>
+                                    <p>Here's your analysis based on weighted criteria scores.</p>
+                                </div>
+                                <div class="step-header-actions">
+                                    <button class="btn btn-ai" id="getAiInsightsBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        Get AI Insights
+                                    </button>
+                                    <button class="btn btn-secondary" id="shareDecisionBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="18" cy="5" r="3"></circle>
+                                            <circle cx="6" cy="12" r="3"></circle>
+                                            <circle cx="18" cy="19" r="3"></circle>
+                                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                        </svg>
+                                        Share
+                                    </button>
+                                    <button class="btn btn-secondary" id="exportDecisionBtn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                                        </svg>
+                                        Export
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="results-container">
+                                <!-- Winner Card -->
+                                <div class="winner-card" id="winnerCard">
+                                    <div class="winner-badge">🏆 Recommended Choice</div>
+                                    <h3 class="winner-name" id="winnerName">-</h3>
+                                    <div class="winner-score" id="winnerScore">-</div>
+                                    <div class="winner-strengths" id="winnerStrengths"></div>
+                                </div>
+
+                                <!-- Results Grid -->
+                                <div class="results-grid">
+                                    <!-- Rankings Chart -->
+                                    <div class="result-card">
+                                        <h4>Rankings</h4>
+                                        <div class="chart-container">
+                                            <canvas id="rankingsChart"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <!-- Radar Chart -->
+                                    <div class="result-card">
+                                        <h4>Criteria Comparison</h4>
+                                        <div class="chart-container">
+                                            <canvas id="radarChart"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <!-- Detailed Scores Table -->
+                                    <div class="result-card full-width">
+                                        <h4>Detailed Scores</h4>
+                                        <div class="scores-table-wrapper">
+                                            <table class="scores-table" id="scoresTable">
+                                                <!-- Populated dynamically -->
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- AI Insights Panel -->
+                                    <div class="result-card full-width ai-insights-card" id="aiInsightsCard" style="display: none;">
+                                        <h4>
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                            </svg>
+                                            AI Insights
+                                        </h4>
+                                        <div class="ai-insights-content" id="aiInsightsContent">
+                                            <!-- Populated by AI -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button class="btn btn-ghost" id="toResultsPrev">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                    </svg>
+                                    Back to Evaluation
+                                </button>
+                                <button class="btn btn-primary" id="newDecisionFromResults">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                    Start New Decision
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Modals Container -->
+        <div id="modalsContainer">
+            <!-- AI Suggestions Modal -->
+            <div class="modal" id="aiSuggestionsModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content modal-lg">
+                    <div class="modal-header">
+                        <h3 id="aiModalTitle">AI Suggestions</h3>
+                        <button class="btn-icon modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ai-loading" id="aiLoading">
+                            <div class="spinner"></div>
+                            <p>Analyzing your decision...</p>
+                        </div>
+                        <div class="ai-suggestions-list" id="aiSuggestionsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                        <div class="ai-error" id="aiError" style="display: none;">
+                            <p>Something went wrong. Please try again.</p>
+                            <button class="btn btn-secondary" id="aiRetryBtn">Retry</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-ghost" id="aiRegenerateBtn">Regenerate</button>
+                        <button class="btn btn-primary" id="aiAcceptAllBtn">Accept All</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Modal -->
+            <div class="modal" id="exportModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Export Decision</h3>
+                        <button class="btn-icon modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="export-options">
+                            <button class="export-option" data-format="json">
+                                <span class="export-icon">📄</span>
+                                <span class="export-label">JSON</span>
+                                <span class="export-desc">Full data backup</span>
+                            </button>
+                            <button class="export-option" data-format="csv">
+                                <span class="export-icon">📊</span>
+                                <span class="export-label">CSV</span>
+                                <span class="export-desc">Spreadsheet format</span>
+                            </button>
+                            <button class="export-option" data-format="markdown">
+                                <span class="export-icon">📝</span>
+                                <span class="export-label">Markdown</span>
+                                <span class="export-desc">Text documentation</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Share Modal -->
+            <div class="modal" id="shareModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Share Decision</h3>
+                        <button class="btn-icon modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Shareable Link</label>
+                            <div class="input-with-button">
+                                <input type="text" id="shareLink" class="form-input" readonly>
+                                <button class="btn btn-primary" id="copyShareLink">Copy</button>
+                            </div>
+                            <small class="form-hint">Anyone with this link can view (not edit) your decision.</small>
+                        </div>
+                        <div class="share-qr" id="shareQr">
+                            <!-- QR code placeholder -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Templates Modal -->
+            <div class="modal" id="templatesModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content modal-lg">
+                    <div class="modal-header">
+                        <h3>Decision Templates</h3>
+                        <button class="btn-icon modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="templates-grid" id="templatesGrid">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirm Delete Modal -->
+            <div class="modal" id="confirmModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content modal-sm">
+                    <div class="modal-header">
+                        <h3 id="confirmTitle">Confirm</h3>
+                        <button class="btn-icon modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="confirmMessage">Are you sure?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-ghost modal-close">Cancel</button>
+                        <button class="btn btn-danger" id="confirmActionBtn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
