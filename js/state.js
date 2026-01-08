@@ -30,7 +30,9 @@ const state = {
     settings: {
         aiProvider: 'deepseek',
         apiKey: '',
-        scoreScale: 5 // 5-star rating system
+        scoreScale: 5, // 5-star rating system
+        affiliateTag: 'thinkflow-20', // Amazon Associates tracking ID
+        affiliateEnabled: true
     },
     
     // Listeners for state changes
@@ -312,7 +314,16 @@ export const StateManager = {
             name: alternative.name || 'New Alternative',
             description: alternative.description || '',
             pros: alternative.pros || [],
-            cons: alternative.cons || []
+            cons: alternative.cons || [],
+            // Product-specific fields for Amazon integration
+            isProduct: alternative.isProduct || false,
+            asin: alternative.asin || '',
+            price: alternative.price || null,
+            rating: alternative.rating || null,
+            reviewCount: alternative.reviewCount || 0,
+            imageUrl: alternative.imageUrl || '',
+            amazonUrl: alternative.amazonUrl || '',
+            specs: alternative.specs || {}
         };
         
         const alternatives = [...(state.currentDecision.alternatives || []), newAlternative];
@@ -350,7 +361,7 @@ export const StateManager = {
     },
     
     /**
-     * Add multiple alternatives (from AI)
+     * Add multiple alternatives (from AI or product research)
      */
     async addAlternatives(alternativesList) {
         if (!state.currentDecision) return;
@@ -360,7 +371,16 @@ export const StateManager = {
             name: a.name,
             description: a.description || '',
             pros: a.pros || [],
-            cons: a.cons || []
+            cons: a.cons || [],
+            // Product-specific fields
+            isProduct: a.isProduct || false,
+            asin: a.asin || '',
+            price: a.price || null,
+            rating: a.rating || null,
+            reviewCount: a.reviewCount || 0,
+            imageUrl: a.imageUrl || '',
+            amazonUrl: a.amazonUrl || '',
+            specs: a.specs || {}
         }));
         
         const alternatives = [...(state.currentDecision.alternatives || []), ...newAlternatives];

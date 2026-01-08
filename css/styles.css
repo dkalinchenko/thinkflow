@@ -1985,3 +1985,366 @@ input, select, textarea {
         color: black;
     }
 }
+
+/* ========================================
+   Product Categories (Landing Page)
+   ======================================== */
+
+.product-categories {
+    margin: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.product-categories h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.category-card:hover {
+    border-color: var(--accent-primary);
+    background: var(--accent-primary-subtle);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.category-icon {
+    font-size: 2rem;
+}
+
+.category-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.welcome-templates-link {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+}
+
+/* ========================================
+   Amazon/Affiliate Styles
+   ======================================== */
+
+/* Affiliate Footer */
+.affiliate-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    z-index: 50;
+}
+
+.affiliate-disclosure {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Add padding to main content to account for footer */
+#app {
+    padding-bottom: 50px;
+}
+
+/* Amazon Button */
+.btn-amazon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    color: #111 !important;
+    border: 1px solid #a88734;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
+    border-color: #8d6e2d;
+    transform: translateY(-1px);
+}
+
+.btn-amazon .amazon-icon {
+    flex-shrink: 0;
+}
+
+/* Product Card (Enhanced Alternative Card) */
+.alternative-card.product {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: var(--spacing-md);
+    align-items: start;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-image-placeholder {
+    font-size: 2.5rem;
+    color: var(--text-muted);
+}
+
+.product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.product-price {
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 1.1rem;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.rating-stars {
+    color: #fbbf24;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.review-count {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.product-specs {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border-color);
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 2px 0;
+}
+
+.spec-label {
+    color: var(--text-muted);
+}
+
+.spec-value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Product Card in Results */
+.winner-card.has-product {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--spacing-xl);
+    text-align: left;
+}
+
+.winner-card.has-product .winner-image {
+    width: 150px;
+    height: 150px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner-card.has-product .winner-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.winner-buy-section {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-light);
+}
+
+.winner-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Spec Comparison Table */
+.specs-comparison {
+    margin-top: var(--spacing-xl);
+}
+
+.specs-comparison h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table th,
+.specs-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.875rem;
+}
+
+.specs-table th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.specs-table th:first-child {
+    width: 30%;
+}
+
+.specs-table td:first-child {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.specs-table tr:hover td {
+    background: var(--bg-hover);
+}
+
+/* AI Research Button Enhancement */
+.btn-ai-research {
+    background: linear-gradient(135deg, #FF9900, #FF6600);
+    color: white;
+    border: none;
+}
+
+.btn-ai-research:hover {
+    background: linear-gradient(135deg, #FFa500, #FF7700);
+}
+
+/* Product Loading State */
+.product-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+    text-align: center;
+}
+
+.product-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.product-loading p {
+    margin-top: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile Adjustments for Products */
+@media (max-width: 768px) {
+    .alternative-card.product {
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .product-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .winner-card.has-product {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .winner-card.has-product .winner-image {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .affiliate-footer {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .affiliate-disclosure {
+        font-size: 0.65rem;
+    }
+}

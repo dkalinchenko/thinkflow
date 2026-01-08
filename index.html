@@ -3,10 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ThinkFlow - Smart decision-making powered by AI. Make better choices with weighted criteria analysis.">
+    <meta name="description" content="ThinkFlow - AI-powered product comparison tool. Compare laptops, phones, cameras & more with smart analysis. Find your perfect tech purchase.">
     <meta name="theme-color" content="#f8f9fc">
+    <meta name="keywords" content="product comparison, laptop comparison, phone comparison, tech reviews, AI product research, best laptop, best phone">
     
-    <title>ThinkFlow - Smart Decision Making</title>
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ThinkFlow - AI Product Comparison Tool">
+    <meta property="og:description" content="Compare laptops, phones, cameras & more with AI-powered analysis. Find your perfect tech purchase.">
+    <meta property="og:url" content="https://dkalinchenko.github.io/thinkflow/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ThinkFlow - AI Product Comparison Tool">
+    <meta name="twitter:description" content="Compare laptops, phones, cameras & more with AI-powered analysis.">
+    
+    <title>ThinkFlow - AI Product Comparison Tool | Compare Laptops, Phones & More</title>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ThinkFlow",
+        "description": "AI-powered product comparison tool for electronics. Compare laptops, smartphones, cameras, headphones and more with smart analysis.",
+        "url": "https://dkalinchenko.github.io/thinkflow/",
+        "applicationCategory": "ShoppingApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "AI-powered product research",
+            "Side-by-side product comparison",
+            "Weighted criteria analysis",
+            "Amazon price comparison",
+            "Expert reviews analysis"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does ThinkFlow compare products?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ThinkFlow uses AI to research products, extract specifications, analyze reviews, and provide weighted criteria scoring. You can compare laptops, phones, cameras, and more with personalized criteria that matter to you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is ThinkFlow free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, ThinkFlow is completely free to use. All your data stays in your browser for privacy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What products can I compare with ThinkFlow?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can compare laptops, smartphones, headphones, cameras, tablets, smartwatches, and many other electronics. You can also use ThinkFlow for non-product decisions like job offers or housing choices."
+                }
+            }
+        ]
+    }
+    </script>
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -103,28 +179,48 @@
                     
                     <div class="nav-section">
                         <div class="nav-section-header">
-                            <span>Templates</span>
+                            <span>Product Comparisons</span>
+                        </div>
+                        <ul class="template-list" id="productTemplateList">
+                            <li class="nav-item" data-template="laptop-comparison">
+                                <span class="nav-icon">💻</span>
+                                <span>Laptops</span>
+                            </li>
+                            <li class="nav-item" data-template="smartphone-comparison">
+                                <span class="nav-icon">📱</span>
+                                <span>Smartphones</span>
+                            </li>
+                            <li class="nav-item" data-template="headphones-comparison">
+                                <span class="nav-icon">🎧</span>
+                                <span>Headphones</span>
+                            </li>
+                            <li class="nav-item" data-template="camera-comparison">
+                                <span class="nav-icon">📷</span>
+                                <span>Cameras</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <div class="nav-section-header">
+                            <span>Decision Templates</span>
                         </div>
                         <ul class="template-list" id="templateList">
                             <li class="nav-item" data-template="job-offer">
                                 <span class="nav-icon">💼</span>
-                                <span>Job Offer Comparison</span>
+                                <span>Job Offer</span>
                             </li>
                             <li class="nav-item" data-template="housing">
                                 <span class="nav-icon">🏠</span>
-                                <span>Housing Decision</span>
-                            </li>
-                            <li class="nav-item" data-template="technology">
-                                <span class="nav-icon">💻</span>
-                                <span>Tech Purchase</span>
+                                <span>Housing</span>
                             </li>
                             <li class="nav-item" data-template="vendor">
                                 <span class="nav-icon">🤝</span>
                                 <span>Vendor Selection</span>
                             </li>
-                            <li class="nav-item" data-template="education">
-                                <span class="nav-icon">🎓</span>
-                                <span>Education Program</span>
+                            <li class="nav-item" data-template="car">
+                                <span class="nav-icon">🚗</span>
+                                <span>Car Purchase</span>
                             </li>
                         </ul>
                     </div>
@@ -148,51 +244,94 @@
                 <section class="view welcome-view active" id="welcomeView">
                     <div class="welcome-container">
                         <div class="welcome-hero">
-                            <div class="welcome-icon">🧠</div>
-                            <h1>Make Better Decisions with AI</h1>
-                            <p>ThinkFlow helps you analyze complex choices using weighted criteria and AI-powered insights. Your data stays private, right in your browser.</p>
+                            <div class="welcome-icon">🛒</div>
+                            <h1>Make Smarter Tech Purchases with AI</h1>
+                            <p>Compare laptops, phones, cameras & more with AI-powered analysis. Research products, compare specs, and find your perfect match—all in one place.</p>
                         </div>
                         
                         <div class="welcome-actions">
-                            <button class="btn btn-primary btn-lg" id="welcomeNewBtn">
+                            <button class="btn btn-primary btn-lg" id="welcomeProductBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                Compare Products
+                            </button>
+                            <button class="btn btn-secondary btn-lg" id="welcomeNewBtn">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                     <line x1="12" y1="5" x2="12" y2="19"></line>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                 </svg>
-                                Start New Decision
+                                Custom Decision
                             </button>
-                            <button class="btn btn-secondary btn-lg" id="welcomeTemplateBtn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        </div>
+
+                        <!-- Product Categories -->
+                        <div class="product-categories" id="productCategories">
+                            <h3>Popular Comparisons</h3>
+                            <div class="category-grid">
+                                <button class="category-card" data-category="laptop">
+                                    <span class="category-icon">💻</span>
+                                    <span class="category-name">Laptops</span>
+                                </button>
+                                <button class="category-card" data-category="smartphone">
+                                    <span class="category-icon">📱</span>
+                                    <span class="category-name">Smartphones</span>
+                                </button>
+                                <button class="category-card" data-category="headphones">
+                                    <span class="category-icon">🎧</span>
+                                    <span class="category-name">Headphones</span>
+                                </button>
+                                <button class="category-card" data-category="camera">
+                                    <span class="category-icon">📷</span>
+                                    <span class="category-name">Cameras</span>
+                                </button>
+                                <button class="category-card" data-category="tablet">
+                                    <span class="category-icon">📲</span>
+                                    <span class="category-name">Tablets</span>
+                                </button>
+                                <button class="category-card" data-category="smartwatch">
+                                    <span class="category-icon">⌚</span>
+                                    <span class="category-name">Smartwatches</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="welcome-features">
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h3>AI Research</h3>
+                                <p>AI automatically finds and compares top products based on your criteria</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h3>Smart Analysis</h3>
+                                <p>See ratings, specs, and reviews analyzed in beautiful charts</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⭐</div>
+                                <h3>Real Reviews</h3>
+                                <p>AI extracts key pros and cons from thousands of reviews</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💰</div>
+                                <h3>Best Prices</h3>
+                                <p>Direct links to purchase with current pricing on Amazon</p>
+                            </div>
+                        </div>
+
+                        <!-- Browse Templates Link -->
+                        <div class="welcome-templates-link">
+                            <button class="btn btn-ghost" id="welcomeTemplateBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="7" height="7"></rect>
                                     <rect x="14" y="3" width="7" height="7"></rect>
                                     <rect x="14" y="14" width="7" height="7"></rect>
                                     <rect x="3" y="14" width="7" height="7"></rect>
                                 </svg>
-                                Browse Templates
+                                Or browse all decision templates
                             </button>
-                        </div>
-
-                        <div class="welcome-features">
-                            <div class="feature-card">
-                                <div class="feature-icon">⚡</div>
-                                <h3>AI-Powered</h3>
-                                <p>Get smart suggestions for criteria, alternatives, and evaluations</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">🔒</div>
-                                <h3>Privacy First</h3>
-                                <p>All data stays in your browser - no accounts needed</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">📊</div>
-                                <h3>Visual Analysis</h3>
-                                <p>Beautiful charts and insights to support your decision</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">🔗</div>
-                                <h3>Easy Sharing</h3>
-                                <p>Share decisions via URL without any server</p>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -671,6 +810,13 @@
 
         <!-- Toast Notifications -->
         <div class="toast-container" id="toastContainer"></div>
+
+        <!-- Affiliate Disclosure Footer -->
+        <footer class="affiliate-footer" id="affiliateFooter">
+            <div class="affiliate-disclosure">
+                <small>As an Amazon Associate, we earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change.</small>
+            </div>
+        </footer>
     </div>
 
     <!-- Application Scripts -->

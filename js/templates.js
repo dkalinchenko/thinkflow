@@ -4,6 +4,151 @@
  */
 
 export const templates = [
+    // ========================================
+    // Electronics & Product Templates (Featured)
+    // ========================================
+    {
+        id: 'laptop-comparison',
+        name: 'Laptop Comparison',
+        description: 'Compare laptops to find your perfect machine',
+        category: 'Electronics',
+        icon: '💻',
+        isProductComparison: true,
+        productCategory: 'laptop',
+        criteria: [
+            { name: 'Performance', weight: 2.0, description: 'CPU, RAM, and processing power for your tasks' },
+            { name: 'Display Quality', weight: 1.5, description: 'Resolution, color accuracy, brightness' },
+            { name: 'Battery Life', weight: 1.8, description: 'Hours of real-world usage between charges' },
+            { name: 'Build Quality', weight: 1.2, description: 'Materials, durability, premium feel' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to features and performance' },
+            { name: 'Portability', weight: 1.0, description: 'Weight and size for travel' }
+        ],
+        exampleAlternatives: [
+            { name: 'MacBook Air M3', description: 'Apple silicon, all-day battery' },
+            { name: 'Dell XPS 15', description: 'Windows power user, great display' },
+            { name: 'ThinkPad X1 Carbon', description: 'Business focused, legendary keyboard' }
+        ],
+        tips: 'Use "AI Research Products" to find and compare top laptops automatically!'
+    },
+    {
+        id: 'smartphone-comparison',
+        name: 'Smartphone Comparison',
+        description: 'Find the best smartphone for your needs',
+        category: 'Electronics',
+        icon: '📱',
+        isProductComparison: true,
+        productCategory: 'smartphone',
+        criteria: [
+            { name: 'Camera Quality', weight: 2.0, description: 'Photo and video capabilities' },
+            { name: 'Performance', weight: 1.8, description: 'Speed, multitasking, gaming' },
+            { name: 'Battery Life', weight: 1.7, description: 'Daily usage between charges' },
+            { name: 'Display', weight: 1.5, description: 'Screen quality, size, refresh rate' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs features' },
+            { name: 'Software & Updates', weight: 1.0, description: 'OS experience, update support' }
+        ],
+        exampleAlternatives: [
+            { name: 'iPhone 15 Pro', description: 'Premium Apple ecosystem' },
+            { name: 'Samsung Galaxy S24', description: 'Android flagship' },
+            { name: 'Google Pixel 8', description: 'Best-in-class camera AI' }
+        ],
+        tips: 'Consider what matters most: camera, battery, or ecosystem compatibility.'
+    },
+    {
+        id: 'headphones-comparison',
+        name: 'Headphones Comparison',
+        description: 'Compare wireless headphones and earbuds',
+        category: 'Electronics',
+        icon: '🎧',
+        isProductComparison: true,
+        productCategory: 'headphones',
+        criteria: [
+            { name: 'Sound Quality', weight: 2.0, description: 'Audio clarity, bass, treble balance' },
+            { name: 'Noise Cancellation', weight: 1.8, description: 'ANC effectiveness' },
+            { name: 'Comfort', weight: 1.5, description: 'Fit, weight, padding quality' },
+            { name: 'Battery Life', weight: 1.3, description: 'Hours of playback' },
+            { name: 'Build Quality', weight: 1.2, description: 'Durability and materials' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to quality' }
+        ],
+        exampleAlternatives: [
+            { name: 'Sony WH-1000XM5', description: 'Industry-leading ANC' },
+            { name: 'AirPods Pro 2', description: 'Apple ecosystem integration' },
+            { name: 'Bose QuietComfort Ultra', description: 'Premium comfort' }
+        ],
+        tips: 'Try them on if possible - comfort matters for long listening sessions.'
+    },
+    {
+        id: 'camera-comparison',
+        name: 'Camera Comparison',
+        description: 'Compare mirrorless and DSLR cameras',
+        category: 'Electronics',
+        icon: '📷',
+        isProductComparison: true,
+        productCategory: 'camera',
+        criteria: [
+            { name: 'Image Quality', weight: 2.0, description: 'Sensor, resolution, dynamic range' },
+            { name: 'Autofocus', weight: 1.8, description: 'Speed, accuracy, subject tracking' },
+            { name: 'Video Capability', weight: 1.5, description: '4K, frame rates, stabilization' },
+            { name: 'Lens Ecosystem', weight: 1.3, description: 'Available lenses and compatibility' },
+            { name: 'Ergonomics', weight: 1.2, description: 'Handling, controls, build' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs capability' }
+        ],
+        exampleAlternatives: [
+            { name: 'Sony A7 IV', description: 'Hybrid photo/video excellence' },
+            { name: 'Canon R6 Mark II', description: 'Fast autofocus, great colors' },
+            { name: 'Nikon Z8', description: 'Professional features, compact body' }
+        ],
+        tips: 'Consider the lens ecosystem - your lenses often outlast your camera body.'
+    },
+    {
+        id: 'tablet-comparison',
+        name: 'Tablet Comparison',
+        description: 'Find the right tablet for work or play',
+        category: 'Electronics',
+        icon: '📲',
+        isProductComparison: true,
+        productCategory: 'tablet',
+        criteria: [
+            { name: 'Display Quality', weight: 2.0, description: 'Screen size, resolution, colors' },
+            { name: 'Performance', weight: 1.8, description: 'Speed for apps and games' },
+            { name: 'Battery Life', weight: 1.5, description: 'Hours of usage' },
+            { name: 'Productivity', weight: 1.3, description: 'Stylus support, keyboard compatibility' },
+            { name: 'App Ecosystem', weight: 1.2, description: 'Tablet-optimized apps available' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to features' }
+        ],
+        exampleAlternatives: [
+            { name: 'iPad Pro M4', description: 'Most powerful tablet' },
+            { name: 'Samsung Galaxy Tab S9', description: 'Android flexibility' },
+            { name: 'iPad Air', description: 'Great balance of price/performance' }
+        ],
+        tips: 'Think about your primary use case: media consumption, note-taking, or laptop replacement.'
+    },
+    {
+        id: 'smartwatch-comparison',
+        name: 'Smartwatch Comparison',
+        description: 'Compare smartwatches and fitness trackers',
+        category: 'Electronics',
+        icon: '⌚',
+        isProductComparison: true,
+        productCategory: 'smartwatch',
+        criteria: [
+            { name: 'Health Tracking', weight: 2.0, description: 'Heart rate, sleep, fitness accuracy' },
+            { name: 'Battery Life', weight: 1.8, description: 'Days between charges' },
+            { name: 'Display', weight: 1.5, description: 'Readability, brightness, always-on' },
+            { name: 'Smart Features', weight: 1.3, description: 'Apps, notifications, payments' },
+            { name: 'Build Quality', weight: 1.2, description: 'Durability, water resistance' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs features' }
+        ],
+        exampleAlternatives: [
+            { name: 'Apple Watch Ultra 2', description: 'Premium Apple ecosystem' },
+            { name: 'Samsung Galaxy Watch 6', description: 'Android integration' },
+            { name: 'Garmin Fenix 8', description: 'Outdoor and fitness focused' }
+        ],
+        tips: 'Make sure the watch is compatible with your phone before buying.'
+    },
+    
+    // ========================================
+    // General Decision Templates
+    // ========================================
     {
         id: 'job-offer',
         name: 'Job Offer Comparison',
@@ -301,7 +446,8 @@ export function createDecisionFromTemplate(templateId) {
     return {
         title: `New ${template.name}`,
         description: template.description,
-        category: template.category,
+        category: template.productCategory || template.category,
+        isProductComparison: template.isProductComparison || false,
         criteria: template.criteria.map((c, i) => ({
             id: `criterion-${i}`,
             name: c.name,

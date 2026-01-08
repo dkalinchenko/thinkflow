@@ -22,6 +22,20 @@ import {
     decryptApiKey,
     getRankSuffix
 } from './utils.js';
+import { 
+    generateAffiliateLink, 
+    formatPrice, 
+    trackAffiliateClick,
+    FTC_DISCLOSURE 
+} from './affiliate.js';
+import { 
+    getCategoryConfig, 
+    getCategories, 
+    researchProducts,
+    evaluateAllProducts,
+    getProductComparison 
+} from './amazon-research.js';
+import { Analytics } from './analytics.js';
 
 // ========================================
 // DOM Elements
@@ -48,11 +62,14 @@ const elements = {
     decisionSearch: document.getElementById('decisionSearch'),
     decisionList: document.getElementById('decisionList'),
     templateList: document.getElementById('templateList'),
+    productTemplateList: document.getElementById('productTemplateList'),
     exportAllBtn: document.getElementById('exportAllBtn'),
     
     // Welcome
     welcomeNewBtn: document.getElementById('welcomeNewBtn'),
     welcomeTemplateBtn: document.getElementById('welcomeTemplateBtn'),
+    welcomeProductBtn: document.getElementById('welcomeProductBtn'),
+    productCategories: document.getElementById('productCategories'),
     
     // Progress Steps
     progressSteps: document.querySelectorAll('.step'),
@@ -264,6 +281,22 @@ function setupEventListeners() {
     elements.welcomeNewBtn.addEventListener('click', createNewDecision);
     elements.newDecisionFromResults.addEventListener('click', createNewDecision);
     
+    // Product comparison button
+    if (elements.welcomeProductBtn) {
+        elements.welcomeProductBtn.addEventListener('click', () => openModal('templates'));
+    }
+    
+    // Product category cards
+    if (elements.productCategories) {
+        elements.productCategories.addEventListener('click', (e) => {
+            const categoryCard = e.target.closest('.category-card');
+            if (categoryCard) {
+                const category = categoryCard.dataset.category;
+                startProductComparison(category);
+            }
+        });
+    }
+    
     // Templates
     elements.welcomeTemplateBtn.addEventListener('click', () => openModal('templates'));
     
@@ -344,6 +377,17 @@ function setupEventListeners() {
             applyTemplate(templateId);
         }
     });
+    
+    // Product template list in sidebar
+    if (elements.productTemplateList) {
+        elements.productTemplateList.addEventListener('click', (e) => {
+            const item = e.target.closest('.nav-item');
+            if (item) {
+                const templateId = item.dataset.template;
+                applyTemplate(templateId);
+            }
+        });
+    }
     
     // Modal close buttons
     document.querySelectorAll('.modal-close, .modal-backdrop').forEach(el => {
@@ -454,6 +498,13 @@ function showStepContent(step) {
                 break;
             case 'results':
                 renderResults();
+                // Track comparison completion
+                const decision = StateManager.getState().currentDecision;
+                Analytics.trackComparisonCompleted({
+                    category: decision?.category || 'general',
+                    alternativesCount: decision?.alternatives?.length || 0,
+                    isProductComparison: decision?.isProductComparison || false
+                });
                 break;
         }
     }
@@ -473,6 +524,92 @@ async function createNewDecision() {
         description: ''
     });
     showToast('New decision created', 'success');
+}
+
+/**
+ * Start a product comparison for a specific category
+ */
+async function startProductComparison(category) {
+    const config = getCategoryConfig(category);
+    if (!config) {
+        showToast('Unknown product category', 'error');
+        return;
+    }
+    
+    // Create a new decision with product-specific criteria
+    await StateManager.createDecision({
+        title: `${config.name} Comparison`,
+        description: `Compare ${config.name.toLowerCase()} to find the best option for your needs.`,
+        category: category,
+        isProductComparison: true,
+        criteria: config.defaultCriteria.map((c, i) => ({
+            id: `criterion-${i}`,
+            name: c.name,
+            weight: c.weight,
+            description: c.description
+        }))
+    });
+    
+    // Track analytics
+    Analytics.trackComparisonStarted(category);
+    
+    // Navigate to alternatives step since criteria are pre-filled
+    StateManager.setStep('alternatives');
+    
+    showToast(`${config.name} comparison started! Add products to compare.`, 'success');
+}
+
+/**
+ * AI-powered product research
+ */
+async function aiResearchProducts() {
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    
+    if (!decision) return;
+    
+    // Get category from decision or default to general
+    const category = decision.category || 'laptop';
+    const decisionTitle = decision.title || '';
+    
+    // Show loading state
+    elements.generateAlternativesBtn.disabled = true;
+    elements.generateAlternativesBtn.innerHTML = `
+        <div class="spinner-small"></div>
+        Researching products...
+    `;
+    
+    try {
+        // Research products using AI
+        const products = await researchProducts(category, {
+            maxProducts: 4,
+            specificQuery: decisionTitle.includes('Comparison') ? null : decisionTitle
+        });
+        
+        if (products.length === 0) {
+            showToast('No products found. Try a different search.', 'warning');
+            return;
+        }
+        
+        // Add products as alternatives
+        const alternatives = products.map(p => p.toAlternative());
+        await StateManager.addAlternatives(alternatives);
+        
+        showToast(`Found ${products.length} products to compare!`, 'success');
+        renderAlternatives();
+        
+    } catch (error) {
+        console.error('Product research error:', error);
+        showToast('Failed to research products. Please try again.', 'error');
+    } finally {
+        elements.generateAlternativesBtn.disabled = false;
+        elements.generateAlternativesBtn.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            ${decision.isProductComparison ? 'AI Research Products' : 'Suggest with AI'}
+        `;
+    }
 }
 
 async function updateDecisionTitle() {
@@ -682,21 +819,76 @@ async function deleteCriterion(id) {
 function renderAlternatives() {
     const state = StateManager.getState();
     const alternatives = state.currentDecision?.alternatives || [];
+    const isProductComparison = state.currentDecision?.isProductComparison;
     
     if (alternatives.length === 0) {
         elements.alternativesList.innerHTML = `
             <div class="empty-state" style="grid-column: span 2;">
-                <p>No alternatives yet. Add options to compare or let AI suggest some.</p>
+                <p>${isProductComparison 
+                    ? 'Click "AI Research Products" to find products to compare, or add them manually.' 
+                    : 'No alternatives yet. Add options to compare or let AI suggest some.'}</p>
             </div>
         `;
     } else {
-        elements.alternativesList.innerHTML = alternatives.map(a => `
-            <div class="alternative-card" data-id="${a.id}">
+        elements.alternativesList.innerHTML = alternatives.map(a => {
+            // Check if this is a product with Amazon data
+            if (a.isProduct || a.asin) {
+                return renderProductCard(a);
+            }
+            
+            // Standard alternative card
+            return `
+                <div class="alternative-card" data-id="${a.id}">
+                    <div class="alternative-header">
+                        <input type="text" class="alternative-name" value="${escapeHtml(a.name)}"
+                            onchange="window.app.updateAlternative('${a.id}', 'name', this.value)">
+                        <div class="criterion-actions">
+                            <button class="btn-icon" onclick="window.app.deleteAlternative('${a.id}')" title="Delete">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <textarea class="alternative-description" placeholder="Description (optional)"
+                        onchange="window.app.updateAlternative('${a.id}', 'description', this.value)">${escapeHtml(a.description || '')}</textarea>
+                    ${a.pros?.length || a.cons?.length ? `
+                        <div class="alternative-meta">
+                            ${a.pros?.map(p => `<span class="alternative-tag pro">✓ ${escapeHtml(p)}</span>`).join('') || ''}
+                            ${a.cons?.map(c => `<span class="alternative-tag con">✗ ${escapeHtml(c)}</span>`).join('') || ''}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }).join('');
+    }
+    
+    updateNavigationButtons();
+}
+
+/**
+ * Render a product card with Amazon data
+ */
+function renderProductCard(product) {
+    const priceDisplay = product.price ? formatPrice(product.price) : 'Check Price';
+    const ratingStars = product.rating ? '⭐'.repeat(Math.round(product.rating)) : '';
+    const amazonUrl = product.amazonUrl || (product.asin ? generateAffiliateLink(product.asin) : '');
+    
+    return `
+        <div class="alternative-card product" data-id="${product.id}" data-asin="${product.asin || ''}">
+            <div class="product-image">
+                ${product.imageUrl 
+                    ? `<img src="${product.imageUrl}" alt="${escapeHtml(product.name)}" loading="lazy">`
+                    : `<span class="product-image-placeholder">📦</span>`
+                }
+            </div>
+            <div class="product-info">
                 <div class="alternative-header">
-                    <input type="text" class="alternative-name" value="${escapeHtml(a.name)}"
-                        onchange="window.app.updateAlternative('${a.id}', 'name', this.value)">
+                    <input type="text" class="alternative-name" value="${escapeHtml(product.name)}"
+                        onchange="window.app.updateAlternative('${product.id}', 'name', this.value)">
                     <div class="criterion-actions">
-                        <button class="btn-icon" onclick="window.app.deleteAlternative('${a.id}')" title="Delete">
+                        <button class="btn-icon" onclick="window.app.deleteAlternative('${product.id}')" title="Delete">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="3 6 5 6 21 6"></polyline>
                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -704,19 +896,52 @@ function renderAlternatives() {
                         </button>
                     </div>
                 </div>
-                <textarea class="alternative-description" placeholder="Description (optional)"
-                    onchange="window.app.updateAlternative('${a.id}', 'description', this.value)">${escapeHtml(a.description || '')}</textarea>
-                ${a.pros?.length || a.cons?.length ? `
-                    <div class="alternative-meta">
-                        ${a.pros?.map(p => `<span class="alternative-tag">✓ ${escapeHtml(p)}</span>`).join('') || ''}
-                        ${a.cons?.map(c => `<span class="alternative-tag">✗ ${escapeHtml(c)}</span>`).join('') || ''}
+                
+                <div class="product-meta">
+                    ${product.rating ? `
+                        <div class="product-rating">
+                            <span class="rating-stars">${ratingStars}</span>
+                            <span class="rating-value">${product.rating.toFixed(1)}</span>
+                            ${product.reviewCount ? `<span class="review-count">(${product.reviewCount.toLocaleString()})</span>` : ''}
+                        </div>
+                    ` : ''}
+                    <div class="product-price">${priceDisplay}</div>
+                </div>
+                
+                ${product.description ? `
+                    <p class="product-description">${escapeHtml(product.description)}</p>
+                ` : ''}
+                
+                ${product.specs && Object.keys(product.specs).length > 0 ? `
+                    <div class="product-specs">
+                        ${Object.entries(product.specs).slice(0, 4).map(([key, value]) => `
+                            <div class="spec-item">
+                                <span class="spec-label">${escapeHtml(key.replace(/_/g, ' '))}:</span>
+                                <span class="spec-value">${escapeHtml(String(value))}</span>
+                            </div>
+                        `).join('')}
                     </div>
                 ` : ''}
+                
+                ${product.pros?.length || product.cons?.length ? `
+                    <div class="alternative-meta">
+                        ${(product.pros || []).slice(0, 2).map(p => `<span class="alternative-tag pro">✓ ${escapeHtml(p)}</span>`).join('')}
+                        ${(product.cons || []).slice(0, 2).map(c => `<span class="alternative-tag con">✗ ${escapeHtml(c)}</span>`).join('')}
+                    </div>
+                ` : ''}
+                
+                ${amazonUrl ? `
+                    <a href="${amazonUrl}" 
+                       class="btn btn-amazon btn-sm" 
+                       target="_blank" 
+                       rel="noopener sponsored"
+                       onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${product.asin}', productName: '${escapeHtml(product.name).replace(/'/g, "\\'")}', source: 'alternatives'})">
+                        View on Amazon
+                    </a>
+                ` : ''}
             </div>
-        `).join('');
-    }
-    
-    updateNavigationButtons();
+        </div>
+    `;
 }
 
 async function addAlternative() {
@@ -876,18 +1101,53 @@ async function setScore(altId, criterionId, value) {
 
 function renderResults() {
     const results = StateManager.calculateResults();
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
     
     if (results.length === 0) {
         return;
     }
     
-    // Render winner card
+    // Find the winning alternative's full data (including product info)
     const winner = results[0];
+    const winnerAlt = decision.alternatives.find(a => a.id === winner.id);
+    const isProduct = winnerAlt?.isProduct || winnerAlt?.asin;
+    
+    // Render winner card
     elements.winnerName.textContent = winner.name;
     elements.winnerScore.textContent = `${winner.totalScore.toFixed(1)} pts`;
     elements.winnerStrengths.innerHTML = winner.strengths
         .map(s => `<span class="strength-tag">✓ ${escapeHtml(s)}</span>`)
         .join('');
+    
+    // Add Amazon buy button for product winners
+    const winnerCard = document.getElementById('winnerCard');
+    const existingBuySection = winnerCard.querySelector('.winner-buy-section');
+    if (existingBuySection) {
+        existingBuySection.remove();
+    }
+    
+    if (isProduct && winnerAlt.asin) {
+        const amazonUrl = winnerAlt.amazonUrl || generateAffiliateLink(winnerAlt.asin);
+        const priceDisplay = winnerAlt.price ? formatPrice(winnerAlt.price) : '';
+        
+        const buySection = document.createElement('div');
+        buySection.className = 'winner-buy-section';
+        buySection.innerHTML = `
+            ${priceDisplay ? `<div class="winner-price">${priceDisplay}</div>` : ''}
+            <a href="${amazonUrl}" 
+               class="btn btn-amazon btn-lg" 
+               target="_blank" 
+               rel="noopener sponsored"
+               onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${winnerAlt.asin}', productName: '${escapeHtml(winner.name).replace(/'/g, "\\'")}', source: 'winner_card'})">
+                <svg class="amazon-icon" viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M15.93 17.09c-.18.16-.43.17-.63.06-.89-.74-1.05-1.08-1.54-1.79-1.47 1.5-2.51 1.95-4.42 1.95-2.25 0-4.01-1.39-4.01-4.17 0-2.18 1.17-3.64 2.86-4.38 1.46-.64 3.49-.76 5.04-.93v-.35c0-.64.05-1.4-.33-1.96-.32-.49-.95-.7-1.5-.7-1.02 0-1.93.53-2.15 1.61-.05.24-.23.47-.48.48l-2.66-.29c-.22-.05-.47-.22-.4-.55C6.26 3.37 8.74 2.5 10.94 2.5c1.14 0 2.63.3 3.53 1.17 1.14 1.06 1.03 2.48 1.03 4.03v3.65c0 1.1.45 1.58.88 2.18.15.21.18.46-.01.62-.48.4-1.35 1.14-1.82 1.56l-.62-.62z"/>
+                </svg>
+                Buy Winner on Amazon
+            </a>
+        `;
+        winnerCard.appendChild(buySection);
+    }
     
     // Render scores table
     const state = StateManager.getState();
@@ -1129,7 +1389,15 @@ async function generateCriteria() {
 async function generateAlternatives() {
     if (!AI.isAvailable()) {
         showToast('Please configure your API key in Settings first', 'warning');
-        openModal('settings');
+        return;
+    }
+    
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    
+    // Use AI product research for product comparisons
+    if (decision?.isProductComparison || decision?.category) {
+        await aiResearchProducts();
         return;
     }
     
@@ -1141,8 +1409,7 @@ async function generateAlternatives() {
     elements.aiError.style.display = 'none';
     
     try {
-        const state = StateManager.getState();
-        const suggestions = await AI.suggestAlternatives(state.currentDecision);
+        const suggestions = await AI.suggestAlternatives(decision);
         currentAIContext.suggestions = suggestions;
         renderAISuggestions(suggestions, 'alternatives');
     } catch (error) {
@@ -1362,6 +1629,11 @@ async function applyTemplate(templateId) {
     const decisionData = createDecisionFromTemplate(templateId);
     if (decisionData) {
         await StateManager.createDecision(decisionData);
+        
+        // Track template usage
+        Analytics.trackTemplateUsed(templateId);
+        Analytics.trackComparisonStarted(decisionData.category || 'general');
+        
         closeAllModals();
         showToast('Template applied!', 'success');
     }

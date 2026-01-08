@@ -3,7 +3,7 @@
  * Enables offline functionality and caching
  */
 
-const CACHE_NAME = 'thinkflow-v7';
+const CACHE_NAME = 'thinkflow-v8';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
@@ -14,6 +14,9 @@ const STATIC_ASSETS = [
     '/js/ai.js',
     '/js/utils.js',
     '/js/templates.js',
+    '/js/affiliate.js',
+    '/js/amazon-research.js',
+    '/js/analytics.js',
     '/manifest.json'
 ];
 
