@@ -132,14 +132,14 @@ export async function researchProducts(category, options = {}) {
     const categoryName = config?.name || 'Products';
     const searchContext = specificQuery || `top ${categoryName} in 2024-2025`;
     
-    // Build the research prompt
-    const prompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields);
+    // Build the combined prompt with system instructions
+    const systemPrompt = getResearchSystemPrompt();
+    const userPrompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields);
+    const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
     
     try {
-        const response = await aiService.chat([
-            { role: 'system', content: getResearchSystemPrompt() },
-            { role: 'user', content: prompt }
-        ]);
+        // Use aiService.call() which handles the API request
+        const response = await aiService.call(fullPrompt, { skipCache: true });
         
         // Parse the AI response into product objects
         const products = parseProductResponse(response);
@@ -311,10 +311,9 @@ Respond with a JSON object containing ratings and brief explanations:
 Use the criterion names as keys (lowercase, underscores for spaces).`;
 
     try {
-        const response = await aiService.chat([
-            { role: 'system', content: 'You are a product evaluation expert. Provide accurate ratings based on product specifications and general knowledge. Always respond with valid JSON.' },
-            { role: 'user', content: prompt }
-        ]);
+        const systemPrompt = 'You are a product evaluation expert. Provide accurate ratings based on product specifications and general knowledge. Always respond with valid JSON.';
+        const fullPrompt = `${systemPrompt}\n\n${prompt}`;
+        const response = await aiService.call(fullPrompt);
         
         // Parse response
         let jsonStr = response;
@@ -401,10 +400,9 @@ Provide a comparison analysis in JSON format:
 }`;
 
     try {
-        const response = await aiService.chat([
-            { role: 'system', content: 'You are a product comparison expert helping consumers make informed purchase decisions. Always respond with valid JSON.' },
-            { role: 'user', content: prompt }
-        ]);
+        const systemPrompt = 'You are a product comparison expert helping consumers make informed purchase decisions. Always respond with valid JSON.';
+        const fullPrompt = `${systemPrompt}\n\n${prompt}`;
+        const response = await aiService.call(fullPrompt);
         
         let jsonStr = response;
         const jsonMatch = response.match(/```(?:json)?\s*([\s\S]*?)```/) || response.match(/\{[\s\S]*\}/);
