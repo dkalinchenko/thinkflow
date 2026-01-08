@@ -1149,9 +1149,8 @@ function renderResults() {
         winnerCard.appendChild(buySection);
     }
     
-    // Render scores table
-    const state = StateManager.getState();
-    const criteria = state.currentDecision.criteria;
+    // Render scores table (using state and decision from above)
+    const criteria = decision.criteria;
     
     let tableHtml = `
         <thead>
