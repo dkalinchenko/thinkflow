@@ -4,7 +4,7 @@
  */
 
 import { AI, aiService } from './ai.js';
-import { AffiliateProduct, generateAffiliateLink } from './affiliate.js';
+import { AffiliateProduct, generateAffiliateLink, generateSearchLink } from './affiliate.js';
 
 /**
  * Product category configurations with research prompts
@@ -144,11 +144,16 @@ export async function researchProducts(category, options = {}) {
         // Parse the AI response into product objects
         const products = parseProductResponse(response);
         
-        // Convert to AffiliateProduct instances
-        return products.map(p => new AffiliateProduct({
-            ...p,
-            amazonUrl: p.asin ? generateAffiliateLink(p.asin) : ''
-        }));
+        // Convert to AffiliateProduct instances with search links
+        return products.map(p => {
+            // Generate Amazon search link instead of direct product link
+            const searchUrl = generateSearchLink(p.name, config?.amazonCategory || 'electronics');
+            return new AffiliateProduct({
+                ...p,
+                asin: '', // No real ASIN
+                amazonUrl: searchUrl
+            });
+        });
     } catch (error) {
         console.error('Product research error:', error);
         throw new Error('Failed to research products. Please try again.');
@@ -162,14 +167,16 @@ function getResearchSystemPrompt() {
     return `You are an expert product researcher and tech analyst. Your job is to provide accurate, up-to-date information about consumer electronics and products.
 
 When researching products:
-1. Focus on popular, well-reviewed products available on Amazon
-2. Include real product names and accurate specifications
-3. Provide genuine pros and cons based on expert reviews
-4. Use realistic Amazon star ratings (1-5 scale)
-5. Include estimated prices (may vary)
-6. Generate realistic-looking Amazon ASINs (10-character alphanumeric codes starting with B0)
+1. Focus on REAL, popular products that actually exist and are available on Amazon
+2. Use EXACT product names as they appear on Amazon (e.g., "Apple MacBook Air M3 15-inch", "Sony WH-1000XM5")
+3. Include accurate specifications based on actual product specs
+4. Provide genuine pros and cons based on expert reviews and user feedback
+5. Use realistic Amazon star ratings (1-5 scale)
+6. Include estimated current prices (may vary)
+7. For ASIN, leave it as empty string "" (we'll generate search links instead)
 
-IMPORTANT: Always respond with valid JSON. Do not include any text before or after the JSON array.`;
+IMPORTANT: Suggest REAL products that users can actually find on Amazon. Do not invent fake product names.
+Always respond with valid JSON. Do not include any text before or after the JSON array.`;
 }
 
 /**
@@ -185,12 +192,12 @@ function buildResearchPrompt(categoryName, searchContext, maxProducts, priceRang
     }
 
     prompt += `For each product, provide:
-1. name: Full product name
-2. asin: Amazon ASIN (generate a realistic one like B0XXXXXXXXX)
+1. name: EXACT product name as it appears on Amazon (e.g., "Apple MacBook Air M3 15-inch Laptop")
+2. asin: Leave as empty string "" (we'll generate search links)
 3. description: Brief 1-2 sentence description
-4. price: Estimated price in USD (number only)
-5. rating: Amazon star rating (1-5, can use decimals like 4.5)
-6. reviewCount: Approximate number of reviews
+4. price: Current estimated price in USD (number only, e.g., 1299)
+5. rating: Approximate Amazon star rating (1-5, can use decimals like 4.5)
+6. reviewCount: Approximate number of reviews (e.g., 1234)
 7. imageUrl: Leave empty string ""
 8. specs: Object with key specifications`;
 

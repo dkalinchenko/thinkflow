@@ -5,7 +5,7 @@
 
 // Configuration - Replace with your actual Amazon Associates ID
 const AFFILIATE_CONFIG = {
-    tag: 'thinkflow-20', // Your Amazon Associates tracking ID
+    tag: 'thinkflow09-20', // Your Amazon Associates tracking ID
     marketplace: 'amazon.com',
     enabled: true
 };
