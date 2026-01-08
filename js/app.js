@@ -571,18 +571,20 @@ async function aiResearchProducts() {
     // Get category from decision or default to general
     const category = decision.category || 'laptop';
     const decisionTitle = decision.title || '';
+    const criteria = decision.criteria || [];
     
     // Show loading state
     elements.generateAlternativesBtn.disabled = true;
     elements.generateAlternativesBtn.innerHTML = `
         <div class="spinner-small"></div>
-        Researching products...
+        Loading products...
     `;
     
     try {
-        // Research products using AI
+        // Research products from curated database
         const products = await researchProducts(category, {
             maxProducts: 4,
+            criteria: criteria,
             specificQuery: decisionTitle.includes('Comparison') ? null : decisionTitle
         });
         
@@ -935,8 +937,8 @@ function renderProductCard(product) {
                        class="btn btn-amazon btn-sm" 
                        target="_blank" 
                        rel="noopener sponsored"
-                       onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${product.asin || 'search'}', productName: '${escapeHtml(product.name).replace(/'/g, "\\'")}', source: 'alternatives'})">
-                        ${product.asin ? 'View on Amazon' : 'Search on Amazon'}
+                       onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${product.asin || 'curated'}', productName: '${escapeHtml(product.name).replace(/'/g, "\\'")}', source: 'alternatives'})">
+                        Buy on Amazon
                     </a>
                 ` : ''}
             </div>
@@ -1130,7 +1132,6 @@ function renderResults() {
     if (isProduct && winnerAlt.amazonUrl) {
         const amazonUrl = winnerAlt.amazonUrl;
         const priceDisplay = winnerAlt.price ? formatPrice(winnerAlt.price) : '';
-        const hasRealAsin = winnerAlt.asin && winnerAlt.asin.length > 0;
         
         const buySection = document.createElement('div');
         buySection.className = 'winner-buy-section';
@@ -1140,11 +1141,11 @@ function renderResults() {
                class="btn btn-amazon btn-lg" 
                target="_blank" 
                rel="noopener sponsored"
-               onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${winnerAlt.asin || 'search'}', productName: '${escapeHtml(winner.name).replace(/'/g, "\\'")}', source: 'winner_card'})">
+               onclick="window.trackAffiliateClick && window.trackAffiliateClick({asin: '${winnerAlt.asin || 'curated'}', productName: '${escapeHtml(winner.name).replace(/'/g, "\\'")}', source: 'winner_card'})">
                 <svg class="amazon-icon" viewBox="0 0 24 24" width="18" height="18">
                     <path fill="currentColor" d="M15.93 17.09c-.18.16-.43.17-.63.06-.89-.74-1.05-1.08-1.54-1.79-1.47 1.5-2.51 1.95-4.42 1.95-2.25 0-4.01-1.39-4.01-4.17 0-2.18 1.17-3.64 2.86-4.38 1.46-.64 3.49-.76 5.04-.93v-.35c0-.64.05-1.4-.33-1.96-.32-.49-.95-.7-1.5-.7-1.02 0-1.93.53-2.15 1.61-.05.24-.23.47-.48.48l-2.66-.29c-.22-.05-.47-.22-.4-.55C6.26 3.37 8.74 2.5 10.94 2.5c1.14 0 2.63.3 3.53 1.17 1.14 1.06 1.03 2.48 1.03 4.03v3.65c0 1.1.45 1.58.88 2.18.15.21.18.46-.01.62-.48.4-1.35 1.14-1.82 1.56l-.62-.62z"/>
                 </svg>
-                ${hasRealAsin ? 'Buy Winner on Amazon' : 'Find Winner on Amazon'}
+                Buy Winner on Amazon
             </a>
         `;
         winnerCard.appendChild(buySection);
