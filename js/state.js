@@ -93,7 +93,7 @@ export const StateManager = {
         state.settings = { ...state.settings, ...settings };
         
         // Load theme preference
-        const savedTheme = await SettingsDB.get('theme', 'dark');
+        const savedTheme = await SettingsDB.get('theme', 'light');
         state.ui.theme = savedTheme;
         
         this._notify('decisions');

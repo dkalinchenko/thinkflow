@@ -1142,8 +1142,11 @@ function renderResults() {
     }
     
     if (winnerExplanation) {
-        const strengthsContainer = winnerCard.querySelector('.card-body');
-        strengthsContainer.insertAdjacentHTML('beforeend', winnerExplanation);
+        // Insert after winnerStrengths element
+        const strengthsElement = document.getElementById('winnerStrengths');
+        if (strengthsElement) {
+            strengthsElement.insertAdjacentHTML('afterend', winnerExplanation);
+        }
     }
     
     // Add Amazon buy button for product winners
