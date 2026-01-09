@@ -918,7 +918,7 @@ function renderProductCard(product) {
                     <div class="product-specs">
                         ${Object.entries(product.specs).slice(0, 4).map(([key, value]) => `
                             <div class="spec-item">
-                                <span class="spec-label">${escapeHtml(key.replace(/_/g, ' '))}:</span>
+                                <span class="spec-label">${escapeHtml(key.replace(/_/g, ' '))}</span>
                                 <span class="spec-value">${escapeHtml(String(value))}</span>
                             </div>
                         `).join('')}

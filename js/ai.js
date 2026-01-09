@@ -284,12 +284,14 @@ ${alternative.description ? `Details: ${alternative.description}` : ''}
 Criterion: ${criterion.name}
 ${criterion.description ? `Definition: ${criterion.description}` : ''}
 
-Provide an objective score from 1-10 where:
-- 1-2: Poor/Inadequate
-- 3-4: Below Average
-- 5-6: Average/Acceptable
-- 7-8: Good/Above Average
-- 9-10: Excellent/Outstanding
+Provide an objective score from 1-5 stars where:
+- 1 star: Poor/Significantly below expectations
+- 2 stars: Below average/Some major limitations
+- 3 stars: Average/Acceptable but not exceptional
+- 4 stars: Good/Above average with minor limitations
+- 5 stars: Excellent/Outstanding in this area
+
+IMPORTANT: Use the FULL range (1-5). Don't cluster scores around 3-4. Be decisive and differentiate clearly between alternatives. Reserve 5 stars for truly exceptional performance and 1-2 stars for genuine weaknesses.
 
 Also provide a brief explanation (2-3 sentences) for your score.
 
@@ -315,7 +317,16 @@ ${alternative.description ? `Details: ${alternative.description}` : ''}
 Criteria to evaluate:
 ${criteriaList}
 
-For each criterion, provide a score from 1-10 and a brief explanation.
+For each criterion, provide a score from 1-5 stars where:
+- 1 star: Poor/Significantly below expectations
+- 2 stars: Below average/Some major limitations
+- 3 stars: Average/Acceptable but not exceptional
+- 4 stars: Good/Above average with minor limitations
+- 5 stars: Excellent/Outstanding in this area
+
+CRITICAL: Use the FULL range (1-5). Don't cluster all scores around 3-4. Be decisive and differentiate clearly. A product can have 5 stars in one area and 2 stars in another. This helps users understand real trade-offs. Reserve 5 stars for truly exceptional performance and use 1-2 stars for genuine weaknesses.
+
+For each criterion, also provide a brief explanation (2-3 sentences) justifying your score.
 
 Return ONLY a JSON object with no additional text, where keys are criterion names:
 {

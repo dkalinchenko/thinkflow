@@ -281,11 +281,19 @@ ${product.pros?.length ? `Pros: ${product.pros.join(', ')}` : ''}
 ${product.cons?.length ? `Cons: ${product.cons.join(', ')}` : ''}
 ${product.rating ? `Amazon Rating: ${product.rating}/5 (${product.reviewCount} reviews)` : ''}
 
-Rate this product on the following criteria (1-5 scale, where 5 is excellent):
+Rate this product on the following criteria using a 1-5 star scale:
+- 1 star: Poor/Significantly below expectations
+- 2 stars: Below average/Some major limitations  
+- 3 stars: Average/Acceptable but not exceptional
+- 4 stars: Good/Above average with minor limitations
+- 5 stars: Excellent/Outstanding in this area
 
+Criteria to evaluate:
 ${criteria.map((c, i) => `${i + 1}. ${c.name}: ${c.description || ''}`).join('\n')}
 
-Respond with a JSON object containing ratings and brief explanations:
+IMPORTANT: Use the FULL range (1-5). Don't cluster all scores around 3-4. Be decisive and differentiate clearly between products. A product can excel in one area (5 stars) and be weak in another (1-2 stars). This helps users understand real trade-offs. Reserve 5 stars for truly exceptional performance and use 1-2 stars for genuine weaknesses.
+
+Respond with a JSON object containing ratings and brief explanations (2-3 sentences each):
 {
   "ratings": {
     "criterion_id": { "value": 4, "explanation": "Brief reason" }

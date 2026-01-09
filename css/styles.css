@@ -2157,6 +2157,25 @@ input, select, textarea {
     align-items: start;
 }
 
+.alternative-card.product .alternative-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.alternative-card.product .alternative-name {
+    flex: 1;
+    min-width: 0; /* Allow text truncation */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.alternative-card.product .criterion-actions {
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
 .product-image {
     width: 100px;
     height: 100px;
@@ -2222,17 +2241,22 @@ input, select, textarea {
     margin-top: var(--spacing-sm);
     padding-top: var(--spacing-sm);
     border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xs) var(--spacing-sm);
 }
 
 .spec-item {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-size: 0.8rem;
-    padding: 2px 0;
+    gap: 2px;
 }
 
 .spec-label {
     color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: capitalize;
 }
 
 .spec-value {
