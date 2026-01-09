@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dkalinchenko.github.io/thinkflow/sitemap.xml
