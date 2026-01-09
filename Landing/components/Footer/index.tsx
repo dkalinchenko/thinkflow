@@ -64,7 +64,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://dkalinchenko.github.io/thinkflow/"
+                      href="/thinkflow/app.html"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
@@ -102,7 +102,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://dkalinchenko.github.io/thinkflow/"
+                      href="/thinkflow/app.html"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
