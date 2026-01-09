@@ -23,13 +23,20 @@ export function generateAffiliateLink(asin, tag = AFFILIATE_CONFIG.tag) {
 
 /**
  * Generate Amazon search affiliate link
- * @param {string} query - Search query
+ * @param {string} query - Search query (product name)
  * @param {string} category - Optional Amazon category
  * @returns {string} - Amazon search URL with affiliate tag
  */
-export function generateSearchLink(query, category = 'electronics') {
+export function generateSearchLink(query, category = null) {
+    if (!query) return '#';
     const encodedQuery = encodeURIComponent(query);
-    return `https://www.${AFFILIATE_CONFIG.marketplace}/s?k=${encodedQuery}&i=${category}&tag=${AFFILIATE_CONFIG.tag}`;
+    // Build URL with optional category filter
+    let url = `https://www.${AFFILIATE_CONFIG.marketplace}/s?k=${encodedQuery}`;
+    if (category) {
+        url += `&i=${category}`;
+    }
+    url += `&tag=${AFFILIATE_CONFIG.tag}`;
+    return url;
 }
 
 /**
@@ -59,16 +66,16 @@ export function extractASIN(url) {
 
 /**
  * Track affiliate link click (for analytics)
- * @param {Object} data - Click data
+ * @param {Object} data - Click data (asin is optional)
  */
 export function trackAffiliateClick(data) {
-    const { asin, productName, source, decisionId } = data;
+    const { asin = null, productName, source, decisionId = null } = data;
     
     // Log to console for development
     console.log('Affiliate click tracked:', {
-        asin,
         productName,
         source,
+        asin,
         decisionId,
         timestamp: new Date().toISOString()
     });
@@ -76,9 +83,9 @@ export function trackAffiliateClick(data) {
     // Store click in localStorage for basic analytics
     const clicks = JSON.parse(localStorage.getItem('thinkflow_affiliate_clicks') || '[]');
     clicks.push({
-        asin,
         productName,
         source,
+        asin,
         decisionId,
         timestamp: Date.now()
     });

@@ -1,7 +1,0 @@
-category,name,affiliate_link,price,image_url,rating,specs_cpu,specs_ram,specs_storage,specs_display,description
-laptop,Apple MacBook Air M3 15-inch,https://www.bestbuy.com/site/apple-macbook-air-15-laptop-m3-chip-8gb-memory-256gb-ssd-midnight/6534606.p?skuId=6534606,1099,,4.8,Apple M3,8GB,256GB SSD,15.3" Liquid Retina,Lightweight powerhouse with all-day battery life
-laptop,Dell XPS 15 (2024),https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9530-laptop,1499,,4.6,Intel Core i7-13700H,16GB,512GB SSD,15.6" OLED 3.5K,Premium Windows laptop with stunning display
-laptop,Lenovo ThinkPad X1 Carbon Gen 11,https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-11/len101t0049,1649,,4.7,Intel Core i7-1365U,16GB,512GB SSD,14" 2.8K OLED,Ultimate business laptop with legendary durability
-smartphone,Apple iPhone 15 Pro Max,https://www.apple.com/shop/buy-iphone/iphone-15-pro-max,1199,,4.8,A17 Pro,8GB,256GB,6.7" Super Retina XDR,Pro camera system with titanium design
-smartphone,Samsung Galaxy S24 Ultra,https://www.samsung.com/us/smartphones/galaxy-s24-ultra/,1299,,4.7,Snapdragon 8 Gen 3,12GB,256GB,6.8" QHD+ Dynamic AMOLED,AI-powered features with built-in S Pen
-smartphone,Google Pixel 8 Pro,https://store.google.com/product/pixel_8_pro,999,,4.6,Google Tensor G3,12GB,128GB,6.7" LTPO OLED,Best-in-class AI and camera experience

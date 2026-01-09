@@ -1,11 +1,10 @@
 /**
- * AI-Powered Product Research for ThinkFlow
- * Uses curated product database with AI-powered matching
+ * AI-Powered Amazon Product Research for ThinkFlow
+ * Uses AI to research, compare, and analyze products from Amazon
  */
 
 import { AI, aiService } from './ai.js';
-import { AffiliateProduct, generateAffiliateLink, generateSearchLink } from './affiliate.js';
-import { loadProducts, getProductsByCategory, getAllProducts } from './product-database.js';
+import { AffiliateProduct, generateSearchLink } from './affiliate.js';
 
 /**
  * Product category configurations with research prompts
@@ -115,14 +114,13 @@ export function getCategories() {
 }
 
 /**
- * Research products from curated database with AI-powered selection
- * Uses curated product database instead of AI-generated products
+ * AI-powered product research
+ * Uses AI to find and analyze products based on category and criteria
  */
 export async function researchProducts(category, options = {}) {
     const { 
         maxProducts = 5, 
         priceRange = null,
-        criteria = [],
         specificQuery = null 
     } = options;
     
@@ -131,133 +129,142 @@ export async function researchProducts(category, options = {}) {
         throw new Error(`Unknown category: ${category}`);
     }
     
+    const categoryName = config?.name || 'Products';
+    const searchContext = specificQuery || `top ${categoryName} in 2024-2025`;
+    
+    // Build the combined prompt with system instructions
+    const systemPrompt = getResearchSystemPrompt();
+    const userPrompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields);
+    const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
+    
     try {
-        // Load products from database
-        await loadProducts();
+        // Use aiService.call() which handles the API request
+        const response = await aiService.call(fullPrompt, { skipCache: true });
         
-        // Get products for the category
-        let products = getProductsByCategory(category);
-        
-        // If no products in category, return empty with message
-        if (products.length === 0) {
-            console.log(`No products found in category: ${category}`);
-            // Fall back to all products if category is empty
-            products = getAllProducts();
-            if (products.length === 0) {
-                throw new Error('No products available. Please add products to data/products.csv');
-            }
-        }
-        
-        // Filter by price range if specified
-        if (priceRange) {
-            products = products.filter(p => {
-                if (!p.price) return true; // Include products without price
-                if (priceRange.min && p.price < priceRange.min) return false;
-                if (priceRange.max && p.price > priceRange.max) return false;
-                return true;
-            });
-        }
-        
-        // If we have criteria and AI is available, use AI to select best matches
-        if (criteria.length > 0 && aiService.isAvailable()) {
-            products = await aiSelectProducts(products, criteria, maxProducts);
-        } else {
-            // Otherwise, return random selection up to maxProducts
-            products = shuffleArray(products).slice(0, maxProducts);
-        }
+        // Parse the AI response into product objects
+        const products = parseProductResponse(response);
         
         // Convert to AffiliateProduct instances
         return products.map(p => new AffiliateProduct({
-            id: p.id,
-            name: p.name,
-            description: p.description || '',
-            price: p.price,
-            rating: p.rating,
-            reviewCount: 0, // CSV doesn't have this yet
-            imageUrl: p.image_url || '',
-            asin: '', // We don't have real ASINs
-            amazonUrl: p.affiliate_link, // Use the curated affiliate link
-            specs: p.specs || {},
-            pros: [],
-            cons: []
+            ...p,
+            amazonUrl: generateSearchLink(p.name) // Use search link based on product name
         }));
     } catch (error) {
         console.error('Product research error:', error);
-        throw error;
+        throw new Error('Failed to research products. Please try again.');
     }
 }
 
 /**
- * Use AI to intelligently select best matching products from database
+ * Get system prompt for product research
  */
-async function aiSelectProducts(products, criteria, maxProducts) {
-    if (products.length <= maxProducts) {
-        return products;
+function getResearchSystemPrompt() {
+    return `You are an expert product researcher and tech analyst. Your job is to provide accurate, up-to-date information about consumer electronics and products.
+
+When researching products:
+1. Focus on popular, well-reviewed products available on Amazon
+2. Include real product names and accurate specifications
+3. Provide genuine pros and cons based on expert reviews
+4. Use realistic Amazon star ratings (1-5 scale)
+5. Include estimated prices (may vary)
+
+IMPORTANT: Always respond with valid JSON. Do not include any text before or after the JSON array.`;
+}
+
+/**
+ * Build research prompt for AI
+ */
+function buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, specFields) {
+    let prompt = `Research and provide detailed information about ${maxProducts} top ${categoryName} products based on: "${searchContext}"
+
+`;
+
+    if (priceRange) {
+        prompt += `Price range: ${priceRange.min ? '$' + priceRange.min : 'Any'} - ${priceRange.max ? '$' + priceRange.max : 'Any'}\n\n`;
     }
+
+    prompt += `For each product, provide:
+1. name: Full product name (exact model/variant)
+2. description: Brief 1-2 sentence description
+3. price: Estimated price in USD (number only)
+4. rating: Amazon star rating (1-5, can use decimals like 4.5)
+5. reviewCount: Approximate number of reviews
+6. imageUrl: Leave empty string ""
+7. specs: Object with key specifications`;
+
+    if (specFields && specFields.length > 0) {
+        prompt += ` (include: ${specFields.join(', ')})`;
+    }
+
+    prompt += `
+8. pros: Array of 3-4 key advantages
+9. cons: Array of 2-3 notable drawbacks
+
+Respond with a JSON array of products. Example format:
+[
+  {
+    "name": "Product Name Model",
+    "description": "Brief description",
+    "price": 999,
+    "rating": 4.5,
+    "reviewCount": 1234,
+    "imageUrl": "",
+    "specs": {
+      "processor": "Apple M3 Pro",
+      "ram": "18GB"
+    },
+    "pros": ["Great battery life", "Excellent display"],
+    "cons": ["Expensive", "Limited ports"]
+  }
+]
+
+Provide exactly ${maxProducts} products, ranked by overall quality and popularity.`;
+
+    return prompt;
+}
+
+/**
+ * Parse AI response into product objects
+ */
+function parseProductResponse(response) {
+    // Extract JSON from response (handle potential markdown code blocks)
+    let jsonStr = response;
     
-    // Build product summaries for AI
-    const productSummaries = products.map((p, index) => ({
-        index,
-        name: p.name,
-        price: p.price || 'Unknown',
-        specs: p.specs || {},
-        description: p.description || ''
-    }));
-    
-    // Build criteria summary
-    const criteriaSummary = criteria.map(c => 
-        `${c.name} (weight: ${c.weight}): ${c.description || ''}`
-    ).join('\n');
-    
-    const prompt = `You are a product selection expert. Given the following criteria and available products, select the ${maxProducts} products that best match the criteria.
-
-CRITERIA (prioritize by weight):
-${criteriaSummary}
-
-AVAILABLE PRODUCTS:
-${JSON.stringify(productSummaries, null, 2)}
-
-Select the ${maxProducts} best matching products based on the criteria. Consider product names, specs, and descriptions.
-
-Respond with ONLY a JSON array of product indices (0-based), ranked by match quality. Example: [2, 0, 4]`;
-
-    try {
-        const response = await aiService.call(prompt);
-        
-        // Parse the response to get indices
-        let jsonStr = response;
-        const arrayMatch = response.match(/\[[\d,\s]+\]/);
+    // Try to extract JSON from code blocks
+    const jsonMatch = response.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (jsonMatch) {
+        jsonStr = jsonMatch[1].trim();
+    } else {
+        // Try to find JSON array directly
+        const arrayMatch = response.match(/\[[\s\S]*\]/);
         if (arrayMatch) {
             jsonStr = arrayMatch[0];
         }
-        
-        const indices = JSON.parse(jsonStr);
-        
-        if (Array.isArray(indices) && indices.every(i => typeof i === 'number')) {
-            // Return products in the order selected by AI
-            return indices
-                .filter(i => i >= 0 && i < products.length)
-                .slice(0, maxProducts)
-                .map(i => products[i]);
-        }
-    } catch (error) {
-        console.error('AI product selection failed, using random selection:', error);
     }
     
-    // Fallback to random selection
-    return shuffleArray(products).slice(0, maxProducts);
-}
-
-/**
- * Shuffle array randomly
- */
-function shuffleArray(array) {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    try {
+        const products = JSON.parse(jsonStr);
+        
+        if (!Array.isArray(products)) {
+            throw new Error('Response is not an array');
+        }
+        
+        // Validate and clean each product
+        return products.map(p => ({
+            name: p.name || 'Unknown Product',
+            description: p.description || '',
+            price: typeof p.price === 'number' ? p.price : parseFloat(p.price) || null,
+            rating: typeof p.rating === 'number' ? Math.min(5, Math.max(1, p.rating)) : null,
+            reviewCount: parseInt(p.reviewCount) || 0,
+            imageUrl: p.imageUrl || '',
+            specs: p.specs || {},
+            pros: Array.isArray(p.pros) ? p.pros : [],
+            cons: Array.isArray(p.cons) ? p.cons : []
+        }));
+    } catch (error) {
+        console.error('Failed to parse product response:', error, jsonStr);
+        throw new Error('Failed to parse product data');
     }
-    return shuffled;
 }
 
 /**
@@ -270,8 +277,9 @@ export async function evaluateProduct(product, criteria) {
 Product: ${product.name}
 ${product.description ? `Description: ${product.description}` : ''}
 ${product.specs ? `Specs: ${JSON.stringify(product.specs)}` : ''}
-${product.price ? `Price: $${product.price}` : ''}
-${product.rating ? `Rating: ${product.rating}/5` : ''}
+${product.pros?.length ? `Pros: ${product.pros.join(', ')}` : ''}
+${product.cons?.length ? `Cons: ${product.cons.join(', ')}` : ''}
+${product.rating ? `Amazon Rating: ${product.rating}/5 (${product.reviewCount} reviews)` : ''}
 
 Rate this product on the following criteria (1-5 scale, where 5 is excellent):
 
@@ -329,8 +337,8 @@ export async function evaluateAllProducts(products, criteria) {
         try {
             const ratings = await evaluateProduct(product, criteria);
             
-            // Map ratings to product alternative ID if available
-            const productId = product.id || product.asin;
+            // Map ratings to product alternative ID
+            const productId = product.id || product.name;
             allScores[productId] = {};
             
             Object.entries(ratings).forEach(([criterionId, scoreData]) => {
