@@ -3,10 +3,9 @@
  * Enables offline functionality and caching
  */
 
-const CACHE_NAME = 'thinkflow-v8';
+const CACHE_NAME = 'thinkflow-v9';
 const STATIC_ASSETS = [
-    '/',
-    '/index.html',
+    '/app.html',
     '/css/styles.css',
     '/js/app.js',
     '/js/db.js',
@@ -106,7 +105,7 @@ self.addEventListener('fetch', (event) => {
             }).catch(() => {
                 // Return offline fallback for navigation requests
                 if (event.request.mode === 'navigate') {
-                    return caches.match('/index.html');
+                    return caches.match('/app.html');
                 }
                 return new Response('Offline', { status: 503 });
             });

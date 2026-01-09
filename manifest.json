@@ -2,7 +2,7 @@
     "name": "ThinkFlow - AI Product Comparison Tool",
     "short_name": "ThinkFlow",
     "description": "AI-powered product comparison tool. Compare laptops, phones, cameras & more with smart analysis to find your perfect tech purchase.",
-    "start_url": "/",
+    "start_url": "/app.html",
     "display": "standalone",
     "background_color": "#f8f9fc",
     "theme_color": "#6366f1",
