@@ -45,9 +45,9 @@ const featuresData: Feature[] = [
         <path d="M38 20H26L20 8L14 20H2C0.9 20 0 20.9 0 22C0 23.1 0.9 24 2 24H6C6 27.31 8.69 30 12 30C15.31 30 18 27.31 18 24H22C22 27.31 24.69 30 28 30C31.31 30 34 27.31 34 24H38C39.1 24 40 23.1 40 22C40 20.9 39.1 20 38 20ZM12 28C10.9 28 10 27.1 10 26C10 24.9 10.9 24 12 24C13.1 24 14 24.9 14 26C14 27.1 13.1 28 12 28ZM28 28C26.9 28 26 27.1 26 26C26 24.9 26.9 24 28 24C29.1 24 30 24.9 30 26C30 27.1 29.1 28 28 28Z" />
       </svg>
     ),
-    title: "Weighted Scoring",
+    title: "Weighted Scoring Model",
     paragraph:
-      "Not all factors are equal. Assign importance levels to each criterion so the comparison reflects your true priorities. Price vs. features – you decide what wins.",
+      "Use our weighted decision matrix to assign importance levels to each criterion. Our scoring model ensures the comparison reflects your true priorities—a proven selection matrix methodology.",
   },
   {
     id: 4,
@@ -88,9 +88,9 @@ const featuresData: Feature[] = [
         <circle cx="20" cy="26" r="3" />
       </svg>
     ),
-    title: "Privacy First",
+    title: "No Signup Required",
     paragraph:
-      "No account needed, ever. Everything runs in your browser with no cloud storage. Your data stays on your device – complete privacy guaranteed.",
+      "No account needed, ever. Our decision matrix calculator runs entirely in your browser with no cloud storage. Your data stays private on your device—completely free to use.",
   },
   {
     id: 7,

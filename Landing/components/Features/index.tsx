@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Everything You Need to Decide Smarter"
-            paragraph="OptiMind gives you powerful tools to compare products and make confident choices. No more decision fatigue – just clear, data-driven results."
+            title="Powerful Decision Matrix Features"
+            paragraph="Our weighted scoring model and selection matrix tools help you make objective decisions. Compare products using customizable criteria with AI-powered analysis. No signup required, completely free."
             center
           />
 

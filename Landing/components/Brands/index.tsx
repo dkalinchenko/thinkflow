@@ -61,15 +61,42 @@ const Brands = () => {
                 {category.name}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {category.templates.map((template) => (
-                  <a
-                    key={template.id}
-                    href={`/app.html?template=${template.id}`}
-                    className="inline-block rounded-md bg-gray-2 px-3 py-1.5 text-sm font-medium text-black transition-all hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:hover:bg-primary"
-                  >
-                    {template.name}
-                  </a>
-                ))}
+                {category.templates.map((template) => {
+                  // Map template IDs to comparison page slugs
+                  const slugMap: Record<string, string> = {
+                    'laptop-comparison': 'laptops',
+                    'smartphone-comparison': 'smartphones',
+                    'headphones-comparison': 'headphones',
+                    'camera-comparison': 'cameras',
+                    'smartwatch-comparison': 'smartwatches',
+                    'tablet-comparison': 'tablets',
+                    'refrigerator-comparison': 'refrigerators',
+                    'washing-machine-comparison': 'washing-machines',
+                    'dishwasher-comparison': 'dishwashers',
+                    'vacuum-cleaner-comparison': 'vacuum-cleaners',
+                    'air-purifier-comparison': 'air-purifiers',
+                    'coffee-maker-comparison': 'coffee-makers',
+                    'treadmill-comparison': 'treadmills',
+                    'exercise-bike-comparison': 'exercise-bikes',
+                    'rowing-machine-comparison': 'rowing-machines',
+                    'fitness-tracker-comparison': 'fitness-trackers',
+                    'yoga-mat-comparison': 'yoga-mats',
+                    'home-gym-equipment-comparison': 'home-gyms',
+                  };
+                  
+                  const slug = slugMap[template.id];
+                  const href = slug ? `/compare/${slug}` : `/app.html?template=${template.id}`;
+                  
+                  return (
+                    <a
+                      key={template.id}
+                      href={href}
+                      className="inline-block rounded-md bg-gray-2 px-3 py-1.5 text-sm font-medium text-black transition-all hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:hover:bg-primary"
+                    >
+                      {template.name}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           ))}
