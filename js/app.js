@@ -1120,11 +1120,14 @@ function renderResults() {
     const winnerExplanations = [];
     decision.criteria.forEach(c => {
         if (winnerScores[c.id]?.explanation) {
-            winnerExplanations.push(`<strong>${escapeHtml(c.name)}:</strong> ${escapeHtml(winnerScores[c.id].explanation)}`);
+            winnerExplanations.push(`<p><strong>${escapeHtml(c.name)}:</strong> ${escapeHtml(winnerScores[c.id].explanation)}</p>`);
         }
     });
     const winnerExplanation = winnerExplanations.length > 0 
-        ? `<div class="winner-explanation"><p>${winnerExplanations.join(' ')}</p></div>`
+        ? `<div class="winner-explanation">
+            <h4>AI Evaluation for ${escapeHtml(winner.name)}</h4>
+            ${winnerExplanations.join('')}
+           </div>`
         : '';
     
     // Render winner card

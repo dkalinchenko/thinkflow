@@ -1481,16 +1481,21 @@ input, select, textarea {
 .winner-explanation {
     margin-top: var(--spacing-md);
     padding: var(--spacing-md);
-    background: var(--bg-tertiary);
+    border-left: 3px solid var(--accent-primary);
+    background: var(--bg-secondary);
     border-radius: var(--radius-sm);
-    border-left: 3px solid var(--accent-success);
+}
+
+.winner-explanation h4 {
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--accent-primary);
+    font-size: 1rem;
 }
 
 .winner-explanation p {
-    margin: 0;
+    margin: var(--spacing-sm) 0;
     color: var(--text-secondary);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .ai-insights-card {
