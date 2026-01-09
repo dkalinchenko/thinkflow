@@ -63,7 +63,7 @@ const featuresData: Feature[] = [
     ),
     title: "AI Suggestions",
     paragraph:
-      "Not sure what to consider? ThinkFlow's AI suggests relevant criteria and product options. It's like having a personal shopping assistant who knows all the specs.",
+      "Not sure what to consider? OptiMind's AI suggests relevant criteria and product options. It's like having a personal shopping assistant who knows all the specs.",
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
     ),
     title: "Visual Results",
     paragraph:
-      "See winners at a glance with charts and score summaries. ThinkFlow calculates total scores instantly and highlights the best choice for you.",
+      "See winners at a glance with charts and score summaries. OptiMind calculates total scores instantly and highlights the best choice for you.",
   },
   {
     id: 6,

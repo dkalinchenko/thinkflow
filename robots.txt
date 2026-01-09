@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dkalinchenko.github.io/thinkflow/sitemap.xml
+Sitemap: https://optimind.space/sitemap.xml

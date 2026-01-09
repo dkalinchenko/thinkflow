@@ -1,5 +1,5 @@
 /**
- * ThinkFlow AI - Main Application
+ * OptiMind AI - Main Application
  * Decision-making powered by AI
  */
 
@@ -1741,7 +1741,7 @@ async function handleExportAll() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `thinkflow-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `optimind-backup-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
     showToast('All decisions exported', 'success');

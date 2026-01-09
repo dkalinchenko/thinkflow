@@ -1,10 +1,10 @@
 /**
- * Analytics & Conversion Tracking for ThinkFlow
+ * Analytics & Conversion Tracking for OptiMind
  * Tracks user behavior and affiliate conversions
  */
 
 // Analytics storage key
-const ANALYTICS_KEY = 'thinkflow_analytics';
+const ANALYTICS_KEY = 'optimind_analytics';
 
 /**
  * Analytics data structure
@@ -250,7 +250,7 @@ if (typeof window !== 'undefined') {
     }
     
     // Expose for debugging
-    window.ThinkFlowAnalytics = Analytics;
+    window.OptiMindAnalytics = Analytics;
 }
 
 export default Analytics;

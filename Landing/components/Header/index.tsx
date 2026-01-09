@@ -58,7 +58,7 @@ const Header = () => {
                 } `}
               >
                 <span className="text-3xl">🧠</span>
-                <span className="text-2xl font-bold text-black dark:text-white">ThinkFlow</span>
+                <span className="text-2xl font-bold text-black dark:text-white">OptiMind</span>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">

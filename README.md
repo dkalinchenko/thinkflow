@@ -37,7 +37,7 @@ Your API key is stored locally and encrypted. It's only used to communicate dire
 ## 📁 Project Structure
 
 ```
-thinkflow.light/
+optimind.light/
 ├── index.html          # Main application
 ├── manifest.json       # PWA manifest
 ├── sw.js              # Service worker for offline

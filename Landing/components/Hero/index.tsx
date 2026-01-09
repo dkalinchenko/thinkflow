@@ -15,7 +15,7 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  ThinkFlow: AI-Powered Decision Matrix for Smarter Product Comparisons
+                  OptiMind: AI-Powered Decision Matrix for Smarter Product Comparisons
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Cut through the noise. Compare products side-by-side and make confident choices with AI-powered insights. No account needed – start deciding smarter in seconds.
@@ -27,7 +27,7 @@ const Hero = () => {
                     rel="noopener noreferrer"
                     className="inline-block rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/90"
                   >
-                    Try ThinkFlow Free 🎉
+                    Try OptiMind Free 🎉
                   </Link>
                   <Link
                     href="#features"

@@ -1,5 +1,5 @@
 /**
- * AI Service Adapter for ThinkFlow AI
+ * AI Service Adapter for OptiMind AI
  * Handles communication with AI providers (DeepSeek, OpenAI, etc.)
  */
 

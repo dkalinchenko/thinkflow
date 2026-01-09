@@ -1,11 +1,11 @@
 /**
- * Amazon Affiliate Integration for ThinkFlow
+ * Amazon Affiliate Integration for OptiMind
  * Handles affiliate link generation, tracking, and compliance
  */
 
 // Configuration - Replace with your actual Amazon Associates ID
 const AFFILIATE_CONFIG = {
-    tag: 'thinkflow09-20', // Your Amazon Associates tracking ID
+    tag: 'optimind09-20', // Your Amazon Associates tracking ID
     marketplace: 'amazon.com',
     enabled: true
 };
@@ -81,7 +81,7 @@ export function trackAffiliateClick(data) {
     });
     
     // Store click in localStorage for basic analytics
-    const clicks = JSON.parse(localStorage.getItem('thinkflow_affiliate_clicks') || '[]');
+    const clicks = JSON.parse(localStorage.getItem('optimind_affiliate_clicks') || '[]');
     clicks.push({
         productName,
         source,
@@ -95,7 +95,7 @@ export function trackAffiliateClick(data) {
         clicks.splice(0, clicks.length - 100);
     }
     
-    localStorage.setItem('thinkflow_affiliate_clicks', JSON.stringify(clicks));
+    localStorage.setItem('optimind_affiliate_clicks', JSON.stringify(clicks));
     
     // Future: Send to analytics service
     // analytics.track('affiliate_click', data);
@@ -106,7 +106,7 @@ export function trackAffiliateClick(data) {
  * @returns {Object} - Click statistics
  */
 export function getClickStats() {
-    const clicks = JSON.parse(localStorage.getItem('thinkflow_affiliate_clicks') || '[]');
+    const clicks = JSON.parse(localStorage.getItem('optimind_affiliate_clicks') || '[]');
     
     const stats = {
         totalClicks: clicks.length,
@@ -237,7 +237,7 @@ export function generateProductCardHTML(product, options = {}) {
  */
 export const FTC_DISCLOSURE = {
     short: 'As an Amazon Associate, we earn from qualifying purchases.',
-    full: 'ThinkFlow is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click on product links and make a purchase, we may earn a commission at no additional cost to you.',
+    full: 'OptiMind is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click on product links and make a purchase, we may earn a commission at no additional cost to you.',
     inline: 'Affiliate link'
 };
 

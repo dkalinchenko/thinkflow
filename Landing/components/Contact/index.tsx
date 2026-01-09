@@ -15,7 +15,7 @@ const Contact = () => {
                 Ready to Make Smarter Decisions?
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Got questions, feedback, or feature requests? We&apos;d love to hear from you! Your input helps make ThinkFlow even better.
+                Got questions, feedback, or feature requests? We&apos;d love to hear from you! Your input helps make OptiMind even better.
               </p>
               <form>
                 <div className="-mx-4 flex flex-wrap">

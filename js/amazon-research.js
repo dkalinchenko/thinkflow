@@ -1,5 +1,5 @@
 /**
- * AI-Powered Amazon Product Research for ThinkFlow
+ * AI-Powered Amazon Product Research for OptiMind
  * Uses AI to research, compare, and analyze products from Amazon
  */
 

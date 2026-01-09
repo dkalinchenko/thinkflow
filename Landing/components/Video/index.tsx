@@ -14,8 +14,8 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="See ThinkFlow in Action"
-          paragraph="Watch how ThinkFlow transforms decision fatigue into confident choices in just 6 simple steps. From confusion to clarity in minutes."
+          title="See OptiMind in Action"
+          paragraph="Watch how OptiMind transforms decision fatigue into confident choices in just 6 simple steps. From confusion to clarity in minutes."
           center
           mb="80px"
         />

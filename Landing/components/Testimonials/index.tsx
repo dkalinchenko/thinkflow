@@ -9,7 +9,7 @@ const getTestimonialData = (): Testimonial[] => [
     name: "Sarah Chen",
     designation: "Tech Enthusiast",
     content:
-      "ThinkFlow saved me hours of research! Instead of juggling dozens of browser tabs, everything was in one place. I found my perfect laptop in 20 minutes.",
+      "OptiMind saved me hours of research! Instead of juggling dozens of browser tabs, everything was in one place. I found my perfect laptop in 20 minutes.",
     image: getImagePath("/images/testimonials/auth-01.png"),
     star: 5,
   },
@@ -18,7 +18,7 @@ const getTestimonialData = (): Testimonial[] => [
     name: "Michael Rodriguez",
     designation: "Online Shopper",
     content:
-      "The weighted scoring is genius. I could prioritize battery life over price, and ThinkFlow showed me exactly which phone matched MY needs – not someone else's.",
+      "The weighted scoring is genius. I could prioritize battery life over price, and OptiMind showed me exactly which phone matched MY needs – not someone else's.",
     image: getImagePath("/images/testimonials/auth-02.png"),
     star: 5,
   },
@@ -27,7 +27,7 @@ const getTestimonialData = (): Testimonial[] => [
     name: "Emma Thompson",
     designation: "Smart Buyer",
     content:
-      "No more buyer's remorse! ThinkFlow helped me make a logical, data-driven choice instead of an impulse buy. I actually trust my decisions now.",
+      "No more buyer's remorse! OptiMind helped me make a logical, data-driven choice instead of an impulse buy. I actually trust my decisions now.",
     image: getImagePath("/images/testimonials/auth-03.png"),
     star: 5,
   },
@@ -38,7 +38,7 @@ const Testimonials = () => {
     <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Why People Love ThinkFlow"
+          title="Why People Love OptiMind"
           paragraph="Join thousands of smart shoppers who've discovered a better way to make decisions. No more analysis paralysis – just confidence."
           center
         />

@@ -59,7 +59,7 @@ const Brands = () => {
       <div className="container">
         <SectionTitle
           title="Compare Anything"
-          paragraph="ThinkFlow is flexible enough for any decision. From electronics to life choices, we've got you covered."
+          paragraph="OptiMind is flexible enough for any decision. From electronics to life choices, we've got you covered."
           center
           mb="50px"
         />
@@ -86,7 +86,7 @@ const Brands = () => {
         
         <div className="mt-12 text-center">
           <p className="text-base font-medium text-body-color">
-            Any time you have multiple options to weigh, ThinkFlow brings clarity.
+            Any time you have multiple options to weigh, OptiMind brings clarity.
           </p>
         </div>
       </div>

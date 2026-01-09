@@ -8,7 +8,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple Pricing: Free Forever"
-          paragraph="ThinkFlow is completely free with all features included. No hidden costs, no premium tiers, no subscriptions. Just smart decisions."
+          paragraph="OptiMind is completely free with all features included. No hidden costs, no premium tiers, no subscriptions. Just smart decisions."
           center
           width="665px"
         />
@@ -55,7 +55,7 @@ const Pricing = () => {
             
             <div className="mt-8 border-t border-body-color border-opacity-10 pt-8 text-center dark:border-white dark:border-opacity-10">
               <p className="text-sm font-medium text-body-color">
-                💡 Want to support ThinkFlow? Premium features coming soon!
+                💡 Want to support OptiMind? Premium features coming soon!
               </p>
             </div>
           </div>

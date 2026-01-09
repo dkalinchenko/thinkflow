@@ -28,10 +28,10 @@ const AboutSectionTwo = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
-                How ThinkFlow Works
+                How OptiMind Works
               </h2>
               <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg">
-                Using ThinkFlow is quick and intuitive. Get from indecision to clarity in 6 simple steps:
+                Using OptiMind is quick and intuitive. Get from indecision to clarity in 6 simple steps:
               </p>
               <div className="mb-6">
                 <h3 className="mb-3 flex items-center text-xl font-bold text-black dark:text-white">
@@ -66,7 +66,7 @@ const AboutSectionTwo = () => {
                   Assign Weights
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color pl-11">
-                  Tell ThinkFlow how important each criterion is – maybe performance 30%, price 30%, battery 20%.
+                  Tell OptiMind how important each criterion is – maybe performance 30%, price 30%, battery 20%.
                 </p>
               </div>
               <div className="mb-6">

@@ -16,10 +16,10 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-flex items-center gap-2">
                   <span className="text-3xl">🧠</span>
-                  <span className="text-2xl font-bold text-black dark:text-white">ThinkFlow</span>
+                  <span className="text-2xl font-bold text-black dark:text-white">OptiMind</span>
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Making smart decisions, one comparison at a time. ThinkFlow helps you cut through decision fatigue with AI-powered insights.
+                  Making smart decisions, one comparison at a time. OptiMind helps you cut through decision fatigue with AI-powered insights.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -92,7 +92,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://github.com/dkalinchenko/thinkflow"
+                      href="https://github.com/dkalinchenko/optimind"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
@@ -118,7 +118,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              © 2025 ThinkFlow. All rights reserved. Making smart decisions, one comparison at a time.
+              © 2025 OptiMind. All rights reserved. Making smart decisions, one comparison at a time.
             </p>
           </div>
         </div>

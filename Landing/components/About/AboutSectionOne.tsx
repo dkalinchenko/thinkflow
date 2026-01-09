@@ -25,8 +25,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="What Can ThinkFlow Do for You?"
-                paragraph="ThinkFlow is your personal decision-making assistant. Whether you're shopping for electronics, appliances, fitness gear, or even making life decisions, we've got you covered."
+                title="What Can OptiMind Do for You?"
+                paragraph="OptiMind is your personal decision-making assistant. Whether you're shopping for electronics, appliances, fitness gear, or even making life decisions, we've got you covered."
                 mb="44px"
               />
 

@@ -10,8 +10,8 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Learn More About ThinkFlow"
-          paragraph="Discover how ThinkFlow compares to other tools and why thousands choose us for smarter decision-making."
+          title="Learn More About OptiMind"
+          paragraph="Discover how OptiMind compares to other tools and why thousands choose us for smarter decision-making."
           center
         />
 

@@ -1,9 +1,9 @@
 /**
- * ThinkFlow AI - Service Worker
+ * OptiMind AI - Service Worker
  * Enables offline functionality and caching
  */
 
-const CACHE_NAME = 'thinkflow-v9';
+const CACHE_NAME = 'optimind-v1';
 const STATIC_ASSETS = [
     '/app.html',
     '/css/styles.css',

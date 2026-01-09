@@ -1,6 +1,6 @@
-# ThinkFlow - AI-Powered Decision Matrix Landing Page
+# OptiMind - AI-Powered Decision Matrix Landing Page
 
-ThinkFlow is an AI-driven decision matrix app that helps you compare products and make confident choices. This is the official landing page built with Next.js 13 and Tailwind CSS.
+OptiMind is an AI-driven decision matrix app that helps you compare products and make confident choices. This is the official landing page built with Next.js 13 and Tailwind CSS.
 
 ## Features
 
@@ -32,9 +32,9 @@ npm run dev
 npm run build
 ```
 
-## About ThinkFlow
+## About OptiMind
 
-ThinkFlow cuts through decision fatigue by combining a classic decision matrix framework with AI suggestions. Compare products side-by-side, customize your criteria, and get data-driven recommendations - all without creating an account.
+OptiMind cuts through decision fatigue by combining a classic decision matrix framework with AI suggestions. Compare products side-by-side, customize your criteria, and get data-driven recommendations - all without creating an account.
 
 ## License
 

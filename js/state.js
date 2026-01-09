@@ -1,5 +1,5 @@
 /**
- * State Management for ThinkFlow AI
+ * State Management for OptiMind AI
  * Simple reactive state management
  */
 
@@ -31,7 +31,7 @@ const state = {
         aiProvider: 'deepseek',
         apiKey: '',
         scoreScale: 5, // 5-star rating system
-        affiliateTag: 'thinkflow-20', // Amazon Associates tracking ID
+        affiliateTag: 'optimind-20', // Amazon Associates tracking ID
         affiliateEnabled: true
     },
     

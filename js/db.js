@@ -1,10 +1,10 @@
 /**
  * Database Layer - IndexedDB with Dexie.js
- * Handles all data persistence for ThinkFlow AI
+ * Handles all data persistence for OptiMind AI
  */
 
 // Initialize Dexie database
-const db = new Dexie('ThinkFlowDB');
+const db = new Dexie('OptiMindDB');
 
 // Define database schema
 db.version(1).stores({

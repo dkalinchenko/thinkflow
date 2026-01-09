@@ -4,8 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
-  basePath: '/thinkflow',
-  assetPrefix: '/thinkflow/',
+  basePath: '',
+  assetPrefix: '',
   images: {
     unoptimized: true,
     domains: ["localhost"],

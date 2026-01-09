@@ -1,5 +1,5 @@
 /**
- * Utility Functions for ThinkFlow AI
+ * Utility Functions for OptiMind AI
  */
 
 /**

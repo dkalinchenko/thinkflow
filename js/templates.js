@@ -1,5 +1,5 @@
 /**
- * Decision Templates for ThinkFlow AI
+ * Decision Templates for OptiMind AI
  * Pre-built templates for common decision types
  */
 

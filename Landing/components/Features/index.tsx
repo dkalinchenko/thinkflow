@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Everything You Need to Decide Smarter"
-            paragraph="ThinkFlow gives you powerful tools to compare products and make confident choices. No more decision fatigue – just clear, data-driven results."
+            paragraph="OptiMind gives you powerful tools to compare products and make confident choices. No more decision fatigue – just clear, data-driven results."
             center
           />
 

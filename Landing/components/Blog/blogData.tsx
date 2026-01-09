@@ -4,9 +4,9 @@ import { Blog } from "@/types/blog";
 const getBlogData = (): Blog[] => [
   {
     id: 1,
-    title: "ThinkFlow vs Traditional Comparison Sites",
+    title: "OptiMind vs Traditional Comparison Sites",
     paragraph:
-      "Discover why ThinkFlow's personalized, weighted approach beats one-size-fits-all comparison charts. You choose what matters, not us.",
+      "Discover why OptiMind's personalized, weighted approach beats one-size-fits-all comparison charts. You choose what matters, not us.",
     image: getImagePath("/images/blog/blog-01.jpg"),
     author: {
       name: "Alex Johnson",
@@ -18,9 +18,9 @@ const getBlogData = (): Blog[] => [
   },
   {
     id: 2,
-    title: "Why ThinkFlow Beats Spreadsheets for Decision Making",
+    title: "Why OptiMind Beats Spreadsheets for Decision Making",
     paragraph:
-      "No more formula errors or formatting headaches. ThinkFlow gives you spreadsheet power with an intuitive interface anyone can use.",
+      "No more formula errors or formatting headaches. OptiMind gives you spreadsheet power with an intuitive interface anyone can use.",
     image: getImagePath("/images/blog/blog-02.jpg"),
     author: {
       name: "Maria Garcia",
@@ -34,7 +34,7 @@ const getBlogData = (): Blog[] => [
     id: 3,
     title: "AI-Powered Shopping: The Future of Product Research",
     paragraph:
-      "See how AI suggestions help you consider factors you might have missed. Make smarter purchases with ThinkFlow's intelligent recommendations.",
+      "See how AI suggestions help you consider factors you might have missed. Make smarter purchases with OptiMind's intelligent recommendations.",
     image: getImagePath("/images/blog/blog-03.jpg"),
     author: {
       name: "David Chen",
