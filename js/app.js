@@ -1115,6 +1115,18 @@ function renderResults() {
     const winnerAlt = decision.alternatives.find(a => a.id === winner.id);
     const isProduct = winnerAlt?.isProduct || winnerAlt?.asin;
     
+    // Generate winner explanation from score explanations
+    const winnerScores = decision.scores[winner.id] || {};
+    const winnerExplanations = [];
+    decision.criteria.forEach(c => {
+        if (winnerScores[c.id]?.explanation) {
+            winnerExplanations.push(`<strong>${escapeHtml(c.name)}:</strong> ${escapeHtml(winnerScores[c.id].explanation)}`);
+        }
+    });
+    const winnerExplanation = winnerExplanations.length > 0 
+        ? `<div class="winner-explanation"><p>${winnerExplanations.join(' ')}</p></div>`
+        : '';
+    
     // Render winner card
     elements.winnerName.textContent = winner.name;
     elements.winnerScore.textContent = `${winner.totalScore.toFixed(1)} pts`;
@@ -1122,8 +1134,19 @@ function renderResults() {
         .map(s => `<span class="strength-tag">✓ ${escapeHtml(s)}</span>`)
         .join('');
     
-    // Add Amazon buy button for product winners
+    // Add winner explanation if available
     const winnerCard = document.getElementById('winnerCard');
+    const existingExplanation = winnerCard.querySelector('.winner-explanation');
+    if (existingExplanation) {
+        existingExplanation.remove();
+    }
+    
+    if (winnerExplanation) {
+        const strengthsContainer = winnerCard.querySelector('.card-body');
+        strengthsContainer.insertAdjacentHTML('beforeend', winnerExplanation);
+    }
+    
+    // Add Amazon buy button for product winners
     const existingBuySection = winnerCard.querySelector('.winner-buy-section');
     if (existingBuySection) {
         existingBuySection.remove();
@@ -1152,7 +1175,7 @@ function renderResults() {
         winnerCard.appendChild(buySection);
     }
     
-    // Render scores table (using state and decision from above)
+    // Render scores table with expandable rows for explanations
     const criteria = decision.criteria;
     
     let tableHtml = `
@@ -1162,16 +1185,45 @@ function renderResults() {
                 <th>Alternative</th>
                 ${criteria.map(c => `<th>${escapeHtml(c.name)}</th>`).join('')}
                 <th>Total</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
     `;
     
     for (const result of results) {
+        const alt = decision.alternatives.find(a => a.id === result.id);
+        const altScores = decision.scores[result.id] || {};
+        const hasExplanations = decision.criteria.some(c => altScores[c.id]?.explanation);
+        const isProductAlt = alt?.isProduct;
+        const amazonUrl = isProductAlt ? generateSearchLink(result.name) : null;
+        
         const rowClass = result.rank === 1 ? 'rank-1' : '';
-        tableHtml += `<tr class="${rowClass}">`;
+        const mainRowId = `result-row-${result.id}`;
+        const expandRowId = `result-expand-${result.id}`;
+        
+        // Main row
+        tableHtml += `<tr class="${rowClass}" id="${mainRowId}" ${hasExplanations ? 'style="cursor: pointer;"' : ''} 
+                         onclick="${hasExplanations ? `toggleExplanationRow('${expandRowId}', '${mainRowId}')` : ''}">`;
         tableHtml += `<td><strong>${getRankSuffix(result.rank)}</strong></td>`;
-        tableHtml += `<td>${escapeHtml(result.name)}</td>`;
+        
+        // Alternative name with Amazon link if product
+        if (amazonUrl) {
+            tableHtml += `<td>
+                <a href="${amazonUrl}" target="_blank" rel="noopener sponsored" 
+                   onclick="event.stopPropagation(); window.trackAffiliateClick && window.trackAffiliateClick({productName: '${escapeHtml(result.name).replace(/'/g, "\\'")}', source: 'results_table'});" 
+                   style="color: inherit; text-decoration: underline;">
+                    ${escapeHtml(result.name)} 
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </td>`;
+        } else {
+            tableHtml += `<td>${escapeHtml(result.name)}</td>`;
+        }
         
         for (const criterion of criteria) {
             const score = result.criteriaScores[criterion.id] || 0;
@@ -1179,7 +1231,24 @@ function renderResults() {
         }
         
         tableHtml += `<td><strong>${result.totalScore.toFixed(1)}</strong></td>`;
+        tableHtml += `<td>${hasExplanations ? '<span class="expand-icon">▼</span>' : ''}</td>`;
         tableHtml += `</tr>`;
+        
+        // Expandable explanation row
+        if (hasExplanations) {
+            tableHtml += `<tr class="explanation-row" id="${expandRowId}" style="display: none;">`;
+            tableHtml += `<td colspan="${criteria.length + 4}">`;
+            tableHtml += `<div class="explanation-content">`;
+            tableHtml += `<h4>AI Evaluation for ${escapeHtml(result.name)}</h4>`;
+            
+            criteria.forEach(c => {
+                if (altScores[c.id]?.explanation) {
+                    tableHtml += `<p><strong>${escapeHtml(c.name)}:</strong> ${escapeHtml(altScores[c.id].explanation)}</p>`;
+                }
+            });
+            
+            tableHtml += `</div></td></tr>`;
+        }
     }
     
     tableHtml += `</tbody>`;
@@ -1189,6 +1258,21 @@ function renderResults() {
     renderRankingsChart(results);
     renderRadarChart(results, criteria);
 }
+
+// Toggle explanation row visibility
+window.toggleExplanationRow = function(expandRowId, mainRowId) {
+    const expandRow = document.getElementById(expandRowId);
+    const mainRow = document.getElementById(mainRowId);
+    const icon = mainRow.querySelector('.expand-icon');
+    
+    if (expandRow.style.display === 'none') {
+        expandRow.style.display = 'table-row';
+        if (icon) icon.textContent = '▲';
+    } else {
+        expandRow.style.display = 'none';
+        if (icon) icon.textContent = '▼';
+    }
+};
 
 function renderRankingsChart(results) {
     const ctx = document.getElementById('rankingsChart');
@@ -1557,7 +1641,7 @@ async function aiEvaluateAll() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            AI Evaluate All
+            Use AI to evaluate alternatives on the criteria
         `;
     }
 }
