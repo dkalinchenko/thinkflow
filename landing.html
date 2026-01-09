@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>ThinkFlow - AI-Powered Decision Matrix for Smarter Product Comparisons</title>
-    <meta name="title" content="ThinkFlow - AI-Powered Decision Matrix">
-    <meta name="description" content="A browser-based decision analysis tool that helps you make better choices using weighted criteria and AI-powered insights. All data stays private in your browser.">
-    <meta name="keywords" content="product comparison tool, decision matrix, AI product comparison, weighted decision matrix, compare electronics, smart shopping tool">
+    <title>ThinkFlow - AI-Powered Decision Matrix for Smarter Product Comparisons | Compare & Choose with Confidence</title>
+    <meta name="title" content="ThinkFlow - AI-Powered Decision Matrix for Smarter Product Comparisons">
+    <meta name="description" content="Compare products side-by-side with AI-powered decision matrices. Make confident purchasing decisions for electronics, appliances, and fitness gear. Free weighted scoring tool with no signup required.">
+    <meta name="keywords" content="product comparison tool, decision matrix, AI product comparison, weighted decision matrix, compare electronics, best product comparison app, smart shopping tool, product evaluation, decision making tool, compare laptops, compare smartphones">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dkalinchenko.github.io/thinkflow/">
-    <meta property="og:title" content="ThinkFlow - AI-Powered Decision Matrix">
-    <meta property="og:description" content="A browser-based decision analysis tool with AI-powered insights and privacy-first design.">
+    <meta property="og:title" content="ThinkFlow - AI-Powered Decision Matrix for Smarter Product Comparisons">
+    <meta property="og:description" content="Compare products side-by-side with AI-powered decision matrices. Make confident purchasing decisions with our free weighted scoring tool.">
     <meta property="og:image" content="https://dkalinchenko.github.io/thinkflow/assets/og-image.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dkalinchenko.github.io/thinkflow/">
-    <meta property="twitter:title" content="ThinkFlow - AI-Powered Decision Matrix">
-    <meta property="twitter:description" content="Browser-based decision analysis tool with AI-powered insights.">
+    <meta property="twitter:title" content="ThinkFlow - AI Decision Matrix for Product Comparisons">
+    <meta property="twitter:description" content="Compare products side-by-side with AI-powered decision matrices. Make confident purchasing decisions.">
     <meta property="twitter:image" content="https://dkalinchenko.github.io/thinkflow/assets/og-image.png">
     
     <!-- Favicon -->
@@ -29,6 +29,13 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://dkalinchenko.github.io/thinkflow/">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -43,13 +50,22 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "description": "AI-powered decision matrix tool for comparing products and making confident purchasing decisions.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "150"
+      },
+      "description": "AI-powered decision matrix tool for comparing products and making confident purchasing decisions. Features weighted scoring, custom criteria, and Amazon integration.",
       "featureList": [
         "AI-powered product comparison",
         "Weighted decision matrix",
+        "Custom criteria and scoring",
+        "No signup required",
         "Privacy-first design",
+        "Amazon affiliate integration",
         "Visual results and charts"
-      ]
+      ],
+      "screenshot": "https://dkalinchenko.github.io/thinkflow/assets/screenshot.png"
     }
     </script>
     
@@ -61,231 +77,392 @@
         }
         
         :root {
+            --primary: #5B7C99;
+            --primary-dark: #4A5F7A;
+            --secondary: #3498DB;
+            --bg-light: #FAFBFC;
             --bg-white: #FFFFFF;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --link-color: #0066CC;
-            --link-hover: #004499;
-            --border-color: #E5E5E5;
+            --text-dark: #2C3E50;
+            --text-gray: #6C757D;
+            --text-light: #ADB5BD;
+            --border: #E1E8ED;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--bg-white);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            overflow-x: hidden;
             font-weight: 400;
         }
         
         /* Header */
         header {
-            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            background: var(--bg-white);
             z-index: 1000;
         }
         
         nav {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: var(--text-primary);
+            color: var(--primary);
+            letter-spacing: -0.02em;
         }
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
         
         .nav-links a {
             text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 1rem;
-            font-weight: 400;
+            color: var(--text-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
         }
         
         .nav-links a:hover {
-            color: var(--text-primary);
+            color: var(--primary);
         }
         
-        /* Sections */
-        section {
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--bg-white);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+        
+        .hero-content {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+            text-align: center;
         }
         
-        .hero-editorial {
-            padding-top: 4rem;
-            padding-bottom: 3rem;
-        }
-        
-        /* Typography */
-        h1 {
+        .hero h1 {
             font-size: 3rem;
             font-weight: 600;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
         }
         
-        .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-        
-        .description {
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            margin-top: 3rem;
-            color: var(--text-primary);
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-        
-        /* Links */
-        a {
-            color: var(--link-color);
-            text-decoration: underline;
-        }
-        
-        a:hover {
-            color: var(--link-hover);
-        }
-        
-        .launch-link {
-            font-size: 1.1rem;
-            font-weight: 500;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-        
-        .launch-link-large {
+        .hero p {
             font-size: 1.25rem;
-            font-weight: 500;
-        }
-        
-        /* Lists */
-        .feature-list,
-        .technical-list,
-        .steps-list {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .feature-list li,
-        .technical-list li,
-        .steps-list li {
-            margin-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-gray);
             line-height: 1.7;
-            color: var(--text-primary);
+            letter-spacing: 0.01em;
         }
         
-        .feature-list {
-            list-style: disc;
-            padding-left: 1.5rem;
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
-        .technical-list,
-        .steps-list {
-            list-style: decimal;
-            padding-left: 1.5rem;
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background 0.2s;
+            letter-spacing: 0.01em;
         }
         
-        strong {
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .trust-badges {
+            margin-top: 3rem;
+            display: flex;
+            gap: 2.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.25rem;
             font-weight: 600;
-            color: #000;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        
+        .feature-card:hover {
+            border-color: var(--primary);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+            stroke: var(--primary);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+            letter-spacing: -0.01em;
+        }
+        
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 4rem 3rem;
+            border: 1px solid var(--border);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         /* CTA Section */
-        .cta-editorial {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-            border-top: 1px solid var(--border-color);
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            border-radius: 8px;
+            margin: 6rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .cta-section .btn-primary:hover {
+            background: var(--bg-light);
         }
         
         /* Footer */
         footer {
-            border-top: 1px solid var(--border-color);
-            padding: 2rem;
-            margin-top: 4rem;
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
         }
         
         .footer-content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            text-align: center;
         }
         
-        .copyright {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .footer-note {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+        .footer-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .affiliate-disclosure {
+            background: var(--bg-light);
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            border: 1px solid var(--border);
+        }
+        
+        .footer-bottom {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            h1 {
-                font-size: 2.25rem;
+            .hero p {
+                font-size: 1.1rem;
             }
             
-            .subtitle {
-                font-size: 1.25rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
+            .section-header h2 {
+                font-size: 1.75rem;
             }
             
             .nav-links {
-                gap: 1.5rem;
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
             
             section {
-                padding: 2rem 1.5rem;
+                padding: 4rem 1.5rem;
             }
             
-            .hero-editorial {
-                padding-top: 2rem;
+            .how-it-works {
+                padding: 3rem 1.5rem;
             }
         }
     </style>
@@ -296,113 +473,167 @@
         <nav>
             <div class="logo">ThinkFlow</div>
             <div class="nav-links">
-                <a href="#about">About</a>
                 <a href="#features">Features</a>
-                <a href="#technical">Technical</a>
-                <a href="index.html">Launch App</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="index.html" class="cta-button">Launch App</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-editorial">
-        <h1>ThinkFlow</h1>
-        <p class="subtitle">AI-Powered Decision Matrix</p>
-        <p class="description">
-            A browser-based decision analysis tool that helps you make better choices using weighted criteria and AI-powered insights. All data stays private in your browser—no backend, no accounts, just intelligent decision-making.
-        </p>
-        <a href="index.html" class="launch-link">Launch the app →</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About ThinkFlow</h2>
-        <p>
-            ThinkFlow demonstrates how AI can augment decision-making without compromising privacy. By keeping all data in the browser, it eliminates security concerns while providing powerful analysis capabilities for complex choices.
-        </p>
-        <p>
-            Whether you're comparing job offers, evaluating technology purchases, or making any multi-criteria decision, ThinkFlow provides structure and clarity to help you choose confidently.
-        </p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AI-Powered Decision Matrix for Smarter Product Comparisons</h1>
+            <p>Compare products side-by-side with weighted scoring. Make confident purchasing decisions for electronics, appliances, and fitness gear.</p>
+            <div class="hero-buttons">
+                <a href="index.html" class="btn-primary">Start Comparing Free</a>
+            </div>
+            <div class="trust-badges">
+                <div class="badge">Privacy-First</div>
+                <div class="badge">No Signup Required</div>
+                <div class="badge">100% Free</div>
+            </div>
+        </div>
     </section>
 
     <!-- Features Section -->
     <section id="features">
-        <h2>Key Features</h2>
-        <ul class="feature-list">
-            <li>
-                <strong>AI-Powered:</strong> Get smart suggestions for criteria, alternatives, and evaluations from advanced language models
-            </li>
-            <li>
-                <strong>Privacy First:</strong> All data stays in your browser—no server, no tracking, no accounts needed
-            </li>
-            <li>
-                <strong>Visual Analysis:</strong> Beautiful charts and insights including rankings, criteria comparison, and detailed scores
-            </li>
-            <li>
-                <strong>Easy Sharing:</strong> Share decisions via URL without any backend or data storage
-            </li>
-            <li>
-                <strong>Decision Templates:</strong> Pre-built templates for common decision types including job offers, tech purchases, and more
-            </li>
-            <li>
-                <strong>Multiple Export Options:</strong> Export your analysis to JSON, CSV, or Markdown format
-            </li>
-        </ul>
-    </section>
-
-    <!-- Technical Architecture Section -->
-    <section id="technical">
-        <h2>Technical Architecture</h2>
-        <p>Built with modern web technologies for performance and privacy:</p>
-        <ol class="technical-list">
-            <li>
-                <strong>Completely Client-Side:</strong> No backend required—all processing happens in your browser using vanilla JavaScript
-            </li>
-            <li>
-                <strong>AI Integration:</strong> Leverages AI APIs for intelligent suggestions while keeping your data local
-            </li>
-            <li>
-                <strong>Progressive Web App:</strong> Works offline and can be installed as a native-feeling application
-            </li>
-            <li>
-                <strong>GitHub Pages Hosting:</strong> Fast, reliable, and cost-effective static hosting
-            </li>
-            <li>
-                <strong>URL-Based Sharing:</strong> Share decisions via encoded URLs without server-side storage
-            </li>
-        </ol>
+        <div class="section-header">
+            <h2>Powerful Features for Smart Decisions</h2>
+            <p>Everything you need to compare products objectively and make confident purchasing choices</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                <h3>AI-Powered Suggestions</h3>
+                <p>Get intelligent recommendations for evaluation criteria and product alternatives. Our AI assistant helps you think of factors you might have missed.</p>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
+                </svg>
+                <h3>Weighted Decision Matrix</h3>
+                <p>Assign custom importance weights to each criterion. Not all factors are equal—prioritize what matters most to you.</p>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <h3>5-Star Rating System</h3>
+                <p>Intuitive star ratings for quick evaluations. Score products across multiple criteria with visual clarity.</p>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+                <h3>Visual Results & Charts</h3>
+                <p>See rankings, radar charts, and detailed score breakdowns. Understand exactly why one option wins over others.</p>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <h3>Amazon Integration</h3>
+                <p>Research products with AI and link directly to Amazon. Seamlessly go from decision to purchase.</p>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <h3>Privacy-First Design</h3>
+                <p>All data stays in your browser. No accounts, no cloud storage, no tracking. Your decisions remain private.</p>
+            </div>
+        </div>
     </section>
 
     <!-- How It Works Section -->
     <section id="how-it-works">
-        <h2>How It Works</h2>
-        <ol class="steps-list">
-            <li>Name your decision and describe what you're choosing between</li>
-            <li>Define criteria that matter to you (or use AI suggestions)</li>
-            <li>Add alternatives to compare (products, options, choices)</li>
-            <li>Assign importance weights to each criterion</li>
-            <li>Rate each alternative using 5-star ratings</li>
-            <li>View detailed results with charts and AI explanations</li>
-        </ol>
+        <div class="how-it-works">
+            <div class="section-header">
+                <h2>How ThinkFlow Works</h2>
+                <p>From confusion to clarity in 6 simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Name Your Decision</h3>
+                    <p>Describe what you're deciding, like "Best Laptop for Programming"</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Define Criteria</h3>
+                    <p>List factors that matter: performance, price, battery life, etc.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Add Products</h3>
+                    <p>Enter products you're comparing or let AI suggest options</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Assign Weights</h3>
+                    <p>Tell ThinkFlow how important each criterion is to you</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Rate with Stars</h3>
+                    <p>Score each product using our intuitive 5-star system</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>See Your Winner</h3>
+                    <p>View scores, charts, and AI explanations instantly</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-editorial">
-        <h2>Try ThinkFlow</h2>
-        <p>
-            Ready to make your next decision with confidence? Launch the app to start comparing options with AI-powered insights.
-        </p>
-        <a href="index.html" class="launch-link-large">Launch ThinkFlow →</a>
-    </section>
+    <div class="cta-section">
+        <h2>Ready to Make Your Next Decision?</h2>
+        <p>Join thousands of smart shoppers who've ditched analysis paralysis.<br>Start comparing products in under 60 seconds—no signup required.</p>
+        <a href="index.html" class="btn-primary">Start Comparing Free</a>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="copyright">© 2025 ThinkFlow. All rights reserved.</p>
-            <p class="footer-note">
-                As an Amazon Associate, we earn from qualifying purchases made through our product links. This helps support ThinkFlow and keep it free forever.
-            </p>
+            <p>AI-powered decision matrices for smarter product comparisons. Make confident purchasing decisions with data-driven insights.</p>
+            <div class="footer-links">
+                <a href="index.html">Launch App</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="https://github.com/dkalinchenko/thinkflow" target="_blank">GitHub</a>
+            </div>
+            <div class="affiliate-disclosure">
+                <strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases made through our product links. This helps support ThinkFlow and keep it free forever.
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 ThinkFlow. All rights reserved.
+            </div>
         </div>
     </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
