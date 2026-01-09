@@ -92,7 +92,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://github.com/dkalinchenko/optimind"
+                      href="https://github.com/dkalinchenko/thinkflow"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
