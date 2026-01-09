@@ -213,10 +213,20 @@ async function init() {
     renderDecisionList();
     renderTemplatesList();
     
-    // Show appropriate view
-    if (state.currentDecision) {
+    // Check for template URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const templateId = urlParams.get('template');
+    
+    if (templateId) {
+        // Auto-load template from URL parameter
+        await applyTemplate(templateId);
+        // Clear the URL parameter
+        window.history.replaceState({}, '', window.location.pathname);
+    } else if (state.currentDecision) {
+        // Show existing decision
         showDecisionView();
     } else {
+        // Show welcome screen
         showWelcomeView();
     }
 }
@@ -300,6 +310,14 @@ function setupEventListeners() {
     
     // Templates
     elements.welcomeTemplateBtn.addEventListener('click', () => openModal('templates'));
+    
+    // Template quick links
+    document.querySelectorAll('.template-link-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const templateId = btn.dataset.template;
+            await applyTemplate(templateId);
+        });
+    });
     
     // Decision title editing
     elements.decisionTitleInput.addEventListener('input', debounce(updateDecisionTitle, 500));

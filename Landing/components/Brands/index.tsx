@@ -1,56 +1,42 @@
 import SectionTitle from "../Common/SectionTitle";
 
 const Brands = () => {
-  const useCases = [
+  const categories = [
     {
       id: 1,
-      name: "Electronics",
-      description: "Phones, Laptops, TVs",
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="fill-current">
-          <rect x="6" y="8" width="36" height="24" rx="2" opacity="0.3" />
-          <rect x="6" y="8" width="36" height="24" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
-          <line x1="24" y1="32" x2="24" y2="38" stroke="currentColor" strokeWidth="2" />
-          <line x1="16" y1="38" x2="32" y2="38" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      ),
+      name: "💻 Tech & Electronics",
+      templates: [
+        { name: "Laptops", id: "laptop-comparison" },
+        { name: "Smartphones", id: "smartphone-comparison" },
+        { name: "Headphones", id: "headphones-comparison" },
+        { name: "Cameras", id: "camera-comparison" },
+        { name: "Smartwatches", id: "smartwatch-comparison" },
+        { name: "Tablets", id: "tablet-comparison" },
+      ],
     },
     {
       id: 2,
-      name: "Home Appliances",
-      description: "Refrigerators, Washers",
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="fill-current">
-          <rect x="10" y="4" width="28" height="40" rx="2" opacity="0.3" />
-          <rect x="10" y="4" width="28" height="40" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
-          <line x1="10" y1="18" x2="38" y2="18" stroke="currentColor" strokeWidth="2" />
-          <circle cx="16" cy="11" r="2" fill="currentColor" />
-          <circle cx="16" cy="28" r="2" fill="currentColor" />
-        </svg>
-      ),
+      name: "🏠 Home Appliances",
+      templates: [
+        { name: "Refrigerators", id: "refrigerator-comparison" },
+        { name: "Washing Machines", id: "washing-machine-comparison" },
+        { name: "Dishwashers", id: "dishwasher-comparison" },
+        { name: "Vacuum Cleaners", id: "vacuum-comparison" },
+        { name: "Air Purifiers", id: "air-purifier-comparison" },
+        { name: "Coffee Makers", id: "coffee-maker-comparison" },
+      ],
     },
     {
       id: 3,
-      name: "Fitness Gear",
-      description: "Trackers, Equipment",
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="fill-current">
-          <path d="M24 8C15.163 8 8 15.163 8 24s7.163 16 16 16 16-7.163 16-16S32.837 8 24 8zm0 28c-6.617 0-12-5.383-12-12S17.383 12 24 12s12 5.383 12 12-5.383 12-12 12z" opacity="0.3" />
-          <path d="M24 16c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 12c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z" />
-        </svg>
-      ),
-    },
-    {
-      id: 4,
-      name: "Life Decisions",
-      description: "Colleges, Jobs, Travel",
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="fill-current">
-          <circle cx="24" cy="24" r="16" opacity="0.3" />
-          <path d="M24 8c8.837 0 16 7.163 16 16s-7.163 16-16 16S8 32.837 8 24 15.163 8 24 8m0-2C13.507 6 6 13.507 6 24s7.507 18 18 18 18-7.507 18-18S34.493 6 24 6z" />
-          <path d="M24 14v10l6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
+      name: "🏋️ Fitness & Health",
+      templates: [
+        { name: "Treadmills", id: "treadmill-comparison" },
+        { name: "Exercise Bikes", id: "exercise-bike-comparison" },
+        { name: "Rowing Machines", id: "rowing-machine-comparison" },
+        { name: "Ellipticals", id: "elliptical-comparison" },
+        { name: "Fitness Trackers", id: "fitness-tracker-comparison" },
+        { name: "Home Gyms", id: "home-gym-comparison" },
+      ],
     },
   ];
 
@@ -58,35 +44,40 @@ const Brands = () => {
     <section id="use-cases" className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Compare Anything"
-          paragraph="OptiMind is flexible enough for any decision. From electronics to life choices, we've got you covered."
+          title="Start Comparing Products"
+          paragraph="Click any category below to instantly start comparing products with AI-powered analysis"
           center
           mb="50px"
         />
         
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {useCases.map((useCase) => (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {categories.map((category) => (
             <div
-              key={useCase.id}
-              className="wow fadeInUp group relative overflow-hidden rounded-lg bg-white p-8 text-center shadow-one transition-all hover:shadow-two dark:bg-gray-dark dark:shadow-three dark:hover:shadow-gray-dark"
+              key={category.id}
+              className="wow fadeInUp rounded-lg bg-white p-6 shadow-one dark:bg-gray-dark dark:shadow-three"
               data-wow-delay=".1s"
             >
-              <div className="mb-6 flex justify-center text-primary transition-all group-hover:scale-110">
-                {useCase.icon}
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-black dark:text-white">
-                {useCase.name}
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+                {category.name}
               </h3>
-              <p className="text-base font-medium text-body-color">
-                {useCase.description}
-              </p>
+              <div className="flex flex-wrap gap-2">
+                {category.templates.map((template) => (
+                  <a
+                    key={template.id}
+                    href={`/app.html?template=${template.id}`}
+                    className="inline-block rounded-md bg-gray-2 px-3 py-1.5 text-sm font-medium text-black transition-all hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:hover:bg-primary"
+                  >
+                    {template.name}
+                  </a>
+                ))}
+              </div>
             </div>
           ))}
         </div>
         
         <div className="mt-12 text-center">
           <p className="text-base font-medium text-body-color">
-            Any time you have multiple options to weigh, OptiMind brings clarity.
+            Or <a href="/app.html" className="text-primary hover:underline">launch the app</a> to create a custom comparison
           </p>
         </div>
       </div>
