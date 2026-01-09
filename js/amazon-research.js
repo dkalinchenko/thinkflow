@@ -93,6 +93,154 @@ const CATEGORY_CONFIG = {
             { name: 'Value for Money', weight: 1.5, description: 'Price vs features' }
         ],
         specFields: ['display', 'battery', 'sensors', 'water_resistance', 'gps', 'storage']
+    },
+    
+    // Home Appliances
+    refrigerator: {
+        name: 'Refrigerators',
+        amazonCategory: 'appliances',
+        searchTerms: ['refrigerator', 'fridge'],
+        defaultCriteria: [
+            { name: 'Storage Capacity', weight: 2.0, description: 'Total and usable space' },
+            { name: 'Energy Efficiency', weight: 1.8, description: 'Energy Star rating, cost' },
+            { name: 'Features', weight: 1.5, description: 'Ice maker, water dispenser' },
+            { name: 'Build Quality', weight: 1.4, description: 'Durability, warranty' }
+        ],
+        specFields: ['capacity', 'energy_rating', 'dimensions', 'features', 'type']
+    },
+    'washing machine': {
+        name: 'Washing Machines',
+        amazonCategory: 'appliances',
+        searchTerms: ['washing machine', 'washer'],
+        defaultCriteria: [
+            { name: 'Cleaning Performance', weight: 2.0, description: 'Stain removal, wash quality' },
+            { name: 'Capacity', weight: 1.8, description: 'Load size' },
+            { name: 'Energy Efficiency', weight: 1.7, description: 'Operating costs' },
+            { name: 'Reliability', weight: 1.6, description: 'Brand reputation, warranty' }
+        ],
+        specFields: ['capacity', 'energy_rating', 'rpm', 'dimensions', 'type']
+    },
+    dishwasher: {
+        name: 'Dishwashers',
+        amazonCategory: 'appliances',
+        searchTerms: ['dishwasher'],
+        defaultCriteria: [
+            { name: 'Cleaning Performance', weight: 2.0, description: 'Wash quality' },
+            { name: 'Noise Level', weight: 1.7, description: 'Decibel rating' },
+            { name: 'Energy Efficiency', weight: 1.5, description: 'Water and electricity usage' },
+            { name: 'Capacity', weight: 1.6, description: 'Place settings' }
+        ],
+        specFields: ['capacity', 'noise_level', 'energy_rating', 'dimensions', 'racks']
+    },
+    'vacuum cleaner': {
+        name: 'Vacuum Cleaners',
+        amazonCategory: 'appliances',
+        searchTerms: ['vacuum cleaner', 'vacuum'],
+        defaultCriteria: [
+            { name: 'Suction Power', weight: 2.0, description: 'Cleaning effectiveness' },
+            { name: 'Filtration', weight: 1.7, description: 'HEPA filter, allergen capture' },
+            { name: 'Versatility', weight: 1.6, description: 'Attachments, surfaces' },
+            { name: 'Battery Life', weight: 1.5, description: 'Runtime for cordless' }
+        ],
+        specFields: ['suction_power', 'filter', 'battery', 'weight', 'type']
+    },
+    'air purifier': {
+        name: 'Air Purifiers',
+        amazonCategory: 'appliances',
+        searchTerms: ['air purifier'],
+        defaultCriteria: [
+            { name: 'Filtration Quality', weight: 2.0, description: 'HEPA, particle capture' },
+            { name: 'Room Coverage', weight: 1.8, description: 'Square footage, CADR' },
+            { name: 'Noise Level', weight: 1.6, description: 'Sound at different speeds' },
+            { name: 'Filter Cost', weight: 1.5, description: 'Replacement costs' }
+        ],
+        specFields: ['cadr', 'coverage', 'filter_type', 'noise_level', 'dimensions']
+    },
+    'coffee maker': {
+        name: 'Coffee Makers',
+        amazonCategory: 'appliances',
+        searchTerms: ['coffee maker', 'espresso machine'],
+        defaultCriteria: [
+            { name: 'Coffee Quality', weight: 2.0, description: 'Brew temperature, taste' },
+            { name: 'Convenience', weight: 1.7, description: 'Ease of use, programmable' },
+            { name: 'Capacity', weight: 1.5, description: 'Cup/carafe size' },
+            { name: 'Cleaning', weight: 1.3, description: 'Maintenance ease' }
+        ],
+        specFields: ['capacity', 'brew_type', 'features', 'dimensions', 'grinder']
+    },
+    
+    // Fitness Equipment
+    treadmill: {
+        name: 'Treadmills',
+        amazonCategory: 'sports',
+        searchTerms: ['treadmill', 'running machine'],
+        defaultCriteria: [
+            { name: 'Motor Power', weight: 1.9, description: 'Continuous horsepower' },
+            { name: 'Running Surface', weight: 1.8, description: 'Belt size, cushioning' },
+            { name: 'Build Quality', weight: 1.7, description: 'Stability, weight capacity' },
+            { name: 'Features', weight: 1.5, description: 'Programs, incline, connectivity' }
+        ],
+        specFields: ['motor_hp', 'belt_size', 'weight_capacity', 'incline', 'speed_range']
+    },
+    'exercise bike': {
+        name: 'Exercise Bikes',
+        amazonCategory: 'sports',
+        searchTerms: ['exercise bike', 'stationary bike', 'spin bike'],
+        defaultCriteria: [
+            { name: 'Ride Quality', weight: 2.0, description: 'Smoothness, resistance' },
+            { name: 'Comfort', weight: 1.8, description: 'Seat, adjustability' },
+            { name: 'Build Quality', weight: 1.6, description: 'Stability, durability' },
+            { name: 'Features', weight: 1.5, description: 'Console, programs' }
+        ],
+        specFields: ['flywheel', 'resistance_type', 'weight_capacity', 'adjustability', 'dimensions']
+    },
+    'rowing machine': {
+        name: 'Rowing Machines',
+        amazonCategory: 'sports',
+        searchTerms: ['rowing machine', 'rower'],
+        defaultCriteria: [
+            { name: 'Resistance Quality', weight: 2.0, description: 'Smoothness, resistance type' },
+            { name: 'Build Quality', weight: 1.8, description: 'Frame durability' },
+            { name: 'Comfort', weight: 1.6, description: 'Seat, footrests, handle' },
+            { name: 'Monitor', weight: 1.5, description: 'Display, tracking' }
+        ],
+        specFields: ['resistance_type', 'rail_length', 'weight_capacity', 'dimensions', 'monitor']
+    },
+    'fitness tracker': {
+        name: 'Fitness Trackers',
+        amazonCategory: 'sports',
+        searchTerms: ['fitness tracker', 'activity tracker', 'smart band'],
+        defaultCriteria: [
+            { name: 'Tracking Accuracy', weight: 2.0, description: 'Heart rate, steps, sleep' },
+            { name: 'Battery Life', weight: 1.8, description: 'Days per charge' },
+            { name: 'Features', weight: 1.6, description: 'GPS, SpO2, workout modes' },
+            { name: 'App Quality', weight: 1.5, description: 'Data insights, goals' }
+        ],
+        specFields: ['battery_life', 'sensors', 'gps', 'water_resistance', 'compatibility']
+    },
+    'yoga mat': {
+        name: 'Yoga Mats',
+        amazonCategory: 'sports',
+        searchTerms: ['yoga mat', 'exercise mat'],
+        defaultCriteria: [
+            { name: 'Grip & Traction', weight: 2.0, description: 'Slip resistance' },
+            { name: 'Cushioning', weight: 1.8, description: 'Thickness, comfort' },
+            { name: 'Material Quality', weight: 1.7, description: 'Durability, eco-friendly' },
+            { name: 'Size & Portability', weight: 1.4, description: 'Dimensions, weight' }
+        ],
+        specFields: ['thickness', 'material', 'dimensions', 'weight', 'texture']
+    },
+    'home gym': {
+        name: 'Home Gym Equipment',
+        amazonCategory: 'sports',
+        searchTerms: ['adjustable dumbbells', 'weight set', 'home gym'],
+        defaultCriteria: [
+            { name: 'Weight Range', weight: 2.0, description: 'Min/max weight' },
+            { name: 'Build Quality', weight: 1.9, description: 'Durability, safety' },
+            { name: 'Space Efficiency', weight: 1.7, description: 'Footprint, storage' },
+            { name: 'Versatility', weight: 1.6, description: 'Exercise variety' }
+        ],
+        specFields: ['weight_range', 'adjustment_type', 'dimensions', 'material', 'warranty']
     }
 };
 

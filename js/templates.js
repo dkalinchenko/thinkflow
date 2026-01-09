@@ -147,6 +147,290 @@ export const templates = [
     },
     
     // ========================================
+    // Home Appliances Templates
+    // ========================================
+    {
+        id: 'refrigerator-comparison',
+        name: 'Refrigerator Comparison',
+        description: 'Find the perfect fridge for your kitchen',
+        category: 'Home Appliances',
+        icon: '🧊',
+        isProductComparison: true,
+        productCategory: 'refrigerator',
+        criteria: [
+            { name: 'Storage Capacity', weight: 2.0, description: 'Total and usable space, shelf configuration' },
+            { name: 'Energy Efficiency', weight: 1.8, description: 'Energy Star rating, annual electricity cost' },
+            { name: 'Features', weight: 1.5, description: 'Ice maker, water dispenser, smart features' },
+            { name: 'Build Quality', weight: 1.4, description: 'Materials, durability, warranty coverage' },
+            { name: 'Temperature Control', weight: 1.3, description: 'Consistency, zones, humidity control' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to features and capacity' }
+        ],
+        exampleAlternatives: [
+            { name: 'LG French Door', description: 'Smart features, spacious' },
+            { name: 'Samsung Family Hub', description: 'Touchscreen, tech-forward' },
+            { name: 'Whirlpool Side-by-Side', description: 'Reliable, good value' }
+        ],
+        tips: 'Measure your space carefully including doorways. Consider door swing clearance.'
+    },
+    {
+        id: 'washing-machine-comparison',
+        name: 'Washing Machine Comparison',
+        description: 'Compare washers for your laundry needs',
+        category: 'Home Appliances',
+        icon: '🧺',
+        isProductComparison: true,
+        productCategory: 'washing machine',
+        criteria: [
+            { name: 'Cleaning Performance', weight: 2.0, description: 'Stain removal, wash quality' },
+            { name: 'Capacity', weight: 1.8, description: 'Load size and drum volume' },
+            { name: 'Energy & Water Efficiency', weight: 1.7, description: 'Operating costs per load' },
+            { name: 'Wash Programs', weight: 1.4, description: 'Cycle variety, steam, sanitize options' },
+            { name: 'Reliability', weight: 1.6, description: 'Brand reputation, warranty, durability' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs features and capacity' }
+        ],
+        exampleAlternatives: [
+            { name: 'LG Front Load', description: 'Efficient, large capacity' },
+            { name: 'Speed Queen Top Load', description: 'Commercial-grade durability' },
+            { name: 'Samsung AddWash', description: 'Smart features, mid-load additions' }
+        ],
+        tips: 'Front-load washers are more efficient but need more maintenance. Consider stacking for space.'
+    },
+    {
+        id: 'dishwasher-comparison',
+        name: 'Dishwasher Comparison',
+        description: 'Find a reliable and efficient dishwasher',
+        category: 'Home Appliances',
+        icon: '🍽️',
+        isProductComparison: true,
+        productCategory: 'dishwasher',
+        criteria: [
+            { name: 'Cleaning Performance', weight: 2.0, description: 'Wash quality, dried dishes' },
+            { name: 'Noise Level', weight: 1.7, description: 'Decibel rating during operation' },
+            { name: 'Energy Efficiency', weight: 1.5, description: 'Water and electricity usage per cycle' },
+            { name: 'Capacity & Racks', weight: 1.6, description: 'Place settings, rack flexibility' },
+            { name: 'Cycle Options', weight: 1.3, description: 'Wash programs, sanitize, quick wash' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to features' }
+        ],
+        exampleAlternatives: [
+            { name: 'Bosch 800 Series', description: 'Quiet, premium build' },
+            { name: 'KitchenAid Top Control', description: 'Powerful, adjustable racks' },
+            { name: 'GE Profile', description: 'Smart features, good value' }
+        ],
+        tips: 'Under 45dB is considered quiet. Check if it fits standard cabinet openings.'
+    },
+    {
+        id: 'vacuum-cleaner-comparison',
+        name: 'Vacuum Cleaner Comparison',
+        description: 'Compare vacuums for your cleaning needs',
+        category: 'Home Appliances',
+        icon: '🧹',
+        isProductComparison: true,
+        productCategory: 'vacuum cleaner',
+        criteria: [
+            { name: 'Suction Power', weight: 2.0, description: 'Cleaning effectiveness on different surfaces' },
+            { name: 'Filtration', weight: 1.7, description: 'HEPA filter, allergen capture' },
+            { name: 'Versatility', weight: 1.6, description: 'Attachments, carpet/hardwood, pet hair' },
+            { name: 'Battery Life', weight: 1.5, description: 'Runtime for cordless models' },
+            { name: 'Weight & Maneuverability', weight: 1.4, description: 'Ease of use, stairs capability' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs performance and features' }
+        ],
+        exampleAlternatives: [
+            { name: 'Dyson V15 Detect', description: 'Cordless, powerful, laser detection' },
+            { name: 'Shark Navigator', description: 'Upright, good value, pet-friendly' },
+            { name: 'Miele Complete C3', description: 'Canister, premium, quiet' }
+        ],
+        tips: 'Consider your home size and floor types. Cordless offers convenience but less runtime.'
+    },
+    {
+        id: 'air-purifier-comparison',
+        name: 'Air Purifier Comparison',
+        description: 'Find the best air purifier for your space',
+        category: 'Home Appliances',
+        icon: '💨',
+        isProductComparison: true,
+        productCategory: 'air purifier',
+        criteria: [
+            { name: 'Filtration Quality', weight: 2.0, description: 'HEPA, activated carbon, particle capture' },
+            { name: 'Room Coverage', weight: 1.8, description: 'Effective square footage, CADR rating' },
+            { name: 'Noise Level', weight: 1.6, description: 'Sound at different fan speeds' },
+            { name: 'Filter Cost', weight: 1.5, description: 'Replacement filter prices and frequency' },
+            { name: 'Energy Consumption', weight: 1.3, description: 'Power usage for continuous operation' },
+            { name: 'Value for Money', weight: 1.5, description: 'Initial cost and ongoing expenses' }
+        ],
+        exampleAlternatives: [
+            { name: 'Coway Airmega', description: 'Large rooms, smart features' },
+            { name: 'Levoit Core 300', description: 'Compact, affordable, quiet' },
+            { name: 'Blueair Blue Pure', description: 'Stylish design, efficient' }
+        ],
+        tips: 'Match CADR rating to your room size. Consider 24/7 operation costs.'
+    },
+    {
+        id: 'coffee-maker-comparison',
+        name: 'Coffee Maker Comparison',
+        description: 'Find your perfect coffee brewing system',
+        category: 'Home Appliances',
+        icon: '☕',
+        isProductComparison: true,
+        productCategory: 'coffee maker',
+        criteria: [
+            { name: 'Coffee Quality', weight: 2.0, description: 'Brew temperature, extraction, taste' },
+            { name: 'Convenience', weight: 1.7, description: 'Ease of use, programmable features' },
+            { name: 'Capacity', weight: 1.5, description: 'Cup/carafe size, servings per brew' },
+            { name: 'Speed', weight: 1.4, description: 'Brew time for full pot' },
+            { name: 'Cleaning', weight: 1.3, description: 'Maintenance ease, dishwasher safe parts' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs features and durability' }
+        ],
+        exampleAlternatives: [
+            { name: 'Breville Barista Express', description: 'Espresso, built-in grinder' },
+            { name: 'Technivorm Moccamaster', description: 'Pour-over style, certified brewing' },
+            { name: 'Keurig K-Elite', description: 'Single-serve, convenient, variety' }
+        ],
+        tips: 'Consider your daily coffee consumption and preferred brewing style.'
+    },
+    
+    // ========================================
+    // Fitness & Exercise Equipment Templates
+    // ========================================
+    {
+        id: 'treadmill-comparison',
+        name: 'Treadmill Comparison',
+        description: 'Compare treadmills for home fitness',
+        category: 'Fitness Equipment',
+        icon: '🏃',
+        isProductComparison: true,
+        productCategory: 'treadmill',
+        criteria: [
+            { name: 'Motor Power', weight: 1.9, description: 'Continuous horsepower, smoothness' },
+            { name: 'Running Surface', weight: 1.8, description: 'Belt size, cushioning quality' },
+            { name: 'Build Quality', weight: 1.7, description: 'Frame stability, weight capacity, warranty' },
+            { name: 'Features', weight: 1.5, description: 'Programs, incline, speed range, connectivity' },
+            { name: 'Footprint', weight: 1.3, description: 'Size, foldable, storage options' },
+            { name: 'Value for Money', weight: 1.6, description: 'Price vs durability and features' }
+        ],
+        exampleAlternatives: [
+            { name: 'NordicTrack Commercial', description: 'iFit integration, interactive training' },
+            { name: 'Sole F80', description: 'Reliable, powerful motor, good warranty' },
+            { name: 'ProForm Pro 2000', description: 'Budget-friendly, feature-rich' }
+        ],
+        tips: 'Test the running surface if possible. Ensure adequate room clearance around treadmill.'
+    },
+    {
+        id: 'exercise-bike-comparison',
+        name: 'Exercise Bike Comparison',
+        description: 'Find the right stationary bike for home',
+        category: 'Fitness Equipment',
+        icon: '🚴',
+        isProductComparison: true,
+        productCategory: 'exercise bike',
+        criteria: [
+            { name: 'Ride Quality', weight: 2.0, description: 'Smoothness, resistance levels, flywheel weight' },
+            { name: 'Comfort', weight: 1.8, description: 'Seat, handlebars, adjustability' },
+            { name: 'Build Quality', weight: 1.6, description: 'Stability, durability, weight capacity' },
+            { name: 'Features', weight: 1.5, description: 'Console, programs, connectivity, metrics' },
+            { name: 'Footprint', weight: 1.3, description: 'Space required, easy to move' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price relative to quality' }
+        ],
+        exampleAlternatives: [
+            { name: 'Peloton Bike+', description: 'Premium, live classes, community' },
+            { name: 'Schwinn IC4', description: 'Peloton alternative, great value' },
+            { name: 'Echelon EX-5', description: 'Affordable, app connectivity' }
+        ],
+        tips: 'Consider upright vs recumbent based on fitness goals. Factor in subscription costs for apps.'
+    },
+    {
+        id: 'rowing-machine-comparison',
+        name: 'Rowing Machine Comparison',
+        description: 'Compare rowing machines for full-body workouts',
+        category: 'Fitness Equipment',
+        icon: '🚣',
+        isProductComparison: true,
+        productCategory: 'rowing machine',
+        criteria: [
+            { name: 'Resistance Quality', weight: 2.0, description: 'Smoothness, resistance type (air/magnetic/water)' },
+            { name: 'Build Quality', weight: 1.8, description: 'Frame durability, rail quality, weight capacity' },
+            { name: 'Comfort', weight: 1.6, description: 'Seat, footrests, handle ergonomics' },
+            { name: 'Monitor & Metrics', weight: 1.5, description: 'Display, workout tracking, connectivity' },
+            { name: 'Storage', weight: 1.4, description: 'Foldability, vertical storage, footprint' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs durability and features' }
+        ],
+        exampleAlternatives: [
+            { name: 'Concept2 Model D', description: 'Industry standard, proven durability' },
+            { name: 'WaterRower', description: 'Water resistance, beautiful design' },
+            { name: 'Hydrow', description: 'Interactive screen, live rowing' }
+        ],
+        tips: 'Air resistance is more realistic, magnetic is quieter. Check rail length for your height.'
+    },
+    {
+        id: 'fitness-tracker-comparison',
+        name: 'Fitness Tracker Comparison',
+        description: 'Compare fitness trackers and smart bands',
+        category: 'Fitness Equipment',
+        icon: '⌚',
+        isProductComparison: true,
+        productCategory: 'fitness tracker',
+        criteria: [
+            { name: 'Tracking Accuracy', weight: 2.0, description: 'Heart rate, steps, sleep, calories' },
+            { name: 'Battery Life', weight: 1.8, description: 'Days of use per charge' },
+            { name: 'Features', weight: 1.6, description: 'GPS, SpO2, stress, workout modes' },
+            { name: 'App Quality', weight: 1.5, description: 'Data insights, goal setting, social features' },
+            { name: 'Comfort & Design', weight: 1.4, description: 'Wearability, style, water resistance' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs features and accuracy' }
+        ],
+        exampleAlternatives: [
+            { name: 'Fitbit Charge 6', description: 'Comprehensive tracking, Google integration' },
+            { name: 'Garmin Vivosmart 5', description: 'Advanced metrics, long battery' },
+            { name: 'Whoop 4.0', description: 'Recovery focused, subscription model' }
+        ],
+        tips: 'Consider if you need GPS built-in or can use phone GPS. Check app compatibility.'
+    },
+    {
+        id: 'yoga-mat-comparison',
+        name: 'Yoga Mat Comparison',
+        description: 'Find the perfect yoga mat for your practice',
+        category: 'Fitness Equipment',
+        icon: '🧘',
+        isProductComparison: true,
+        productCategory: 'yoga mat',
+        criteria: [
+            { name: 'Grip & Traction', weight: 2.0, description: 'Slip resistance, wet and dry performance' },
+            { name: 'Cushioning', weight: 1.8, description: 'Thickness, joint protection, comfort' },
+            { name: 'Material Quality', weight: 1.7, description: 'Durability, eco-friendly, non-toxic' },
+            { name: 'Size & Portability', weight: 1.4, description: 'Dimensions, weight, easy to carry' },
+            { name: 'Maintenance', weight: 1.3, description: 'Easy to clean, odor resistance' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs durability and quality' }
+        ],
+        exampleAlternatives: [
+            { name: 'Manduka PRO', description: 'Premium, lifetime warranty, eco-friendly' },
+            { name: 'Liforme', description: 'Superior grip, alignment markers' },
+            { name: 'Gaiam Essentials', description: 'Budget-friendly, good for beginners' }
+        ],
+        tips: 'Thicker mats (6mm+) for joint support, thinner (3-4mm) for balance poses and travel.'
+    },
+    {
+        id: 'home-gym-equipment-comparison',
+        name: 'Home Gym Equipment',
+        description: 'Compare weight sets and strength equipment',
+        category: 'Fitness Equipment',
+        icon: '🏋️',
+        isProductComparison: true,
+        productCategory: 'home gym',
+        criteria: [
+            { name: 'Weight Range', weight: 2.0, description: 'Min/max weight, adjustment increments' },
+            { name: 'Build Quality', weight: 1.9, description: 'Durability, safety, weight capacity' },
+            { name: 'Space Efficiency', weight: 1.7, description: 'Footprint, storage, compactness' },
+            { name: 'Versatility', weight: 1.6, description: 'Exercise variety, attachments' },
+            { name: 'Ease of Use', weight: 1.4, description: 'Weight changes, setup, adjustments' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price per weight range and features' }
+        ],
+        exampleAlternatives: [
+            { name: 'Bowflex SelectTech', description: 'Adjustable dumbbells, space-saving' },
+            { name: 'PowerBlock Elite', description: 'Expandable weights, compact design' },
+            { name: 'Ironmaster Quick-Lock', description: 'Heavy-duty, traditional feel' }
+        ],
+        tips: 'Plan for growth - buy equipment that can expand with your strength gains.'
+    },
+    
+    // ========================================
     // General Decision Templates
     // ========================================
     {
