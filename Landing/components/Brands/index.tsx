@@ -1,4 +1,6 @@
 import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image";
+import { getImagePath } from "@/lib/utils";
 
 const Brands = () => {
   const categories = [
@@ -6,36 +8,72 @@ const Brands = () => {
       id: 1,
       name: "💻 Tech & Electronics",
       templates: [
-        { name: "Laptops", id: "laptop-comparison" },
-        { name: "Smartphones", id: "smartphone-comparison" },
-        { name: "Headphones", id: "headphones-comparison" },
-        { name: "Cameras", id: "camera-comparison" },
-        { name: "Smartwatches", id: "smartwatch-comparison" },
-        { name: "Tablets", id: "tablet-comparison" },
+        { 
+          name: "Laptop Comparison", 
+          id: "laptop-comparison", 
+          icon: getImagePath("/images/icons/laptop.png"),
+          description: "Compare laptop specifications, performance benchmarks, and prices using our weighted decision matrix calculator"
+        },
+        { 
+          name: "Smartphone Comparison", 
+          id: "smartphone-comparison", 
+          icon: getImagePath("/images/icons/mobile-phone.png"),
+          description: "Side-by-side smartphone comparison with camera quality, battery life, and feature analysis"
+        },
+        { 
+          name: "Headphones Comparison", 
+          id: "headphones-comparison", 
+          icon: getImagePath("/images/icons/headphones.png"),
+          description: "Compare headphones by sound quality, noise cancellation, comfort, and value using our selection matrix"
+        },
       ],
     },
     {
       id: 2,
       name: "🏠 Home Appliances",
       templates: [
-        { name: "Refrigerators", id: "refrigerator-comparison" },
-        { name: "Washing Machines", id: "washing-machine-comparison" },
-        { name: "Dishwashers", id: "dishwasher-comparison" },
-        { name: "Vacuum Cleaners", id: "vacuum-comparison" },
-        { name: "Air Purifiers", id: "air-purifier-comparison" },
-        { name: "Coffee Makers", id: "coffee-maker-comparison" },
+        { 
+          name: "Vacuum Cleaner Comparison", 
+          id: "vacuum-comparison", 
+          icon: getImagePath("/images/icons/vacuum.png"),
+          description: "Compare vacuum cleaners by suction power, filtration, and cleaning performance with our weighted scoring model"
+        },
+        { 
+          name: "Air Purifier Comparison", 
+          id: "air-purifier-comparison", 
+          icon: getImagePath("/images/icons/air-purifier.png"),
+          description: "Evaluate air purifiers using our decision matrix tool for HEPA filtration, coverage area, and noise levels"
+        },
+        { 
+          name: "Coffee Maker Comparison", 
+          id: "coffee-maker-comparison", 
+          icon: getImagePath("/images/icons/coffee-machine.png"),
+          description: "Compare coffee makers by brew quality, features, and ease of use with our product comparison tool"
+        },
       ],
     },
     {
       id: 3,
       name: "🏋️ Fitness & Health",
       templates: [
-        { name: "Treadmills", id: "treadmill-comparison" },
-        { name: "Exercise Bikes", id: "exercise-bike-comparison" },
-        { name: "Rowing Machines", id: "rowing-machine-comparison" },
-        { name: "Ellipticals", id: "elliptical-comparison" },
-        { name: "Fitness Trackers", id: "fitness-tracker-comparison" },
-        { name: "Home Gyms", id: "home-gym-comparison" },
+        { 
+          name: "Treadmill Comparison", 
+          id: "treadmill-comparison", 
+          icon: getImagePath("/images/icons/treadmill.png"),
+          description: "Compare treadmills using our weighted decision matrix for motor power, running surface, and durability"
+        },
+        { 
+          name: "Exercise Bike Comparison", 
+          id: "exercise-bike-comparison", 
+          icon: getImagePath("/images/icons/elliptical.png"),
+          description: "Evaluate exercise bikes and ellipticals with our selection matrix tool for resistance, comfort, and features"
+        },
+        { 
+          name: "Home Gym Equipment", 
+          id: "home-gym-comparison", 
+          icon: getImagePath("/images/icons/gym.png"),
+          description: "Compare home gym equipment using our prioritization matrix for versatility, space efficiency, and value"
+        },
       ],
     },
   ];
@@ -50,17 +88,17 @@ const Brands = () => {
           mb="50px"
         />
         
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <div
               key={category.id}
-              className="wow fadeInUp rounded-lg bg-white p-6 shadow-one dark:bg-gray-dark dark:shadow-three"
+              className="wow fadeInUp rounded-lg bg-white p-8 shadow-one"
               data-wow-delay=".1s"
             >
-              <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+              <h3 className="mb-6 text-2xl font-bold text-black">
                 {category.name}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="space-y-6">
                 {category.templates.map((template) => {
                   // Map template IDs to comparison page slugs
                   const slugMap: Record<string, string> = {
@@ -88,13 +126,17 @@ const Brands = () => {
                   const href = slug ? `/compare/${slug}` : `/app.html?template=${template.id}`;
                   
                   return (
-                    <a
-                      key={template.id}
-                      href={href}
-                      className="inline-block rounded-md bg-gray-2 px-3 py-1.5 text-sm font-medium text-black transition-all hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:hover:bg-primary"
-                    >
-                      {template.name}
-                    </a>
+                    <div key={template.id} className="flex items-start gap-4">
+                      <div className="flex h-[70px] w-[70px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10">
+                        <Image src={template.icon} alt={template.name} width={40} height={40} />
+                      </div>
+                      <div className="flex-1">
+                        <a href={href} className="mb-2 block text-lg font-semibold text-black hover:text-primary">
+                          {template.name}
+                        </a>
+                        <p className="text-sm text-body-color">{template.description}</p>
+                      </div>
+                    </div>
                   );
                 })}
               </div>

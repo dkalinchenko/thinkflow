@@ -35,7 +35,17 @@
         footer { background: #1a1a1a; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem; }
         footer a { color: white; text-decoration: none; }
         footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 1.75rem; } .blog-grid { grid-template-columns: 1fr; } }
+        .breadcrumb { padding: 6rem 0 1rem; font-size: 0.9rem; color: var(--text-dark); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .featured-tools { background: white; padding: 3rem 0; margin-bottom: 3rem; border-radius: 12px; }
+        .featured-tools h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 1rem; text-align: center; }
+        .featured-tools .subtitle { text-align: center; color: var(--text-dark); margin-bottom: 2rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .tool-card { background: var(--bg-light); border: 2px solid #CED3DC; border-radius: 12px; padding: 2rem; text-decoration: none; display: block; transition: all 0.3s; }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); border-color: var(--primary); }
+        .tool-card h3 { color: #1a1a1a; font-size: 1.25rem; margin: 0 0 0.5rem; }
+        .tool-card p { color: var(--text-dark); margin: 0; font-size: 0.95rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.75rem; } .blog-grid { grid-template-columns: 1fr; } .tools-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -51,12 +61,34 @@
 
     <section class="hero">
         <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a> &gt; Blog
+            </div>
             <h1>OptiMind Blog</h1>
             <p>Expert guides on decision matrices, product comparison, and making smarter buying decisions with data-driven analysis.</p>
         </div>
     </section>
 
     <main class="container">
+        <!-- Featured Tools -->
+        <section class="featured-tools">
+            <h2>Popular Decision Making Tools</h2>
+            <p class="subtitle">Try our free tools to make better buying decisions</p>
+            <div class="tools-grid">
+                <a href="/decision-matrix-calculator/" class="tool-card">
+                    <h3>Decision Matrix Calculator</h3>
+                    <p>Free weighted scoring tool for objective decisions. Compare options using customizable criteria.</p>
+                </a>
+                <a href="/product-comparison-tool/" class="tool-card">
+                    <h3>Product Comparison Tool</h3>
+                    <p>Compare products side-by-side with AI insights. No signup required, completely private.</p>
+                </a>
+                <a href="/decision-matrix-template/" class="tool-card">
+                    <h3>Decision Matrix Templates</h3>
+                    <p>Pre-built templates for laptops, smartphones, and more. Start comparing in seconds.</p>
+                </a>
+            </div>
+        </section>
         <!-- Decision Matrix Guides -->
         <section class="blog-section">
             <h2 class="section-title">Decision Matrix Guides</h2>
