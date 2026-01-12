@@ -271,26 +271,34 @@ function setupEventListeners() {
         }
     });
     
-    // Theme toggle
-    elements.themeToggle.addEventListener('click', async () => {
-        await StateManager.toggleTheme();
-        const state = StateManager.getState();
-        document.documentElement.setAttribute('data-theme', state.ui.theme);
-        
-        // Re-render charts if on results page
-        if (state.currentStep === 'results' && state.currentDecision) {
-            const results = StateManager.calculateResults();
-            if (results.length > 0 && state.currentDecision.criteria) {
-                renderRankingsChart(results);
-                renderRadarChart(results, state.currentDecision.criteria);
+    // Theme toggle (optional - may not exist if theme toggle removed)
+    if (elements.themeToggle) {
+        elements.themeToggle.addEventListener('click', async () => {
+            await StateManager.toggleTheme();
+            const state = StateManager.getState();
+            document.documentElement.setAttribute('data-theme', state.ui.theme);
+            
+            // Re-render charts if on results page
+            if (state.currentStep === 'results' && state.currentDecision) {
+                const results = StateManager.calculateResults();
+                if (results.length > 0 && state.currentDecision.criteria) {
+                    renderRankingsChart(results);
+                    renderRadarChart(results, state.currentDecision.criteria);
+                }
             }
-        }
-    });
+        });
+    }
     
     // New Decision buttons
-    elements.newDecisionBtn.addEventListener('click', createNewDecision);
-    elements.welcomeNewBtn.addEventListener('click', createNewDecision);
-    elements.newDecisionFromResults.addEventListener('click', createNewDecision);
+    if (elements.newDecisionBtn) {
+        elements.newDecisionBtn.addEventListener('click', createNewDecision);
+    }
+    if (elements.welcomeNewBtn) {
+        elements.welcomeNewBtn.addEventListener('click', createNewDecision);
+    }
+    if (elements.newDecisionFromResults) {
+        elements.newDecisionFromResults.addEventListener('click', createNewDecision);
+    }
     
     // Product comparison button
     if (elements.welcomeProductBtn) {
@@ -309,7 +317,9 @@ function setupEventListeners() {
     }
     
     // Templates
-    elements.welcomeTemplateBtn.addEventListener('click', () => openModal('templates'));
+    if (elements.welcomeTemplateBtn) {
+        elements.welcomeTemplateBtn.addEventListener('click', () => openModal('templates'));
+    }
     
     // Template quick links
     document.querySelectorAll('.template-link-btn').forEach(btn => {
@@ -320,29 +330,55 @@ function setupEventListeners() {
     });
     
     // Decision title editing
-    elements.decisionTitleInput.addEventListener('input', debounce(updateDecisionTitle, 500));
+    if (elements.decisionTitleInput) {
+        elements.decisionTitleInput.addEventListener('input', debounce(updateDecisionTitle, 500));
+    }
     
     // Decision search
-    elements.decisionSearch.addEventListener('input', debounce(handleDecisionSearch, 300));
+    if (elements.decisionSearch) {
+        elements.decisionSearch.addEventListener('input', debounce(handleDecisionSearch, 300));
+    }
     
     // Export
-    elements.exportAllBtn.addEventListener('click', handleExportAll);
+    if (elements.exportAllBtn) {
+        elements.exportAllBtn.addEventListener('click', handleExportAll);
+    }
     
     // Criteria step
-    elements.addCriterionBtn.addEventListener('click', addCriterion);
-    elements.generateCriteriaBtn.addEventListener('click', generateCriteria);
-    elements.toCriteriaNext.addEventListener('click', () => navigateToStep('alternatives'));
+    if (elements.addCriterionBtn) {
+        elements.addCriterionBtn.addEventListener('click', addCriterion);
+    }
+    if (elements.generateCriteriaBtn) {
+        elements.generateCriteriaBtn.addEventListener('click', generateCriteria);
+    }
+    if (elements.toCriteriaNext) {
+        elements.toCriteriaNext.addEventListener('click', () => navigateToStep('alternatives'));
+    }
     
     // Alternatives step
-    elements.addAlternativeBtn.addEventListener('click', addAlternative);
-    elements.generateAlternativesBtn.addEventListener('click', generateAlternatives);
-    elements.toAlternativesPrev.addEventListener('click', () => navigateToStep('criteria'));
-    elements.toAlternativesNext.addEventListener('click', () => navigateToStep('evaluation'));
+    if (elements.addAlternativeBtn) {
+        elements.addAlternativeBtn.addEventListener('click', addAlternative);
+    }
+    if (elements.generateAlternativesBtn) {
+        elements.generateAlternativesBtn.addEventListener('click', generateAlternatives);
+    }
+    if (elements.toAlternativesPrev) {
+        elements.toAlternativesPrev.addEventListener('click', () => navigateToStep('criteria'));
+    }
+    if (elements.toAlternativesNext) {
+        elements.toAlternativesNext.addEventListener('click', () => navigateToStep('evaluation'));
+    }
     
     // Evaluation step
-    elements.aiEvaluateAllBtn.addEventListener('click', aiEvaluateAll);
-    elements.toEvaluationPrev.addEventListener('click', () => navigateToStep('alternatives'));
-    elements.toEvaluationNext.addEventListener('click', () => navigateToStep('results'));
+    if (elements.aiEvaluateAllBtn) {
+        elements.aiEvaluateAllBtn.addEventListener('click', aiEvaluateAll);
+    }
+    if (elements.toEvaluationPrev) {
+        elements.toEvaluationPrev.addEventListener('click', () => navigateToStep('alternatives'));
+    }
+    if (elements.toEvaluationNext) {
+        elements.toEvaluationNext.addEventListener('click', () => navigateToStep('results'));
+    }
     
     // View toggle
     document.querySelectorAll('.view-btn').forEach(btn => {
@@ -350,16 +386,28 @@ function setupEventListeners() {
             document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const view = btn.dataset.view;
-            elements.matrixView.style.display = view === 'matrix' ? 'block' : 'none';
-            elements.cardsView.style.display = view === 'cards' ? 'block' : 'none';
+            if (elements.matrixView) {
+                elements.matrixView.style.display = view === 'matrix' ? 'block' : 'none';
+            }
+            if (elements.cardsView) {
+                elements.cardsView.style.display = view === 'cards' ? 'block' : 'none';
+            }
         });
     });
     
     // Results step
-    elements.getAiInsightsBtn.addEventListener('click', getAIInsights);
-    elements.shareDecisionBtn.addEventListener('click', shareDecision);
-    elements.exportDecisionBtn.addEventListener('click', () => openModal('export'));
-    elements.toResultsPrev.addEventListener('click', () => navigateToStep('evaluation'));
+    if (elements.getAiInsightsBtn) {
+        elements.getAiInsightsBtn.addEventListener('click', getAIInsights);
+    }
+    if (elements.shareDecisionBtn) {
+        elements.shareDecisionBtn.addEventListener('click', shareDecision);
+    }
+    if (elements.exportDecisionBtn) {
+        elements.exportDecisionBtn.addEventListener('click', () => openModal('export'));
+    }
+    if (elements.toResultsPrev) {
+        elements.toResultsPrev.addEventListener('click', () => navigateToStep('evaluation'));
+    }
     
     // Progress steps click
     elements.progressSteps.forEach(step => {
@@ -372,9 +420,15 @@ function setupEventListeners() {
     });
     
     // AI Modal
-    elements.aiRegenerateBtn.addEventListener('click', regenerateAISuggestions);
-    elements.aiAcceptAllBtn.addEventListener('click', acceptAllAISuggestions);
-    elements.aiRetryBtn.addEventListener('click', retryAI);
+    if (elements.aiRegenerateBtn) {
+        elements.aiRegenerateBtn.addEventListener('click', regenerateAISuggestions);
+    }
+    if (elements.aiAcceptAllBtn) {
+        elements.aiAcceptAllBtn.addEventListener('click', acceptAllAISuggestions);
+    }
+    if (elements.aiRetryBtn) {
+        elements.aiRetryBtn.addEventListener('click', retryAI);
+    }
     
     // Export Modal
     document.querySelectorAll('.export-option').forEach(option => {
@@ -386,16 +440,20 @@ function setupEventListeners() {
     });
     
     // Share Modal
-    elements.copyShareLink.addEventListener('click', copyShareLink);
+    if (elements.copyShareLink) {
+        elements.copyShareLink.addEventListener('click', copyShareLink);
+    }
     
     // Template list in sidebar
-    elements.templateList.addEventListener('click', (e) => {
-        const item = e.target.closest('.nav-item');
-        if (item) {
-            const templateId = item.dataset.template;
-            applyTemplate(templateId);
-        }
-    });
+    if (elements.templateList) {
+        elements.templateList.addEventListener('click', (e) => {
+            const item = e.target.closest('.nav-item');
+            if (item) {
+                const templateId = item.dataset.template;
+                applyTemplate(templateId);
+            }
+        });
+    }
     
     // Product template list in sidebar
     if (elements.productTemplateList) {
