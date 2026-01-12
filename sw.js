@@ -67,8 +67,9 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
     
-    // Don't cache API calls
-    if (url.hostname.includes('api.') || 
+    // Don't cache POST requests or API calls
+    if (event.request.method !== 'GET' ||
+        url.hostname.includes('api.') || 
         url.hostname.includes('deepseek') || 
         url.hostname.includes('openai') ||
         url.hostname.includes('anthropic')) {
@@ -94,7 +95,7 @@ self.addEventListener('fetch', (event) => {
             
             // Not in cache, fetch from network
             return fetch(event.request).then((response) => {
-                // Cache successful responses
+                // Cache successful responses (only GET requests)
                 if (response.ok) {
                     const responseClone = response.clone();
                     caches.open(CACHE_NAME).then((cache) => {

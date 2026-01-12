@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Weighted Decision Matrix: A Step-by-Step Guide | OptiMind</title>
+    <meta name="description" content="Master the weighted decision matrix with our complete guide. Learn how to assign criteria weights, score options, and make objective decisions."/>
+    <meta name="keywords" content="weighted decision matrix,decision matrix weights,weighted scoring,how to weight criteria,decision matrix guide"/>
+    <link rel="canonical" href="https://optimind.space/blog/weighted-decision-matrix-guide/"/>
+    <link rel="icon" type="image/png" href="/images/icons/puzzle.png"/>
+    <link rel="stylesheet" href="/_next/static/css/a919680227c60a63.css"/>
+    <style>
+        :root { --primary: #275DAD; --text-dark: #5B616A; --bg-light: #FCF7F8; }
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+        header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 1rem; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; }
+        .logo img { width: 32px; height: 32px; }
+        .btn-primary { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        article { padding: 7rem 0 4rem; }
+        .article-meta { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
+        h1 { font-size: 2.25rem; color: #1a1a1a; line-height: 1.3; margin-bottom: 1rem; }
+        h2 { font-size: 1.5rem; color: #1a1a1a; margin-top: 2.5rem; margin-bottom: 1rem; }
+        h3 { font-size: 1.25rem; color: #1a1a1a; margin-top: 2rem; }
+        p { margin-bottom: 1.5rem; }
+        ul, ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        .step-box { background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--primary); }
+        .step-box h3 { margin-top: 0; color: var(--primary); }
+        .example-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; border-radius: 8px; overflow: hidden; }
+        .example-table th, .example-table td { padding: 0.75rem; text-align: center; border-bottom: 1px solid #eee; }
+        .example-table th { background: var(--primary); color: white; }
+        .cta-box { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0; }
+        .cta-box h3 { color: white; margin-top: 0; }
+        .cta-box a { background: white; color: var(--primary); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem; }
+        .related-posts { background: white; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-posts h3 { margin-top: 0; }
+        .related-posts ul { list-style: none; padding: 0; margin: 0; }
+        .related-posts li { margin-bottom: 0.75rem; }
+        .related-posts a { color: var(--primary); text-decoration: none; }
+        footer { background: #1a1a1a; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem; }
+        footer a { color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo"><img src="/images/icons/puzzle.png" alt="OptiMind"/><span>OptiMind</span></a>
+            <a href="/app.html" class="btn-primary">Try Calculator</a>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <div class="article-meta">Published January 27, 2026 · 10 min read</div>
+            <h1>Weighted Decision Matrix: A Step-by-Step Guide</h1>
+
+            <p>A <strong>weighted decision matrix</strong> takes the basic decision matrix and adds a crucial element: importance weights. Not all criteria matter equally, and weighted scoring reflects that reality. This guide will teach you exactly how to create and use a weighted decision matrix for any decision.</p>
+
+            <h2>What Makes a Decision Matrix "Weighted"?</h2>
+
+            <p>In a simple decision matrix, you score options on criteria and sum the scores. The problem? All criteria are treated equally, which rarely reflects reality.</p>
+
+            <p>A <strong>weighted</strong> matrix assigns importance percentages to each criterion. Criteria you care more about have more influence on the final score. A factor weighted 30% has twice the impact of one weighted 15%.</p>
+
+            <h2>Building a Weighted Decision Matrix</h2>
+
+            <div class="step-box">
+                <h3>Step 1: List Your Options</h3>
+                <p>Identify the alternatives you're comparing. Keep it to 3-6 options for manageable analysis.</p>
+            </div>
+
+            <div class="step-box">
+                <h3>Step 2: Define Evaluation Criteria</h3>
+                <p>What factors matter for this decision? Be specific and avoid overlap. Aim for 5-8 criteria.</p>
+            </div>
+
+            <div class="step-box">
+                <h3>Step 3: Assign Weights (Most Important Step)</h3>
+                <p>Distribute 100% across your criteria based on importance. Ask yourself:</p>
+                <ul>
+                    <li>"If I could only optimize for one thing, what would it be?" (highest weight)</li>
+                    <li>"Would I trade criterion A for more of criterion B?" (compare relative importance)</li>
+                    <li>"If this option excelled here but failed there, would I still choose it?" (reveals true priorities)</li>
+                </ul>
+                <p>Weights must total exactly 100%.</p>
+            </div>
+
+            <div class="step-box">
+                <h3>Step 4: Score Each Option</h3>
+                <p>Rate how well each alternative performs on each criterion using a consistent scale (typically 1-5). Be objective and consistent.</p>
+            </div>
+
+            <div class="step-box">
+                <h3>Step 5: Calculate Weighted Scores</h3>
+                <p>For each option: (Score × Weight) for each criterion, then sum. The option with the highest total wins.</p>
+            </div>
+
+            <h2>Example: Weighted Headphones Comparison</h2>
+
+            <table class="example-table">
+                <tr>
+                    <th>Criterion</th>
+                    <th>Weight</th>
+                    <th>Sony WH-1000XM5</th>
+                    <th>Apple AirPods Max</th>
+                    <th>Bose QC Ultra</th>
+                </tr>
+                <tr>
+                    <td>Sound Quality</td>
+                    <td>30%</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Noise Canceling</td>
+                    <td>25%</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Comfort</td>
+                    <td>20%</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Value</td>
+                    <td>15%</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Battery</td>
+                    <td>10%</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                </tr>
+                <tr style="background: #e8f4f8; font-weight: bold;">
+                    <td>WEIGHTED TOTAL</td>
+                    <td>100%</td>
+                    <td>4.65</td>
+                    <td>3.85</td>
+                    <td>4.45</td>
+                </tr>
+            </table>
+
+            <p><strong>Winner: Sony WH-1000XM5</strong> — The Sony's excellent scores across highly-weighted criteria (sound quality and noise canceling) push it ahead, despite Bose having better comfort.</p>
+
+            <div class="cta-box">
+                <h3>Create Your Weighted Matrix</h3>
+                <p>Our free calculator handles the math automatically. Just define criteria, set weights, and score options.</p>
+                <a href="/decision-matrix-calculator/">Launch Calculator →</a>
+            </div>
+
+            <h2>Tips for Assigning Weights</h2>
+
+            <h3>Start with Rough Buckets</h3>
+            <p>Group criteria into "critical" (25-35% each), "important" (15-20% each), and "nice-to-have" (5-10% each), then refine.</p>
+
+            <h3>Use Pairwise Comparison</h3>
+            <p>Compare each criterion pair: "Is A more important than B?" Tally wins to help rank importance.</p>
+
+            <h3>Check for Overlap</h3>
+            <p>If two criteria often score the same across options, they might be redundant. Combine or drop one.</p>
+
+            <h3>Validate with Extremes</h3>
+            <p>Imagine an option that scores 5 on your highest-weighted criterion but 1 on everything else. Would you choose it? If not, your weights might be off.</p>
+
+            <h2>When Weighted Results Surprise You</h2>
+
+            <p>Sometimes the calculated winner isn't what you expected. This is valuable information:</p>
+
+            <ul>
+                <li>If you want to reject the winner, examine what criterion is missing from your matrix</li>
+                <li>If weights feel wrong in hindsight, adjust them—the matrix revealed your true priorities</li>
+                <li>If you accept the surprise winner, you've learned something about your actual preferences</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+
+            <p>A <strong>weighted decision matrix</strong> is the gold standard for objective decision-making. By assigning importance to criteria, you ensure the final ranking reflects YOUR priorities—not just a simple tally of scores.</p>
+
+            <p>Ready to build your weighted matrix? <a href="/app.html">Try our free calculator</a> and make your next decision with confidence.</p>
+
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="/blog/decision-matrix-calculator-guide/">How to Use a Decision Matrix Calculator</a></li>
+                    <li><a href="/blog/weighted-decision-matrix-template/">Weighted Decision Matrix Template</a></li>
+                    <li><a href="/blog/decision-matrix-template-guide/">Free Decision Matrix Templates</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p><a href="/">OptiMind</a> · <a href="/blog/">Blog</a></p>
+            <p>© 2026 OptiMind. Making smart decisions, one comparison at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

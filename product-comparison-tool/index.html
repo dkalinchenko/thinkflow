@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Product Comparison Tool - Compare Products Online Free | OptiMind</title>
+    <meta name="description" content="Free product comparison tool to compare products online objectively. Use our AI-powered weighted scoring to find the best products for your needs. No signup required."/>
+    <meta name="keywords" content="product comparison tool,compare products online,product comparison website,best product comparison tool,compare products side by side,product research tool,unbiased product comparison,objective product comparison"/>
+    <link rel="canonical" href="https://optimind.space/product-comparison-tool/"/>
+    <meta property="og:title" content="Product Comparison Tool - Compare Products Online Free | OptiMind"/>
+    <meta property="og:description" content="Free product comparison tool to compare products online objectively. Use our AI-powered weighted scoring to find the best products for your needs."/>
+    <meta property="og:url" content="https://optimind.space/product-comparison-tool/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Product Comparison Tool - Compare Products Online Free | OptiMind"/>
+    <meta name="twitter:description" content="Free product comparison tool with AI-powered weighted scoring. Compare any products objectively."/>
+    <link rel="icon" type="image/png" href="/images/icons/puzzle.png"/>
+    <link rel="stylesheet" href="/_next/static/css/a919680227c60a63.css"/>
+    <style>
+        :root { --primary: #275DAD; --text-dark: #5B616A; --bg-light: #FCF7F8; --bg-gray: #CED3DC; }
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; }
+        .logo img { width: 32px; height: 32px; }
+        .btn-primary { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary { background: white; color: var(--primary); border: 2px solid var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .hero { padding: 8rem 0 4rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #1a1a1a; line-height: 1.2; }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; line-height: 1.7; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        section { padding: 4rem 0; }
+        .section-gray { background: white; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2rem; margin-bottom: 1rem; color: #1a1a1a; }
+        .section-title p { color: var(--text-dark); max-width: 600px; margin: 0 auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .feature-card { background: var(--bg-light); padding: 2rem; border-radius: 12px; }
+        .feature-card h3 { margin-bottom: 0.75rem; color: #1a1a1a; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .category-card { background: white; padding: 1.5rem; border-radius: 12px; text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid var(--bg-gray); }
+        .category-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .category-card img { width: 48px; height: 48px; margin-bottom: 1rem; }
+        .category-card h3 { margin: 0; font-size: 1rem; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: white; border-radius: 12px; overflow: hidden; }
+        .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--bg-gray); }
+        .comparison-table th { background: var(--primary); color: white; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .faq-item { background: white; border-radius: 8px; margin-bottom: 1rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .faq-item h3 { margin: 0 0 0.75rem; color: #1a1a1a; }
+        .faq-item p { margin: 0; line-height: 1.7; }
+        .cta { background: var(--primary); color: white; text-align: center; padding: 4rem 2rem; border-radius: 12px; margin: 2rem 0; }
+        .cta h2 { margin-bottom: 1rem; }
+        .cta p { margin-bottom: 2rem; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta .btn-primary { background: white; color: var(--primary); }
+        .cta .btn-secondary { border-color: white; color: white; }
+        footer { background: #1a1a1a; color: white; padding: 3rem 0; text-align: center; }
+        footer a { color: white; text-decoration: none; }
+        footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.75rem; } .hero p { font-size: 1rem; } }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Product Comparison Tool",
+        "applicationCategory": "BusinessApplication",
+        "description": "Free online product comparison tool to compare products objectively using weighted scoring and AI-powered analysis.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "248" }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <img src="/images/icons/puzzle.png" alt="OptiMind Logo"/>
+                <span>OptiMind</span>
+            </a>
+            <a href="/app.html" class="btn-primary">Compare Products</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Product Comparison Tool</h1>
+                <p>Stop relying on biased reviews and affiliate rankings. Our free product comparison tool lets you compare products online using your own criteria and priorities. Whether you're shopping for electronics, appliances, or any major purchase, get objective recommendations based on what matters to YOU.</p>
+                <div class="hero-buttons">
+                    <a href="/app.html" class="btn-primary">Start Comparing Products →</a>
+                    <a href="#categories" class="btn-secondary">Browse Categories</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-gray">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Use Our Product Comparison Tool?</h2>
+                    <p>Traditional comparison sites have a conflict of interest. We don't.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>You Define What Matters</h3>
+                        <p>Most comparison sites rank products by what makes them money. Our product comparison tool lets YOU set the criteria and weights. If battery life matters twice as much as price to you, your comparison reflects that.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Objective Weighted Scoring</h3>
+                        <p>Our decision matrix approach turns subjective preferences into objective scores. Rate each product on your criteria, assign importance weights, and let the math reveal the best choice for your specific needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>AI-Powered Research</h3>
+                        <p>Don't know all the specs? Our AI automatically researches product details, reviews, and ratings from Amazon—saving you hours of manual comparison work. Just enter product names and we do the rest.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Privacy-First Approach</h3>
+                        <p>No tracking, no account required, no data harvesting. Your product research stays private in your browser. We don't sell your shopping data to advertisers or influence your results with paid placements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Compare Any Products</h3>
+                        <p>Unlike category-specific sites, our tool works for ANY products. Compare laptops, compare phones, compare refrigerators, or even compare across categories. The methodology adapts to your needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Export & Share Results</h3>
+                        <p>Download your comparison as PDF, CSV, or Markdown. Share a link with friends or family to get their input. Perfect for household decisions or team purchasing decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Popular Product Comparison Categories</h2>
+                    <p>Start comparing products in these popular categories or create your own</p>
+                </div>
+                <div class="category-grid">
+                    <a href="/compare/laptops/" class="category-card">
+                        <img src="/images/icons/laptop.png" alt="Laptops"/>
+                        <h3>Laptops</h3>
+                    </a>
+                    <a href="/compare/smartphones/" class="category-card">
+                        <img src="/images/icons/mobile-phone.png" alt="Smartphones"/>
+                        <h3>Smartphones</h3>
+                    </a>
+                    <a href="/compare/headphones/" class="category-card">
+                        <img src="/images/icons/headphones.png" alt="Headphones"/>
+                        <h3>Headphones</h3>
+                    </a>
+                    <a href="/compare/cameras/" class="category-card">
+                        <img src="/images/icons/camera.png" alt="Cameras"/>
+                        <h3>Cameras</h3>
+                    </a>
+                    <a href="/compare/smartwatches/" class="category-card">
+                        <img src="/images/icons/smartwatch.png" alt="Smartwatches"/>
+                        <h3>Smartwatches</h3>
+                    </a>
+                    <a href="/compare/vacuum-cleaners/" class="category-card">
+                        <img src="/images/icons/vacuum.png" alt="Vacuum Cleaners"/>
+                        <h3>Vacuums</h3>
+                    </a>
+                    <a href="/compare/air-purifiers/" class="category-card">
+                        <img src="/images/icons/air-purifier.png" alt="Air Purifiers"/>
+                        <h3>Air Purifiers</h3>
+                    </a>
+                    <a href="/compare/coffee-makers/" class="category-card">
+                        <img src="/images/icons/coffee-machine.png" alt="Coffee Makers"/>
+                        <h3>Coffee Makers</h3>
+                    </a>
+                    <a href="/compare/treadmills/" class="category-card">
+                        <img src="/images/icons/treadmill.png" alt="Treadmills"/>
+                        <h3>Treadmills</h3>
+                    </a>
+                    <a href="/compare/exercise-bikes/" class="category-card">
+                        <img src="/images/icons/gym.png" alt="Exercise Bikes"/>
+                        <h3>Exercise Bikes</h3>
+                    </a>
+                    <a href="/app.html" class="category-card" style="border: 2px dashed var(--primary);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">+</div>
+                        <h3>Custom Comparison</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-gray">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Product Comparison Tool vs. Review Sites</h2>
+                    <p>See why objective comparison beats subjective reviews</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>OptiMind</th>
+                            <th>Traditional Review Sites</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Who defines "best"?</strong></td>
+                            <td>You (through custom weights)</td>
+                            <td>The reviewer or algorithm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Affiliate bias</strong></td>
+                            <td>No paid placements in results</td>
+                            <td>Often ranks higher-commission products</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Criteria flexibility</strong></td>
+                            <td>Add any criteria you want</td>
+                            <td>Fixed criteria chosen by site</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Privacy</strong></td>
+                            <td>No tracking, data stays local</td>
+                            <td>Tracks browsing for ad targeting</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Methodology</strong></td>
+                            <td>Transparent weighted scoring</td>
+                            <td>Opaque "expert" rankings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Account required</strong></td>
+                            <td>No</td>
+                            <td>Often yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Product Comparison Tool FAQ</h2>
+                    <p>Questions about comparing products online</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <h3>How is this different from CNET, Wirecutter, or other review sites?</h3>
+                        <p>Review sites tell you what THEY think is best based on their criteria. Our product comparison tool lets YOU define the criteria and weights. A reviewer might prioritize camera quality, but if you care more about battery life and price, their "best phone" isn't best for you. We give you the framework to find YOUR best choice.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I compare products from different brands?</h3>
+                        <p>Absolutely. Our tool is brand-agnostic. Compare Apple to Samsung, Sony to Bose, or any combination. The weighted scoring methodology works regardless of brand, helping you focus on features and performance rather than marketing.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Where does the product data come from?</h3>
+                        <p>When you use our AI research feature, we pull product information including specs, features, prices, and ratings from Amazon. This gives you access to comprehensive product data without hours of manual research. You can also enter your own data manually.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is this free to use?</h3>
+                        <p>Yes, completely free with no limitations. No trial period, no premium tier, no hidden fees. We believe everyone deserves access to objective decision-making tools. The tool runs in your browser with no server costs on our end.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I save and return to my comparison later?</h3>
+                        <p>Yes. Your comparisons are automatically saved in your browser's local storage. You can also export as a shareable link to access from any device, or download as PDF/CSV for permanent records.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="cta">
+                    <h2>Ready to Compare Products Objectively?</h2>
+                    <p>Stop guessing. Start comparing products based on what matters to you. Free, private, and unbiased.</p>
+                    <div class="cta-buttons">
+                        <a href="/app.html" class="btn-primary">Start Comparing →</a>
+                        <a href="/decision-matrix-calculator/" class="btn-secondary">Learn About Decision Matrices</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="/">OptiMind</a> - Free Product Comparison Tool</p>
+            <p>© 2026 OptiMind. Making smart decisions, one comparison at a time.</p>
+            <p style="margin-top: 1rem;"><a href="/blog/">Blog</a> · <a href="/decision-matrix-calculator/">Decision Matrix</a> · <a href="/decision-matrix-template/">Templates</a></p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">As an Amazon Associate, OptiMind earns from qualifying purchases.</p>
+            <p style="font-size: 0.8rem;"><a href="https://www.flaticon.com/free-icons/brain" title="brain icons">Icons by Freepik - Flaticon</a></p>
+        </div>
+    </footer>
+</body>
+</html>

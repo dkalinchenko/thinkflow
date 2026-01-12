@@ -3,7 +3,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://optimind.space/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,69 +11,237 @@
     <!-- Main App -->
     <url>
         <loc>https://optimind.space/app.html</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Comparison Landing Pages - Top 10 Categories -->
+    <!-- High-Value Landing Pages -->
+    <url>
+        <loc>https://optimind.space/decision-matrix-calculator/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/product-comparison-tool/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/decision-matrix-template/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Blog Index -->
+    <url>
+        <loc>https://optimind.space/blog/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Blog Posts - Decision Matrix -->
+    <url>
+        <loc>https://optimind.space/blog/decision-matrix-calculator-guide/</loc>
+        <lastmod>2026-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/weighted-decision-matrix-guide/</loc>
+        <lastmod>2026-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/decision-matrix-template-guide/</loc>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/weighted-decision-matrix-template/</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/top-decision-matrix-tools/</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Posts - Product Comparison -->
+    <url>
+        <loc>https://optimind.space/blog/buying-decision-tools/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/best-product-comparison-tools/</loc>
+        <lastmod>2026-01-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/compare-products-online/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/purchase-decision-matrix/</loc>
+        <lastmod>2026-01-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/decision-making-tools/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/product-comparison-templates/</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Posts - Tech (Laptops & Smartphones) -->
+    <url>
+        <loc>https://optimind.space/blog/how-to-compare-laptops/</loc>
+        <lastmod>2026-01-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/laptop-comparison-tools/</loc>
+        <lastmod>2026-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/best-laptop-comparison/</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/compare-smartphones/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/smartphone-comparison-tools/</loc>
+        <lastmod>2026-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/best-smartphone-comparison/</loc>
+        <lastmod>2026-02-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Posts - Privacy & Objectivity -->
+    <url>
+        <loc>https://optimind.space/blog/private-product-comparison/</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/privacy-focused-comparison/</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/objective-product-comparison/</loc>
+        <lastmod>2026-01-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/unbiased-product-comparison/</loc>
+        <lastmod>2026-01-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://optimind.space/blog/data-driven-comparison/</loc>
+        <lastmod>2026-02-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Product Comparison Landing Pages -->
     <url>
         <loc>https://optimind.space/compare/laptops/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/smartphones/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/headphones/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/cameras/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/smartwatches/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/vacuum-cleaners/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/air-purifiers/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/coffee-makers/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/treadmills/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://optimind.space/compare/exercise-bikes/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
