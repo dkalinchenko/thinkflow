@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W5GF3XKD');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ThinkFlow - AI-powered product comparison tool. Compare laptops, phones, cameras & more with smart analysis. Find your perfect tech purchase.">
@@ -86,7 +93,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="icon" type="image/png" href="/images/icons/puzzle.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,6 +110,10 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5GF3XKD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="app">
         <!-- Header -->
         <header class="app-header">
@@ -115,7 +126,7 @@
                     </svg>
                 </button>
             <div class="logo">
-                <span class="logo-icon">🧠</span>
+                <img src="/images/icons/puzzle.png" alt="OptiMind Logo" width="32" height="32" style="object-fit: contain;" class="logo-icon" />
                 <span class="logo-text">OptiMind</span>
             </div>
             </div>
@@ -126,22 +137,6 @@
                 </div>
             </div>
             <div class="header-right">
-                <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
             </div>
         </header>
 
@@ -243,12 +238,6 @@
                 <!-- Welcome Screen (Default View) -->
                 <section class="view welcome-view active" id="welcomeView">
                     <div class="welcome-container">
-                        <div class="welcome-hero">
-                            <div class="welcome-icon">🛒</div>
-                            <h1>Make Smarter Tech Purchases with AI</h1>
-                            <p>Compare laptops, phones, cameras & more with AI-powered analysis. Research products, compare specs, and find your perfect match—all in one place.</p>
-                        </div>
-                        
                         <div class="welcome-actions">
                             <button class="btn btn-primary btn-lg" id="welcomeProductBtn">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -267,84 +256,97 @@
                             </button>
                         </div>
 
-                        <!-- Product Categories -->
-                        <div class="product-categories" id="productCategories">
-                            <h3>Popular Comparisons</h3>
-                            <div class="category-grid">
-                                <button class="category-card" data-category="laptop">
-                                    <span class="category-icon">💻</span>
-                                    <span class="category-name">Laptops</span>
-                                </button>
-                                <button class="category-card" data-category="smartphone">
-                                    <span class="category-icon">📱</span>
-                                    <span class="category-name">Smartphones</span>
-                                </button>
-                                <button class="category-card" data-category="headphones">
-                                    <span class="category-icon">🎧</span>
-                                    <span class="category-name">Headphones</span>
-                                </button>
-                                <button class="category-card" data-category="camera">
-                                    <span class="category-icon">📷</span>
-                                    <span class="category-name">Cameras</span>
-                                </button>
-                                <button class="category-card" data-category="tablet">
-                                    <span class="category-icon">📲</span>
-                                    <span class="category-name">Tablets</span>
-                                </button>
-                                <button class="category-card" data-category="smartwatch">
-                                    <span class="category-icon">⌚</span>
-                                    <span class="category-name">Smartwatches</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Quick Start Templates by Category -->
-                        <div class="template-categories">
-                            <div class="category-section">
-                                <h3 class="category-title">💻 Tech & Electronics</h3>
-                                <div class="template-links">
-                                    <button class="template-link-btn" data-template="laptop-comparison">💻 Laptops</button>
-                                    <button class="template-link-btn" data-template="smartphone-comparison">📱 Smartphones</button>
-                                    <button class="template-link-btn" data-template="headphones-comparison">🎧 Headphones</button>
-                                    <button class="template-link-btn" data-template="camera-comparison">📷 Cameras</button>
-                                    <button class="template-link-btn" data-template="smartwatch-comparison">⌚ Smartwatches</button>
-                                    <button class="template-link-btn" data-template="tablet-comparison">📲 Tablets</button>
-                                </div>
-                            </div>
-                            <div class="category-section">
-                                <h3 class="category-title">🏠 Home Appliances</h3>
-                                <div class="template-links">
-                                    <button class="template-link-btn" data-template="refrigerator-comparison">🧊 Refrigerators</button>
-                                    <button class="template-link-btn" data-template="washing-machine-comparison">🧺 Washing Machines</button>
-                                    <button class="template-link-btn" data-template="dishwasher-comparison">🍽️ Dishwashers</button>
-                                    <button class="template-link-btn" data-template="vacuum-comparison">🧹 Vacuum Cleaners</button>
-                                    <button class="template-link-btn" data-template="air-purifier-comparison">💨 Air Purifiers</button>
-                                    <button class="template-link-btn" data-template="coffee-maker-comparison">☕ Coffee Makers</button>
-                                </div>
-                            </div>
-                            <div class="category-section">
-                                <h3 class="category-title">🏋️ Fitness & Health</h3>
-                                <div class="template-links">
-                                    <button class="template-link-btn" data-template="treadmill-comparison">🏃 Treadmills</button>
-                                    <button class="template-link-btn" data-template="exercise-bike-comparison">🚴 Exercise Bikes</button>
-                                    <button class="template-link-btn" data-template="rowing-machine-comparison">🚣 Rowing Machines</button>
-                                    <button class="template-link-btn" data-template="elliptical-comparison">🏃‍♀️ Ellipticals</button>
-                                    <button class="template-link-btn" data-template="fitness-tracker-comparison">⌚ Fitness Trackers</button>
-                                    <button class="template-link-btn" data-template="home-gym-comparison">🏋️ Home Gyms</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Browse Templates Link -->
-                        <div class="welcome-templates-link">
-                            <button class="btn btn-ghost" id="welcomeTemplateBtn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="7" height="7"></rect>
-                                    <rect x="14" y="3" width="7" height="7"></rect>
-                                    <rect x="14" y="14" width="7" height="7"></rect>
-                                    <rect x="3" y="14" width="7" height="7"></rect>
-                                </svg>
-                                Or browse all decision templates
+                        <!-- All Product Categories -->
+                        <style>
+                        .product-grid-welcome {
+                            display: grid;
+                            gap: 1.5rem;
+                            margin-top: 2rem;
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                        @media (min-width: 768px) {
+                            .product-grid-welcome {
+                                grid-template-columns: repeat(4, 1fr);
+                            }
+                        }
+                        </style>
+                        <div class="product-grid-welcome">
+                            <!-- Tech Products -->
+                            <button class="product-card" data-template="laptop-comparison" onclick="window.app && window.app.applyTemplate('laptop-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/laptop.png" alt="Laptops" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Laptops</div>
+                            </button>
+                            <button class="product-card" data-template="smartphone-comparison" onclick="window.app && window.app.applyTemplate('smartphone-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/mobile-phone.png" alt="Smartphones" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Smartphones</div>
+                            </button>
+                            <button class="product-card" data-template="headphones-comparison" onclick="window.app && window.app.applyTemplate('headphones-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/headphones.png" alt="Headphones" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Headphones</div>
+                            </button>
+                            <button class="product-card" data-template="camera-comparison" onclick="window.app && window.app.applyTemplate('camera-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/camera.png" alt="Cameras" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Cameras</div>
+                            </button>
+                            <button class="product-card" data-template="smartwatch-comparison" onclick="window.app && window.app.applyTemplate('smartwatch-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/smartwatch.png" alt="Smartwatches" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Smartwatches</div>
+                            </button>
+                            <button class="product-card" data-template="tablet-comparison" onclick="window.app && window.app.applyTemplate('tablet-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/tablet.png" alt="Tablets" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Tablets</div>
+                            </button>
+                            
+                            <!-- Household Appliances -->
+                            <button class="product-card" data-template="vacuum-comparison" onclick="window.app && window.app.applyTemplate('vacuum-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/vacuum.png" alt="Vacuum Cleaners" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Vacuum Cleaners</div>
+                            </button>
+                            <button class="product-card" data-template="air-purifier-comparison" onclick="window.app && window.app.applyTemplate('air-purifier-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/air-purifier.png" alt="Air Purifiers" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Air Purifiers</div>
+                            </button>
+                            <button class="product-card" data-template="coffee-maker-comparison" onclick="window.app && window.app.applyTemplate('coffee-maker-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/coffee-machine.png" alt="Coffee Makers" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Coffee Makers</div>
+                            </button>
+                            <button class="product-card" data-template="refrigerator-comparison" onclick="window.app && window.app.applyTemplate('refrigerator-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/fridge.png" alt="Refrigerators" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Refrigerators</div>
+                            </button>
+                            <button class="product-card" data-template="dishwasher-comparison" onclick="window.app && window.app.applyTemplate('dishwasher-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/dishwasher.png" alt="Dishwashers" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Dishwashers</div>
+                            </button>
+                            <button class="product-card" data-template="washing-machine-comparison" onclick="window.app && window.app.applyTemplate('washing-machine-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/washing-machine.png" alt="Washing Machines" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Washing Machines</div>
+                            </button>
+                            
+                            <!-- Fitness Equipment -->
+                            <button class="product-card" data-template="treadmill-comparison" onclick="window.app && window.app.applyTemplate('treadmill-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/treadmill.png" alt="Treadmills" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Treadmills</div>
+                            </button>
+                            <button class="product-card" data-template="exercise-bike-comparison" onclick="window.app && window.app.applyTemplate('exercise-bike-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/gym.png" alt="Exercise Bikes" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Exercise Bikes</div>
+                            </button>
+                            <button class="product-card" data-template="elliptical-comparison" onclick="window.app && window.app.applyTemplate('elliptical-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/elliptical.png" alt="Elliptical Machines" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Elliptical Machines</div>
+                            </button>
+                            <button class="product-card" data-template="rowing-machine-comparison" onclick="window.app && window.app.applyTemplate('rowing-machine-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/rowing-machine.png" alt="Rowing Machines" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Rowing Machines</div>
+                            </button>
+                            <button class="product-card" data-template="fitness-tracker-comparison" onclick="window.app && window.app.applyTemplate('fitness-tracker-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/health.png" alt="Fitness Trackers" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Fitness Trackers</div>
+                            </button>
+                            <button class="product-card" data-template="home-gym-comparison" onclick="window.app && window.app.applyTemplate('home-gym-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <img src="/images/icons/weightlifting.png" alt="Home Gym Equipment" width="48" height="48" style="margin: 0 auto 1rem;" />
+                                <div style="font-weight: 600; color: #5B616A;">Home Gym Equipment</div>
                             </button>
                         </div>
                     </div>
