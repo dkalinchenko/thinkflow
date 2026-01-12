@@ -30,7 +30,7 @@
         .hero { padding: 7rem 0 3rem; text-align: center; background: white; }
         .hero h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 1rem; }
         .hero p { color: var(--text-dark); max-width: 600px; margin: 0 auto; }
-        .blog-section { padding: 3rem 0; }
+        .blog-section { padding: 2rem 0 3rem; }
         .section-title { font-size: 1.5rem; color: #1a1a1a; margin-bottom: 2rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary); }
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
         .blog-card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
@@ -41,20 +41,26 @@
         .blog-card p { color: var(--text-dark); font-size: 0.9rem; margin: 0 0 1rem; }
         .blog-card .meta { font-size: 0.8rem; color: #888; }
         .category-tag { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; margin-bottom: 0.75rem; }
-        footer { background: #1a1a1a; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem; }
+        footer { background: #1a1a1a; color: white; padding: 2rem 0; text-align: center; margin-top: 2rem; }
         footer a { color: white; text-decoration: none; }
         footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
         .breadcrumb { padding: 6rem 0 1rem; font-size: 0.9rem; color: var(--text-dark); }
         .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .featured-tools { background: white; padding: 3rem 0; margin-bottom: 3rem; border-radius: 12px; }
-        .featured-tools h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 1rem; text-align: center; }
-        .featured-tools .subtitle { text-align: center; color: var(--text-dark); margin-bottom: 2rem; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .featured-tools { background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .featured-tools h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 0.5rem; text-align: center; }
+        .featured-tools .subtitle { text-align: center; color: var(--text-dark); margin-bottom: 2rem; font-size: 1rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .tool-card { background: var(--bg-light); border: 2px solid #CED3DC; border-radius: 12px; padding: 2rem; text-decoration: none; display: block; transition: all 0.3s; }
         .tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); border-color: var(--primary); }
         .tool-card h3 { color: #1a1a1a; font-size: 1.25rem; margin: 0 0 0.5rem; }
-        .tool-card p { color: var(--text-dark); margin: 0; font-size: 0.95rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 1.75rem; } .blog-grid { grid-template-columns: 1fr; } .tools-grid { grid-template-columns: 1fr; } }
+        .tool-card p { color: var(--text-dark); margin: 0; font-size: 0.95rem; line-height: 1.5; }
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 1.75rem; } 
+            .blog-grid { grid-template-columns: 1fr; } 
+            .tools-grid { grid-template-columns: 1fr; }
+            .featured-tools { padding: 1.5rem; }
+            .logo span { display: none; }
+        }
     </style>
 </head>
 <body>
