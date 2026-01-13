@@ -1,31 +1,29 @@
-# System files
-.DS_Store
-Thumbs.db
+# Dependencies
+node_modules/
+package-lock.json
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Build outputs
+dist/
+.vite/
+
+# Environment
+.env
+.env.local
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
 
 # Logs
 *.log
 npm-debug.log*
 
-# Dependencies (if you add npm later)
-node_modules/
-
-# Environment variables
-.env
-.env.local
-
-# Build outputs (if you add build tools later)
-dist/
-build/
-
 # Testing
 coverage/
+.nyc_output/
+
+# Temporary
+*.tmp
+*.temp
+.cache/

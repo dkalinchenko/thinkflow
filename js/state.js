@@ -31,12 +31,15 @@ const state = {
         aiProvider: 'deepseek',
         apiKey: '',
         scoreScale: 5, // 5-star rating system
-        affiliateTag: 'optimind-20', // Amazon Associates tracking ID
+        affiliateTag: 'thinkflow09-20', // Amazon Associates tracking ID
         affiliateEnabled: true
     },
     
     // Listeners for state changes
-    _listeners: new Map()
+    _listeners: new Map(),
+    
+    // Results cache for performance
+    _resultsCache: null
 };
 
 /**
@@ -44,10 +47,26 @@ const state = {
  */
 export const StateManager = {
     /**
-     * Get current state
+     * Get current state (read-only)
+     * Returns a frozen shallow copy for performance
+     * Deep properties should not be mutated directly
      */
     getState() {
-        return deepClone(state);
+        return {
+            currentDecision: state.currentDecision,
+            decisions: state.decisions,
+            currentStep: state.currentStep,
+            ui: { ...state.ui },
+            settings: { ...state.settings }
+        };
+    },
+    
+    /**
+     * Get current decision (read-only)
+     * More efficient than getState() when only decision is needed
+     */
+    getCurrentDecision() {
+        return state.currentDecision;
     },
     
     /**
@@ -116,7 +135,9 @@ export const StateManager = {
             criteria: data.criteria || [],
             alternatives: data.alternatives || [],
             scores: data.scores || {},
-            evaluators: data.evaluators || [{ id: 'default', name: 'You', isDefault: true }]
+            evaluators: data.evaluators || [{ id: 'default', name: 'You', isDefault: true }],
+            priceConstraint: data.priceConstraint || null,
+            isProductComparison: data.isProductComparison || false
         });
         
         state.decisions.unshift(decision);
@@ -177,6 +198,9 @@ export const StateManager = {
         if (index !== -1) {
             state.decisions[index] = updated;
         }
+        
+        // Invalidate results cache when decision changes
+        this._invalidateResultsCache();
         
         this._notify('currentDecision');
         this._notify('decisions');
@@ -440,12 +464,38 @@ export const StateManager = {
         return state.currentDecision.scores?.[alternativeId]?.[criterionId];
     },
     
+    // ========================================
+    // Price Constraint Operations
+    // ========================================
+    
     /**
-     * Calculate results
+     * Update price constraint for current decision
+     */
+    async updatePriceConstraint(constraint) {
+        if (!state.currentDecision) return null;
+        return await this.updateDecision({ priceConstraint: constraint });
+    },
+    
+    /**
+     * Get price constraint from current decision
+     */
+    getPriceConstraint() {
+        if (!state.currentDecision) return null;
+        return state.currentDecision.priceConstraint;
+    },
+    
+    /**
+     * Calculate results with memoization
      */
     calculateResults() {
         const decision = state.currentDecision;
         if (!decision) return [];
+        
+        // Check if we can use cached results
+        const cacheKey = this._getResultsCacheKey(decision);
+        if (state._resultsCache?.key === cacheKey) {
+            return state._resultsCache.results;
+        }
         
         const results = decision.alternatives.map(alt => {
             const scores = decision.scores[alt.id] || {};
@@ -482,7 +532,24 @@ export const StateManager = {
             r.rank = i + 1;
         });
         
+        // Cache the results
+        state._resultsCache = { key: cacheKey, results };
+        
         return results;
+    },
+    
+    /**
+     * Generate cache key for results
+     */
+    _getResultsCacheKey(decision) {
+        return `${decision.id}-${decision.updatedAt}-${Object.keys(decision.scores).length}`;
+    },
+    
+    /**
+     * Invalidate results cache
+     */
+    _invalidateResultsCache() {
+        state._resultsCache = null;
     },
     
     /**

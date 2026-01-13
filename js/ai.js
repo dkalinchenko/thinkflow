@@ -38,6 +38,7 @@ class AIService {
         this.provider = 'deepseek';
         this.apiKey = null;
         this.initialized = false;
+        this.activeRequests = new Map(); // Track active requests for cancellation
     }
     
     /**
@@ -87,22 +88,58 @@ class AIService {
             return cached;
         }
         
-        // Make API call
-        const response = await this._makeRequest(config, prompt, options);
+        // Create abort controller for this request
+        const abortController = new AbortController();
+        const requestId = options.requestId || `req-${Date.now()}`;
+        this.activeRequests.set(requestId, abortController);
         
-        // Cache response
-        if (response) {
-            await AICacheDB.set(cacheKey, response);
+        try {
+            // Make API call with abort signal
+            const response = await this._makeRequest(config, prompt, {
+                ...options,
+                signal: abortController.signal
+            });
+            
+            // Cache response
+            if (response) {
+                await AICacheDB.set(cacheKey, response);
+            }
+            
+            return response;
+        } finally {
+            // Clean up abort controller
+            this.activeRequests.delete(requestId);
         }
-        
-        return response;
+    }
+    
+    /**
+     * Cancel specific request
+     */
+    cancelRequest(requestId) {
+        const controller = this.activeRequests.get(requestId);
+        if (controller) {
+            controller.abort();
+            this.activeRequests.delete(requestId);
+            console.log(`🚫 Cancelled AI request: ${requestId}`);
+        }
+    }
+    
+    /**
+     * Cancel all active requests
+     */
+    cancelAllRequests() {
+        console.log(`🚫 Cancelling ${this.activeRequests.size} active AI requests`);
+        for (const [requestId, controller] of this.activeRequests) {
+            controller.abort();
+        }
+        this.activeRequests.clear();
     }
     
     /**
      * Make HTTP request to AI provider
      */
     async _makeRequest(config, prompt, options) {
-        const { temperature = 0.3, maxTokens = config.maxTokens } = options;
+        const { temperature = 0.3, maxTokens = config.maxTokens, signal } = options;
         
         const headers = {
             'Content-Type': 'application/json',
@@ -119,21 +156,37 @@ class AIService {
         const body = this._buildRequestBody(config, prompt, { temperature, maxTokens });
         
         try {
+            console.log(`🤖 Making AI API call to ${this.provider} (${config.model})...`);
+            console.log(`📡 Endpoint: ${config.baseUrl}/chat/completions`);
+            
+            const startTime = Date.now();
             const response = await fetch(`${config.baseUrl}/chat/completions`, {
                 method: 'POST',
                 headers,
-                body: JSON.stringify(body)
+                body: JSON.stringify(body),
+                signal  // Pass abort signal to fetch
             });
+            
+            const elapsedTime = Date.now() - startTime;
             
             if (!response.ok) {
                 const error = await response.json().catch(() => ({}));
+                console.error(`❌ API Error (${response.status}):`, error);
                 throw new Error(error.error?.message || `API error: ${response.status}`);
             }
             
             const data = await response.json();
+            console.log(`✅ AI API call completed in ${elapsedTime}ms`);
+            console.log(`📊 Tokens used: ${data.usage?.total_tokens || 'unknown'}`);
+            
             return this._parseResponse(data);
         } catch (error) {
-            console.error('AI API Error:', error);
+            // Handle abort errors separately
+            if (error.name === 'AbortError') {
+                console.log('🚫 AI request was cancelled');
+                throw new Error('Request cancelled');
+            }
+            console.error('❌ AI API Error:', error);
             throw error;
         }
     }

@@ -102,31 +102,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- External Libraries -->
+    <!-- External Libraries - Core (Required) -->
     <script src="https://cdn.jsdelivr.net/npm/dexie@3.2.4/dist/dexie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    
+    <!-- External Libraries - Lazy Loaded -->
+    <!-- Chart.js and Sortable.js are now loaded on-demand for better performance -->
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=8">
+    <link rel="stylesheet" href="css/vendor/tippy.css">
 </head>
-<body>
-    <div id="app">
-        <!-- Header -->
+    <body>
+        <a href="#mainContent" class="skip-link">Skip to main content</a>
+        <div id="app">
+            <!-- Header -->
         <header class="app-header">
             <div class="header-left">
-                <button class="btn-icon sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <button class="btn-icon sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar" data-tooltip="Toggle sidebar">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
                 </button>
-            <div class="logo">
+            <a href="#" class="logo" onclick="window.app.showWelcomeView(); return false;" style="text-decoration: none; color: inherit; cursor: pointer;">
                 <img src="/images/icons/puzzle.png" alt="OptiMind Logo" width="32" height="32" style="object-fit: contain;" class="logo-icon" />
                 <span class="logo-text">OptiMind</span>
-            </div>
+            </a>
             </div>
             <div class="header-center">
                 <div class="decision-title-container" id="decisionTitleContainer" style="display: none;">
@@ -297,7 +301,7 @@
                             </button>
                             
                             <!-- Household Appliances -->
-                            <button class="product-card" data-template="vacuum-comparison" onclick="window.app && window.app.applyTemplate('vacuum-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <button class="product-card" data-template="vacuum-cleaner-comparison" onclick="window.app && window.app.applyTemplate('vacuum-cleaner-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                                 <img src="/images/icons/vacuum.png" alt="Vacuum Cleaners" width="48" height="48" style="margin: 0 auto 1rem;" />
                                 <div style="font-weight: 600; color: #5B616A;">Vacuum Cleaners</div>
                             </button>
@@ -343,7 +347,7 @@
                                 <img src="/images/icons/health.png" alt="Fitness Trackers" width="48" height="48" style="margin: 0 auto 1rem;" />
                                 <div style="font-weight: 600; color: #5B616A;">Fitness Trackers</div>
                             </button>
-                            <button class="product-card" data-template="home-gym-comparison" onclick="window.app && window.app.applyTemplate('home-gym-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <button class="product-card" data-template="home-gym-equipment-comparison" onclick="window.app && window.app.applyTemplate('home-gym-equipment-comparison')" style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                                 <img src="/images/icons/weightlifting.png" alt="Home Gym Equipment" width="48" height="48" style="margin: 0 auto 1rem;" />
                                 <div style="font-weight: 600; color: #5B616A;">Home Gym Equipment</div>
                             </button>
@@ -407,14 +411,27 @@
                                     <h2>Define Your Criteria</h2>
                                     <p>What factors matter in this decision? Add at least 2 criteria.</p>
                                 </div>
-                                <div class="step-header-actions">
-                                    <button class="btn btn-ai" id="generateCriteriaBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                        </svg>
-                                        Generate with AI
-                                    </button>
-                                </div>
+                            </div>
+
+                            <div class="action-buttons-row">
+                                <button class="btn btn-secondary btn-add-item" id="addCriterionBtn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                    Add Manually
+                                </button>
+                                <span class="action-separator">or</span>
+                                <button class="btn btn-ai" id="generateCriteriaBtn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                    Generate with AI
+                                </button>
+                            </div>
+
+                            <div class="criteria-list" id="criteriaList">
+                                <!-- Populated dynamically -->
                             </div>
 
                             <details class="guide-box">
@@ -434,18 +451,6 @@
                                 </div>
                             </details>
 
-                            <div class="criteria-list" id="criteriaList">
-                                <!-- Populated dynamically -->
-                            </div>
-
-                            <button class="btn btn-ghost btn-add-item" id="addCriterionBtn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                                Add Criterion
-                            </button>
-
                             <div class="step-navigation">
                                 <div></div>
                                 <button class="btn btn-primary" id="toCriteriaNext" disabled>
@@ -464,15 +469,29 @@
                                 <div class="step-header-left">
                                     <h2>Add Your Alternatives</h2>
                                     <p>What options are you considering? Add at least 2 alternatives.</p>
+                                    <div id="priceConstraintDisplay" style="margin-top: 0.75rem;"></div>
                                 </div>
-                                <div class="step-header-actions">
-                                    <button class="btn btn-ai" id="generateAlternativesBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                        </svg>
-                                        Use AI to suggest alternatives
-                                    </button>
-                                </div>
+                            </div>
+
+                            <div class="action-buttons-row">
+                                <button class="btn btn-secondary btn-add-item" id="addAlternativeBtn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                    Add Manually
+                                </button>
+                                <span class="action-separator">or</span>
+                                <button class="btn btn-ai" id="generateAlternativesBtn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                    Generate with AI
+                                </button>
+                            </div>
+
+                            <div class="alternatives-grid" id="alternativesList">
+                                <!-- Populated dynamically -->
                             </div>
 
                             <details class="guide-box">
@@ -491,18 +510,6 @@
                                     <p><strong>Tip:</strong> Include 2-5 realistic alternatives. More than that and decision-making becomes overwhelming!</p>
                                 </div>
                             </details>
-
-                            <div class="alternatives-grid" id="alternativesList">
-                                <!-- Populated dynamically -->
-                            </div>
-
-                            <button class="btn btn-ghost btn-add-item" id="addAlternativeBtn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                                Add Alternative
-                            </button>
 
                             <div class="step-navigation">
                                 <button class="btn btn-ghost" id="toAlternativesPrev">
@@ -729,12 +736,12 @@
         <!-- Modals Container -->
         <div id="modalsContainer">
             <!-- AI Suggestions Modal -->
-            <div class="modal" id="aiSuggestionsModal">
-                <div class="modal-backdrop"></div>
+            <div class="modal" id="aiSuggestionsModal" role="dialog" aria-modal="true" aria-labelledby="aiModalTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
                 <div class="modal-content modal-lg">
                     <div class="modal-header">
                         <h3 id="aiModalTitle">AI Suggestions</h3>
-                        <button class="btn-icon modal-close">&times;</button>
+                        <button class="btn-icon modal-close" aria-label="Close modal" data-tooltip="Close">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="ai-loading" id="aiLoading">
@@ -757,12 +764,12 @@
             </div>
 
             <!-- Export Modal -->
-            <div class="modal" id="exportModal">
-                <div class="modal-backdrop"></div>
+            <div class="modal" id="exportModal" role="dialog" aria-modal="true" aria-labelledby="exportModalTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3>Export Decision</h3>
-                        <button class="btn-icon modal-close">&times;</button>
+                        <h3 id="exportModalTitle">Export Decision</h3>
+                        <button class="btn-icon modal-close" aria-label="Close modal" data-tooltip="Close">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="export-options">
@@ -787,12 +794,12 @@
             </div>
 
             <!-- Share Modal -->
-            <div class="modal" id="shareModal">
-                <div class="modal-backdrop"></div>
+            <div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3>Share Decision</h3>
-                        <button class="btn-icon modal-close">&times;</button>
+                        <h3 id="shareModalTitle">Share Decision</h3>
+                        <button class="btn-icon modal-close" aria-label="Close modal" data-tooltip="Close">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
@@ -827,12 +834,12 @@
             </div>
 
             <!-- Confirm Delete Modal -->
-            <div class="modal" id="confirmModal">
-                <div class="modal-backdrop"></div>
+            <div class="modal" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
                 <div class="modal-content modal-sm">
                     <div class="modal-header">
                         <h3 id="confirmTitle">Confirm</h3>
-                        <button class="btn-icon modal-close">&times;</button>
+                        <button class="btn-icon modal-close" aria-label="Close modal" data-tooltip="Close">&times;</button>
                     </div>
                     <div class="modal-body">
                         <p id="confirmMessage">Are you sure?</p>
@@ -843,10 +850,93 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Price Targeting Modal -->
+            <div class="modal" id="priceTargetingModal" role="dialog" aria-modal="true" aria-labelledby="priceModalTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="priceModalTitle">Set Your Price Target</h3>
+                        <p class="modal-subtitle">Help us find products in your budget</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="price-targeting-options">
+                            <!-- Option 1: Manual Entry -->
+                            <div class="price-option">
+                                <label class="price-option-header">
+                                    <input type="radio" name="priceMode" value="manual" class="price-mode-radio">
+                                    <span class="price-option-title">Manual Price Range</span>
+                                </label>
+                                <div class="price-option-content" id="manualPriceContent" style="display: none;">
+                                    <div class="price-inputs">
+                                        <div class="form-group">
+                                            <label>Min Price ($)</label>
+                                            <input type="number" id="minPriceInput" class="form-input" placeholder="300" min="0">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Max Price ($)</label>
+                                            <input type="number" id="maxPriceInput" class="form-input" placeholder="1500" min="0">
+                                        </div>
+                                    </div>
+                                    <small class="form-hint">Leave max empty for no upper limit</small>
+                                </div>
+                            </div>
+
+                            <!-- Option 2: Preset Ranges -->
+                            <div class="price-option">
+                                <label class="price-option-header">
+                                    <input type="radio" name="priceMode" value="preset" class="price-mode-radio" checked>
+                                    <span class="price-option-title">Select Price Category</span>
+                                </label>
+                                <div class="price-option-content" id="presetPriceContent">
+                                    <div class="preset-ranges" id="presetRanges">
+                                        <!-- Populated dynamically based on product category -->
+                                    </div>
+                                    <small class="form-hint">Select one or more price ranges</small>
+                                </div>
+                            </div>
+
+                            <!-- Option 3: Skip -->
+                            <div class="price-option">
+                                <label class="price-option-header">
+                                    <input type="radio" name="priceMode" value="skip" class="price-mode-radio">
+                                    <span class="price-option-title">No Price Preference</span>
+                                </label>
+                                <div class="price-option-content" id="skipPriceContent" style="display: none;">
+                                    <p class="price-option-description">Show products at all price points</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-ghost" id="priceSkipBtn">Skip for Now</button>
+                        <button class="btn btn-primary" id="priceConfirmBtn">Continue</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Toast Notifications -->
         <div class="toast-container" id="toastContainer"></div>
+
+        <!-- AI Loading Modal -->
+        <div class="ai-loading-modal" id="aiLoadingModal">
+            <div class="ai-loading-content">
+                <div class="ai-loading-spinner"></div>
+                <h3 class="ai-loading-title" id="aiLoadingTitle">AI is Working...</h3>
+                <p class="ai-loading-message" id="aiLoadingMessage">Analyzing your decision and generating suggestions</p>
+                
+                <div class="ai-loading-info">
+                    <h4>How OptiMind Works</h4>
+                    <ul>
+                        <li>AI analyzes your decision context and requirements</li>
+                        <li>Generates personalized criteria or alternatives</li>
+                        <li>Uses real-time data and expert knowledge</li>
+                        <li>Provides objective, unbiased recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Affiliate Disclosure Footer -->
         <footer class="affiliate-footer" id="affiliateFooter">
@@ -856,7 +946,11 @@
         </footer>
     </div>
 
+    <!-- Third-party Libraries -->
+    <script src="js/vendor/tippy.min.js"></script>
+    <script src="js/vendor/sortable.min.js"></script>
+    
     <!-- Application Scripts -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js?v=9"></script>
 </body>
 </html>

@@ -29,14 +29,14 @@ import {
     trackAffiliateClick,
     FTC_DISCLOSURE 
 } from './affiliate.js';
-import { 
-    getCategoryConfig, 
-    getCategories, 
-    researchProducts,
-    evaluateAllProducts,
-    getProductComparison 
-} from './amazon-research.js';
+// Amazon Research - Lazy loaded when needed
+// import will be done dynamically to reduce initial bundle size
 import { Analytics } from './analytics.js';
+import { performanceMonitor } from './monitoring.js';
+import { initTooltips, refreshTooltips } from './tooltips.js';
+import { initInlineEditing, makeEditable, validateName, validateWeight } from './inline-edit.js';
+import { initDragDrop, refreshDragDrop } from './drag-drop.js';
+import { loadChartModule, loadSortableModule, loadAmazonResearchModule, preloadModules } from './lazy-loader.js';
 
 // ========================================
 // DOM Elements
@@ -166,9 +166,12 @@ let currentAIContext = {
 // ========================================
 
 async function init() {
+    // Initialize performance monitoring
+    performanceMonitor.init();
+    
     // Initialize state
     await StateManager.init();
-    
+
     // Pre-configure DeepSeek API key if not already set
     let state = StateManager.getState();
     if (!state.settings.apiKey) {
@@ -213,6 +216,21 @@ async function init() {
     renderDecisionList();
     renderTemplatesList();
     
+    // Register service worker
+    registerServiceWorker();
+    
+    // Initialize tooltips
+    initTooltips();
+    
+    // Initialize inline editing
+    initInlineEditing();
+    
+    // Initialize drag & drop (will lazy load Sortable.js when needed)
+    initDragDrop();
+    
+    // Preload heavy modules in background
+    preloadModules();
+    
     // Check for template URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const templateId = urlParams.get('template');
@@ -228,6 +246,31 @@ async function init() {
     } else {
         // Show welcome screen
         showWelcomeView();
+    }
+}
+
+/**
+ * Register service worker for offline support
+ */
+async function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.register('/sw.js');
+            console.log('✅ Service Worker registered:', registration.scope);
+            
+            // Check for updates
+            registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        // New service worker available
+                        showToast('App updated! Refresh to see changes.', 'info', 5000);
+                    }
+                });
+            });
+        } catch (error) {
+            console.warn('⚠️ Service Worker registration failed:', error);
+        }
     }
 }
 
@@ -476,8 +519,26 @@ function setupEventListeners() {
         el.addEventListener('click', (e) => e.stopPropagation());
     });
     
+    // Price targeting modal
+    document.querySelectorAll('input[name="priceMode"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            togglePriceContent(e.target.value);
+        });
+    });
+    
+    const priceConfirmBtn = document.getElementById('priceConfirmBtn');
+    if (priceConfirmBtn) {
+        priceConfirmBtn.addEventListener('click', handlePriceModalSubmit);
+    }
+    
+    const priceSkipBtn = document.getElementById('priceSkipBtn');
+    if (priceSkipBtn) {
+        priceSkipBtn.addEventListener('click', handlePriceSkip);
+    }
+    
     // Keyboard shortcuts
     document.addEventListener('keydown', handleKeyboardShortcuts);
+    document.addEventListener('keydown', handleArrowKeyNavigation);
 }
 
 // ========================================
@@ -607,6 +668,9 @@ async function createNewDecision() {
  * Start a product comparison for a specific category
  */
 async function startProductComparison(category) {
+    // Lazy load amazon-research module
+    const { getCategoryConfig } = await loadAmazonResearchModule();
+    
     const config = getCategoryConfig(category);
     if (!config) {
         showToast('Unknown product category', 'error');
@@ -649,19 +713,34 @@ async function aiResearchProducts() {
     const category = decision.category || 'laptop';
     const decisionTitle = decision.title || '';
     
-    // Show loading state
-    elements.generateAlternativesBtn.disabled = true;
-    elements.generateAlternativesBtn.innerHTML = `
-        <div class="spinner-small"></div>
-        Researching products...
-    `;
+    // Transform price constraint to priceRange format
+    const priceRange = await transformPriceConstraint(decision.priceConstraint, category);
+    
+    // Debug logging
+    console.log('💰 Price constraint from decision:', decision.priceConstraint);
+    console.log('💰 Transformed price range for AI:', priceRange);
+    
+    // Show skeleton in alternatives list
+    showAlternativesSkeleton();
+    
+    // Show loading modal
+    showAILoadingModal(
+        'Researching Products...',
+        'AI is searching for the best products that match your criteria and price range'
+    );
     
     try {
+        // Lazy load amazon-research module
+        const { researchProducts } = await loadAmazonResearchModule();
+        
         // Research products using AI
         const products = await researchProducts(category, {
             maxProducts: 4,
+            priceRange: priceRange,
             specificQuery: decisionTitle.includes('Comparison') ? null : decisionTitle
         });
+        
+        hideAILoadingModal();
         
         if (products.length === 0) {
             showToast('No products found. Try a different search.', 'warning');
@@ -677,15 +756,8 @@ async function aiResearchProducts() {
         
     } catch (error) {
         console.error('Product research error:', error);
+        hideAILoadingModal();
         showToast('Failed to research products. Please try again.', 'error');
-    } finally {
-        elements.generateAlternativesBtn.disabled = false;
-        elements.generateAlternativesBtn.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            ${decision.isProductComparison ? 'AI Research Products' : 'Suggest with AI'}
-        `;
     }
 }
 
@@ -734,10 +806,21 @@ async function deleteDecision(id, e) {
 // Rendering Functions
 // ========================================
 
+/**
+ * Show skeleton loading for decision list
+ */
+function showDecisionListSkeleton() {
+    elements.decisionList.innerHTML = Array(3).fill(0).map(() => `
+        <li class="nav-item">
+            <div class="skeleton skeleton-decision-item"></div>
+        </li>
+    `).join('');
+}
+
 function renderDecisionList() {
     const state = StateManager.getState();
     const decisions = state.decisions;
-    
+
     if (decisions.length === 0) {
         elements.decisionList.innerHTML = `
             <li class="nav-item nav-item-empty">
@@ -747,7 +830,7 @@ function renderDecisionList() {
         `;
         return;
     }
-    
+
     elements.decisionList.innerHTML = decisions.map(d => `
         <li class="nav-item ${state.currentDecision?.id === d.id ? 'active' : ''}" 
             data-id="${d.id}" onclick="window.app.loadDecision('${d.id}')">
@@ -766,13 +849,28 @@ function renderDecisionList() {
 }
 
 function renderTemplatesList() {
+    console.log('📋 Rendering templates list. Total templates:', templates.length);
+    console.log('🔍 Template IDs:', templates.map(t => t.id));
+    
+    // Check for specific templates
+    const elliptical = templates.find(t => t.id === 'elliptical-comparison');
+    const homeGym = templates.find(t => t.id === 'home-gym-equipment-comparison');
+    const vacuum = templates.find(t => t.id === 'vacuum-cleaner-comparison');
+    
+    console.log('✅ Elliptical template found:', !!elliptical);
+    console.log('✅ Home Gym template found:', !!homeGym);
+    console.log('✅ Vacuum template found:', !!vacuum);
+    
     elements.templatesGrid.innerHTML = templates.map(t => `
-        <div class="template-card" data-template="${t.id}" onclick="window.app.applyTemplate('${t.id}')">
+        <div class="template-card" data-template="${t.id}" onclick="console.log('🖱️ Clicked:', '${t.id}'); window.app.applyTemplate('${t.id}')">
             <div class="template-icon">${t.icon}</div>
             <h4>${t.name}</h4>
             <p>${t.description}</p>
         </div>
     `).join('');
+    
+    console.log('✅ Templates rendered to DOM');
+    console.log('✅ window.app.applyTemplate available:', typeof window.app?.applyTemplate === 'function');
 }
 
 function renderCurrentDecision() {
@@ -805,21 +903,71 @@ function updateNavigationButtons() {
 // Criteria Rendering
 // ========================================
 
+/**
+ * Show skeleton loading for criteria
+ */
+function showCriteriaSkeleton() {
+    elements.criteriaList.innerHTML = Array(3).fill(0).map(() => `
+        <div class="skeleton skeleton-criterion"></div>
+    `).join('');
+}
+
 function renderCriteria() {
     const state = StateManager.getState();
-    const criteria = state.currentDecision?.criteria || [];
+    const decision = state.currentDecision;
+    const criteria = decision?.criteria || [];
+    
+    // Disable Generate AI button if criteria were pre-populated from template
+    const isTemplateWithCriteria = decision?.isProductComparison && criteria.length >= 2;
+    const generateBtn = elements.generateCriteriaBtn;
+    
+    if (generateBtn) {
+        if (isTemplateWithCriteria) {
+            generateBtn.disabled = true;
+            generateBtn.title = 'Criteria already provided by template. You can edit them or add more manually.';
+            generateBtn.innerHTML = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Criteria Provided by Template
+            `;
+        } else {
+            generateBtn.disabled = false;
+            generateBtn.title = 'Use AI to suggest criteria for your decision';
+            generateBtn.innerHTML = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Generate with AI
+            `;
+        }
+    }
     
     if (criteria.length === 0) {
         elements.criteriaList.innerHTML = `
             <div class="empty-state">
-                <p>No criteria yet. Add criteria manually or use AI to generate them.</p>
+                <svg class="empty-state-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    <path d="M9 12h6m-6 4h6"></path>
+                </svg>
+                <h3 class="empty-state-title">No Criteria Yet</h3>
+                <p class="empty-state-description">Criteria are the factors you'll use to evaluate your options. For example: price, quality, speed.</p>
+                <div class="empty-state-actions">
+                    <button class="btn btn-secondary" onclick="window.app.addCriterion()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Add Your First Criterion
+                    </button>
+                </div>
             </div>
         `;
     } else {
         elements.criteriaList.innerHTML = criteria.map((c, index) => `
             <div class="criterion-card" data-id="${c.id}" data-index="${index}">
                 <div class="criterion-header">
-                    <div class="drag-handle">
+                    <div class="drag-handle" data-tooltip="Drag to reorder">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="9" cy="5" r="1"></circle>
                             <circle cx="9" cy="12" r="1"></circle>
@@ -832,7 +980,7 @@ function renderCriteria() {
                     <input type="text" class="criterion-name" value="${escapeHtml(c.name)}" 
                         onchange="window.app.updateCriterion('${c.id}', 'name', this.value)">
                     <div class="criterion-actions">
-                        <button class="btn-icon" onclick="window.app.deleteCriterion('${c.id}')" title="Delete">
+                        <button class="btn-icon" onclick="window.app.deleteCriterion('${c.id}')" data-tooltip="Delete criterion">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="3 6 5 6 21 6"></polyline>
                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -853,16 +1001,11 @@ function renderCriteria() {
             </div>
         `).join('');
         
-        // Initialize Sortable for drag-and-drop
-        if (typeof Sortable !== 'undefined') {
-            new Sortable(elements.criteriaList, {
-                handle: '.drag-handle',
-                animation: 150,
-                onEnd: (evt) => {
-                    StateManager.reorderCriteria(evt.oldIndex, evt.newIndex);
-                }
-            });
-        }
+        // Refresh drag & drop (using module)
+        refreshDragDrop();
+        
+        // Refresh tooltips after DOM update
+        refreshTooltips();
     }
     
     updateNavigationButtons();
@@ -884,26 +1027,178 @@ async function updateCriterionWeight(id, value, slider) {
 }
 
 async function deleteCriterion(id) {
-    await StateManager.deleteCriterion(id);
-    renderCriteria();
-    showToast('Criterion deleted', 'success');
+    const state = StateManager.getState();
+    const criterion = state.currentDecision?.criteria.find(c => c.id === id);
+
+    if (!criterion) return;
+
+    elements.confirmTitle.textContent = 'Delete Criterion';
+    elements.confirmMessage.textContent = `Are you sure you want to delete "${criterion.name}"? This will also remove all scores for this criterion.`;
+    elements.confirmActionBtn.onclick = async () => {
+        await StateManager.deleteCriterion(id);
+        renderCriteria();
+        closeAllModals();
+        showToast('Criterion deleted', 'success');
+    };
+
+    openModal('confirm');
+}
+
+// Inline editing for criterion name
+function editCriterionName(id, element) {
+    const originalValue = element.textContent;
+    
+    // Create input
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'criterion-name inline-editor';
+    input.value = originalValue;
+    
+    // Replace content
+    element.textContent = '';
+    element.appendChild(input);
+    element.classList.add('editing');
+    
+    // Focus and select
+    input.focus();
+    input.select();
+    
+    // Save function
+    const save = async () => {
+        const newValue = input.value.trim();
+        
+        if (!newValue) {
+            showToast('Name cannot be empty', 'error');
+            input.focus();
+            return;
+        }
+        
+        if (newValue !== originalValue) {
+            await updateCriterion(id, 'name', newValue);
+            element.textContent = newValue;
+            showToast('Criterion updated', 'success');
+        } else {
+            element.textContent = originalValue;
+        }
+        
+        element.classList.remove('editing');
+    };
+    
+    // Event listeners
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            save();
+        } else if (e.key === 'Escape') {
+            element.textContent = originalValue;
+            element.classList.remove('editing');
+        }
+    });
+}
+
+// Inline editing for alternative name
+function editAlternativeName(id, element) {
+    const originalValue = element.textContent;
+    
+    // Create input
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'alternative-name inline-editor';
+    input.value = originalValue;
+    
+    // Replace content
+    element.textContent = '';
+    element.appendChild(input);
+    element.classList.add('editing');
+    
+    // Focus and select
+    input.focus();
+    input.select();
+    
+    // Save function
+    const save = async () => {
+        const newValue = input.value.trim();
+        
+        if (!newValue) {
+            showToast('Name cannot be empty', 'error');
+            input.focus();
+            return;
+        }
+        
+        if (newValue !== originalValue) {
+            await updateAlternative(id, 'name', newValue);
+            element.textContent = newValue;
+            showToast('Alternative updated', 'success');
+        } else {
+            element.textContent = originalValue;
+        }
+        
+        element.classList.remove('editing');
+    };
+    
+    // Event listeners
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            save();
+        } else if (e.key === 'Escape') {
+            element.textContent = originalValue;
+            element.classList.remove('editing');
+        }
+    });
 }
 
 // ========================================
 // Alternatives Rendering
 // ========================================
 
+/**
+ * Show skeleton loading for alternatives
+ */
+function showAlternativesSkeleton() {
+    elements.alternativesList.innerHTML = Array(2).fill(0).map(() => `
+        <div class="skeleton skeleton-alternative"></div>
+    `).join('');
+}
+
 function renderAlternatives() {
     const state = StateManager.getState();
     const alternatives = state.currentDecision?.alternatives || [];
     const isProductComparison = state.currentDecision?.isProductComparison;
     
+    // Render price constraint display
+    renderPriceConstraintDisplay();
+    
     if (alternatives.length === 0) {
         elements.alternativesList.innerHTML = `
             <div class="empty-state" style="grid-column: span 2;">
-                <p>${isProductComparison 
-                    ? 'Click "AI Research Products" to find products to compare, or add them manually.' 
-                    : 'No alternatives yet. Add options to compare or let AI suggest some.'}</p>
+                <svg class="empty-state-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                <h3 class="empty-state-title">No Alternatives Yet</h3>
+                <p class="empty-state-description">${isProductComparison 
+                    ? 'Alternatives are the different products you\'re considering. Use AI to research products automatically, or add them manually.' 
+                    : 'Alternatives are the different options you\'re choosing between. For example: different job offers, vacation destinations, or laptops.'}</p>
+                <div class="empty-state-actions">
+                    ${isProductComparison ? `
+                        <button class="btn btn-ai" onclick="window.app.generateAlternatives()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            AI Research Products
+                        </button>
+                    ` : `
+                        <button class="btn btn-secondary" onclick="window.app.addAlternative()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Add Your First Alternative
+                        </button>
+                    `}
+                </div>
             </div>
         `;
     } else {
@@ -917,10 +1212,24 @@ function renderAlternatives() {
             return `
                 <div class="alternative-card" data-id="${a.id}">
                     <div class="alternative-header">
-                        <input type="text" class="alternative-name" value="${escapeHtml(a.name)}"
-                            onchange="window.app.updateAlternative('${a.id}', 'name', this.value)">
+                        <div class="drag-handle" data-tooltip="Drag to reorder">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="5" r="1"></circle>
+                                <circle cx="9" cy="12" r="1"></circle>
+                                <circle cx="9" cy="19" r="1"></circle>
+                                <circle cx="15" cy="5" r="1"></circle>
+                                <circle cx="15" cy="12" r="1"></circle>
+                                <circle cx="15" cy="19" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div class="alternative-name inline-editable" 
+                             data-id="${a.id}" 
+                             data-field="name" 
+                             data-value="${escapeHtml(a.name)}"
+                             data-tooltip="Click to edit"
+                             onclick="window.app.editAlternativeName('${a.id}', this)">${escapeHtml(a.name)}</div>
                         <div class="criterion-actions">
-                            <button class="btn-icon" onclick="window.app.deleteAlternative('${a.id}')" title="Delete">
+                            <button class="btn-icon" onclick="window.app.deleteAlternative('${a.id}')" data-tooltip="Delete alternative">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="3 6 5 6 21 6"></polyline>
                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -939,6 +1248,12 @@ function renderAlternatives() {
                 </div>
             `;
         }).join('');
+        
+        // Refresh drag & drop (using module)
+        refreshDragDrop();
+        
+        // Refresh tooltips after DOM update
+        refreshTooltips();
     }
     
     updateNavigationButtons();
@@ -955,6 +1270,16 @@ function renderProductCard(product) {
     
     return `
         <div class="alternative-card product" data-id="${product.id}">
+            <div class="drag-handle" data-tooltip="Drag to reorder" style="position: absolute; top: 8px; left: 8px; z-index: 1;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="5" r="1"></circle>
+                    <circle cx="9" cy="12" r="1"></circle>
+                    <circle cx="9" cy="19" r="1"></circle>
+                    <circle cx="15" cy="5" r="1"></circle>
+                    <circle cx="15" cy="12" r="1"></circle>
+                    <circle cx="15" cy="19" r="1"></circle>
+                </svg>
+            </div>
             <div class="product-image">
                 ${product.imageUrl 
                     ? `<img src="${product.imageUrl}" alt="${escapeHtml(product.name)}" loading="lazy">`
@@ -963,10 +1288,14 @@ function renderProductCard(product) {
             </div>
             <div class="product-info">
                 <div class="alternative-header">
-                    <input type="text" class="alternative-name" value="${escapeHtml(product.name)}"
-                        onchange="window.app.updateAlternative('${product.id}', 'name', this.value)">
+                    <div class="alternative-name inline-editable" 
+                         data-id="${product.id}" 
+                         data-field="name" 
+                         data-value="${escapeHtml(product.name)}"
+                         data-tooltip="Click to edit product name"
+                         onclick="window.app.editAlternativeName('${product.id}', this)">${escapeHtml(product.name)}</div>
                     <div class="criterion-actions">
-                        <button class="btn-icon" onclick="window.app.deleteAlternative('${product.id}')" title="Delete">
+                        <button class="btn-icon" onclick="window.app.deleteAlternative('${product.id}')" data-tooltip="Delete product">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="3 6 5 6 21 6"></polyline>
                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -1032,9 +1361,21 @@ async function updateAlternative(id, field, value) {
 }
 
 async function deleteAlternative(id) {
-    await StateManager.deleteAlternative(id);
-    renderAlternatives();
-    showToast('Alternative deleted', 'success');
+    const state = StateManager.getState();
+    const alternative = state.currentDecision?.alternatives.find(a => a.id === id);
+    
+    if (!alternative) return;
+    
+    elements.confirmTitle.textContent = 'Delete Alternative';
+    elements.confirmMessage.textContent = `Are you sure you want to delete "${alternative.name}"? This will also remove all scores for this alternative.`;
+    elements.confirmActionBtn.onclick = async () => {
+        await StateManager.deleteAlternative(id);
+        renderAlternatives();
+        closeAllModals();
+        showToast('Alternative deleted', 'success');
+    };
+    
+    openModal('confirm');
 }
 
 // ========================================
@@ -1356,7 +1697,17 @@ window.toggleExplanationRow = function(expandRowId, mainRowId) {
     }
 };
 
-function renderRankingsChart(results) {
+async function renderRankingsChart(results) {
+    // Lazy load Chart.js if not available
+    if (typeof Chart === 'undefined') {
+        try {
+            await loadChartModule();
+        } catch (error) {
+            console.error('Cannot render chart: Chart.js failed to load');
+            return;
+        }
+    }
+
     const ctx = document.getElementById('rankingsChart');
     
     if (rankingsChart) {
@@ -1432,9 +1783,19 @@ function renderRankingsChart(results) {
     });
 }
 
-function renderRadarChart(results, criteria) {
+async function renderRadarChart(results, criteria) {
+    // Lazy load Chart.js if not available
+    if (typeof Chart === 'undefined') {
+        try {
+            await loadChartModule();
+        } catch (error) {
+            console.error('Cannot render chart: Chart.js failed to load');
+            return;
+        }
+    }
+
     const ctx = document.getElementById('radarChart');
-    
+
     if (radarChart) {
         radarChart.destroy();
     }
@@ -1533,24 +1894,41 @@ async function generateCriteria() {
         return;
     }
     
+    // Show skeleton in criteria list
+    showCriteriaSkeleton();
+    
+    // Show loading modal
+    showAILoadingModal(
+        'Generating Criteria...',
+        'AI is analyzing your decision to suggest relevant evaluation criteria'
+    );
+    
     currentAIContext.type = 'criteria';
-    openModal('aiSuggestions');
-    elements.aiModalTitle.textContent = 'AI Criteria Suggestions';
-    elements.aiLoading.style.display = 'flex';
-    elements.aiSuggestionsList.innerHTML = '';
-    elements.aiError.style.display = 'none';
     
     try {
         const state = StateManager.getState();
         const suggestions = await AI.suggestCriteria(state.currentDecision);
         currentAIContext.suggestions = suggestions;
+        
+        // Hide loading modal and show results
+        hideAILoadingModal();
+        
+        openModal('aiSuggestions');
+        elements.aiModalTitle.textContent = 'AI Criteria Suggestions';
+        elements.aiLoading.style.display = 'none';
+        elements.aiSuggestionsList.innerHTML = '';
+        elements.aiError.style.display = 'none';
+        
         renderAISuggestions(suggestions, 'criteria');
     } catch (error) {
         console.error('AI Error:', error);
+        hideAILoadingModal();
+        
+        openModal('aiSuggestions');
+        elements.aiModalTitle.textContent = 'AI Criteria Suggestions';
+        elements.aiLoading.style.display = 'none';
         elements.aiError.style.display = 'block';
         elements.aiError.querySelector('p').textContent = error.message;
-    } finally {
-        elements.aiLoading.style.display = 'none';
     }
 }
 
@@ -1569,23 +1947,37 @@ async function generateAlternatives() {
         return;
     }
     
+    // Show loading modal
+    showAILoadingModal(
+        'Generating Alternatives...',
+        'AI is brainstorming different options for your decision'
+    );
+    
     currentAIContext.type = 'alternatives';
-    openModal('aiSuggestions');
-    elements.aiModalTitle.textContent = 'AI Alternative Suggestions';
-    elements.aiLoading.style.display = 'flex';
-    elements.aiSuggestionsList.innerHTML = '';
-    elements.aiError.style.display = 'none';
     
     try {
         const suggestions = await AI.suggestAlternatives(decision);
         currentAIContext.suggestions = suggestions;
+        
+        // Hide loading modal and show results
+        hideAILoadingModal();
+        
+        openModal('aiSuggestions');
+        elements.aiModalTitle.textContent = 'AI Alternative Suggestions';
+        elements.aiLoading.style.display = 'none';
+        elements.aiSuggestionsList.innerHTML = '';
+        elements.aiError.style.display = 'none';
+        
         renderAISuggestions(suggestions, 'alternatives');
     } catch (error) {
         console.error('AI Error:', error);
+        hideAILoadingModal();
+        
+        openModal('aiSuggestions');
+        elements.aiModalTitle.textContent = 'AI Alternative Suggestions';
+        elements.aiLoading.style.display = 'none';
         elements.aiError.style.display = 'block';
         elements.aiError.querySelector('p').textContent = error.message;
-    } finally {
-        elements.aiLoading.style.display = 'none';
     }
 }
 
@@ -1690,11 +2082,11 @@ async function aiEvaluateAll() {
         return;
     }
     
-    elements.aiEvaluateAllBtn.disabled = true;
-    elements.aiEvaluateAllBtn.innerHTML = `
-        <div class="spinner" style="width: 16px; height: 16px;"></div>
-        Evaluating...
-    `;
+    // Show loading modal
+    showAILoadingModal(
+        'Evaluating Alternatives...',
+        `AI is analyzing ${decision.alternatives.length} alternatives across ${decision.criteria.length} criteria`
+    );
     
     try {
         const allScores = {};
@@ -1712,19 +2104,13 @@ async function aiEvaluateAll() {
         }
         
         await StateManager.setAllScores(allScores);
+        hideAILoadingModal();
         renderEvaluationMatrix();
         showToast('AI evaluation complete!', 'success');
     } catch (error) {
         console.error('AI Evaluation Error:', error);
+        hideAILoadingModal();
         showToast('AI evaluation failed: ' + error.message, 'error');
-    } finally {
-        elements.aiEvaluateAllBtn.disabled = false;
-        elements.aiEvaluateAllBtn.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            Use AI to evaluate alternatives on the criteria
-        `;
     }
 }
 
@@ -1735,16 +2121,18 @@ async function getAIInsights() {
         return;
     }
     
-    elements.getAiInsightsBtn.disabled = true;
-    elements.getAiInsightsBtn.innerHTML = `
-        <div class="spinner" style="width: 16px; height: 16px;"></div>
-        Analyzing...
-    `;
+    // Show loading modal
+    showAILoadingModal(
+        'Generating Insights...',
+        'AI is analyzing your decision results to provide strategic recommendations'
+    );
     
     try {
         const state = StateManager.getState();
         const results = StateManager.calculateResults();
         const insights = await AI.generateInsights(state.currentDecision, results);
+        
+        hideAILoadingModal();
         
         elements.aiInsightsCard.style.display = 'block';
         elements.aiInsightsContent.innerHTML = `
@@ -1777,15 +2165,8 @@ async function getAIInsights() {
         showToast('AI insights generated!', 'success');
     } catch (error) {
         console.error('AI Insights Error:', error);
+        hideAILoadingModal();
         showToast('Failed to generate insights: ' + error.message, 'error');
-    } finally {
-        elements.getAiInsightsBtn.disabled = false;
-        elements.getAiInsightsBtn.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            Get AI Insights
-        `;
     }
 }
 
@@ -1794,16 +2175,38 @@ async function getAIInsights() {
 // ========================================
 
 async function applyTemplate(templateId) {
-    const decisionData = createDecisionFromTemplate(templateId);
-    if (decisionData) {
-        await StateManager.createDecision(decisionData);
+    console.log('🎯 applyTemplate called with ID:', templateId);
+    
+    try {
+        const decisionData = createDecisionFromTemplate(templateId);
+        console.log('📋 Decision data created:', decisionData ? 'success' : 'failed');
         
-        // Track template usage
-        Analytics.trackTemplateUsed(templateId);
-        Analytics.trackComparisonStarted(decisionData.category || 'general');
-        
-        closeAllModals();
-        showToast('Template applied!', 'success');
+        if (decisionData) {
+            await StateManager.createDecision(decisionData);
+            console.log('✅ Decision created in state');
+
+            // Track template usage
+            Analytics.trackTemplateUsed(templateId);
+            Analytics.trackComparisonStarted(decisionData.category || 'general');
+
+            closeAllModals();
+            console.log('✅ Modals closed');
+
+            // Show price targeting modal for product comparisons
+            if (decisionData.isProductComparison && decisionData.category) {
+                console.log('💰 Showing price targeting modal for:', decisionData.category);
+                await showPriceTargetingModal(decisionData.category);
+            }
+
+            showToast('Template applied!', 'success');
+            console.log('✅ Template applied successfully!');
+        } else {
+            console.error('❌ Failed to create decision data from template');
+            showToast('Failed to apply template', 'error');
+        }
+    } catch (error) {
+        console.error('❌ Error in applyTemplate:', error);
+        showToast('Error applying template: ' + error.message, 'error');
     }
 }
 
@@ -1862,43 +2265,523 @@ function copyShareLink() {
 }
 
 // ========================================
-// Modal Management
+// Modal Management with Focus Trapping
 // ========================================
+
+// Track focus before modal opens
+let previousFocusedElement = null;
+const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
 function openModal(modalName) {
     closeAllModals();
     const modal = document.getElementById(`${modalName}Modal`);
     if (modal) {
+        // Store currently focused element
+        previousFocusedElement = document.activeElement;
+        
+        // Open modal
         modal.classList.add('active');
+        
+        // Focus first focusable element in modal
+        const firstFocusable = modal.querySelector(focusableSelectors);
+        if (firstFocusable) {
+            setTimeout(() => firstFocusable.focus(), 100);
+        }
+        
+        // Trap focus in modal
+        modal.addEventListener('keydown', handleModalKeyDown);
     }
 }
 
 function closeAllModals() {
     document.querySelectorAll('.modal').forEach(modal => {
         modal.classList.remove('active');
+        modal.removeEventListener('keydown', handleModalKeyDown);
     });
+    
+    // Restore focus to previously focused element
+    if (previousFocusedElement) {
+        previousFocusedElement.focus();
+        previousFocusedElement = null;
+    }
+}
+
+/**
+ * Handle keyboard navigation in modals
+ */
+function handleModalKeyDown(e) {
+    const modal = e.currentTarget;
+    
+    // Close on ESC key
+    if (e.key === 'Escape') {
+        closeAllModals();
+        return;
+    }
+    
+    // Trap focus on TAB key
+    if (e.key === 'Tab') {
+        const focusableElements = Array.from(modal.querySelectorAll(focusableSelectors))
+            .filter(el => !el.disabled && el.offsetParent !== null);
+        
+        if (focusableElements.length === 0) return;
+        
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        if (e.shiftKey) {
+            // Shift+Tab: focus last element if on first
+            if (document.activeElement === firstElement) {
+                lastElement.focus();
+                e.preventDefault();
+            }
+        } else {
+            // Tab: focus first element if on last
+            if (document.activeElement === lastElement) {
+                firstElement.focus();
+                e.preventDefault();
+            }
+        }
+    }
 }
 
 // ========================================
-// Keyboard Shortcuts
+// Price Targeting Modal
+// ========================================
+
+/**
+ * Show price targeting modal with category-specific ranges
+ */
+async function showPriceTargetingModal(category) {
+    // Lazy load amazon-research module
+    const { getCategoryConfig } = await loadAmazonResearchModule();
+    
+    const config = getCategoryConfig(category);
+    if (!config || !config.priceRanges) {
+        // No price ranges for this category, skip modal
+        return;
+    }
+    
+    // Populate preset ranges
+    const presetRanges = document.getElementById('presetRanges');
+    presetRanges.innerHTML = Object.entries(config.priceRanges).map(([key, range]) => `
+        <label class="preset-range-item">
+            <input type="checkbox" name="presetRange" value="${key}" class="preset-range-checkbox">
+            <span class="preset-range-label">${range.label}</span>
+        </label>
+    `).join('');
+    
+    // Get existing constraint if editing
+    const existingConstraint = StateManager.getPriceConstraint();
+    if (existingConstraint) {
+        if (existingConstraint.type === 'manual') {
+            document.querySelector('input[name="priceMode"][value="manual"]').checked = true;
+            document.getElementById('minPriceInput').value = existingConstraint.min || '';
+            document.getElementById('maxPriceInput').value = existingConstraint.max || '';
+            togglePriceContent('manual');
+        } else if (existingConstraint.type === 'preset') {
+            document.querySelector('input[name="priceMode"][value="preset"]').checked = true;
+            existingConstraint.ranges.forEach(range => {
+                const checkbox = document.querySelector(`input[name="presetRange"][value="${range}"]`);
+                if (checkbox) checkbox.checked = true;
+            });
+            togglePriceContent('preset');
+        } else if (existingConstraint.type === 'skip') {
+            document.querySelector('input[name="priceMode"][value="skip"]').checked = true;
+            togglePriceContent('skip');
+        }
+    } else {
+        // Default to preset mode
+        document.querySelector('input[name="priceMode"][value="preset"]').checked = true;
+        togglePriceContent('preset');
+    }
+    
+    openModal('priceTargeting');
+    
+    // Return a promise that resolves when the modal is closed
+    return new Promise((resolve) => {
+        window._priceTargetingResolve = resolve;
+    });
+}
+
+/**
+ * Toggle visibility of price content sections
+ */
+function togglePriceContent(mode) {
+    document.getElementById('manualPriceContent').style.display = mode === 'manual' ? 'block' : 'none';
+    document.getElementById('presetPriceContent').style.display = mode === 'preset' ? 'block' : 'none';
+    document.getElementById('skipPriceContent').style.display = mode === 'skip' ? 'block' : 'none';
+}
+
+/**
+ * Handle price modal submission
+ */
+async function handlePriceModalSubmit() {
+    const mode = document.querySelector('input[name="priceMode"]:checked')?.value;
+    
+    if (!mode) {
+        showToast('Please select a price option', 'warning');
+        return;
+    }
+    
+    let constraint = null;
+    
+    if (mode === 'manual') {
+        const min = document.getElementById('minPriceInput').value;
+        const max = document.getElementById('maxPriceInput').value;
+        
+        if (!min && !max) {
+            showToast('Please enter at least one price value', 'warning');
+            return;
+        }
+        
+        const minNum = min ? parseInt(min) : null;
+        const maxNum = max ? parseInt(max) : null;
+        
+        if (minNum !== null && maxNum !== null && minNum >= maxNum) {
+            showToast('Min price must be less than max price', 'warning');
+            return;
+        }
+        
+        constraint = {
+            type: 'manual',
+            min: minNum,
+            max: maxNum
+        };
+    } else if (mode === 'preset') {
+        const selected = Array.from(document.querySelectorAll('input[name="presetRange"]:checked'))
+            .map(cb => cb.value);
+        
+        if (selected.length === 0) {
+            showToast('Please select at least one price range', 'warning');
+            return;
+        }
+        
+        constraint = {
+            type: 'preset',
+            ranges: selected
+        };
+    } else if (mode === 'skip') {
+        constraint = {
+            type: 'skip'
+        };
+    }
+    
+    // Save constraint to decision
+    await StateManager.updatePriceConstraint(constraint);
+    
+    // Close modal
+    closeAllModals();
+    
+    // Render constraint display
+    renderPriceConstraintDisplay();
+    
+    // Resolve promise if it exists
+    if (window._priceTargetingResolve) {
+        window._priceTargetingResolve(constraint);
+        window._priceTargetingResolve = null;
+    }
+}
+
+/**
+ * Skip price targeting (use skip mode)
+ */
+async function handlePriceSkip() {
+    await StateManager.updatePriceConstraint({ type: 'skip' });
+    closeAllModals();
+    renderPriceConstraintDisplay();
+    
+    if (window._priceTargetingResolve) {
+        window._priceTargetingResolve({ type: 'skip' });
+        window._priceTargetingResolve = null;
+    }
+}
+
+/**
+ * Render price constraint display in alternatives step
+ */
+async function renderPriceConstraintDisplay() {
+    const display = document.getElementById('priceConstraintDisplay');
+    if (!display) return;
+    
+    const constraint = StateManager.getPriceConstraint();
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    
+    if (!constraint || constraint.type === 'skip' || !decision?.isProductComparison) {
+        display.innerHTML = '';
+        return;
+    }
+    
+    let badgeText = '';
+    
+    if (constraint.type === 'manual') {
+        if (constraint.min && constraint.max) {
+            badgeText = `$${constraint.min} - $${constraint.max}`;
+        } else if (constraint.min) {
+            badgeText = `$${constraint.min}+`;
+        } else if (constraint.max) {
+            badgeText = `Up to $${constraint.max}`;
+        }
+    } else if (constraint.type === 'preset') {
+        // Just show the range keys (simplified to avoid async complexity in render)
+        badgeText = constraint.ranges.join(', ');
+    }
+    
+    if (badgeText) {
+        display.innerHTML = `
+            <div class="price-constraint-display">
+                <span class="price-constraint-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    ${badgeText}
+                </span>
+                <button class="btn-edit-price" onclick="window.app.editPriceConstraint()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Edit
+                </button>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Edit existing price constraint (reopen modal)
+ */
+async function editPriceConstraint() {
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    if (decision?.category) {
+        await showPriceTargetingModal(decision.category);
+    }
+}
+
+/**
+ * Transform price constraint to format expected by researchProducts
+ */
+async function transformPriceConstraint(constraint, category) {
+    if (!constraint || constraint.type === 'skip') {
+        return null;
+    }
+    
+    if (constraint.type === 'manual') {
+        return {
+            min: constraint.min,
+            max: constraint.max
+        };
+    }
+    
+    if (constraint.type === 'preset') {
+        const { getCategoryConfig } = await loadAmazonResearchModule();
+        const config = getCategoryConfig(category);
+        if (!config || !config.priceRanges) {
+            return null;
+        }
+
+        // Calculate combined range from selected presets
+        return calculateCombinedRange(constraint.ranges, config.priceRanges);
+    }
+    
+    return null;
+}
+
+/**
+ * Calculate combined price range from multiple preset selections
+ */
+function calculateCombinedRange(selectedRanges, priceRanges) {
+    if (!selectedRanges || selectedRanges.length === 0) {
+        return null;
+    }
+    
+    let min = null;
+    let max = null;
+    const excludedRanges = [];
+    
+    // Get all range definitions
+    const allRanges = Object.keys(priceRanges);
+    const selectedSet = new Set(selectedRanges);
+    
+    // Calculate outer bounds
+    let hasUnboundedMax = false;
+    selectedRanges.forEach(key => {
+        const range = priceRanges[key];
+        if (range) {
+            // Set minimum to the lowest min value
+            if (min === null || (range.min !== null && range.min < min)) {
+                min = range.min;
+            }
+            
+            // Handle maximum
+            if (range.max === null) {
+                hasUnboundedMax = true; // Any unbounded range makes the whole selection unbounded
+            } else {
+                // Take the highest max value (unless we already have unbounded)
+                if (!hasUnboundedMax && (max === null || range.max > max)) {
+                    max = range.max;
+                }
+            }
+        }
+    });
+    
+    // If any selected range is unbounded, the result is unbounded
+    if (hasUnboundedMax) {
+        max = null;
+    }
+    
+    // If user selected multiple non-contiguous ranges (e.g., low + high), 
+    // we pass the outer bounds but note excluded middle ranges in the query
+    const result = { min, max };
+    
+    // Check for excluded ranges
+    allRanges.forEach(key => {
+        if (!selectedSet.has(key)) {
+            const range = priceRanges[key];
+            if (range) {
+                excludedRanges.push({ min: range.min, max: range.max });
+            }
+        }
+    });
+    
+    if (excludedRanges.length > 0 && excludedRanges.length < allRanges.length) {
+        result.excludeRanges = excludedRanges;
+    }
+    
+    return result;
+}
+
+// ========================================
+// AI Loading Modal
+// ========================================
+
+/**
+ * Show AI loading modal with custom message
+ */
+function showAILoadingModal(title = 'AI is Working...', message = 'Analyzing your decision and generating suggestions') {
+    const modal = document.getElementById('aiLoadingModal');
+    const titleEl = document.getElementById('aiLoadingTitle');
+    const messageEl = document.getElementById('aiLoadingMessage');
+    
+    if (modal && titleEl && messageEl) {
+        titleEl.textContent = title;
+        messageEl.textContent = message;
+        modal.classList.add('active');
+    }
+}
+
+/**
+ * Hide AI loading modal
+ */
+function hideAILoadingModal() {
+    const modal = document.getElementById('aiLoadingModal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+}
+
+// ========================================
+// Keyboard Shortcuts and Navigation
 // ========================================
 
 function handleKeyboardShortcuts(e) {
+    // Don't trigger shortcuts when typing in inputs
+    if (e.target.matches('input, textarea, select')) {
+        return;
+    }
+    
     // Escape to close modals
     if (e.key === 'Escape') {
         closeAllModals();
     }
-    
+
     // Ctrl/Cmd + S to save (prevent default)
     if ((e.ctrlKey || e.metaKey) && e.key === 's') {
         e.preventDefault();
         showToast('Auto-saved', 'success');
     }
-    
+
     // Ctrl/Cmd + N for new decision
     if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
         e.preventDefault();
         createNewDecision();
+    }
+    
+    // Ctrl/Cmd + E to export
+    if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
+        e.preventDefault();
+        const state = StateManager.getState();
+        if (state.currentDecision) {
+            openModal('export');
+        }
+    }
+    
+    // Ctrl/Cmd + / to show keyboard shortcuts help
+    if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+        e.preventDefault();
+        showKeyboardShortcutsHelp();
+    }
+    
+    // Number keys 1-4 to navigate steps (when not in input)
+    const state = StateManager.getState();
+    if (state.currentDecision && e.key >= '1' && e.key <= '4') {
+        const steps = ['criteria', 'alternatives', 'evaluation', 'results'];
+        const stepIndex = parseInt(e.key) - 1;
+        if (steps[stepIndex]) {
+            navigateToStep(steps[stepIndex]);
+        }
+    }
+}
+
+/**
+ * Show keyboard shortcuts help
+ */
+function showKeyboardShortcutsHelp() {
+    showToast(
+        'Keyboard Shortcuts:\n' +
+        'Ctrl/Cmd + N: New Decision\n' +
+        'Ctrl/Cmd + E: Export\n' +
+        'Ctrl/Cmd + S: Save\n' +
+        '1-4: Navigate Steps\n' +
+        'Esc: Close Modals',
+        'info',
+        5000
+    );
+}
+
+/**
+ * Handle arrow key navigation in lists
+ */
+function handleArrowKeyNavigation(e) {
+    if (e.target.matches('input, textarea, select')) {
+        return;
+    }
+    
+    // Arrow key navigation in decision list
+    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        const activeItem = document.querySelector('.nav-item.active');
+        const allItems = Array.from(document.querySelectorAll('.nav-item[data-id]'));
+        
+        if (allItems.length === 0) return;
+        
+        const currentIndex = allItems.indexOf(activeItem);
+        let nextIndex;
+        
+        if (e.key === 'ArrowUp') {
+            nextIndex = currentIndex > 0 ? currentIndex - 1 : allItems.length - 1;
+        } else {
+            nextIndex = currentIndex < allItems.length - 1 ? currentIndex + 1 : 0;
+        }
+        
+        const nextItem = allItems[nextIndex];
+        if (nextItem) {
+            e.preventDefault();
+            const decisionId = nextItem.dataset.id;
+            loadDecision(decisionId);
+            nextItem.focus();
+        }
     }
 }
 
@@ -1923,26 +2806,15 @@ window.app = {
     updateCriterion,
     updateCriterionWeight,
     deleteCriterion,
+    editCriterionName,
     updateAlternative,
     deleteAlternative,
+    editAlternativeName,
     setScore,
-    acceptAISuggestion
+    acceptAISuggestion,
+    editPriceConstraint,
+    showWelcomeView
 };
-
-// ========================================
-// Service Worker Registration
-// ========================================
-
-async function registerServiceWorker() {
-    if ('serviceWorker' in navigator) {
-        try {
-            const registration = await navigator.serviceWorker.register('/sw.js');
-            console.log('ServiceWorker registered:', registration.scope);
-        } catch (error) {
-            console.log('ServiceWorker registration failed:', error);
-        }
-    }
-}
 
 // ========================================
 // Initialize App
@@ -1950,5 +2822,4 @@ async function registerServiceWorker() {
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    registerServiceWorker();
 });

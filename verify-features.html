@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiMind Features Verification</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ccc;
+        }
+        .check-item.pass {
+            border-left-color: #22c55e;
+        }
+        .check-item.fail {
+            border-left-color: #ef4444;
+        }
+        .status {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .pass .status { color: #22c55e; }
+        .fail .status { color: #ef4444; }
+        button {
+            background: #275DAD;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        button:hover {
+            background: #1e4a8a;
+        }
+        .score {
+            font-size: 48px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .score.good { color: #22c55e; }
+        .score.ok { color: #f59e0b; }
+        .score.bad { color: #ef4444; }
+    </style>
+</head>
+<body>
+    <h1>🔍 OptiMind Features Verification</h1>
+    <p>Click the button below to verify all new features are working correctly.</p>
+    
+    <button onclick="runChecks()">Run Verification Checks</button>
+    
+    <div id="results"></div>
+    <div id="score"></div>
+
+    <script>
+        async function runChecks() {
+            const results = document.getElementById('results');
+            const scoreEl = document.getElementById('score');
+            results.innerHTML = '<p>Running checks...</p>';
+            
+            const checks = [];
+            let passed = 0;
+            let total = 0;
+
+            // Check 1: Tippy.js loaded
+            total++;
+            const tippyLoaded = typeof tippy !== 'undefined';
+            checks.push({
+                name: 'Tippy.js Library Loaded',
+                pass: tippyLoaded,
+                details: tippyLoaded ? 'Library available globally' : 'Not found - check script tag'
+            });
+            if (tippyLoaded) passed++;
+
+            // Check 2: Sortable loaded
+            total++;
+            const sortableLoaded = typeof Sortable !== 'undefined';
+            checks.push({
+                name: 'SortableJS Library Loaded',
+                pass: sortableLoaded,
+                details: sortableLoaded ? 'Library available globally' : 'Not found - check script tag'
+            });
+            if (sortableLoaded) passed++;
+
+            // Check 3: Vendor files exist
+            total++;
+            let vendorFilesExist = false;
+            try {
+                const tippyReq = await fetch('/js/vendor/tippy.min.js', { method: 'HEAD' });
+                const sortableReq = await fetch('/js/vendor/sortable.min.js', { method: 'HEAD' });
+                vendorFilesExist = tippyReq.ok && sortableReq.ok;
+            } catch (e) {}
+            checks.push({
+                name: 'Vendor Files Exist',
+                pass: vendorFilesExist,
+                details: vendorFilesExist ? 'Tippy and Sortable files found' : 'Missing vendor files'
+            });
+            if (vendorFilesExist) passed++;
+
+            // Check 4: CSS modules loaded
+            total++;
+            let cssLoaded = false;
+            try {
+                const cssReq = await fetch('/css/vendor/tippy.css', { method: 'HEAD' });
+                cssLoaded = cssReq.ok;
+            } catch (e) {}
+            checks.push({
+                name: 'Tippy CSS Loaded',
+                pass: cssLoaded,
+                details: cssLoaded ? 'Tippy CSS file found' : 'Missing tippy.css'
+            });
+            if (cssLoaded) passed++;
+
+            // Check 5: New JS modules exist
+            total++;
+            let modulesExist = false;
+            try {
+                const tooltipsReq = await fetch('/js/tooltips.js', { method: 'HEAD' });
+                const inlineEditReq = await fetch('/js/inline-edit.js', { method: 'HEAD' });
+                const dragDropReq = await fetch('/js/drag-drop.js', { method: 'HEAD' });
+                const lazyLoaderReq = await fetch('/js/lazy-loader.js', { method: 'HEAD' });
+                modulesExist = tooltipsReq.ok && inlineEditReq.ok && dragDropReq.ok && lazyLoaderReq.ok;
+            } catch (e) {}
+            checks.push({
+                name: 'New Modules Exist',
+                pass: modulesExist,
+                details: modulesExist ? 'All 4 modules found' : 'Some modules missing'
+            });
+            if (modulesExist) passed++;
+
+            // Check 6: Vite config
+            total++;
+            let viteConfigExists = false;
+            try {
+                const viteReq = await fetch('/vite.config.js', { method: 'HEAD' });
+                viteConfigExists = viteReq.ok;
+            } catch (e) {}
+            checks.push({
+                name: 'Vite Configuration',
+                pass: viteConfigExists,
+                details: viteConfigExists ? 'vite.config.js found' : 'Vite not configured'
+            });
+            if (viteConfigExists) passed++;
+
+            // Check 7: Package.json
+            total++;
+            let packageJsonExists = false;
+            try {
+                const pkgReq = await fetch('/package.json', { method: 'HEAD' });
+                packageJsonExists = pkgReq.ok;
+            } catch (e) {}
+            checks.push({
+                name: 'NPM Package Configuration',
+                pass: packageJsonExists,
+                details: packageJsonExists ? 'package.json found with scripts' : 'package.json missing'
+            });
+            if (packageJsonExists) passed++;
+
+            // Display results
+            results.innerHTML = checks.map(check => `
+                <div class="check-item ${check.pass ? 'pass' : 'fail'}">
+                    <span class="status">${check.pass ? '✅ PASS' : '❌ FAIL'}</span>
+                    <strong>${check.name}</strong>
+                    <br>
+                    <small>${check.details}</small>
+                </div>
+            `).join('');
+
+            // Display score
+            const percentage = Math.round((passed / total) * 100);
+            const grade = percentage >= 90 ? 'good' : percentage >= 70 ? 'ok' : 'bad';
+            scoreEl.innerHTML = `
+                <div class="score ${grade}">
+                    ${passed}/${total} checks passed (${percentage}%)
+                </div>
+                <p style="text-align: center;">
+                    ${percentage >= 90 ? '🎉 All features verified! Ready to use!' :
+                      percentage >= 70 ? '⚠️ Some features may not work. Check failed items.' :
+                      '❌ Multiple issues found. Review installation.'}
+                </p>
+            `;
+        }
+    </script>
+</body>
+</html>

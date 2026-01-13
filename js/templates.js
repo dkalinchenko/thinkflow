@@ -338,6 +338,29 @@ export const templates = [
         tips: 'Consider upright vs recumbent based on fitness goals. Factor in subscription costs for apps.'
     },
     {
+        id: 'elliptical-comparison',
+        name: 'Elliptical Machine Comparison',
+        description: 'Compare ellipticals for low-impact cardio',
+        category: 'Fitness Equipment',
+        icon: '⛷️',
+        isProductComparison: true,
+        productCategory: 'elliptical',
+        criteria: [
+            { name: 'Stride Length', weight: 2.0, description: 'Natural movement, adjustability' },
+            { name: 'Resistance', weight: 1.8, description: 'Levels, smoothness, magnetic vs friction' },
+            { name: 'Build Quality', weight: 1.7, description: 'Stability, weight capacity, durability' },
+            { name: 'Features', weight: 1.5, description: 'Programs, incline, console, connectivity' },
+            { name: 'Joint Impact', weight: 1.6, description: 'Low-impact design, smooth motion' },
+            { name: 'Value for Money', weight: 1.5, description: 'Price vs quality and longevity' }
+        ],
+        exampleAlternatives: [
+            { name: 'NordicTrack FS10i', description: 'Incline trainer, iFit enabled' },
+            { name: 'Sole E35', description: 'Solid build, lifetime warranty' },
+            { name: 'ProForm Carbon HIIT', description: 'Hybrid trainer, versatile' }
+        ],
+        tips: 'Test stride length for comfort. Consider front-drive vs rear-drive based on space.'
+    },
+    {
         id: 'rowing-machine-comparison',
         name: 'Rowing Machine Comparison',
         description: 'Compare rowing machines for full-body workouts',
@@ -724,9 +747,17 @@ export function getTemplateCategories() {
  * Create decision from template
  */
 export function createDecisionFromTemplate(templateId) {
+    console.log('🔍 createDecisionFromTemplate called with:', templateId);
     const template = getTemplate(templateId);
-    if (!template) return null;
+    console.log('📋 Template found:', !!template);
     
+    if (!template) {
+        console.error('❌ Template not found. Available template IDs:', templates.map(t => t.id));
+        console.error('❌ Looking for:', templateId);
+        return null;
+    }
+
+    console.log('✅ Creating decision from template:', template.name);
     return {
         title: `New ${template.name}`,
         description: template.description,

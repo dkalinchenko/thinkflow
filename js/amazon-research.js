@@ -14,6 +14,11 @@ const CATEGORY_CONFIG = {
         name: 'Laptops',
         amazonCategory: 'electronics',
         searchTerms: ['laptop', 'notebook'],
+        priceRanges: {
+            low: { min: 300, max: 700, label: 'Budget ($300-$700)' },
+            mid: { min: 700, max: 1500, label: 'Mid-Range ($700-$1,500)' },
+            high: { min: 1500, max: null, label: 'Premium ($1,500+)' }
+        },
         defaultCriteria: [
             { name: 'Performance', weight: 2.0, description: 'CPU, RAM, and processing power' },
             { name: 'Display Quality', weight: 1.5, description: 'Resolution, color accuracy, brightness' },
@@ -28,6 +33,11 @@ const CATEGORY_CONFIG = {
         name: 'Smartphones',
         amazonCategory: 'electronics',
         searchTerms: ['smartphone', 'cell phone'],
+        priceRanges: {
+            low: { min: 200, max: 500, label: 'Budget ($200-$500)' },
+            mid: { min: 500, max: 900, label: 'Mid-Range ($500-$900)' },
+            high: { min: 900, max: null, label: 'Premium ($900+)' }
+        },
         defaultCriteria: [
             { name: 'Camera Quality', weight: 2.0, description: 'Photo and video capabilities' },
             { name: 'Performance', weight: 1.8, description: 'Speed, multitasking, gaming' },
@@ -42,6 +52,11 @@ const CATEGORY_CONFIG = {
         name: 'Headphones',
         amazonCategory: 'electronics',
         searchTerms: ['headphones', 'earbuds', 'wireless headphones'],
+        priceRanges: {
+            low: { min: 50, max: 150, label: 'Budget ($50-$150)' },
+            mid: { min: 150, max: 300, label: 'Mid-Range ($150-$300)' },
+            high: { min: 300, max: null, label: 'Premium ($300+)' }
+        },
         defaultCriteria: [
             { name: 'Sound Quality', weight: 2.0, description: 'Audio clarity, bass, treble balance' },
             { name: 'Noise Cancellation', weight: 1.8, description: 'ANC effectiveness' },
@@ -56,6 +71,11 @@ const CATEGORY_CONFIG = {
         name: 'Cameras',
         amazonCategory: 'electronics',
         searchTerms: ['mirrorless camera', 'dslr camera', 'digital camera'],
+        priceRanges: {
+            low: { min: 400, max: 1000, label: 'Entry-Level ($400-$1,000)' },
+            mid: { min: 1000, max: 2500, label: 'Mid-Range ($1,000-$2,500)' },
+            high: { min: 2500, max: null, label: 'Professional ($2,500+)' }
+        },
         defaultCriteria: [
             { name: 'Image Quality', weight: 2.0, description: 'Sensor, resolution, dynamic range' },
             { name: 'Autofocus', weight: 1.8, description: 'Speed, accuracy, tracking' },
@@ -70,6 +90,11 @@ const CATEGORY_CONFIG = {
         name: 'Tablets',
         amazonCategory: 'electronics',
         searchTerms: ['tablet', 'ipad', 'android tablet'],
+        priceRanges: {
+            low: { min: 150, max: 400, label: 'Budget ($150-$400)' },
+            mid: { min: 400, max: 800, label: 'Mid-Range ($400-$800)' },
+            high: { min: 800, max: null, label: 'Premium ($800+)' }
+        },
         defaultCriteria: [
             { name: 'Display Quality', weight: 2.0, description: 'Screen size, resolution, colors' },
             { name: 'Performance', weight: 1.8, description: 'Speed for apps and games' },
@@ -84,6 +109,11 @@ const CATEGORY_CONFIG = {
         name: 'Smartwatches',
         amazonCategory: 'electronics',
         searchTerms: ['smartwatch', 'fitness tracker'],
+        priceRanges: {
+            low: { min: 100, max: 250, label: 'Budget ($100-$250)' },
+            mid: { min: 250, max: 500, label: 'Mid-Range ($250-$500)' },
+            high: { min: 500, max: null, label: 'Premium ($500+)' }
+        },
         defaultCriteria: [
             { name: 'Health Tracking', weight: 2.0, description: 'Heart rate, sleep, fitness accuracy' },
             { name: 'Battery Life', weight: 1.8, description: 'Days between charges' },
@@ -100,6 +130,11 @@ const CATEGORY_CONFIG = {
         name: 'Refrigerators',
         amazonCategory: 'appliances',
         searchTerms: ['refrigerator', 'fridge'],
+        priceRanges: {
+            low: { min: 500, max: 1200, label: 'Budget ($500-$1,200)' },
+            mid: { min: 1200, max: 2500, label: 'Mid-Range ($1,200-$2,500)' },
+            high: { min: 2500, max: null, label: 'Premium ($2,500+)' }
+        },
         defaultCriteria: [
             { name: 'Storage Capacity', weight: 2.0, description: 'Total and usable space' },
             { name: 'Energy Efficiency', weight: 1.8, description: 'Energy Star rating, cost' },
@@ -112,6 +147,11 @@ const CATEGORY_CONFIG = {
         name: 'Washing Machines',
         amazonCategory: 'appliances',
         searchTerms: ['washing machine', 'washer'],
+        priceRanges: {
+            low: { min: 400, max: 800, label: 'Budget ($400-$800)' },
+            mid: { min: 800, max: 1500, label: 'Mid-Range ($800-$1,500)' },
+            high: { min: 1500, max: null, label: 'Premium ($1,500+)' }
+        },
         defaultCriteria: [
             { name: 'Cleaning Performance', weight: 2.0, description: 'Stain removal, wash quality' },
             { name: 'Capacity', weight: 1.8, description: 'Load size' },
@@ -124,6 +164,11 @@ const CATEGORY_CONFIG = {
         name: 'Dishwashers',
         amazonCategory: 'appliances',
         searchTerms: ['dishwasher'],
+        priceRanges: {
+            low: { min: 400, max: 700, label: 'Budget ($400-$700)' },
+            mid: { min: 700, max: 1200, label: 'Mid-Range ($700-$1,200)' },
+            high: { min: 1200, max: null, label: 'Premium ($1,200+)' }
+        },
         defaultCriteria: [
             { name: 'Cleaning Performance', weight: 2.0, description: 'Wash quality' },
             { name: 'Noise Level', weight: 1.7, description: 'Decibel rating' },
@@ -136,6 +181,11 @@ const CATEGORY_CONFIG = {
         name: 'Vacuum Cleaners',
         amazonCategory: 'appliances',
         searchTerms: ['vacuum cleaner', 'vacuum'],
+        priceRanges: {
+            low: { min: 100, max: 300, label: 'Budget ($100-$300)' },
+            mid: { min: 300, max: 600, label: 'Mid-Range ($300-$600)' },
+            high: { min: 600, max: null, label: 'Premium ($600+)' }
+        },
         defaultCriteria: [
             { name: 'Suction Power', weight: 2.0, description: 'Cleaning effectiveness' },
             { name: 'Filtration', weight: 1.7, description: 'HEPA filter, allergen capture' },
@@ -148,6 +198,11 @@ const CATEGORY_CONFIG = {
         name: 'Air Purifiers',
         amazonCategory: 'appliances',
         searchTerms: ['air purifier'],
+        priceRanges: {
+            low: { min: 100, max: 250, label: 'Budget ($100-$250)' },
+            mid: { min: 250, max: 500, label: 'Mid-Range ($250-$500)' },
+            high: { min: 500, max: null, label: 'Premium ($500+)' }
+        },
         defaultCriteria: [
             { name: 'Filtration Quality', weight: 2.0, description: 'HEPA, particle capture' },
             { name: 'Room Coverage', weight: 1.8, description: 'Square footage, CADR' },
@@ -160,6 +215,11 @@ const CATEGORY_CONFIG = {
         name: 'Coffee Makers',
         amazonCategory: 'appliances',
         searchTerms: ['coffee maker', 'espresso machine'],
+        priceRanges: {
+            low: { min: 50, max: 150, label: 'Budget ($50-$150)' },
+            mid: { min: 150, max: 400, label: 'Mid-Range ($150-$400)' },
+            high: { min: 400, max: null, label: 'Premium ($400+)' }
+        },
         defaultCriteria: [
             { name: 'Coffee Quality', weight: 2.0, description: 'Brew temperature, taste' },
             { name: 'Convenience', weight: 1.7, description: 'Ease of use, programmable' },
@@ -174,6 +234,11 @@ const CATEGORY_CONFIG = {
         name: 'Treadmills',
         amazonCategory: 'sports',
         searchTerms: ['treadmill', 'running machine'],
+        priceRanges: {
+            low: { min: 300, max: 800, label: 'Budget ($300-$800)' },
+            mid: { min: 800, max: 1800, label: 'Mid-Range ($800-$1,800)' },
+            high: { min: 1800, max: null, label: 'Premium ($1,800+)' }
+        },
         defaultCriteria: [
             { name: 'Motor Power', weight: 1.9, description: 'Continuous horsepower' },
             { name: 'Running Surface', weight: 1.8, description: 'Belt size, cushioning' },
@@ -186,6 +251,11 @@ const CATEGORY_CONFIG = {
         name: 'Exercise Bikes',
         amazonCategory: 'sports',
         searchTerms: ['exercise bike', 'stationary bike', 'spin bike'],
+        priceRanges: {
+            low: { min: 200, max: 500, label: 'Budget ($200-$500)' },
+            mid: { min: 500, max: 1200, label: 'Mid-Range ($500-$1,200)' },
+            high: { min: 1200, max: null, label: 'Premium ($1,200+)' }
+        },
         defaultCriteria: [
             { name: 'Ride Quality', weight: 2.0, description: 'Smoothness, resistance' },
             { name: 'Comfort', weight: 1.8, description: 'Seat, adjustability' },
@@ -194,10 +264,32 @@ const CATEGORY_CONFIG = {
         ],
         specFields: ['flywheel', 'resistance_type', 'weight_capacity', 'adjustability', 'dimensions']
     },
+    elliptical: {
+        name: 'Elliptical Machines',
+        amazonCategory: 'sports',
+        searchTerms: ['elliptical machine', 'elliptical trainer', 'cross trainer'],
+        priceRanges: {
+            low: { min: 200, max: 600, label: 'Budget ($200-$600)' },
+            mid: { min: 600, max: 1500, label: 'Mid-Range ($600-$1,500)' },
+            high: { min: 1500, max: null, label: 'Premium ($1,500+)' }
+        },
+        defaultCriteria: [
+            { name: 'Stride Length', weight: 2.0, description: 'Natural movement' },
+            { name: 'Resistance', weight: 1.8, description: 'Smoothness, levels' },
+            { name: 'Build Quality', weight: 1.7, description: 'Stability' },
+            { name: 'Features', weight: 1.5, description: 'Programs, incline' }
+        ],
+        specFields: ['stride_length', 'resistance_levels', 'weight_capacity', 'incline', 'programs']
+    },
     'rowing machine': {
         name: 'Rowing Machines',
         amazonCategory: 'sports',
         searchTerms: ['rowing machine', 'rower'],
+        priceRanges: {
+            low: { min: 200, max: 500, label: 'Budget ($200-$500)' },
+            mid: { min: 500, max: 1200, label: 'Mid-Range ($500-$1,200)' },
+            high: { min: 1200, max: null, label: 'Premium ($1,200+)' }
+        },
         defaultCriteria: [
             { name: 'Resistance Quality', weight: 2.0, description: 'Smoothness, resistance type' },
             { name: 'Build Quality', weight: 1.8, description: 'Frame durability' },
@@ -210,6 +302,11 @@ const CATEGORY_CONFIG = {
         name: 'Fitness Trackers',
         amazonCategory: 'sports',
         searchTerms: ['fitness tracker', 'activity tracker', 'smart band'],
+        priceRanges: {
+            low: { min: 30, max: 100, label: 'Budget ($30-$100)' },
+            mid: { min: 100, max: 200, label: 'Mid-Range ($100-$200)' },
+            high: { min: 200, max: null, label: 'Premium ($200+)' }
+        },
         defaultCriteria: [
             { name: 'Tracking Accuracy', weight: 2.0, description: 'Heart rate, steps, sleep' },
             { name: 'Battery Life', weight: 1.8, description: 'Days per charge' },
@@ -222,6 +319,11 @@ const CATEGORY_CONFIG = {
         name: 'Yoga Mats',
         amazonCategory: 'sports',
         searchTerms: ['yoga mat', 'exercise mat'],
+        priceRanges: {
+            low: { min: 15, max: 40, label: 'Budget ($15-$40)' },
+            mid: { min: 40, max: 100, label: 'Mid-Range ($40-$100)' },
+            high: { min: 100, max: null, label: 'Premium ($100+)' }
+        },
         defaultCriteria: [
             { name: 'Grip & Traction', weight: 2.0, description: 'Slip resistance' },
             { name: 'Cushioning', weight: 1.8, description: 'Thickness, comfort' },
@@ -234,6 +336,11 @@ const CATEGORY_CONFIG = {
         name: 'Home Gym Equipment',
         amazonCategory: 'sports',
         searchTerms: ['adjustable dumbbells', 'weight set', 'home gym'],
+        priceRanges: {
+            low: { min: 100, max: 300, label: 'Budget ($100-$300)' },
+            mid: { min: 300, max: 700, label: 'Mid-Range ($300-$700)' },
+            high: { min: 700, max: null, label: 'Premium ($700+)' }
+        },
         defaultCriteria: [
             { name: 'Weight Range', weight: 2.0, description: 'Min/max weight' },
             { name: 'Build Quality', weight: 1.9, description: 'Durability, safety' },
@@ -280,17 +387,31 @@ export async function researchProducts(category, options = {}) {
     const categoryName = config?.name || 'Products';
     const searchContext = specificQuery || `top ${categoryName} in 2024-2025`;
     
+    // Log price constraint for debugging
+    if (priceRange) {
+        console.log(`🎯 Price constraint active for ${categoryName}:`, priceRange);
+    } else {
+        console.log(`📊 No price constraint for ${categoryName} - showing all prices`);
+    }
+    
     // Build the combined prompt with system instructions
     const systemPrompt = getResearchSystemPrompt();
     const userPrompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields);
     const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
     
     try {
+        console.log(`🔍 Requesting AI to research ${maxProducts} ${categoryName} products...`);
+        console.log(`📝 Prompt preview:`, userPrompt.substring(0, 300) + '...');
+        
         // Use aiService.call() which handles the API request
         const response = await aiService.call(fullPrompt, { skipCache: true });
         
+        console.log(`📦 AI returned product data, parsing...`);
+        
         // Parse the AI response into product objects
         const products = parseProductResponse(response);
+        
+        console.log(`✨ Successfully parsed ${products.length} products from AI response`);
         
         // Convert to AffiliateProduct instances
         return products.map(p => new AffiliateProduct({
@@ -328,7 +449,26 @@ function buildResearchPrompt(categoryName, searchContext, maxProducts, priceRang
 `;
 
     if (priceRange) {
-        prompt += `Price range: ${priceRange.min ? '$' + priceRange.min : 'Any'} - ${priceRange.max ? '$' + priceRange.max : 'Any'}\n\n`;
+        prompt += `IMPORTANT PRICE CONSTRAINT:\n`;
+        if (priceRange.min && priceRange.max) {
+            prompt += `- ONLY include products priced between $${priceRange.min} and $${priceRange.max}\n`;
+        } else if (priceRange.min) {
+            prompt += `- ONLY include products priced at $${priceRange.min} or higher\n`;
+        } else if (priceRange.max) {
+            prompt += `- ONLY include products priced up to $${priceRange.max}\n`;
+        }
+        
+        // Handle excluded ranges (for non-contiguous selections like low + high)
+        if (priceRange.excludeRanges && priceRange.excludeRanges.length > 0) {
+            prompt += `- EXCLUDE products in these price ranges:\n`;
+            priceRange.excludeRanges.forEach(range => {
+                if (range.min && range.max) {
+                    prompt += `  * $${range.min} to $${range.max}\n`;
+                }
+            });
+        }
+        
+        prompt += `- Do NOT suggest products outside this price range under any circumstances\n\n`;
     }
 
     prompt += `For each product, provide:
@@ -366,7 +506,19 @@ Respond with a JSON array of products. Example format:
   }
 ]
 
-Provide exactly ${maxProducts} products, ranked by overall quality and popularity.`;
+`;
+
+    if (priceRange) {
+        prompt += `CRITICAL REMINDER: All ${maxProducts} products MUST be within the specified price range. Do not include any products outside the price constraints.\n\n`;
+    }
+
+    prompt += `Provide exactly ${maxProducts} products, ranked by overall quality and popularity`;
+    
+    if (priceRange) {
+        prompt += ` within the specified price range`;
+    }
+    
+    prompt += `.`;
 
     return prompt;
 }
