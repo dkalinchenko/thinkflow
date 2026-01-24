@@ -1,0 +1,406 @@
+{
+  "id": "5171ef4e-60b7-47a4-a8cb-691114c95dcd",
+  "slug": "new-rowing-machine-comparison",
+  "title": "New Rowing Machine Comparison",
+  "description": "Compare rowing machines for full-body workouts",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Resistance Quality",
+      "weight": 2,
+      "description": "Smoothness, resistance type (air/magnetic/water)"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Build Quality",
+      "weight": 1.8,
+      "description": "Frame durability, rail quality, weight capacity"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Comfort",
+      "weight": 1.6,
+      "description": "Seat, footrests, handle ergonomics"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Monitor & Metrics",
+      "weight": 1.5,
+      "description": "Display, workout tracking, connectivity"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Storage",
+      "weight": 1.4,
+      "description": "Foldability, vertical storage, footprint"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs durability and features"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "7d31189e-31c2-4e92-b8ee-8f1eae3db963",
+      "name": "Concept2 Model D Rowing Machine",
+      "description": "Professional-grade air resistance rower used by athletes and fitness enthusiasts worldwide, known for its durability and accurate performance metrics.",
+      "pros": [
+        "Industry standard for accuracy and reliability",
+        "Durable construction with 5-year warranty",
+        "Excellent performance tracking with PM5 monitor",
+        "Easy to store upright"
+      ],
+      "cons": [
+        "Higher price point",
+        "Can be noisy due to air resistance",
+        "Assembly required"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 990,
+      "rating": 4.8,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "resistance_type": "Air resistance with adjustable damper",
+        "rail_length": "142 cm",
+        "weight_capacity": "227 kg (500 lbs)",
+        "dimensions": "244 cm x 61 cm x 135 cm (folded: 132 cm x 61 cm x 54 cm)",
+        "monitor": "PM5 Performance Monitor with Bluetooth connectivity"
+      }
+    },
+    {
+      "id": "86e4a573-65b9-47f4-a556-d91a5e8c4b88",
+      "name": "Hydrow Wave Rowing Machine",
+      "description": "Connected rower with immersive live and on-demand workouts, featuring electromagnetic resistance and a compact, modern design.",
+      "pros": [
+        "Extremely quiet operation",
+        "Engaging live/on-demand classes",
+        "Compact footprint when stored",
+        "Smooth, realistic rowing feel"
+      ],
+      "cons": [
+        "Requires monthly subscription for full features",
+        "Higher initial investment",
+        "Screen dependent for advanced metrics"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1695,
+      "rating": 4.6,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "resistance_type": "Electromagnetic (quiet)",
+        "rail_length": "86 inches",
+        "weight_capacity": "375 lbs",
+        "dimensions": "86\" L x 23\" W x 43\" H (stored upright: 23\" x 25\" x 86\")",
+        "monitor": "16\" HD touchscreen with subscription content"
+      }
+    },
+    {
+      "id": "7baea616-5286-4583-aea8-9ba6e50ddd7b",
+      "name": "Sunny Health & Fitness SF-RW5515 Magnetic Rowing Machine",
+      "description": "Affordable magnetic resistance rower with 8 resistance levels, comfortable seat, and LCD monitor for basic workout tracking.",
+      "pros": [
+        "Very affordable price point",
+        "Quiet magnetic resistance",
+        "Compact design fits small spaces",
+        "Easy assembly"
+      ],
+      "cons": [
+        "Lower weight capacity",
+        "Basic monitor with limited metrics",
+        "Shorter rail may not suit taller users"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 249,
+      "rating": 4.3,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "resistance_type": "Magnetic (8 levels)",
+        "rail_length": "39 inches",
+        "weight_capacity": "220 lbs",
+        "dimensions": "49\" L x 21.5\" W x 21\" H",
+        "monitor": "LCD display showing time, count, total count, calories"
+      }
+    },
+    {
+      "id": "b666c917-2cdc-457f-a0c3-014f5d55b59e",
+      "name": "NordicTrack RW900 Rowing Machine",
+      "description": "Smart rower with 22\" HD touchscreen, iFIT compatibility, and 26 digital resistance levels for interactive training experiences.",
+      "pros": [
+        "Large interactive touchscreen",
+        "26 resistance levels for progressive training",
+        "Auto-adjust resistance with iFIT workouts",
+        "Foldable for storage"
+      ],
+      "cons": [
+        "iFIT subscription adds ongoing cost",
+        "Heavier and bulkier than some competitors",
+        "Higher price for full feature access"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1599,
+      "rating": 4.4,
+      "reviewCount": 1800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "resistance_type": "SMR Silent Magnetic Resistance (26 levels)",
+        "rail_length": "Standard length rail system",
+        "weight_capacity": "250 lbs",
+        "dimensions": "96\" L x 23\" W x 55\" H (folded: 35\" x 23\" x 64\")",
+        "monitor": "22\" HD touchscreen with iFIT compatibility"
+      }
+    }
+  ],
+  "scores": {
+    "7d31189e-31c2-4e92-b8ee-8f1eae3db963": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "Air resistance provides exceptionally smooth, consistent drag that increases naturally with effort. The flywheel design creates a realistic rowing feel that's both challenging and fluid, making it the industry standard for performance."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Commercial-grade construction with aircraft-grade aluminum frame and stainless steel components. Rated for unlimited use in gym environments with 500 lb weight capacity, known to last decades with minimal maintenance."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Basic molded seat and simple footrests are functional but not plush. The handle is straightforward without ergonomic shaping. Adequate for serious workouts but not luxurious for extended casual use."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "PM5 monitor provides exceptionally accurate metrics (split times, watts, calories) with Bluetooth/ANT+ connectivity. Industry-standard performance tracking used for official competitions and personal records."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Does not fold and requires significant floor space (96\" long). Can be stored vertically but requires careful handling due to weight (57 lbs). Not suitable for small apartments without dedicated space."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Premium price point but offers unmatched durability and resale value. Lacks some comfort features of cheaper models, but professional-grade construction justifies cost for serious users."
+      }
+    },
+    "86e4a573-65b9-47f4-a556-d91a5e8c4b88": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The electromagnetic resistance system provides exceptionally smooth, quiet operation with precise resistance adjustments. This is superior to air or water resistance in terms of consistency and noise reduction."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The aluminum frame is sturdy but not as robust as commercial-grade machines. Weight capacity (375 lbs) is adequate but not exceptional, and some users report minor rail wobble during intense sessions."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The ergonomic handle and adjustable footrests provide good comfort for most users. However, the seat cushioning could be improved for longer workouts, and footplate adjustment requires manual tools."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The 22-inch HD touchscreen with live/on-demand classes and comprehensive metrics tracking is outstanding. Connectivity features including leaderboards and instructor interaction set a new standard in connected fitness."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "While marketed as compact, it doesn't fold and requires significant floor space (86\" long). Vertical storage is possible but awkward due to weight and balance issues, making it less practical for small spaces."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At approximately $1,700 plus monthly subscription fees, it's significantly more expensive than comparable rowers. The premium price is hard to justify given build quality limitations and mandatory subscription for full functionality."
+      }
+    },
+    "7baea616-5286-4583-aea8-9ba6e50ddd7b": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Magnetic resistance provides smooth operation without the noise of air rowers, but the 8 resistance levels are limited compared to higher-end models. The resistance adjustment is adequate for beginners but may feel insufficient for advanced users seeking intense workouts."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "The frame is lightweight and adequate for basic use, but lacks the solid construction of premium rowers. Weight capacity (250 lbs) and rail stability are below average, potentially causing wobble during vigorous rowing sessions."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "The seat is reasonably comfortable for short to moderate sessions, though some users report discomfort during longer workouts. Footrests and handle are basic but functional, lacking the ergonomic adjustments found on higher-priced models."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "The basic LCD monitor tracks only fundamental metrics (time, count, calories) with no connectivity or advanced tracking. Display quality is minimal, and the lack of Bluetooth or app integration significantly limits workout analysis."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Foldable design and vertical storage capability are strong features for space-constrained environments. The compact footprint when stored makes it practical for home use where equipment must be moved frequently."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "At its affordable price point, it delivers acceptable performance for beginners and casual users. While lacking premium features, it represents good value for those seeking basic rowing functionality without major investment."
+      }
+    },
+    "b666c917-2cdc-457f-a0c3-014f5d55b59e": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 26 digital resistance levels provide good adjustability, and the magnetic resistance system offers smooth transitions. However, it lacks the authentic feel and natural water resistance progression of premium water rowers."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The frame is sturdy for typical home use with a 250 lb weight capacity, but some users report rail wobble during intense workouts. Construction is adequate but not as robust as commercial-grade machines."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The ergonomic handle and adjustable footrests provide good comfort for most users. The seat glides smoothly, though some taller users may find the foot positioning slightly awkward."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The 22\" HD touchscreen with iFIT compatibility is exceptional, offering immersive workouts and comprehensive tracking. Connectivity features and metric display are industry-leading in this price range."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "The machine folds but requires significant effort and space. The vertical storage option is awkward due to the large screen, making it less practical for small spaces than advertised."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced at a premium primarily for the screen and iFIT features. The rowing mechanism itself doesn't justify the cost compared to simpler machines offering similar resistance quality."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "7d31189e-31c2-4e92-b8ee-8f1eae3db963",
+      "name": "Concept2 Model D Rowing Machine",
+      "description": "Professional-grade air resistance rower used by athletes and fitness enthusiasts worldwide, known for its durability and accurate performance metrics.",
+      "totalScore": 40.1,
+      "maxPossible": 98,
+      "percentage": 41,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Resistance Quality",
+        "Build Quality",
+        "Monitor & Metrics"
+      ],
+      "weaknesses": [
+        "Storage"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "86e4a573-65b9-47f4-a556-d91a5e8c4b88",
+      "name": "Hydrow Wave Rowing Machine",
+      "description": "Connected rower with immersive live and on-demand workouts, featuring electromagnetic resistance and a compact, modern design.",
+      "totalScore": 35.1,
+      "maxPossible": 98,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Resistance Quality",
+        "Monitor & Metrics",
+        "Comfort"
+      ],
+      "weaknesses": [
+        "Storage",
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "b666c917-2cdc-457f-a0c3-014f5d55b59e",
+      "name": "NordicTrack RW900 Rowing Machine",
+      "description": "Smart rower with 22\" HD touchscreen, iFIT compatibility, and 26 digital resistance levels for interactive training experiences.",
+      "totalScore": 34.6,
+      "maxPossible": 98,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Monitor & Metrics",
+        "Resistance Quality",
+        "Comfort"
+      ],
+      "weaknesses": [
+        "Storage"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "7baea616-5286-4583-aea8-9ba6e50ddd7b",
+      "name": "Sunny Health & Fitness SF-RW5515 Magnetic Rowing Machine",
+      "description": "Affordable magnetic resistance rower with 8 resistance levels, comfortable seat, and LCD monitor for basic workout tracking.",
+      "totalScore": 29,
+      "maxPossible": 98,
+      "percentage": 30,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 2,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Storage",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Build Quality",
+        "Monitor & Metrics"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:44:10.625Z",
+  "metadata": {
+    "seoTitle": "New Rowing Machine Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Concept2 Model D Rowing Machine (41.0%)",
+    "winnerName": "Concept2 Model D Rowing Machine",
+    "winnerScore": 40.1,
+    "winnerPercentage": 41
+  },
+  "insights": {
+    "recommendation": "I recommend the Concept2 Model D Rowing Machine because it achieved the highest weighted score (40.1 points, 41%) by excelling in the most important criteria. Its superior performance in Resistance Quality and Build Quality, which carry the highest weights, makes it the optimal choice for serious full-body workouts despite its higher price point.",
+    "decision_drivers": [
+      "Resistance Quality (weight: 2)",
+      "Build Quality (weight: 1.8)",
+      "Comfort (weight: 1.6)"
+    ],
+    "trade_offs": {
+      "Concept2 Model D Rowing Machine": "Superior performance and durability versus higher cost and potentially less advanced technology/features compared to smart rowers",
+      "Hydrow Wave Rowing Machine": "Modern technology and interactive experience versus higher ongoing subscription costs and potentially less proven long-term durability",
+      "NordicTrack RW900 Rowing Machine": "Integrated workout programming and incline feature versus dependence on iFit subscription and complex electronics that may require maintenance"
+    },
+    "risks": [
+      "Higher initial investment may not be justified for casual users",
+      "Lacks the interactive/guided workout features of smart rowers which some users prefer",
+      "Large footprint and less convenient storage compared to some alternatives"
+    ],
+    "sensitivity": "Moderately sensitive. The Concept2's lead is substantial (5-point gap to second place), but since Resistance Quality has double the weight of Storage, reducing its importance could benefit alternatives like Hydrow that may excel in other areas. However, the weighted score differences suggest the ranking is reasonably robust to small weight changes.",
+    "confidence": {
+      "level": "High",
+      "explanation": "The decision framework is well-structured with appropriate criteria weights for fitness equipment selection. The scoring differences between alternatives are clear and meaningful, with Concept2 demonstrating a significant lead. The criteria weights logically prioritize performance and durability factors that matter most for serious rowing workouts."
+    }
+  }
+}
