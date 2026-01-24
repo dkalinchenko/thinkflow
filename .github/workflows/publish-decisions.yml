@@ -46,10 +46,13 @@ jobs:
       - name: Update sitemap
         run: node scripts/update-sitemap.js
       
+      - name: Generate guides index
+        run: node scripts/generate-guides-index.js
+      
       - name: Check for changes
         id: git-check
         run: |
-          git add decisions/*.html sitemap.xml 2>/dev/null || true
+          git add decisions/*.html decisions/*.json guides/index.html sitemap.xml 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "changes=false" >> $GITHUB_OUTPUT
           else

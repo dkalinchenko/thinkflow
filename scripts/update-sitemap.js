@@ -42,6 +42,10 @@ console.log(`Found ${htmlFiles.length} published decision(s)`);
 const decisionUrlPattern = /<url>\s*<loc>https:\/\/optimind\.space\/decisions\/[^<]+<\/loc>[\s\S]*?<\/url>\s*/g;
 sitemap = sitemap.replace(decisionUrlPattern, '');
 
+// Remove any existing guides URL to prevent duplicates
+const guidesUrlPattern = /<url>\s*<loc>https:\/\/optimind\.space\/guides\/<\/loc>[\s\S]*?<\/url>\s*/g;
+sitemap = sitemap.replace(guidesUrlPattern, '');
+
 // Get today's date for lastmod
 const today = new Date().toISOString().split('T')[0];
 
@@ -56,12 +60,27 @@ const decisionUrls = htmlFiles.map(slug => {
     </url>`;
 }).join('\n');
 
+// Generate guides index URL
+const guidesIndexUrl = `    <!-- Decision Guides Index -->
+    <url>
+        <loc>https://optimind.space/guides/</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>`;
+
 // Add comment section header if decisions exist
 let decisionSection = '';
 if (htmlFiles.length > 0) {
     decisionSection = `
+${guidesIndexUrl}
+
     <!-- Published Decisions -->
 ${decisionUrls}
+`;
+} else {
+    decisionSection = `
+${guidesIndexUrl}
 `;
 }
 

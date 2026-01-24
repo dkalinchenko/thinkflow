@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPC2C97LL4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YPC2C97LL4');
+    </script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Decision Guides - AI-Powered Product Comparisons | OptiMind</title>
+    <meta name="description" content="Expert product comparisons powered by AI analysis and weighted decision matrices. Data-driven guides to help you choose the best option for your needs."/>
+    <meta name="keywords" content="product comparison,decision guide,buying guide,product review,best products,comparison guide"/>
+    <link rel="canonical" href="https://optimind.space/guides/"/>
+    <link rel="icon" type="image/png" href="/images/icons/puzzle.png"/>
+    <link rel="stylesheet" href="/_next/static/css/a919680227c60a63.css"/>
+    <style>
+        :root { --primary: #275DAD; --text-dark: #5B616A; --bg-light: #FCF7F8; }
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; }
+        .logo img { width: 32px; height: 32px; }
+        .btn-primary { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .hero { padding: 7rem 0 3rem; text-align: center; background: white; }
+        .hero h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 1rem; }
+        .hero p { color: var(--text-dark); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+        .guides-section { padding: 2rem 0 3rem; }
+        .section-title { font-size: 1.5rem; color: #1a1a1a; margin-bottom: 2rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary); }
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        .guide-card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+        .guide-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+        .guide-card h3 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+        .guide-card h3 a { color: #1a1a1a; text-decoration: none; }
+        .guide-card h3 a:hover { color: var(--primary); }
+        .guide-card p { color: var(--text-dark); font-size: 0.9rem; margin: 0 0 1rem; line-height: 1.5; }
+        .guide-card .meta { font-size: 0.8rem; color: #888; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+        .guide-card .meta .winner { color: var(--primary); font-weight: 500; }
+        .category-tag { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; margin-bottom: 0.75rem; }
+        footer { background: #1a1a1a; color: white; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        footer a { color: white; text-decoration: none; }
+        footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
+        .breadcrumb { padding: 6rem 0 1rem; font-size: 0.9rem; color: var(--text-dark); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .featured-tools { background: white; padding: 2rem; margin: 3rem 0 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .featured-tools h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 0.5rem; text-align: center; }
+        .featured-tools .subtitle { text-align: center; color: var(--text-dark); margin-bottom: 2rem; font-size: 1rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .tool-card { background: var(--bg-light); border: 2px solid #CED3DC; border-radius: 12px; padding: 2rem; text-decoration: none; display: block; transition: all 0.3s; }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); border-color: var(--primary); }
+        .tool-card h3 { color: #1a1a1a; font-size: 1.25rem; margin: 0 0 0.5rem; }
+        .tool-card p { color: var(--text-dark); margin: 0; font-size: 0.95rem; line-height: 1.5; }
+        .no-guides { text-align: center; padding: 3rem; color: var(--text-dark); font-style: italic; }
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 1.75rem; } 
+            .guides-grid { grid-template-columns: 1fr; } 
+            .tools-grid { grid-template-columns: 1fr; }
+            .featured-tools { padding: 1.5rem; }
+            .logo span { display: none; }
+            .header-inner .btn-primary { display: none; }
+            .header-inner { padding: 0.5rem 1rem !important; }
+            .logo { padding-top: 0 !important; padding-bottom: 0 !important; }
+            .logo img { width: 24px !important; height: 24px !important; }
+            .guide-card .meta { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <img src="/images/icons/puzzle.png" alt="OptiMind"/>
+                <span>OptiMind</span>
+            </a>
+            <a href="/app.html" class="btn-primary">Launch App</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a> &gt; Decision Guides
+            </div>
+            <h1>Decision Guides</h1>
+            <p>Expert product comparisons powered by AI analysis and weighted decision matrices. Data-driven guides to help you choose the best option for your needs.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Featured Tools -->
+        <section class="featured-tools">
+            <h2>Create Your Own Comparison</h2>
+            <p class="subtitle">Use our free tools to make data-driven decisions</p>
+            <div class="tools-grid">
+                <a href="/decision-matrix-calculator/" class="tool-card">
+                    <h3>Decision Matrix Calculator</h3>
+                    <p>Free weighted scoring tool for objective decisions. Compare options using customizable criteria.</p>
+                </a>
+                <a href="/product-comparison-tool/" class="tool-card">
+                    <h3>Product Comparison Tool</h3>
+                    <p>Compare products side-by-side with AI insights. No signup required, completely private.</p>
+                </a>
+                <a href="/decision-matrix-template/" class="tool-card">
+                    <h3>Decision Matrix Templates</h3>
+                    <p>Pre-built templates for laptops, smartphones, and more. Start comparing in seconds.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Published Decision Guides -->
+        <section class="guides-section">
+            <h2 class="section-title">Published Comparisons</h2>
+            <div class="guides-grid">
+                <article class="guide-card">
+                    <span class="category-tag">Decision Guide</span>
+                    <h3><a href="/decisions/test-123-test-laptop-comparison.html">Best Laptop Comparison 2026 - MacBook Pro vs Dell XPS vs ThinkPad</a></h3>
+                    <p>A test decision to verify the publishing workflow</p>
+                    <div class="meta">
+                        <span class="date">January 24, 2026</span>
+                        <span class="winner">Winner: MacBook Pro</span>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <span class="category-tag">Decision Guide</span>
+                    <h3><a href="/decisions/28e16b96-3831-4875-93e6-566a5f0993d8-new-headphones-comparison.html">New Headphones Comparison - Decision Matrix | OptiMind</a></h3>
+                    <p>Compare wireless headphones and earbuds</p>
+                    <div class="meta">
+                        <span class="date">January 24, 2026</span>
+                        <span class="winner">Winner: Anker Soundcore Space Q45</span>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <span class="category-tag">Decision Guide</span>
+                    <h3><a href="/decisions/a81cab09-73bf-49ac-85b6-17212eeb90bc-new-laptop-comparison.html">New Laptop Comparison - Decision Matrix | OptiMind</a></h3>
+                    <p>Compare laptops to find your perfect machine</p>
+                    <div class="meta">
+                        <span class="date">January 24, 2026</span>
+                        <span class="winner">Winner: Apple MacBook Air 13-inch (M3 chip, 2024)</span>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <span class="category-tag">Decision Guide</span>
+                    <h3><a href="/decisions/9c990ead-574b-44a8-b2e7-0482681cf18b-new-laptop-comparison.html">New Laptop Comparison - Decision Matrix | OptiMind</a></h3>
+                    <p>Compare laptops to find your perfect machine</p>
+                    <div class="meta">
+                        <span class="date">January 24, 2026</span>
+                        <span class="winner">Winner: Apple MacBook Air 13-inch (M3 Chip, 2024)</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="/">OptiMind</a> · <a href="/decision-matrix-calculator/">Calculator</a> · <a href="/decision-matrix-template/">Templates</a> · <a href="/product-comparison-tool/">Product Comparison</a></p>
+            <p>© 2026 OptiMind. Making smart decisions, one comparison at a time.</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;"><a href="https://www.flaticon.com/free-icons/brain" title="brain icons">Icons by Freepik - Flaticon</a></p>
+        </div>
+    </footer>
+</body>
+</html>

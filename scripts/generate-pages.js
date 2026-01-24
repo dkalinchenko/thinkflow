@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
-const { generateArticle } = require('./ai-article-generator');
+const { generateArticle, generateSummary } = require('./ai-article-generator');
 
 // Configure marked for safe HTML output
 marked.setOptions({
@@ -58,6 +58,8 @@ async function processDecisions() {
             
             // Generate AI article (only if DEEPSEEK_API_KEY is available)
             let article = null;
+            let jsonUpdated = false;
+            
             if (process.env.DEEPSEEK_API_KEY) {
                 console.log(`Generating AI article for: ${decision.title}...`);
                 article = await generateArticle(decision);
@@ -66,8 +68,25 @@ async function processDecisions() {
                 } else {
                     console.warn(`Article generation failed, proceeding without article`);
                 }
+                
+                // Generate summary for guides index (only if we don't have one)
+                if (!decision.summary) {
+                    console.log(`Generating summary for: ${decision.title}...`);
+                    const summary = await generateSummary(decision);
+                    if (summary) {
+                        decision.summary = summary;
+                        jsonUpdated = true;
+                        console.log(`Summary generated: ${summary}`);
+                    }
+                }
             } else {
                 console.log(`No DEEPSEEK_API_KEY found, skipping article generation`);
+            }
+            
+            // Save updated JSON if summary was added
+            if (jsonUpdated) {
+                fs.writeFileSync(jsonPath, JSON.stringify(decision, null, 2));
+                console.log(`Updated JSON with summary: ${file}`);
             }
             
             // Generate HTML with article

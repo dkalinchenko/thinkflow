@@ -267,4 +267,92 @@ async function callDeepSeekReasoner(apiKey, prompt) {
     }
 }
 
-module.exports = { generateArticle };
+/**
+ * Generate a one-sentence summary for the decision guides index
+ * @param {Object} decision - The decision data object
+ * @returns {Promise<string|null>} - Summary text or null on failure
+ */
+async function generateSummary(decision) {
+    const apiKey = process.env.DEEPSEEK_API_KEY;
+    
+    if (!apiKey) {
+        return null;
+    }
+    
+    const winner = decision.results[0];
+    const prompt = `Write ONE compelling sentence (max 150 characters) that summarizes this decision comparison and announces the winner.
+
+Decision: ${decision.title}
+Description: ${decision.description || 'A product comparison'}
+Winner: ${winner.name} with ${winner.percentage.toFixed(1)}% score
+Alternatives compared: ${decision.alternatives.map(a => a.name).join(', ')}
+
+Requirements:
+- ONE sentence only
+- Include the winner's name
+- Make it engaging and informative for someone browsing a list of guides
+- Max 150 characters
+- No emoji or special formatting
+- Do not start with "This comparison" or similar`;
+
+    try {
+        const response = await callDeepSeekChat(apiKey, prompt);
+        return response ? response.trim() : null;
+    } catch (error) {
+        console.error('Summary generation failed:', error.message);
+        return null;
+    }
+}
+
+/**
+ * Call DeepSeek Chat API (faster than Reasoner, good for short tasks)
+ * @param {string} apiKey - DeepSeek API key
+ * @param {string} prompt - The prompt to send
+ * @returns {Promise<string>} - Generated content
+ */
+async function callDeepSeekChat(apiKey, prompt) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+    
+    try {
+        const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: 'deepseek-chat',
+                messages: [
+                    {
+                        role: 'user',
+                        content: prompt
+                    }
+                ],
+                max_tokens: 200,
+                temperature: 0.7
+            }),
+            signal: controller.signal
+        });
+        
+        clearTimeout(timeout);
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`API error ${response.status}: ${errorText}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+            throw new Error('Invalid API response structure');
+        }
+        
+        return data.choices[0].message.content;
+    } catch (error) {
+        clearTimeout(timeout);
+        throw error;
+    }
+}
+
+module.exports = { generateArticle, generateSummary };
