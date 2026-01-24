@@ -1,0 +1,384 @@
+{
+  "id": "28e16b96-3831-4875-93e6-566a5f0993d8",
+  "slug": "new-headphones-comparison",
+  "title": "New Headphones Comparison",
+  "description": "Compare wireless headphones and earbuds",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Sound Quality",
+      "weight": 2,
+      "description": "Audio clarity, bass, treble balance"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Noise Cancellation",
+      "weight": 1.8,
+      "description": "ANC effectiveness"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Comfort",
+      "weight": 1.5,
+      "description": "Fit, weight, padding quality"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Battery Life",
+      "weight": 1.3,
+      "description": "Hours of playback"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Build Quality",
+      "weight": 1.2,
+      "description": "Durability and materials"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to quality"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "78bf4486-ea12-444b-a07a-ba90636ba6d9",
+      "name": "Sony WH-CH720N",
+      "description": "Lightweight wireless noise-canceling headphones with excellent battery life and clear call quality.",
+      "pros": [
+        "Extremely lightweight and comfortable for long sessions",
+        "Excellent 35-hour battery life with ANC on",
+        "Effective noise cancellation for the price",
+        "Multi-point Bluetooth connection"
+      ],
+      "cons": [
+        "Earcup padding could be thicker",
+        "Sound profile is somewhat bass-light by default",
+        "Plastic build feels less premium"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 128,
+      "rating": 4.3,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "driver": "30mm dynamic",
+        "frequency": "7Hz-20kHz",
+        "battery": "Up to 35 hours with ANC",
+        "anc": "Yes (Digital Noise Canceling)",
+        "bluetooth": "5.2",
+        "weight": "192g"
+      }
+    },
+    {
+      "id": "258cc9dd-372b-4eb2-9af5-726352f2140e",
+      "name": "Anker Soundcore Space Q45",
+      "description": "Feature-packed over-ear headphones with hybrid active noise cancellation and exceptional battery life.",
+      "pros": [
+        "Outstanding battery life, one of the best in class",
+        "Strong, customizable noise cancellation via app",
+        "Comfortable memory foam earcups",
+        "Includes LDAC support for high-resolution audio"
+      ],
+      "cons": [
+        "Can feel a bit bulky on the head",
+        "Carrying case is quite large",
+        "Microphone quality for calls is average"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 129,
+      "rating": 4.5,
+      "reviewCount": 12000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "driver": "40mm dynamic",
+        "frequency": "20Hz-40kHz",
+        "battery": "Up to 50 hours with ANC (65 hours without)",
+        "anc": "Yes (Hybrid Adaptive ANC)",
+        "bluetooth": "5.3",
+        "weight": "292g"
+      }
+    },
+    {
+      "id": "6c3fa5e0-cac6-4d1b-8310-36f8b0ac5393",
+      "name": "JBL Tune 770NC",
+      "description": "Affordable over-ear headphones with active noise cancellation and JBL's signature bass-heavy sound.",
+      "pros": [
+        "Incredible 70-hour battery life (without ANC)",
+        "Powerful, deep bass response favored by many",
+        "Very comfortable and foldable design",
+        "Includes AUX cable for wired use"
+      ],
+      "cons": [
+        "Noise cancellation is decent but not class-leading",
+        "Sound can be muddy at high volumes",
+        "Plastic build lacks premium feel"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 99,
+      "rating": 4.2,
+      "reviewCount": 6000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "driver": "32mm dynamic",
+        "frequency": "20Hz-20kHz",
+        "battery": "Up to 70 hours without ANC",
+        "anc": "Yes (Adaptive ANC)",
+        "bluetooth": "5.3",
+        "weight": "220g"
+      }
+    },
+    {
+      "id": "e6677bdb-a98a-416a-b647-805627d19b2c",
+      "name": "Audio-Technica ATH-M20xBT",
+      "description": "Reliable studio-style wireless headphones with a focus on accurate sound reproduction and long battery life.",
+      "pros": [
+        "Excellent, balanced sound quality for critical listening",
+        "Very long 60-hour battery life",
+        "Comfortable for extended wear",
+        "Can be used wired (included cable) even when battery is dead"
+      ],
+      "cons": [
+        "No active noise cancellation",
+        "Design is utilitarian and not very stylish",
+        "Earcups are not the most breathable for hot climates"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 79,
+      "rating": 4.4,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "driver": "40mm dynamic",
+        "frequency": "15Hz-22kHz",
+        "battery": "Up to 60 hours",
+        "anc": "No",
+        "bluetooth": "5.0",
+        "weight": "220g"
+      }
+    }
+  ],
+  "scores": {
+    "78bf4486-ea12-444b-a07a-ba90636ba6d9": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The WH-CH720N delivers clear audio with decent bass response, but lacks the richness and detail of higher-end models. Treble can sound slightly compressed at higher volumes, making it acceptable but not exceptional for critical listening."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "ANC effectively reduces consistent low-frequency noise like airplane engines or office hum. However, it struggles more with sudden, sharp sounds compared to premium competitors, though still performing well for its price range."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Exceptionally lightweight design with ample padding makes these ideal for extended wear. The ear cups provide a comfortable fit without excessive clamping pressure, standing out as a major strength of this model."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding battery performance provides up to 35 hours with ANC enabled, far exceeding many competitors. Quick charging offers hours of playback from brief charges, making reliability exceptional in this category."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Plastic construction feels somewhat cheap and creaky compared to more premium materials. While functional, the overall durability and premium feel are compromised to achieve the lightweight design and lower price point."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Offers excellent features like ANC and long battery life at a competitive price point. The trade-offs in build quality and sound refinement are reasonable given the cost, providing strong overall value."
+      }
+    },
+    "258cc9dd-372b-4eb2-9af5-726352f2140e": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The Space Q45 delivers clear, well-balanced audio with solid bass response and good detail in mids and highs. While not audiophile-grade, it offers excellent sound for its price point, though some competitors have slightly richer soundstage."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Hybrid ANC effectively reduces constant low-frequency noise like airplane engines, but struggles with higher frequencies and sudden sounds. It's competent for the price but falls short of premium competitors like Sony or Bose in overall noise blocking."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Lightweight design with plush memory foam ear cups provides good comfort for extended listening sessions. The headband has adequate padding, though some users with larger heads may find the clamp force slightly tight after several hours."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional 50+ hours with ANC on (65+ hours without) sets a benchmark in its category. This outstanding endurance eliminates daily charging anxiety and significantly outperforms most competitors in battery performance."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Plastic construction feels adequate but not premium, with some creaking in the headband joints. While reasonably durable for regular use, it lacks the solid feel and materials of higher-priced alternatives."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "At its typical price point, the Space Q45 offers remarkable value by combining strong battery life, good sound, and decent ANC. It delivers features typically found in more expensive headphones, making it an outstanding budget-conscious choice."
+      }
+    },
+    "6c3fa5e0-cac6-4d1b-8310-36f8b0ac5393": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "JBL's signature bass-heavy sound is prominent, which appeals to bass lovers but can overwhelm mids and treble, reducing overall clarity and balance. It's acceptable for casual listening but not exceptional for critical listening or varied genres."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Active noise cancellation is functional for reducing low-frequency ambient noise like airplane hum, but it's less effective against higher-frequency sounds such as voices. It's average for the price point, not matching premium ANC performance."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Over-ear design with adequate padding provides decent comfort for extended wear, though the fit can feel somewhat bulky and the clamping force may be tight for some users. It's above average but not the most plush or lightweight option."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Offers solid battery life, typically around 40-50 hours with ANC off, which is good for daily use and travel. It's above average compared to many competitors, though not class-leading."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Materials feel plasticky and less premium, with some reports of creaking or fragility in hinges. Durability is a concern for long-term heavy use, placing it below average in build robustness."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "At an affordable price, it delivers decent features like ANC and long battery life, making it a good value for budget-conscious buyers. However, compromises in build quality and sound balance prevent a top score."
+      }
+    },
+    "e6677bdb-a98a-416a-b647-805627d19b2c": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Excellent audio clarity and balanced frequency response typical of Audio-Technica's studio heritage, though bass may be less emphasized compared to consumer-focused models. Treble is detailed without harshness, making these suitable for critical listening."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "No active noise cancellation (ANC) feature—only passive isolation from the over-ear design. This significantly limits effectiveness in noisy environments compared to competitors with dedicated ANC technology."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Studio-style design provides decent padding and fit, but the weight and clamping force may cause fatigue during extended use. Earcups are adequately padded but not as plush as premium models."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Long battery life (approximately 60 hours) is a strong point, exceeding many competitors. This makes them reliable for extended use without frequent charging, though not class-leading."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Durable plastic construction with some metal components, typical of entry-level studio gear. Materials feel robust but not premium; hinges and joints may show wear over time with heavy use."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Strong value for those prioritizing sound accuracy and battery life over features like ANC. Priced competitively for its audio performance, though the lack of ANC reduces overall versatility."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "258cc9dd-372b-4eb2-9af5-726352f2140e",
+      "name": "Anker Soundcore Space Q45",
+      "description": "Feature-packed over-ear headphones with hybrid active noise cancellation and exceptional battery life.",
+      "totalScore": 37,
+      "maxPossible": 93,
+      "percentage": 40,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Battery Life",
+        "Value for Money",
+        "Sound Quality"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "78bf4486-ea12-444b-a07a-ba90636ba6d9",
+      "name": "Sony WH-CH720N",
+      "description": "Lightweight wireless noise-canceling headphones with excellent battery life and clear call quality.",
+      "totalScore": 35.6,
+      "maxPossible": 93,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 5,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Comfort",
+        "Battery Life",
+        "Noise Cancellation"
+      ],
+      "weaknesses": [
+        "Build Quality"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "6c3fa5e0-cac6-4d1b-8310-36f8b0ac5393",
+      "name": "JBL Tune 770NC",
+      "description": "Affordable over-ear headphones with active noise cancellation and JBL's signature bass-heavy sound.",
+      "totalScore": 31,
+      "maxPossible": 93,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Comfort",
+        "Battery Life",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Build Quality"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "e6677bdb-a98a-416a-b647-805627d19b2c",
+      "name": "Audio-Technica ATH-M20xBT",
+      "description": "Reliable studio-style wireless headphones with a focus on accurate sound reproduction and long battery life.",
+      "totalScore": 30.9,
+      "maxPossible": 93,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 2,
+        "criterion-2": 3,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Sound Quality",
+        "Battery Life",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Noise Cancellation"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T17:55:12.730Z",
+  "metadata": {
+    "seoTitle": "New Headphones Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Anker Soundcore Space Q45 (40.0%)",
+    "winnerName": "Anker Soundcore Space Q45",
+    "winnerScore": 37,
+    "winnerPercentage": 40
+  }
+}
