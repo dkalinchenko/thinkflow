@@ -172,11 +172,15 @@ Write a comprehensive, well-structured comparison article (800-1500 words) that:
 
 ## Amazon Affiliate Links
 
-If Amazon links are provided for any alternatives, you MUST include them in the article:
-- Add a "Where to Buy" or "Check Price" link for each product that has an Amazon URL
+For EVERY product/alternative in this comparison, you MUST create Amazon affiliate links:
+- Create search URLs in this exact format: `https://www.amazon.com/s?k={product_name_url_encoded}&tag=optimind09-20`
+- URL encode the product name (replace spaces with + signs, keep alphanumeric and hyphens)
 - Use markdown link format: [Check Price on Amazon](url) or [View on Amazon](url)
-- Place these links naturally within the product discussion sections and/or in the verdict section
-- Include a brief call-to-action when linking (e.g., "Check current pricing on Amazon")
+- Place these links in TWO locations:
+  1. At the end of each product's detailed analysis section
+  2. In a "Where to Buy" section at the end of the article with all products listed
+- Example: For "MacBook Pro M3 16GB", use: `https://www.amazon.com/s?k=MacBook+Pro+M3+16GB&tag=optimind09-20`
+- Include a brief call-to-action like "Check current pricing and reviews on Amazon"
 
 ## SEO Best Practices
 
