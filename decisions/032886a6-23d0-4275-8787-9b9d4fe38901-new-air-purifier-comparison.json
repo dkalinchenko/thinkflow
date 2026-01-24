@@ -1,0 +1,404 @@
+{
+  "id": "032886a6-23d0-4275-8787-9b9d4fe38901",
+  "slug": "new-air-purifier-comparison",
+  "title": "New Air Purifier Comparison",
+  "description": "Find the best air purifier for your space",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Filtration Quality",
+      "weight": 2,
+      "description": "HEPA, activated carbon, particle capture"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Room Coverage",
+      "weight": 1.8,
+      "description": "Effective square footage, CADR rating"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Noise Level",
+      "weight": 1.6,
+      "description": "Sound at different fan speeds"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Filter Cost",
+      "weight": 1.5,
+      "description": "Replacement filter prices and frequency"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Energy Consumption",
+      "weight": 1.3,
+      "description": "Power usage for continuous operation"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Initial cost and ongoing expenses"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "4bcaae93-a7ab-4fb1-b46b-d57b678122d1",
+      "name": "Dyson Purifier Cool TP09",
+      "description": "A premium air purifier and fan combo with advanced HEPA and carbon filtration, plus formaldehyde detection and destruction.",
+      "pros": [
+        "Destroys formaldehyde, not just traps it",
+        "Doubles as a quiet, effective fan",
+        "Real-time air quality display and reporting via app",
+        "Sealed filtration system prevents leak-back"
+      ],
+      "cons": [
+        "Extremely expensive",
+        "Replacement filters are costly",
+        "Large physical footprint"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 749,
+      "rating": 4.3,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "cadr": "164 CFM (Pollen)",
+        "coverage": "up to 800 sq ft",
+        "filter_type": "Sealed HEPA + Activated Carbon, plus catalytic formaldehyde filter",
+        "noise_level": "as low as 31 dB",
+        "dimensions": "8.7 x 8.7 x 40.9 inches"
+      }
+    },
+    {
+      "id": "977a9abf-7509-4043-89ee-32b1ec8af7e3",
+      "name": "Coway Airmega AP-1512HH Mighty",
+      "description": "A highly efficient and popular compact air purifier with a 4-stage filtration system including a True HEPA filter.",
+      "pros": [
+        "Excellent CADR for its size and price",
+        "Very energy efficient",
+        "Auto mode adjusts fan speed based on air quality",
+        "Great value and low filter costs"
+      ],
+      "cons": [
+        "Coverage is for medium-sized rooms",
+        "Air quality indicator is basic (color-based)",
+        "No app connectivity or smart features"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 229,
+      "rating": 4.7,
+      "reviewCount": 31200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "cadr": "246 CFM (Dust), 240 CFM (Pollen), 233 CFM (Smoke)",
+        "coverage": "up to 361 sq ft",
+        "filter_type": "Pre-filter, True HEPA, Activated Carbon, Vital Ion",
+        "noise_level": "24.4 dB (Sleep Mode) - 53.8 dB (Max)",
+        "dimensions": "9.6 x 16.8 x 18.3 inches"
+      }
+    },
+    {
+      "id": "21662abf-33c3-4f59-b06f-ea751fb108f9",
+      "name": "Levoit Core 400S Smart True HEPA Air Purifier",
+      "description": "A smart, Wi-Fi-enabled air purifier with a large room coverage, quiet operation, and compatibility with voice assistants.",
+      "pros": [
+        "Strong smart features with detailed app control and scheduling",
+        "Excellent for large bedrooms or living rooms",
+        "Very quiet on sleep mode",
+        "Good value for smart purifier"
+      ],
+      "cons": [
+        "Filter life can be shorter with heavy use",
+        "App can be occasionally buggy",
+        "Auto mode can be overly sensitive to minor changes"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 199,
+      "rating": 4.6,
+      "reviewCount": 8900,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "cadr": "260 CFM (Dust), 250 CFM (Pollen), 245 CFM (Smoke)",
+        "coverage": "up to 403 sq ft",
+        "filter_type": "3-Stage: Pre-filter, True HEPA, High-Efficiency Activated Carbon",
+        "noise_level": "24 dB (Sleep Mode) - 48 dB (Max)",
+        "dimensions": "10.2 x 10.2 x 20.5 inches"
+      }
+    },
+    {
+      "id": "adc957d1-19f2-4a5c-bd57-104f4712ccc6",
+      "name": "Winix 5500-2 Air Purifier",
+      "description": "A best-selling, reliable air purifier featuring a True HEPA filter, PlasmaWave technology, and an auto mode with air quality sensor.",
+      "pros": [
+        "Proven reliability and massive number of positive reviews",
+        "PlasmaWave is effective on odors and VOCs",
+        "Includes a washable pre-filter to extend main filter life",
+        "Great performance-to-price ratio"
+      ],
+      "cons": [
+        "PlasmaWave produces a small amount of ozone (though within safe limits)",
+        "Design is functional but not sleek",
+        "No smart features or app connectivity"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 159,
+      "rating": 4.5,
+      "reviewCount": 42600,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "cadr": "243 CFM (Dust), 246 CFM (Pollen), 232 CFM (Smoke)",
+        "coverage": "up to 360 sq ft",
+        "filter_type": "True HEPA, Advanced Odor Control Carbon, Pre-filter, PlasmaWave",
+        "noise_level": "27.8 dB (Sleep Mode) - 56.5 dB (Max)",
+        "dimensions": "15 x 8.2 x 23.6 inches"
+      }
+    }
+  ],
+  "scores": {
+    "4bcaae93-a7ab-4fb1-b46b-d57b678122d1": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "Exceptional filtration with HEPA H13 capturing 99.95% of particles down to 0.1 microns, plus activated carbon for gases and unique formaldehyde destruction technology. This represents top-tier air purification performance."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Covers up to 800 sq ft effectively, which is adequate for medium rooms but limited compared to dedicated purifiers. CADR ratings are solid but not exceptional for the premium price point."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Noticeably louder than competitors at higher speeds due to fan functionality. While quiet on low settings, the dual-purpose design compromises noise performance compared to dedicated air purifiers."
+      },
+      "criterion-3": {
+        "value": 1,
+        "explanation": "Replacement filters are extremely expensive ($80-100) and require annual replacement. This represents one of the highest ongoing costs in the air purifier market."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Relatively efficient for continuous operation with smart sensors that adjust power usage. While not the absolute most efficient, it performs well given its dual fan/purifier functionality."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Very high initial cost ($750+) combined with expensive annual filter replacements. While feature-rich, the price-to-performance ratio is poor compared to dedicated air purifiers."
+      }
+    },
+    "977a9abf-7509-4043-89ee-32b1ec8af7e3": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 4-stage system with True HEPA filter captures 99.97% of particles down to 0.3 microns, plus activated carbon for odors and VOCs. This represents top-tier filtration for a compact unit, matching or exceeding many larger purifiers."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Rated for 361 sq ft with solid CADR ratings (dust: 246, pollen: 240, smoke: 233). This is adequate for medium rooms but significantly below larger units designed for open spaces or whole-home coverage."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Exceptionally quiet on low (24.4 dB) and medium settings, making it suitable for bedrooms. High speed reaches 53.8 dB, which is noticeable but typical for effective cleaning bursts."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Replacement filters cost $50-70 every 6-12 months depending on usage. This ongoing expense is relatively high compared to some competitors with longer-lasting or cheaper filter options."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Extremely efficient at just 12-77 watts depending on speed. At typical usage, annual energy cost is under $15, making it one of the most energy-conscious models available."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Initial purchase price ($200-250) is reasonable for the performance, but ongoing filter costs reduce long-term value. Excellent filtration and energy efficiency balance the higher maintenance expenses."
+      }
+    },
+    "21662abf-33c3-4f59-b06f-ea751fb108f9": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Features a True HEPA filter that captures 99.97% of particles as small as 0.3 microns and includes an activated carbon layer for odors and VOCs. While effective, it lacks specialized filters for gases or advanced VOC removal found in premium models."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Excellent coverage for up to 403 sq ft with a high CADR rating (260 CFM for dust/pollen). This makes it suitable for large bedrooms, living rooms, or open-plan spaces, performing exceptionally well for its class."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Very quiet on low and medium settings (24-48 dB), suitable for bedrooms and offices. At highest speed, noise becomes noticeable but not excessive, though not the absolute quietest available."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Replacement filters cost around $35-$45 and are recommended every 6-8 months. This is average for the category—neither particularly cheap nor excessively expensive compared to competitors."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Energy-efficient with power usage as low as 2W on sleep mode and up to 45W on max. Energy Star certified, resulting in low annual operating costs for continuous use."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Strong value given its smart features, large coverage, and solid performance at a mid-range price point (~$200). Ongoing filter costs are reasonable, though not the cheapest long-term."
+      }
+    },
+    "adc957d1-19f2-4a5c-bd57-104f4712ccc6": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "True HEPA filter captures 99.97% of particles down to 0.3 microns, and activated carbon reduces odors. PlasmaWave technology adds an extra layer for smaller particles, though some users question its necessity versus pure HEPA performance."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Effective for rooms up to 360 sq ft, which is adequate for most bedrooms and medium living spaces. CADR ratings are solid but not class-leading compared to some competitors in similar price ranges."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Quiet on low settings (27.8 dB) and sleep mode, making it suitable for bedrooms. Higher speeds become audible but are reasonable for daytime use, though not the absolute quietest available."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Replacement filters cost around $60-70 and are recommended every 12 months, which is relatively high. The need to replace both HEPA and carbon filters together increases ongoing expense compared to some modular systems."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Extremely efficient at just 70 watts on max speed and much lower on auto/sleep modes. Energy Star certified, resulting in minimal electricity costs even with 24/7 operation."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Initial purchase price is competitive, offering good upfront value. However, the higher long-term filter replacement costs reduce overall value compared to some alternatives with cheaper maintenance."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "21662abf-33c3-4f59-b06f-ea751fb108f9",
+      "name": "Levoit Core 400S Smart True HEPA Air Purifier",
+      "description": "A smart, Wi-Fi-enabled air purifier with a large room coverage, quiet operation, and compatibility with voice assistants.",
+      "totalScore": 39.1,
+      "maxPossible": 97,
+      "percentage": 40,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Room Coverage",
+        "Filtration Quality",
+        "Noise Level"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "977a9abf-7509-4043-89ee-32b1ec8af7e3",
+      "name": "Coway Airmega AP-1512HH Mighty",
+      "description": "A highly efficient and popular compact air purifier with a 4-stage filtration system including a True HEPA filter.",
+      "totalScore": 37.3,
+      "maxPossible": 97,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 2,
+        "criterion-4": 5,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Filtration Quality",
+        "Energy Consumption",
+        "Noise Level"
+      ],
+      "weaknesses": [
+        "Filter Cost"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "adc957d1-19f2-4a5c-bd57-104f4712ccc6",
+      "name": "Winix 5500-2 Air Purifier",
+      "description": "A best-selling, reliable air purifier featuring a True HEPA filter, PlasmaWave technology, and an auto mode with air quality sensor.",
+      "totalScore": 33.8,
+      "maxPossible": 97,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 2,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Energy Consumption",
+        "Filtration Quality",
+        "Noise Level"
+      ],
+      "weaknesses": [
+        "Filter Cost"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "4bcaae93-a7ab-4fb1-b46b-d57b678122d1",
+      "name": "Dyson Purifier Cool TP09",
+      "description": "A premium air purifier and fan combo with advanced HEPA and carbon filtration, plus formaldehyde detection and destruction.",
+      "totalScore": 28.3,
+      "maxPossible": 97,
+      "percentage": 29,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 2,
+        "criterion-3": 1,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Filtration Quality",
+        "Energy Consumption"
+      ],
+      "weaknesses": [
+        "Filter Cost",
+        "Noise Level",
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:34.086Z",
+  "metadata": {
+    "seoTitle": "New Air Purifier Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Levoit Core 400S Smart True HEPA Air Purifier (40.0%)",
+    "winnerName": "Levoit Core 400S Smart True HEPA Air Purifier",
+    "winnerScore": 39.1,
+    "winnerPercentage": 40
+  },
+  "insights": {
+    "recommendation": "I recommend the Levoit Core 400S Smart True HEPA Air Purifier as it achieved the highest weighted score (39.1 points, 40%) by performing well across all criteria, particularly excelling in Filtration Quality and Room Coverage which are the most important factors. Its smart features and balanced performance make it the optimal choice for most users seeking comprehensive air purification.",
+    "decision_drivers": [
+      "Filtration Quality (weight: 2)",
+      "Room Coverage (weight: 1.8)",
+      "Noise Level (weight: 1.6)"
+    ],
+    "trade_offs": {
+      "Levoit Core 400S Smart True HEPA Air Purifier": "Higher initial cost and potentially higher filter replacement costs compared to some alternatives, but offers superior filtration and smart features",
+      "Coway Airmega AP-1512HH Mighty": "Slightly lower room coverage than Levoit but offers excellent energy efficiency and lower operating costs",
+      "Winix 5500-2 Air Purifier": "Lower overall performance score but provides good value for money with lower initial investment"
+    },
+    "risks": [
+      "Potential higher long-term filter replacement costs compared to some competitors",
+      "Smart features may require ongoing app support and compatibility updates",
+      "Premium pricing may not be justified for smaller spaces where cheaper alternatives could suffice"
+    ],
+    "sensitivity": "Moderately sensitive. The Levoit's lead of 1.8 points over Coway suggests small weight changes could potentially flip the top two positions, particularly if weights for Filter Cost or Energy Consumption were increased significantly. However, the substantial gap to third place (5.3 points) indicates the top two alternatives are clearly superior.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The scoring methodology appears sound with clear differentiation between alternatives, but without seeing the raw scores per criterion for each option, I cannot fully assess if the weighted aggregation properly reflects performance trade-offs. The close margin between first and second place also suggests the recommendation could change with minor preference adjustments."
+    }
+  }
+}
