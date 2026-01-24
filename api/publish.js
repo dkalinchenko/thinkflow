@@ -34,14 +34,14 @@ export default async function handler(req, res) {
         // Sanitize slug
         const sanitizedSlug = sanitizeSlug(decision.slug);
         
-        // Generate filename
+        // Generate filename (includes ID for uniqueness)
         const filename = `decisions/${decision.id}-${sanitizedSlug}.json`;
         
         // Commit to GitHub
         const result = await commitToGitHub(filename, decision);
         
-        // Return public URL
-        const publicUrl = `${process.env.PUBLIC_URL || 'https://optimind.space'}/decisions/${sanitizedSlug}.html`;
+        // Return public URL (must match filename pattern: id-slug.html)
+        const publicUrl = `${process.env.PUBLIC_URL || 'https://optimind.space'}/decisions/${decision.id}-${sanitizedSlug}.html`;
         
         return res.status(200).json({
             success: true,
