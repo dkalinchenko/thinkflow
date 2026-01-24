@@ -1,0 +1,404 @@
+{
+  "id": "8adc563e-7139-48d6-825e-2799e9a962af",
+  "slug": "new-exercise-bike-comparison",
+  "title": "New Exercise Bike Comparison",
+  "description": "Find the right stationary bike for home",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Ride Quality",
+      "weight": 2,
+      "description": "Smoothness, resistance levels, flywheel weight"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Comfort",
+      "weight": 1.8,
+      "description": "Seat, handlebars, adjustability"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Build Quality",
+      "weight": 1.6,
+      "description": "Stability, durability, weight capacity"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Features",
+      "weight": 1.5,
+      "description": "Console, programs, connectivity, metrics"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Footprint",
+      "weight": 1.3,
+      "description": "Space required, easy to move"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to quality"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "e063a056-e9eb-46ca-bd69-070e446ce02b",
+      "name": "Peloton Bike+",
+      "description": "Premium connected exercise bike with rotating 23.8-inch touchscreen, live and on-demand classes, and auto-follow resistance.",
+      "pros": [
+        "Best-in-class live and on-demand classes",
+        "Smooth, quiet magnetic resistance",
+        "Rotating screen for off-bike workouts",
+        "Excellent build quality and stability"
+      ],
+      "cons": [
+        "Very expensive upfront cost",
+        "Requires $44/month subscription for full features",
+        "Limited adjustability for very tall users"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2495,
+      "rating": 4.6,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "flywheel": "Magnetic, 38 lb",
+        "resistance_type": "Auto-follow magnetic",
+        "weight_capacity": 297,
+        "adjustability": "Seat height/depth, handlebar height/depth, screen tilt",
+        "dimensions": "59\" L x 53\" H x 23\" W"
+      }
+    },
+    {
+      "id": "97a68005-db5a-4de3-b5ab-735f558ecf38",
+      "name": "Bowflex Velocore 16",
+      "description": "Leaning indoor bike with 16-inch touchscreen and unique leaning feature that engages core muscles during rides.",
+      "pros": [
+        "Unique leaning feature adds core engagement",
+        "Good JRNY app integration with adaptive workouts",
+        "High weight capacity and sturdy construction",
+        "Quiet operation suitable for apartments"
+      ],
+      "cons": [
+        "Leaning mechanism has learning curve",
+        "Screen smaller than competitors at this price",
+        "Some users report seat discomfort on longer rides"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1699,
+      "rating": 4.4,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "flywheel": "Magnetic, 40 lb",
+        "resistance_type": "Magnetic with 100 micro-adjustable levels",
+        "weight_capacity": 325,
+        "adjustability": "Seat height/fore-aft, handlebar height",
+        "dimensions": "58.7\" L x 55.1\" H x 21.5\" W"
+      }
+    },
+    {
+      "id": "3c5b3fd7-fd83-4990-b998-bab908d612d4",
+      "name": "Schwinn IC4 Indoor Cycling Bike",
+      "description": "Commercial-grade magnetic resistance bike with Bluetooth connectivity, dual-link pedals, and compatibility with popular apps.",
+      "pros": [
+        "Excellent value for magnetic resistance quality",
+        "Works with Peloton, Zwift, and other apps",
+        "Very quiet operation",
+        "Includes 3 lb dumbbells and media rack"
+      ],
+      "cons": [
+        "No built-in screen (bring your own device)",
+        "Basic console display",
+        "Some assembly challenges reported"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 899,
+      "rating": 4.5,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "flywheel": "Magnetic, 40 lb",
+        "resistance_type": "Micro-adjustable magnetic",
+        "weight_capacity": 330,
+        "adjustability": "Seat height/fore-aft, handlebar height/fore-aft",
+        "dimensions": "48.7\" L x 51.8\" H x 21.2\" W"
+      }
+    },
+    {
+      "id": "1a57f2a1-aaed-46e1-86dd-b974c91c2bdc",
+      "name": "Echelon Connect Sport",
+      "description": "Budget-friendly smart bike with magnetic resistance, Bluetooth connectivity, and access to Echelon's fitness classes.",
+      "pros": [
+        "Most affordable connected bike option",
+        "Compact footprint fits small spaces",
+        "Good app integration with live classes",
+        "Easy assembly compared to competitors"
+      ],
+      "cons": [
+        "Requires $34.99/month subscription for classes",
+        "Less stable than higher-end models",
+        "Basic console, need tablet/phone for metrics"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 499,
+      "rating": 4.2,
+      "reviewCount": 6800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "flywheel": "Magnetic, 32 lb",
+        "resistance_type": "32 levels of magnetic resistance",
+        "weight_capacity": 300,
+        "adjustability": "Seat height/fore-aft, handlebar height",
+        "dimensions": "48\" L x 48\" H x 21\" W"
+      }
+    }
+  ],
+  "scores": {
+    "e063a056-e9eb-46ca-bd69-070e446ce02b": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The magnetic resistance system provides exceptionally smooth transitions, and the 38 lb flywheel delivers road-like inertia. Auto-follow resistance adjusts automatically in instructor-led classes, creating a seamless, immersive experience."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The seat is firm and may require an aftermarket cushion for many users. While handlebars and seat are adjustable, the basic design prioritizes performance over long-term comfort for casual riders."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The steel frame is solid and stable with minimal wobble, supporting up to 297 lbs. However, some users report occasional creaking over time, and the premium feel comes with proprietary components that require Peloton service."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The rotating 23.8-inch HD touchscreen is best-in-class, with seamless access to live/on-demand classes. Comprehensive metrics tracking, Bluetooth connectivity, and leaderboard integration create a fully connected fitness ecosystem."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "At 59\" L x 53\" H x 23\" W, it requires significant dedicated space. The 140 lb weight makes it difficult to move despite front wheels, essentially requiring a permanent installation location."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At $2,495 plus $44/month subscription for full functionality, it's among the most expensive home bikes. The value proposition depends entirely on whether you'll consistently use the subscription content—otherwise it's overpriced hardware."
+      }
+    },
+    "97a68005-db5a-4de3-b5ab-735f558ecf38": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The leaning feature provides exceptional ride dynamics that engage core muscles, creating a more immersive and full-body workout. The magnetic resistance system is smooth and quiet, with a heavy flywheel (22-25 lbs) that delivers realistic road-like feel and consistent momentum."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The seat is firm and may require aftermarket padding for extended rides, though it's adjustable. Handlebars offer multiple grip positions and adjust well, but some users report discomfort during intense leaning workouts where core engagement is high."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The bike feels solid and stable even during maximum leaning, with a weight capacity of 325 lbs. However, some early models had reported issues with the leaning mechanism's durability over time, though Bowflex has addressed many concerns."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The 16-inch HD touchscreen with JRNY subscription offers excellent programming and scenic rides. The leaning feature is truly unique, and metrics tracking is comprehensive with Bluetooth connectivity for heart rate monitors and other devices."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "At approximately 59\" L x 21\" W x 55\" H, it requires significant floor space. The bike is heavy (around 140 lbs) and while it has transport wheels, moving it is challenging due to its size and weight."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced around $2,200-$2,500, it's expensive compared to basic stationary bikes. The leaning feature and large screen justify some premium, but the mandatory JRNY subscription ($19.99/month) adds substantial ongoing cost."
+      }
+    },
+    "3c5b3fd7-fd83-4990-b998-bab908d612d4": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 40 lb flywheel provides smooth, quiet magnetic resistance with 100 micro-adjustable levels, offering commercial-grade feel. While excellent, some high-end competitors offer heavier flywheels for slightly more inertia."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Four-way adjustable seat and handlebars accommodate most users, but the stock seat is firm and often replaced. Adjustability is good but not exceptional compared to premium models with more ergonomic options."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Sturdy steel frame with 300 lb capacity provides excellent stability during intense riding. Commercial-grade construction ensures durability, though some welds and finishes aren't quite as refined as true commercial studio bikes."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional connectivity with Bluetooth FTMS, dual-link pedals for SPD/LOOK cleats, and compatibility with Peloton, Zwift, and other apps. The console provides essential metrics without overwhelming complexity."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Requires moderate floor space (48\"L x 21\"W) and transport wheels help with moving, but it's heavy at 106 lbs. Not as compact as some foldable models but manageable for most home setups."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Priced competitively between budget and premium bikes, offering commercial-grade features at home prices. Excellent value, though occasional quality control issues prevent a perfect score."
+      }
+    },
+    "1a57f2a1-aaed-46e1-86dd-b974c91c2bdc": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The magnetic resistance provides smooth transitions, but the 22 lb flywheel is lighter than premium bikes, limiting momentum and realism. Resistance levels are adequate for most users but lack the high-end feel of heavier flywheel systems."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "The seat is basic and often reported as uncomfortable for longer sessions, requiring aftermarket replacements. Adjustability is limited compared to higher-end models, with fewer handlebar and seat positioning options."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "The frame is stable for typical use but feels less substantial than commercial-grade bikes. Weight capacity (300 lbs) is standard, but some users report minor wobble at higher intensities."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Bluetooth connectivity works reliably with the Echelon app, providing good metrics tracking. The console is basic but functional, though it lacks built-in screen and relies entirely on external devices."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Compact design fits well in home spaces, and transport wheels make moving relatively easy. It's not the smallest available but balances stability with reasonable space requirements."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "At its price point, it delivers solid smart bike features and class access that competitors charge more for. However, the subscription model for classes adds ongoing cost, and build compromises are noticeable versus premium bikes."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "3c5b3fd7-fd83-4990-b998-bab908d612d4",
+      "name": "Schwinn IC4 Indoor Cycling Bike",
+      "description": "Commercial-grade magnetic resistance bike with Bluetooth connectivity, dual-link pedals, and compatibility with popular apps.",
+      "totalScore": 37.2,
+      "maxPossible": 97,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Features",
+        "Ride Quality",
+        "Build Quality"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "97a68005-db5a-4de3-b5ab-735f558ecf38",
+      "name": "Bowflex Velocore 16",
+      "description": "Leaning indoor bike with 16-inch touchscreen and unique leaning feature that engages core muscles during rides.",
+      "totalScore": 36.4,
+      "maxPossible": 97,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Ride Quality",
+        "Features",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Footprint"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "e063a056-e9eb-46ca-bd69-070e446ce02b",
+      "name": "Peloton Bike+",
+      "description": "Premium connected exercise bike with rotating 23.8-inch touchscreen, live and on-demand classes, and auto-follow resistance.",
+      "totalScore": 34.9,
+      "maxPossible": 97,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Ride Quality",
+        "Features",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Footprint",
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "1a57f2a1-aaed-46e1-86dd-b974c91c2bdc",
+      "name": "Echelon Connect Sport",
+      "description": "Budget-friendly smart bike with magnetic resistance, Bluetooth connectivity, and access to Echelon's fitness classes.",
+      "totalScore": 31.6,
+      "maxPossible": 97,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 2,
+        "criterion-2": 3,
+        "criterion-3": 4,
+        "criterion-4": 4,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Features",
+        "Footprint",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Comfort"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:43:55.785Z",
+  "metadata": {
+    "seoTitle": "New Exercise Bike Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Schwinn IC4 Indoor Cycling Bike (38.0%)",
+    "winnerName": "Schwinn IC4 Indoor Cycling Bike",
+    "winnerScore": 37.2,
+    "winnerPercentage": 38
+  },
+  "insights": {
+    "recommendation": "I recommend the Schwinn IC4 Indoor Cycling Bike as it achieved the highest weighted score (37.2 points) by balancing ride quality, comfort, and build quality effectively. It offers strong performance across all criteria while providing excellent value for money compared to premium alternatives.",
+    "decision_drivers": [
+      "Ride Quality (weight: 2)",
+      "Comfort (weight: 1.8)",
+      "Build Quality (weight: 1.6)"
+    ],
+    "trade_offs": {
+      "Schwinn IC4 Indoor Cycling Bike": "Slightly lower features compared to Bowflex Velocore 16 but better value for money and footprint",
+      "Bowflex Velocore 16": "Higher features and potentially better ride experience but at lower value for money score",
+      "Peloton Bike+": "Premium brand and likely superior features/ecosystem but significantly lower value for money and larger footprint"
+    },
+    "risks": [
+      "Schwinn may have less robust digital ecosystem compared to Peloton or Bowflex",
+      "Potential quality control issues with lower-tier brands despite high build quality score",
+      "Limited community/class integration compared to subscription-based competitors"
+    ],
+    "sensitivity": "Moderately sensitive. Small changes in Ride Quality or Comfort weights could potentially swap the top two alternatives, but the Schwinn's strong performance across multiple criteria provides some stability.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The scores are close between top alternatives (37.2 vs 36.4), suggesting the decision is not clear-cut. However, Schwinn's consistent performance across weighted criteria and value advantage supports the recommendation."
+    }
+  }
+}
