@@ -115,6 +115,7 @@ const elements = {
     aiInsightsContent: document.getElementById('aiInsightsContent'),
     shareDecisionBtn: document.getElementById('shareDecisionBtn'),
     exportDecisionBtn: document.getElementById('exportDecisionBtn'),
+    publishDecisionBtn: document.getElementById('publishDecisionBtn'),
     toResultsPrev: document.getElementById('toResultsPrev'),
     newDecisionFromResults: document.getElementById('newDecisionFromResults'),
     
@@ -447,6 +448,9 @@ function setupEventListeners() {
     }
     if (elements.exportDecisionBtn) {
         elements.exportDecisionBtn.addEventListener('click', () => openModal('export'));
+    }
+    if (elements.publishDecisionBtn) {
+        elements.publishDecisionBtn.addEventListener('click', publishDecision);
     }
     if (elements.toResultsPrev) {
         elements.toResultsPrev.addEventListener('click', () => navigateToStep('evaluation'));
@@ -2262,6 +2266,123 @@ function copyShareLink() {
     elements.shareLink.select();
     navigator.clipboard.writeText(elements.shareLink.value);
     showToast('Link copied to clipboard!', 'success');
+}
+
+// ========================================
+// Publishing
+// ========================================
+
+/**
+ * Publish the current decision to make it permanent and SEO-indexable
+ */
+async function publishDecision() {
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    
+    if (!decision) return;
+    
+    // Show loading state
+    const btn = elements.publishDecisionBtn;
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Publishing...';
+    
+    try {
+        const results = StateManager.calculateResults();
+        const publishData = preparePublishData(decision, results);
+        
+        const response = await fetch('/api/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(publishData)
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.error || 'Failed to publish');
+        }
+        
+        const { url, message } = await response.json();
+        
+        showToast('Decision published successfully!', 'success');
+        
+        // Show published URL modal
+        showPublishedUrlModal(url, message);
+        
+    } catch (error) {
+        console.error('Publish error:', error);
+        showToast(`Failed to publish: ${error.message}`, 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+    }
+}
+
+/**
+ * Prepare decision data for publishing
+ */
+function preparePublishData(decision, results) {
+    const winner = results[0];
+    const slug = generateSlug(decision.title);
+    
+    return {
+        id: decision.id,
+        slug: slug,
+        title: decision.title,
+        description: decision.description || generatePublishDescription(decision, results),
+        criteria: decision.criteria,
+        alternatives: decision.alternatives,
+        scores: decision.scores,
+        results: results,
+        publishedAt: new Date().toISOString(),
+        metadata: {
+            seoTitle: `${decision.title} - Decision Matrix | OptiMind`,
+            seoDescription: `Compare ${decision.alternatives.length} options across ${decision.criteria.length} criteria. Winner: ${winner.name} (${winner.percentage.toFixed(1)}%)`,
+            winnerName: winner.name,
+            winnerScore: winner.totalScore,
+            winnerPercentage: winner.percentage
+        }
+    };
+}
+
+/**
+ * Generate a URL-friendly slug from a title
+ */
+function generateSlug(title) {
+    return title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .substring(0, 60);
+}
+
+/**
+ * Generate a description for the published decision
+ */
+function generatePublishDescription(decision, results) {
+    const winner = results[0];
+    const alternatives = decision.alternatives.map(a => a.name).join(', ');
+    return `Decision matrix comparing ${alternatives}. Analysis shows ${winner.name} as the best choice based on weighted criteria evaluation.`;
+}
+
+/**
+ * Show modal with the published URL
+ */
+function showPublishedUrlModal(url, message) {
+    elements.shareLink.value = url;
+    openModal('share');
+    
+    // Update modal title temporarily
+    const modalTitle = document.querySelector('#shareModal h3');
+    if (modalTitle) {
+        const originalTitle = modalTitle.textContent;
+        modalTitle.textContent = 'Decision Published!';
+        
+        // Add message if provided
+        if (message) {
+            showToast(message, 'info');
+        }
+    }
 }
 
 // ========================================

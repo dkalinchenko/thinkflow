@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>{{SEO_TITLE}}</title>
+    <meta name="description" content="{{SEO_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{SEO_DESCRIPTION}}">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:site_name" content="OptiMind">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{SEO_DESCRIPTION}}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icons/puzzle.png">
+    <link rel="apple-touch-icon" href="/images/icons/puzzle.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fc;
+        }
+        
+        a {
+            color: #275DAD;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Header */
+        .site-header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .logo:hover {
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .header-nav a {
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        
+        /* Main Content */
+        .decision-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+        
+        /* Decision Header */
+        .decision-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .decision-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+        
+        .decision-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .decision-description {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Winner Section */
+        .winner-section {
+            background: linear-gradient(135deg, #275DAD 0%, #1e4a8a 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(39, 93, 173, 0.3);
+        }
+        
+        .winner-badge {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .winner-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .winner-section h2 {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+        }
+        
+        .winner-stats {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        .winner-stat {
+            text-align: center;
+        }
+        
+        .winner-stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        
+        .winner-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .content-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a2e;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.75rem;
+        }
+        
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .content-section li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .content-section li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Comparison Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 0 -1rem;
+            padding: 0 1rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .comparison-table th {
+            background: #f8f9fc;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+        
+        .comparison-table th small {
+            display: block;
+            font-weight: 400;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        .comparison-table td {
+            vertical-align: middle;
+        }
+        
+        .comparison-table .score-num {
+            color: #666;
+            font-size: 0.85rem;
+            margin-left: 0.25rem;
+        }
+        
+        .comparison-table .percentage {
+            font-weight: 600;
+            color: #275DAD;
+        }
+        
+        .winner-row {
+            background: linear-gradient(90deg, #fff9e6 0%, #fff 100%);
+        }
+        
+        .winner-row td:first-child {
+            border-left: 3px solid #f5a623;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 16px;
+            margin-top: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #1a1a2e;
+        }
+        
+        .cta-section p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #275DAD;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #1e4a8a;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(39, 93, 173, 0.3);
+        }
+        
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 4rem;
+            background: white;
+        }
+        
+        .site-footer a {
+            color: #275DAD;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .decision-header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .winner-section {
+                padding: 1.5rem;
+            }
+            
+            .winner-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    {{STRUCTURED_DATA}}
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="/images/icons/puzzle.png" alt="OptiMind" width="32" height="32">
+                <span>OptiMind</span>
+            </a>
+            <nav class="header-nav">
+                <a href="/">Create Decision</a>
+                <a href="/blog/">Resources</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="decision-page">
+        <article>
+            <header class="decision-header">
+                <h1>{{TITLE}}</h1>
+                <p class="decision-meta">
+                    Published on {{PUBLISHED_DATE}}
+                </p>
+                <p class="decision-description">{{DESCRIPTION}}</p>
+            </header>
+            
+            <section class="winner-section">
+                <div class="winner-badge">&#127942;</div>
+                <div class="winner-label">Recommended Choice</div>
+                <h2>{{WINNER_NAME}}</h2>
+                <div class="winner-stats">
+                    <div class="winner-stat">
+                        <div class="winner-stat-value">{{WINNER_SCORE}}</div>
+                        <div class="winner-stat-label">Total Score</div>
+                    </div>
+                    <div class="winner-stat">
+                        <div class="winner-stat-value">{{WINNER_PERCENTAGE}}%</div>
+                        <div class="winner-stat-label">Overall Rating</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h3>Decision Criteria</h3>
+                <ul>
+{{CRITERIA_LIST}}
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h3>Alternatives Compared</h3>
+                <ul>
+{{ALTERNATIVES_LIST}}
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h3>Full Comparison</h3>
+                <div class="table-wrapper">
+{{COMPARISON_TABLE}}
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <h3>Make Your Own Decision</h3>
+                <p>Create your own decision matrix based on this analysis</p>
+                <a href="/app.html?clone={{DECISION_ID}}" class="btn">
+                    Clone This Decision
+                </a>
+            </section>
+        </article>
+    </main>
+    
+    <footer class="site-footer">
+        <p>Created with <a href="/">OptiMind</a> - AI-Powered Decision Making</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            <a href="/about/">About</a> &middot; 
+            <a href="/blog/">Resources</a> &middot;
+            <a href="/">Create New Decision</a>
+        </p>
+    </footer>
+</body>
+</html>

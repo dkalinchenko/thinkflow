@@ -12,10 +12,8 @@ export default defineConfig({
             },
             output: {
                 manualChunks: {
-                    // Split vendor libraries
-                    'vendor-charts': ['chart.js'],
-                    'vendor-ui': ['tippy.js', 'sortablejs'],
-                    // Split application code
+                    // Split application code only
+                    // Note: chart.js, tippy.js, sortablejs are loaded from CDN
                     'ai': ['./js/ai.js', './js/amazon-research.js'],
                     'state': ['./js/state.js', './js/db.js'],
                     'utils': ['./js/utils.js', './js/affiliate.js']

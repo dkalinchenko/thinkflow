@@ -1,0 +1,59 @@
+name: Generate Published Decision Pages
+
+on:
+  push:
+    paths:
+      - 'decisions/*.json'
+    branches:
+      - main
+
+# Prevent concurrent runs to avoid race conditions
+concurrency:
+  group: publish-decisions
+  cancel-in-progress: false
+
+jobs:
+  generate-pages:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Create decisions directory if needed
+        run: mkdir -p decisions
+      
+      - name: Generate HTML pages from JSON
+        run: node scripts/generate-pages.js
+      
+      - name: Update sitemap
+        run: node scripts/update-sitemap.js
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add decisions/*.html sitemap.xml 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit generated files
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git commit -m "Auto-generated decision pages [skip ci]"
+          git push
