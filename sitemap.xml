@@ -245,4 +245,13 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- Published Decisions -->
+    <!-- Published Decision -->
+    <url>
+        <loc>https://optimind.space/decisions/9c990ead-574b-44a8-b2e7-0482681cf18b-new-laptop-comparison.html</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
