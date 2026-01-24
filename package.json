@@ -4,7 +4,8 @@
   "description": "A next-generation decision matrix application powered by AI. Make better choices with weighted criteria analysis, all while keeping your data private in your browser.",
   "main": "sw.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vercel dev",
+    "dev:vite": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/dkalinchenko/thinkflow#readme",
   "devDependencies": {
     "@vitejs/plugin-legacy": "^7.2.1",
+    "vercel": "^39.2.4",
     "vite": "^7.3.1"
   }
 }

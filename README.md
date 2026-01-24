@@ -44,6 +44,42 @@ To change AI settings:
 
 Your API key is stored locally and encrypted. It's only used to communicate directly with your chosen AI provider.
 
+## 💻 Development Setup
+
+### For Users (Simple)
+Just open `index.html` in a modern browser - no setup required!
+
+### For Developers (With Publishing Feature)
+
+The publishing feature requires serverless functions to work. Here's how to run it locally:
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run with Vercel Dev (Recommended):**
+   ```bash
+   npm run dev
+   ```
+   This starts the app with full API support including the publish feature.
+
+3. **Alternative: Run with Vite only (no API):**
+   ```bash
+   npm run dev:vite
+   ```
+   This is faster but publishing won't work. Use this for UI-only development.
+
+### Environment Variables for Publishing
+
+To enable the publishing feature in production, set these environment variables:
+
+- `GITHUB_TOKEN` - GitHub Personal Access Token with repo write access
+- `GITHUB_REPO` - Repository in format `username/repo-name`
+- `PUBLIC_URL` - Your public URL (e.g., `https://optimind.space`)
+
+**Note:** The publish feature is only available when deployed to Vercel or when running with `npm run dev`. It won't work when opening `index.html` directly.
+
 ## 📁 Project Structure
 
 ```

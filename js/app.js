@@ -2299,7 +2299,23 @@ async function publishDecision() {
         
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
-            throw new Error(errorData.error || 'Failed to publish');
+            
+            // Provide helpful error messages based on status code
+            let errorMessage = errorData.error || 'Failed to publish';
+            
+            if (response.status === 405) {
+                errorMessage = 'Publishing is not available in this environment. Please use "npm run dev" with Vercel CLI or deploy to production.';
+                if (errorData.message) {
+                    errorMessage += `\n${errorData.message}`;
+                }
+            } else if (response.status === 503) {
+                errorMessage = errorData.message || 'API service is unavailable. Please use Vercel Dev for local development.';
+                if (errorData.solution) {
+                    console.log('Solution:', errorData.solution);
+                }
+            }
+            
+            throw new Error(errorMessage);
         }
         
         const { url, message } = await response.json();
@@ -2311,7 +2327,16 @@ async function publishDecision() {
         
     } catch (error) {
         console.error('Publish error:', error);
-        showToast(`Failed to publish: ${error.message}`, 'error');
+        
+        // Show more helpful error message
+        let displayMessage = error.message;
+        
+        // Check if it's a network error or fetch failed
+        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+            displayMessage = 'Publishing is not available. This feature requires the app to be running on Vercel or with "npm run dev" (Vercel CLI).';
+        }
+        
+        showToast(displayMessage, 'error', 7000); // Show for 7 seconds
     } finally {
         btn.disabled = false;
         btn.innerHTML = originalText;

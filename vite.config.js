@@ -29,6 +29,31 @@ export default defineConfig({
     ],
     server: {
         port: 3000,
-        open: true
+        open: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3001',
+                changeOrigin: true,
+                configure: (proxy, options) => {
+                    proxy.on('error', (err, req, res) => {
+                        console.log('Proxy error - API not available. Use "npm run dev" to run with Vercel Dev which supports serverless functions.');
+                        res.writeHead(503, {
+                            'Content-Type': 'application/json',
+                        });
+                        res.end(JSON.stringify({
+                            error: 'API not available in Vite-only mode',
+                            message: 'Please use "npm run dev" instead of "npm run dev:vite" to enable API endpoints. This requires Vercel CLI.',
+                            solution: 'Run: npm install && npm run dev'
+                        }));
+                    });
+                    proxy.on('proxyReq', (proxyReq, req, res) => {
+                        // If connection is refused, send helpful error
+                        proxyReq.on('error', (err) => {
+                            console.log('API endpoint not available. Use "npm run dev" to run with Vercel Dev.');
+                        });
+                    });
+                }
+            }
+        }
     }
 });
