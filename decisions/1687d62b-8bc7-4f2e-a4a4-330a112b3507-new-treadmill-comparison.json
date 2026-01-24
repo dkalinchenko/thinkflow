@@ -1,0 +1,403 @@
+{
+  "id": "1687d62b-8bc7-4f2e-a4a4-330a112b3507",
+  "slug": "new-treadmill-comparison",
+  "title": "New Treadmill Comparison",
+  "description": "Compare treadmills for home fitness",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Motor Power",
+      "weight": 1.9,
+      "description": "Continuous horsepower, smoothness"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Running Surface",
+      "weight": 1.8,
+      "description": "Belt size, cushioning quality"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Build Quality",
+      "weight": 1.7,
+      "description": "Frame stability, weight capacity, warranty"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Features",
+      "weight": 1.5,
+      "description": "Programs, incline, speed range, connectivity"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Footprint",
+      "weight": 1.3,
+      "description": "Size, foldable, storage options"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.6,
+      "description": "Price vs durability and features"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "1a584279-6bf6-40cc-b81c-326e804c0f96",
+      "name": "NordicTrack Commercial 1750 Treadmill",
+      "description": "Premium smart treadmill with iFIT integration, featuring a powerful motor and large HD touchscreen for interactive workouts.",
+      "pros": [
+        "Excellent iFIT integration with live coaching",
+        "Powerful and quiet motor",
+        "Large, responsive 22\" HD touchscreen",
+        "Robust construction with good cushioning"
+      ],
+      "cons": [
+        "Expensive, especially with iFIT subscription",
+        "Assembly can be challenging",
+        "Large footprint requires significant space"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1999,
+      "rating": 4.4,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "motor_hp": "3.75 CHP DurX Commercial Plus",
+        "belt_size": "22\" x 60\"",
+        "weight_capacity": 300,
+        "incline": "0-15%",
+        "speed_range": "0-12 mph"
+      }
+    },
+    {
+      "id": "4521f609-3b82-4f6b-a073-dc4e51cbb43c",
+      "name": "Sole F85 Folding Treadmill",
+      "description": "High-performance folding treadmill known for durability, a strong motor, and excellent cushioning system for joint protection.",
+      "pros": [
+        "Extremely durable and stable construction",
+        "High weight capacity",
+        "Excellent Cushion Flex Whisper Deck",
+        "Lifetime warranty on frame and motor"
+      ],
+      "cons": [
+        "Basic console display compared to smart treadmills",
+        "Heavy and difficult to move",
+        "Bluetooth connectivity can be finicky"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2299,
+      "rating": 4.6,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "motor_hp": "4.0 HP",
+        "belt_size": "22\" x 60\"",
+        "weight_capacity": 400,
+        "incline": "0-15%",
+        "speed_range": "0.5-12 mph"
+      }
+    },
+    {
+      "id": "9949d66d-dbf0-4b2c-b1cc-f39296337346",
+      "name": "ProForm Pro 2000 Smart Treadmill",
+      "description": "Feature-rich smart treadmill with iFIT compatibility, automatic incline/decline, and a space-saving folding design.",
+      "pros": [
+        "Good value for smart features",
+        "Automatic decline is rare at this price",
+        "iFIT workouts are engaging",
+        "Folds up to save space"
+      ],
+      "cons": [
+        "Requires iFIT subscription for full functionality",
+        "Some users report durability issues over time",
+        "Console can be slow to respond"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1499,
+      "rating": 4.3,
+      "reviewCount": 4100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "motor_hp": "3.5 CHP",
+        "belt_size": "22\" x 60\"",
+        "weight_capacity": 300,
+        "incline": "-3% to 15%",
+        "speed_range": "0-12 mph"
+      }
+    },
+    {
+      "id": "5ae11a3d-01d1-4bcd-8980-176e59779bad",
+      "name": "Horizon Fitness 7.8 AT Treadmill",
+      "description": "Responsive, durable treadmill with a strong motor, quick speed/incline adjustments, and a straightforward interface.",
+      "pros": [
+        "Very responsive speed and incline changes",
+        "Quiet and powerful motor",
+        "Sturdy frame with good shock absorption",
+        "Easy to use without complex subscriptions"
+      ],
+      "cons": [
+        "Basic console with smaller screen",
+        "Limited built-in workout programs",
+        "Heavier users note some belt slippage at high speeds"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1699,
+      "rating": 4.5,
+      "reviewCount": 1250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "motor_hp": "4.0 HP",
+        "belt_size": "22\" x 60\"",
+        "weight_capacity": 350,
+        "incline": "0-15%",
+        "speed_range": "0-12 mph"
+      }
+    }
+  ],
+  "scores": {
+    "1a584279-6bf6-40cc-b81c-326e804c0f96": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 3.75 CHP motor is exceptionally powerful and smooth for a home treadmill, handling high speeds and inclines without strain. It provides commercial-grade performance that exceeds typical home fitness equipment expectations."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "The 22\" x 60\" belt offers ample space for running, and the FlexSelect cushioning provides good shock absorption. While excellent, some premium commercial models offer slightly more advanced cushioning systems."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The steel frame is sturdy with a 300 lb capacity and solid 10-year motor warranty, indicating good durability. However, some components have shorter warranties, and assembly can be challenging compared to simpler models."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional feature set with iFIT integration, 15% power incline, -3% decline, 0-12 mph speed range, and interactive HD touchscreen. The workout library and automatic trainer control are industry-leading."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "At 78\"L x 35\"W x 66\"H, this is a large machine that requires significant dedicated space. While it folds, the hydraulic system is heavy and awkward, making storage impractical for many home environments."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced as a premium treadmill, it offers excellent features but requires ongoing iFIT subscription for full functionality. The high initial cost and subscription model may not justify the expense for casual users."
+      }
+    },
+    "4521f609-3b82-4f6b-a073-dc4e51cbb43c": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Sole F85 features a powerful 4.0 CHP motor that delivers exceptionally smooth and consistent performance even at high speeds. It handles intense running sessions without strain, making it one of the strongest motors in its class."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "With a 22\" x 60\" belt and the exclusive Cushion Flex Whisper Deck, it provides outstanding cushioning that reduces joint impact by 40%. The spacious surface comfortably accommodates runners of all sizes."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The heavy-duty steel frame offers excellent stability with a 400 lb capacity, though some users note minor vibration at top speeds. The lifetime frame and motor warranty are exceptional, but electronics have a shorter coverage period."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "It includes 10 programs, 15 levels of power incline, and 0.5-12 mph speed range, but lacks advanced connectivity like Bluetooth speakers or app integration. The console is functional but not modern compared to smart-enabled competitors."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "While foldable, the F85 is heavy (308 lbs) and requires significant space even when folded. The hydraulic folding mechanism works well, but moving or storing it is challenging without dedicated floor space."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Priced at a premium, it delivers outstanding durability and performance that justifies the cost for serious runners. However, budget-conscious users might find better value in models with more features at similar price points."
+      }
+    },
+    "9949d66d-dbf0-4b2c-b1cc-f39296337346": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 3.5 CHP motor provides strong, consistent power suitable for serious runners, though not the absolute highest tier available for commercial-grade durability."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "20\" x 60\" belt with ProShox cushioning offers ample space and good impact absorption for most users, but cushioning may not match premium non-folding models."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Solid construction with 300 lb capacity, but folding mechanisms can introduce long-term stability concerns compared to non-folding units; warranty is competitive but not exceptional."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding feature set with iFIT integration, -3% to 15% automatic incline/decline, 0-12 mph speed, and extensive programming; truly exceptional in this category."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Space-saving design folds effectively and includes wheels for mobility, though folded dimensions still require dedicated storage space."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced at a premium for smart features; good value for tech enthusiasts but may not be the best durability investment compared to simpler, sturdier models at similar price points."
+      }
+    },
+    "5ae11a3d-01d1-4bcd-8980-176e59779bad": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 3.5 CHP motor provides strong, consistent power suitable for running, with smooth acceleration and deceleration. It's above average for home treadmills but not the most powerful in its class."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The 22\" x 60\" belt offers adequate space for most users with decent cushioning. It's a standard size that meets expectations but doesn't provide the extra length or advanced shock absorption of premium models."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Solid steel frame construction with 350 lb capacity and good stability during use. Warranty coverage is competitive, though some components have shorter coverage periods than higher-end alternatives."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Offers basic programs, 0-15% incline, and 0-12 mph speed range with quick adjustments. Lacks advanced connectivity options and sophisticated training programs found on more expensive models."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "While foldable, the unit has a substantial footprint when in use and requires significant clearance space. Storage options are limited compared to more compact designs in the market."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Provides good durability and essential features at a mid-range price point. Offers solid performance for the cost, though some competitors offer more features at similar prices."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "4521f609-3b82-4f6b-a073-dc4e51cbb43c",
+      "name": "Sole F85 Folding Treadmill",
+      "description": "High-performance folding treadmill known for durability, a strong motor, and excellent cushioning system for joint protection.",
+      "totalScore": 38.8,
+      "maxPossible": 98,
+      "percentage": 40,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Motor Power",
+        "Running Surface",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Footprint"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "1a584279-6bf6-40cc-b81c-326e804c0f96",
+      "name": "NordicTrack Commercial 1750 Treadmill",
+      "description": "Premium smart treadmill with iFIT integration, featuring a powerful motor and large HD touchscreen for interactive workouts.",
+      "totalScore": 38.4,
+      "maxPossible": 98,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Motor Power",
+        "Features",
+        "Running Surface"
+      ],
+      "weaknesses": [
+        "Footprint"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "9949d66d-dbf0-4b2c-b1cc-f39296337346",
+      "name": "ProForm Pro 2000 Smart Treadmill",
+      "description": "Feature-rich smart treadmill with iFIT compatibility, automatic incline/decline, and a space-saving folding design.",
+      "totalScore": 37.4,
+      "maxPossible": 98,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Features",
+        "Motor Power",
+        "Running Surface"
+      ],
+      "weaknesses": [],
+      "rank": 3
+    },
+    {
+      "id": "5ae11a3d-01d1-4bcd-8980-176e59779bad",
+      "name": "Horizon Fitness 7.8 AT Treadmill",
+      "description": "Responsive, durable treadmill with a strong motor, quick speed/incline adjustments, and a straightforward interface.",
+      "totalScore": 33.3,
+      "maxPossible": 98,
+      "percentage": 34,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Motor Power",
+        "Build Quality",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Footprint"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:40.888Z",
+  "metadata": {
+    "seoTitle": "New Treadmill Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Sole F85 Folding Treadmill (40.0%)",
+    "winnerName": "Sole F85 Folding Treadmill",
+    "winnerScore": 38.8,
+    "winnerPercentage": 40
+  },
+  "insights": {
+    "recommendation": "I recommend the Sole F85 Folding Treadmill because it achieved the highest weighted score (38.8 points) with a narrow but clear margin over the NordicTrack Commercial 1750. Its performance across the most heavily weighted criteria, particularly Motor Power and Running Surface, appears strongest for a home fitness user prioritizing durability and workout quality.",
+    "decision_drivers": [
+      "Motor Power (weight: 1.9)",
+      "Running Surface (weight: 1.8)",
+      "Build Quality (weight: 1.7)"
+    ],
+    "trade_offs": {
+      "Sole F85 Folding Treadmill": "Highest scores in Motor Power and Build Quality, but potentially trades off on advanced smart features or brand-specific tech ecosystems compared to NordicTrack/ProForm.",
+      "NordicTrack Commercial 1750 Treadmill": "Very close overall score, likely offers stronger interactive/smart features and brand ecosystem, but may have slightly lower perceived durability or running surface quality.",
+      "ProForm Pro 2000 Smart Treadmill": "Strong in tech features and possibly value, but appears to concede on core performance criteria like Motor Power or Build Quality compared to the top two."
+    },
+    "risks": [
+      "The score difference between 1st and 2nd is very small (0.4 points), suggesting the ranking could be sensitive to individual preference or measurement error.",
+      "The Sole F85 may lack the advanced interactive training content or tech integration that competitors like NordicTrack offer, which could impact long-term user engagement.",
+      "Potential risk if 'Value for Money' (weight 1.6) was scored subjectively; the top choice might have a higher upfront cost despite its high performance."
+    ],
+    "sensitivity": "This decision appears moderately sensitive. The top two alternatives are separated by only 0.4 points (1% of total weighted score). Small changes in the weights for the top three criteria (Motor Power, Running Surface, Build Quality) could easily flip the ranking between the Sole F85 and NordicTrack 1750.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The quantitative analysis is clear, but the narrow margin between top alternatives reduces confidence in a definitive 'best' choice. Confidence would be higher with more detail on how each alternative was scored per criterion, and whether the weights perfectly reflect the decision-maker's true priorities. The structured criteria and weighting are logical for a home treadmill purchase."
+    }
+  }
+}
