@@ -1,0 +1,405 @@
+{
+  "id": "345387a5-e559-431d-b79f-4379d67845ac",
+  "slug": "new-refrigerator-comparison",
+  "title": "New Refrigerator Comparison",
+  "description": "Find the perfect fridge for your kitchen",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Storage Capacity",
+      "weight": 2,
+      "description": "Total and usable space, shelf configuration"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Energy Efficiency",
+      "weight": 1.8,
+      "description": "Energy Star rating, annual electricity cost"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Features",
+      "weight": 1.5,
+      "description": "Ice maker, water dispenser, smart features"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Build Quality",
+      "weight": 1.4,
+      "description": "Materials, durability, warranty coverage"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Temperature Control",
+      "weight": 1.3,
+      "description": "Consistency, zones, humidity control"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to features and capacity"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "3daa711a-e631-4ba2-a518-75409c643f7a",
+      "name": "LG 27 cu. ft. InstaView Door-in-Door Counter-Depth Smart Refrigerator (Model LRFVS2706S)",
+      "description": "Premium French door refrigerator with InstaView panel that lights up with two knocks, featuring smart cooling technology and spacious flexible storage.",
+      "pros": [
+        "Excellent temperature consistency",
+        "Quiet operation",
+        "Smart features work reliably",
+        "Spacious and flexible interior layout"
+      ],
+      "cons": [
+        "Very expensive",
+        "Ice maker can be slow",
+        "Door-in-door reduces main compartment space slightly"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 3299,
+      "rating": 4.7,
+      "reviewCount": 1250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "27 cubic feet",
+        "energy_rating": "ENERGY STAR certified",
+        "dimensions": "70\" H x 36\" W x 31\" D",
+        "features": "InstaView panel, SmartThinQ technology, Door Cooling+, Linear Cooling, Craft Ice maker, convertible freezer drawer",
+        "type": "French Door Counter-Depth"
+      }
+    },
+    {
+      "id": "d7f658da-3f69-4d54-a5a7-6a75d93cb682",
+      "name": "Samsung 28 cu. ft. 4-Door Flex Refrigerator with Family Hub (Model RF28R7351SR)",
+      "description": "Large capacity 4-door refrigerator with Family Hub touchscreen, dual ice makers, and convertible FlexZone drawer that can switch between fridge and freezer.",
+      "pros": [
+        "Huge capacity",
+        "Useful Family Hub screen for notes, calendars, and entertainment",
+        "Excellent ice production",
+        "Flexible storage options"
+      ],
+      "cons": [
+        "Screen interface can be laggy",
+        "Some reliability concerns with ice makers",
+        "Very large footprint"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2899,
+      "rating": 4.4,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "28 cubic feet",
+        "energy_rating": "ENERGY STAR certified",
+        "dimensions": "70.75\" H x 35.75\" W x 34.5\" D",
+        "features": "Family Hub 21.5\" touchscreen, Twin Cooling Plus, dual ice makers (craft ice and cubed), FlexZone drawer, Bixby voice assistant",
+        "type": "4-Door French Door"
+      }
+    },
+    {
+      "id": "86c04897-d4dc-4daa-b2f9-63537947fe49",
+      "name": "GE Profile 27.8 cu. ft. Smart French Door Refrigerator with Keurig K-Cup Brewing System (Model PFE28KYNFS)",
+      "description": "Innovative French door refrigerator with built-in Keurig coffee maker, smart temperature management, and advanced water filtration.",
+      "pros": [
+        "Built-in coffee maker is convenient and space-saving",
+        "Excellent temperature control",
+        "Smart features are well-implemented",
+        "Good water filtration system"
+      ],
+      "cons": [
+        "Premium price point",
+        "Coffee system requires regular cleaning",
+        "External dispenser reduces freezer space"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 3499,
+      "rating": 4.6,
+      "reviewCount": 890,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "27.8 cubic feet",
+        "energy_rating": "ENERGY STAR certified",
+        "dimensions": "69.875\" H x 35.75\" W x 36.125\" D",
+        "features": "Built-in Keurig brewer, SmartHQ technology, AutoFill water pitcher, Turbo Cool settings, external water and ice dispenser",
+        "type": "French Door"
+      }
+    },
+    {
+      "id": "e5563e16-9c54-4906-9f83-e32961ecde77",
+      "name": "Whirlpool 25 cu. ft. French Door Refrigerator with Exterior Ice and Water Dispenser (Model WRX735SDHZ)",
+      "description": "Reliable and efficient French door refrigerator with fingerprint-resistant stainless steel, adaptive defrost, and spacious gallon door bins.",
+      "pros": [
+        "Excellent value for money",
+        "Reliable performance",
+        "Large door storage",
+        "Energy efficient",
+        "Quiet operation"
+      ],
+      "cons": [
+        "Interior layout less premium than competitors",
+        "Ice maker can be noisy",
+        "Basic smart features compared to others"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2199,
+      "rating": 4.3,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "25 cubic feet",
+        "energy_rating": "ENERGY STAR certified",
+        "dimensions": "69.75\" H x 35.75\" W x 35.75\" D",
+        "features": "Exterior ice and water dispenser, adaptive defrost, FreshFlow air filter, LED lighting, gallon door bins, EveryDrop filtration",
+        "type": "French Door"
+      }
+    }
+  ],
+  "scores": {
+    "3daa711a-e631-4ba2-a518-75409c643f7a": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "27 cu. ft. is generous for a counter-depth model, and the Door-in-Door design adds accessible storage. However, counter-depth inherently sacrifices some capacity compared to standard-depth models."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "It carries an Energy Star rating, but premium features like the InstaView panel and smart cooling increase consumption. Annual operating cost is acceptable but not class-leading."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "The InstaView panel, smart connectivity, dual ice makers, and water dispenser are standout. The Door-in-Door feature is exceptionally convenient, placing it at the top of its category."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "LG uses premium materials and offers a solid warranty, including 10 years on the linear compressor. Some users report long-term issues with the ice maker, preventing a perfect score."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Smart Cooling technology and multiple zones provide excellent consistency and humidity control. It lacks the precision of some ultra-premium brands with more granular settings."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "This is a premium-priced model. While feature-rich, the cost is significantly higher than many competitors with similar core cooling performance and capacity."
+      }
+    },
+    "d7f658da-3f69-4d54-a5a7-6a75d93cb682": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "With 28 cubic feet and flexible shelf/drawer configurations including the convertible FlexZone, this refrigerator offers exceptional usable space. The 4-door design maximizes organization and accessibility for large households."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "While Energy Star certified, the large capacity and multiple cooling zones result in higher-than-average energy consumption. The annual electricity cost is acceptable but not outstanding for its class."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "The Family Hub touchscreen, dual ice makers, and convertible FlexZone drawer represent premium features. Smart connectivity and advanced cooling technologies make this exceptionally feature-rich."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Some users report issues with ice maker reliability and door seal durability over time. While materials feel premium initially, long-term durability concerns and mixed warranty support lower this score."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Excellent multi-zone temperature management with consistent cooling performance. The convertible drawer offers good humidity control, though some users note minor temperature fluctuations in the main compartment."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At a premium price point, the value proposition is weak given durability concerns. While feature-rich, reliability issues and high repair costs diminish the long-term value compared to competitors."
+      }
+    },
+    "86c04897-d4dc-4daa-b2f9-63537947fe49": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "At 27.8 cubic feet, this offers generous capacity suitable for most families. The French door design provides flexible shelf configurations, though some space is dedicated to the Keurig system, slightly reducing pure food storage."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "While Energy Star certified, the built-in coffee maker and smart features increase energy consumption compared to basic models. Annual electricity cost will be moderate, not exceptional for its class."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "The integrated Keurig brewing system is a unique standout feature. Combined with smart temperature management, advanced filtration, and standard ice/water dispensers, this refrigerator offers exceptional feature integration."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "GE Profile offers decent materials and standard warranty coverage. However, the complexity of the Keurig integration introduces potential reliability concerns compared to simpler refrigerators in this price range."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Smart temperature management provides good consistency and zone control. Humidity-controlled crispers work well, though the coffee system's proximity to food compartments creates minor thermal management challenges."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "The premium price is heavily driven by the novelty Keurig system rather than core refrigeration performance. Consumers paying primarily for refrigeration capacity and efficiency will find better value elsewhere."
+      }
+    },
+    "e5563e16-9c54-4906-9f83-e32961ecde77": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "At 25 cubic feet, this offers generous total capacity suitable for most families. The French door design and gallon door bins provide flexible storage, though some competitors offer more innovative interior configurations."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Energy Star certified with adaptive defrost technology helps efficiency. However, the exterior ice and water dispenser increases energy consumption compared to models without this feature, placing it in the average range."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Exterior ice and water dispenser is convenient, and fingerprint-resistant finish is practical. Lacks advanced smart features like Wi-Fi connectivity or interior cameras found in premium models."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Stainless steel construction is durable but not premium grade. Standard one-year warranty is industry basic; some competitors offer longer coverage on key components."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Adaptive defrost helps maintain consistent temperatures. However, lacks advanced humidity-controlled crispers and multi-zone cooling found in higher-end refrigerators."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Good balance of capacity and features at a mid-range price point. Offers reliable performance without premium pricing, though energy costs may be higher than simpler models."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "3daa711a-e631-4ba2-a518-75409c643f7a",
+      "name": "LG 27 cu. ft. InstaView Door-in-Door Counter-Depth Smart Refrigerator (Model LRFVS2706S)",
+      "description": "Premium French door refrigerator with InstaView panel that lights up with two knocks, featuring smart cooling technology and spacious flexible storage.",
+      "totalScore": 34.7,
+      "maxPossible": 95,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 4,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Features",
+        "Storage Capacity",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "d7f658da-3f69-4d54-a5a7-6a75d93cb682",
+      "name": "Samsung 28 cu. ft. 4-Door Flex Refrigerator with Family Hub (Model RF28R7351SR)",
+      "description": "Large capacity 4-door refrigerator with Family Hub touchscreen, dual ice makers, and convertible FlexZone drawer that can switch between fridge and freezer.",
+      "totalScore": 33.9,
+      "maxPossible": 95,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Storage Capacity",
+        "Features",
+        "Temperature Control"
+      ],
+      "weaknesses": [
+        "Build Quality",
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "e5563e16-9c54-4906-9f83-e32961ecde77",
+      "name": "Whirlpool 25 cu. ft. French Door Refrigerator with Exterior Ice and Water Dispenser (Model WRX735SDHZ)",
+      "description": "Reliable and efficient French door refrigerator with fingerprint-resistant stainless steel, adaptive defrost, and spacious gallon door bins.",
+      "totalScore": 33.5,
+      "maxPossible": 95,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Storage Capacity",
+        "Features",
+        "Value for Money"
+      ],
+      "weaknesses": [],
+      "rank": 3
+    },
+    {
+      "id": "86c04897-d4dc-4daa-b2f9-63537947fe49",
+      "name": "GE Profile 27.8 cu. ft. Smart French Door Refrigerator with Keurig K-Cup Brewing System (Model PFE28KYNFS)",
+      "description": "Innovative French door refrigerator with built-in Keurig coffee maker, smart temperature management, and advanced water filtration.",
+      "totalScore": 33.3,
+      "maxPossible": 95,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Features",
+        "Storage Capacity",
+        "Temperature Control"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:36.786Z",
+  "metadata": {
+    "seoTitle": "New Refrigerator Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: LG 27 cu. ft. InstaView Door-in-Door Counter-Depth Smart Refrigerator (Model LRFVS2706S) (37.0%)",
+    "winnerName": "LG 27 cu. ft. InstaView Door-in-Door Counter-Depth Smart Refrigerator (Model LRFVS2706S)",
+    "winnerScore": 34.7,
+    "winnerPercentage": 37
+  },
+  "insights": {
+    "recommendation": "I recommend the LG 27 cu. ft. InstaView refrigerator as it achieved the highest weighted score (34.7 points) by performing well across all criteria, particularly excelling in Storage Capacity and Features which carry significant weight. Its narrow margin of victory suggests it's the best balanced option for this specific weighting scheme.",
+    "decision_drivers": [
+      "Storage Capacity (weight: 2)",
+      "Energy Efficiency (weight: 1.8)",
+      "Features (weight: 1.5)"
+    ],
+    "trade_offs": {
+      "LG 27 cu. ft. InstaView": "Slightly lower value for money compared to Whirlpool, trading some cost efficiency for premium features and capacity",
+      "Samsung 28 cu. ft. 4-Door Flex": "Higher capacity but potentially less reliable build quality based on industry reputation, trading durability for smart features",
+      "Whirlpool 25 cu. ft. French Door": "Lower storage capacity but better value proposition, trading space for cost efficiency"
+    },
+    "risks": [
+      "LG's smart features and InstaView technology may have higher repair costs and complexity",
+      "Counter-depth design could reduce actual usable space despite high cubic footage rating",
+      "Premium price point may not deliver proportional value if basic refrigeration needs are primary"
+    ],
+    "sensitivity": "This decision appears moderately sensitive. Small changes in weights for Storage Capacity or Energy Efficiency could potentially change the ranking, given the close scores (34.7, 33.9, 33.5, 33.3). A 5-10% weight adjustment in key criteria might alter the outcome.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "While the scoring methodology appears sound and results are logically ranked, the narrow point differences between alternatives (1.4 points separating all four) and lack of raw criterion scores make it difficult to assess robustness. More detailed scoring data would increase confidence."
+    }
+  }
+}
