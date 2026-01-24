@@ -46,20 +46,19 @@
         footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
         .breadcrumb { padding: 6rem 0 1rem; font-size: 0.9rem; color: var(--text-dark); }
         .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .featured-tools { background: white; padding: 2rem; margin: 3rem 0 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .featured-tools h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 0.5rem; text-align: center; }
-        .featured-tools .subtitle { text-align: center; color: var(--text-dark); margin-bottom: 2rem; font-size: 1rem; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .tool-card { background: var(--bg-light); border: 2px solid #CED3DC; border-radius: 12px; padding: 2rem; text-decoration: none; display: block; transition: all 0.3s; }
-        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); border-color: var(--primary); }
-        .tool-card h3 { color: #1a1a1a; font-size: 1.25rem; margin: 0 0 0.5rem; }
-        .tool-card p { color: var(--text-dark); margin: 0; font-size: 0.95rem; line-height: 1.5; }
+        .cta-banner { background: linear-gradient(135deg, #275DAD 0%, #1a4580 100%); padding: 3rem 2rem; margin: 3rem 0 2rem; border-radius: 16px; box-shadow: 0 8px 25px rgba(39, 93, 173, 0.25); text-align: center; color: white; }
+        .cta-banner h2 { font-size: 2rem; color: white; margin-bottom: 1rem; font-weight: 700; }
+        .cta-banner p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 2rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta-banner .cta-button { display: inline-block; background: white; color: #275DAD; padding: 1rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        .cta-banner .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); }
         .no-guides { text-align: center; padding: 3rem; color: var(--text-dark); font-style: italic; }
         @media (max-width: 768px) { 
             .hero h1 { font-size: 1.75rem; } 
             .guides-grid { grid-template-columns: 1fr; } 
-            .tools-grid { grid-template-columns: 1fr; }
-            .featured-tools { padding: 1.5rem; }
+            .cta-banner { padding: 2rem 1.5rem; margin: 2rem 0 1.5rem; }
+            .cta-banner h2 { font-size: 1.5rem; }
+            .cta-banner p { font-size: 1rem; }
+            .cta-banner .cta-button { padding: 0.875rem 2rem; font-size: 1rem; }
             .logo span { display: none; }
             .header-inner .btn-primary { display: none; }
             .header-inner { padding: 0.5rem 1rem !important; }
@@ -91,24 +90,11 @@
     </section>
 
     <main class="container">
-        <!-- Featured Tools -->
-        <section class="featured-tools">
-            <h2>Create Your Own Comparison</h2>
-            <p class="subtitle">Use our free tools to make data-driven decisions</p>
-            <div class="tools-grid">
-                <a href="/decision-matrix-calculator/" class="tool-card">
-                    <h3>Decision Matrix Calculator</h3>
-                    <p>Free weighted scoring tool for objective decisions. Compare options using customizable criteria.</p>
-                </a>
-                <a href="/product-comparison-tool/" class="tool-card">
-                    <h3>Product Comparison Tool</h3>
-                    <p>Compare products side-by-side with AI insights. No signup required, completely private.</p>
-                </a>
-                <a href="/decision-matrix-template/" class="tool-card">
-                    <h3>Decision Matrix Templates</h3>
-                    <p>Pre-built templates for laptops, smartphones, and more. Start comparing in seconds.</p>
-                </a>
-            </div>
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <h2>Make Your Own Data-Driven Decision</h2>
+            <p>Browse our expert decision guides below for inspiration, or launch the app to create your own custom comparison with AI-powered insights and weighted scoring.</p>
+            <a href="/app.html" class="cta-button">Launch OptiMind →</a>
         </section>
 
         <!-- Published Decision Guides -->
@@ -117,20 +103,20 @@
             <div class="guides-grid">
                 <article class="guide-card">
                     <span class="category-tag">Decision Guide</span>
+                    <h3><a href="/decisions/28e16b96-3831-4875-93e6-566a5f0993d8-new-headphones-comparison.html">New Headphones Comparison - Decision Matrix | OptiMind</a></h3>
+                    <p>Compare wireless headphones and earbuds</p>
+                    <div class="meta">
+                        <span class="date">January 24, 2026</span>
+                        <span class="winner">Winner: Anker Soundcore Space Q45</span>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <span class="category-tag">Decision Guide</span>
                     <h3><a href="/decisions/test-123-test-laptop-comparison.html">Best Laptop Comparison 2026 - MacBook Pro vs Dell XPS vs ThinkPad</a></h3>
                     <p>The MacBook Pro wins our laptop test with an 87.5% score, beating the Dell XPS 15 and Lenovo ThinkPad.</p>
                     <div class="meta">
                         <span class="date">January 24, 2026</span>
                         <span class="winner">Winner: MacBook Pro</span>
-                    </div>
-                </article>
-                <article class="guide-card">
-                    <span class="category-tag">Decision Guide</span>
-                    <h3><a href="/decisions/28e16b96-3831-4875-93e6-566a5f0993d8-new-headphones-comparison.html">New Headphones Comparison - Decision Matrix | OptiMind</a></h3>
-                    <p>The Anker Soundcore Space Q45 wins our wireless headphones showdown with a top score of 40%.</p>
-                    <div class="meta">
-                        <span class="date">January 24, 2026</span>
-                        <span class="winner">Winner: Anker Soundcore Space Q45</span>
                     </div>
                 </article>
                 <article class="guide-card">
