@@ -277,6 +277,13 @@
     <!-- Published Decision -->
     
     <!-- Decision Guides Index -->
+    <!-- Published Decisions -->
+    <!-- Published Decision -->
+    <!-- Published Decision -->
+    <!-- Published Decision -->
+    <!-- Published Decision -->
+    
+    <!-- Decision Guides Index -->
     <url>
         <loc>https://optimind.space/guides/</loc>
         <lastmod>2026-01-24</lastmod>
@@ -301,7 +308,21 @@
     </url>
     <!-- Published Decision -->
     <url>
+        <loc>https://optimind.space/decisions/a3fc88ad-f152-49cb-9915-1365ce71c7cd-new-camera-comparison.html</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- Published Decision -->
+    <url>
         <loc>https://optimind.space/decisions/a81cab09-73bf-49ac-85b6-17212eeb90bc-new-laptop-comparison.html</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- Published Decision -->
+    <url>
+        <loc>https://optimind.space/decisions/b8d21c89-a9c9-4e27-a7b6-24876938615f-new-smartphone-comparison.html</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
