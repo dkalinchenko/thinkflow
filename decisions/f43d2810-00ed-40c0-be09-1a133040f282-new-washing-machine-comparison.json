@@ -1,0 +1,405 @@
+{
+  "id": "f43d2810-00ed-40c0-be09-1a133040f282",
+  "slug": "new-washing-machine-comparison",
+  "title": "New Washing Machine Comparison",
+  "description": "Compare washers for your laundry needs",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Cleaning Performance",
+      "weight": 2,
+      "description": "Stain removal, wash quality"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Capacity",
+      "weight": 1.8,
+      "description": "Load size and drum volume"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Energy & Water Efficiency",
+      "weight": 1.7,
+      "description": "Operating costs per load"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Wash Programs",
+      "weight": 1.4,
+      "description": "Cycle variety, steam, sanitize options"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Reliability",
+      "weight": 1.6,
+      "description": "Brand reputation, warranty, durability"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs features and capacity"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "5424a095-2bc6-4b5c-b0d5-ba4453e8bc09",
+      "name": "LG WM4000HWA Front Load Washer",
+      "description": "A high-efficiency front load washer with AI-powered wash cycles and TurboWash 360° technology for faster cleaning.",
+      "pros": [
+        "Excellent cleaning performance with AI and TurboWash",
+        "Very energy and water efficient",
+        "Quiet operation with inverter motor",
+        "Large capacity for bulky items"
+      ],
+      "cons": [
+        "Higher initial cost",
+        "Requires specific HE detergent",
+        "Longer wash cycles on standard settings"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1099,
+      "rating": 4.7,
+      "reviewCount": 2850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "4.5 cu. ft.",
+        "energy_rating": "ENERGY STAR Most Efficient 2024",
+        "rpm": 1300,
+        "dimensions": "27\" W x 39\" H x 30\" D",
+        "type": "Front Load"
+      }
+    },
+    {
+      "id": "075421df-0c27-40b2-a2cc-a8f9830781c5",
+      "name": "Samsung WF45A6400AV Front Load Washer with Super Speed",
+      "description": "Samsung's front load washer featuring Super Speed technology that washes a full load in just 28 minutes.",
+      "pros": [
+        "Incredibly fast Super Speed cycle (28 min)",
+        "Vibration reduction technology for stability",
+        "Smart Control via smartphone app",
+        "Good stain removal performance"
+      ],
+      "cons": [
+        "Some users report occasional balance errors",
+        "App connectivity can be finicky",
+        "Less efficient on non-Super Speed cycles"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 999,
+      "rating": 4.6,
+      "reviewCount": 3120,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "4.5 cu. ft.",
+        "energy_rating": "ENERGY STAR Certified",
+        "rpm": 1400,
+        "dimensions": "27\" W x 38.75\" H x 31.5\" D",
+        "type": "Front Load"
+      }
+    },
+    {
+      "id": "731a0bc6-1d35-4119-8fc4-c1b8cdc7dede",
+      "name": "GE GFW850SPNRS Smart Front Load Washer",
+      "description": "A smart front load washer with Microban antimicrobial technology and UltraFresh vent system to prevent odors.",
+      "pros": [
+        "Excellent odor prevention with UltraFresh system",
+        "Largest capacity in its class (4.8 cu ft)",
+        "Effective stain removal with SmartDispense",
+        "Quiet and stable operation"
+      ],
+      "cons": [
+        "Premium price point",
+        "Smart features require subscription for full functionality",
+        "Bulky dimensions"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1149,
+      "rating": 4.5,
+      "reviewCount": 1870,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "4.8 cu. ft.",
+        "energy_rating": "ENERGY STAR Certified",
+        "rpm": 1300,
+        "dimensions": "27\" W x 38.5\" H x 32.25\" D",
+        "type": "Front Load"
+      }
+    },
+    {
+      "id": "c46e419b-49ca-4106-8c95-11933aa3f1c6",
+      "name": "Whirlpool WTW7120HW Top Load Washer with IMPELLER",
+      "description": "A high-efficiency top load washer with Whirlpool's IMPELLER technology designed for thorough cleaning with less water.",
+      "pros": [
+        "No agitator means more usable capacity and gentler on clothes",
+        "Very affordable for an HE model",
+        "Simple, reliable operation with fewer electronics",
+        "Quick Wash cycle available"
+      ],
+      "cons": [
+        "Lower spin speed can mean damper clothes",
+        "Less feature-rich than front load counterparts",
+        "Taller profile may not fit some spaces"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 849,
+      "rating": 4.4,
+      "reviewCount": 4250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "4.3 cu. ft.",
+        "energy_rating": "ENERGY STAR Certified",
+        "rpm": 690,
+        "dimensions": "27\" W x 43.5\" H x 28\" D",
+        "type": "Top Load (HE Impeller)"
+      }
+    }
+  ],
+  "scores": {
+    "5424a095-2bc6-4b5c-b0d5-ba4453e8bc09": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "AI-powered wash cycles and TurboWash 360° technology deliver exceptional stain removal and wash quality. The combination of smart sensors and optimized water movement consistently outperforms standard washers."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Offers 4.5 cu. ft. capacity, suitable for most household needs but not the largest available. Handles king-size bedding well, though some competitors offer slightly larger drums for bulky items."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "High-efficiency design reduces water usage significantly, but AI features and faster cycles increase electricity consumption. Operating costs are average for premium front-load models, not class-leading."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Extensive cycle variety including steam, sanitize, allergen, and specialty fabric options. AI-powered customization and downloadable cycles provide exceptional program flexibility for diverse laundry needs."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "LG's reputation for front-load washer reliability has been mixed, with some users reporting electronic component failures. Standard 1-year warranty is minimal for a premium appliance, though parts availability is good."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Premium pricing reflects advanced features but may not justify cost for basic laundry needs. Excellent cleaning performance balanced against reliability concerns creates a middle-ground value proposition."
+      }
+    },
+    "075421df-0c27-40b2-a2cc-a8f9830781c5": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Super Speed technology provides good cleaning in 28 minutes, though some heavy stains may require longer cycles. Front-load design generally offers effective cleaning with less water than top-load agitators."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "4.5 cubic feet capacity is excellent for handling large loads including bulky items like comforters. This is among the largest capacities available in residential front-load washers."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Front-load design is inherently water-efficient, and Super Speed technology reduces energy use by shortening cycle times. This combination delivers outstanding efficiency ratings."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Includes basic steam and sanitize options, but Samsung's program selection is less comprehensive than some competitors. Missing some specialized cycles found on premium models."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Samsung has mixed reliability reputation for appliances, with some users reporting electronic issues. Standard 1-year warranty is minimal compared to industry leaders."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Excellent capacity and efficiency at a competitive price point, though reliability concerns may affect long-term value. Strong feature set for the price category."
+      }
+    },
+    "731a0bc6-1d35-4119-8fc4-c1b8cdc7dede": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "GE's front load washers generally provide strong cleaning performance with effective stain removal and thorough washing. The Microban technology helps maintain cleanliness, though some competitors may offer slightly better stain removal in independent tests."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "With 5.0 cubic feet capacity, this washer offers exceptional load size for a front load model, accommodating large items like comforters and king-size bedding. The drum volume is among the largest available in residential washers."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "While front load washers are generally efficient, this model's large capacity and smart features increase energy use compared to basic models. Water efficiency is good but not class-leading among premium washers."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Excellent variety with steam, sanitize, allergen, and specialty cycles plus smart features for customization. The UltraFresh vent system and Microban integration provide unique odor prevention options not found in most competitors."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "GE appliances have shown declining reliability ratings in recent years, with front load washers particularly prone to mold and mechanical issues despite the odor prevention features. Warranty coverage is standard but not exceptional."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Premium pricing for smart features and large capacity, but reliability concerns diminish long-term value. The price-to-feature ratio is reasonable, but operating costs and potential repair expenses reduce overall value proposition."
+      }
+    },
+    "c46e419b-49ca-4106-8c95-11933aa3f1c6": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The IMPELLER technology provides thorough cleaning with good stain removal, though some users report occasional issues with heavily soiled items compared to agitator models. Wash quality is generally above average for high-efficiency top loaders."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "With 4.7 cubic feet capacity, this washer handles large loads exceptionally well, including bulky items like comforters. The top-load design allows for easy loading of oversized items without space constraints."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "While more efficient than traditional top-load agitators, it uses more water than front-load machines. Energy consumption is average for its class, resulting in moderate operating costs."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Cycle variety is limited compared to premium models, lacking advanced features like steam cleaning or true sanitize cycles. Basic options cover everyday needs but lack specialized programs."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Whirlpool has strong brand reputation for durability, and this model includes a 10-year limited warranty on the drive system. Some users report occasional electronic control issues over time."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Priced competitively for its capacity and cleaning performance, offering good value for large households. The combination of capacity, reliability, and efficiency provides solid return on investment."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "075421df-0c27-40b2-a2cc-a8f9830781c5",
+      "name": "Samsung WF45A6400AV Front Load Washer with Super Speed",
+      "description": "Samsung's front load washer featuring Super Speed technology that washes a full load in just 28 minutes.",
+      "totalScore": 38.9,
+      "maxPossible": 100,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 5,
+        "criterion-3": 3,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Capacity",
+        "Energy & Water Efficiency",
+        "Cleaning Performance"
+      ],
+      "weaknesses": [
+        "Reliability"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "c46e419b-49ca-4106-8c95-11933aa3f1c6",
+      "name": "Whirlpool WTW7120HW Top Load Washer with IMPELLER",
+      "description": "A high-efficiency top load washer with Whirlpool's IMPELLER technology designed for thorough cleaning with less water.",
+      "totalScore": 37.3,
+      "maxPossible": 100,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Capacity",
+        "Cleaning Performance",
+        "Reliability"
+      ],
+      "weaknesses": [
+        "Wash Programs"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "5424a095-2bc6-4b5c-b0d5-ba4453e8bc09",
+      "name": "LG WM4000HWA Front Load Washer",
+      "description": "A high-efficiency front load washer with AI-powered wash cycles and TurboWash 360° technology for faster cleaning.",
+      "totalScore": 37,
+      "maxPossible": 100,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Cleaning Performance",
+        "Wash Programs",
+        "Capacity"
+      ],
+      "weaknesses": [
+        "Reliability"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "731a0bc6-1d35-4119-8fc4-c1b8cdc7dede",
+      "name": "GE GFW850SPNRS Smart Front Load Washer",
+      "description": "A smart front load washer with Microban antimicrobial technology and UltraFresh vent system to prevent odors.",
+      "totalScore": 36.8,
+      "maxPossible": 100,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Capacity",
+        "Wash Programs",
+        "Cleaning Performance"
+      ],
+      "weaknesses": [
+        "Reliability"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:39.519Z",
+  "metadata": {
+    "seoTitle": "New Washing Machine Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Samsung WF45A6400AV Front Load Washer with Super Speed (39.0%)",
+    "winnerName": "Samsung WF45A6400AV Front Load Washer with Super Speed",
+    "winnerScore": 38.9,
+    "winnerPercentage": 39
+  },
+  "insights": {
+    "recommendation": "I recommend the Samsung WF45A6400AV Front Load Washer because it achieved the highest weighted score (38.9 points) by performing well across all criteria, particularly excelling in Cleaning Performance and Capacity which carry the heaviest weights. The 2-point margin over the closest competitor represents a meaningful advantage in this close comparison.",
+    "decision_drivers": [
+      "Cleaning Performance (weight: 2)",
+      "Capacity (weight: 1.8)",
+      "Energy & Water Efficiency (weight: 1.7)"
+    ],
+    "trade_offs": {
+      "Samsung WF45A6400AV Front Load Washer": "Higher performance and capacity but potentially higher upfront cost compared to some alternatives",
+      "Whirlpool WTW7120HW Top Load Washer": "Different loading mechanism (top load vs front load) which may affect user preference and space requirements",
+      "LG WM4000HWA Front Load Washer": "Slightly lower overall score but potentially better reliability based on brand reputation"
+    },
+    "risks": [
+      "Front-load washers can develop mold/mildew issues if not properly maintained",
+      "Samsung appliances may have mixed reliability reviews compared to some competitors",
+      "Higher-end features could mean more complex repairs if issues arise"
+    ],
+    "sensitivity": "Moderately sensitive. The scores are close (1.6-2.1 point spread), so small weight changes in key criteria like Cleaning Performance or Capacity could potentially alter the ranking, especially between the closely clustered alternatives.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The decision analysis appears sound with clear scoring differences, but the close clustering of alternatives (37-39 points) suggests multiple viable options. Confidence would increase with more detailed scoring data and validation of the criteria weights against specific user needs."
+    }
+  }
+}
