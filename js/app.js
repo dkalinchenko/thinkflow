@@ -2136,6 +2136,9 @@ async function getAIInsights() {
         const results = StateManager.calculateResults();
         const insights = await AI.generateInsights(state.currentDecision, results);
         
+        // Store insights in the decision for later use (e.g., publishing)
+        await StateManager.updateDecision({ insights });
+        
         hideAILoadingModal();
         
         elements.aiInsightsCard.style.display = 'block';
@@ -2350,7 +2353,7 @@ function preparePublishData(decision, results) {
     const winner = results[0];
     const slug = generateSlug(decision.title);
     
-    return {
+    const publishData = {
         id: decision.id,
         slug: slug,
         title: decision.title,
@@ -2368,6 +2371,13 @@ function preparePublishData(decision, results) {
             winnerPercentage: winner.percentage
         }
     };
+    
+    // Include AI-generated insights if available
+    if (decision.insights) {
+        publishData.insights = decision.insights;
+    }
+    
+    return publishData;
 }
 
 /**

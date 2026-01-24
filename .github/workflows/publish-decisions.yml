@@ -30,11 +30,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
       
       - name: Create decisions directory if needed
         run: mkdir -p decisions
       
       - name: Generate HTML pages from JSON
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: node scripts/generate-pages.js
       
       - name: Update sitemap

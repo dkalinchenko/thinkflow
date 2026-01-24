@@ -8,6 +8,7 @@
     "dev:vite": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "generate-pages": "node scripts/generate-pages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,9 @@
     "url": "https://github.com/dkalinchenko/thinkflow/issues"
   },
   "homepage": "https://github.com/dkalinchenko/thinkflow#readme",
+  "dependencies": {
+    "marked": "^15.0.0"
+  },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^7.2.1",
     "vercel": "^39.2.4",

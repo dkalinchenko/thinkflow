@@ -5,6 +5,14 @@
 
 const fs = require('fs');
 const path = require('path');
+const { marked } = require('marked');
+const { generateArticle } = require('./ai-article-generator');
+
+// Configure marked for safe HTML output
+marked.setOptions({
+    gfm: true,
+    breaks: true
+});
 
 // Paths
 const templatePath = path.join(__dirname, '../templates/decision-template.html');
@@ -35,38 +43,63 @@ if (jsonFiles.length === 0) {
 
 console.log(`Found ${jsonFiles.length} decision(s) to generate`);
 
-// Process each JSON file
-jsonFiles.forEach(file => {
-    try {
-        const jsonPath = path.join(decisionsDir, file);
-        const decision = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-        
-        // Validate decision data
-        if (!decision.title || !decision.criteria || !decision.alternatives || !decision.results) {
-            console.warn(`Skipping ${file}: missing required fields`);
-            return;
+// Main async processing function
+async function processDecisions() {
+    for (const file of jsonFiles) {
+        try {
+            const jsonPath = path.join(decisionsDir, file);
+            const decision = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+            
+            // Validate decision data
+            if (!decision.title || !decision.criteria || !decision.alternatives || !decision.results) {
+                console.warn(`Skipping ${file}: missing required fields`);
+                continue;
+            }
+            
+            // Generate AI article (only if DEEPSEEK_API_KEY is available)
+            let article = null;
+            if (process.env.DEEPSEEK_API_KEY) {
+                console.log(`Generating AI article for: ${decision.title}...`);
+                article = await generateArticle(decision);
+                if (article) {
+                    console.log(`Article generated successfully (${article.length} chars)`);
+                } else {
+                    console.warn(`Article generation failed, proceeding without article`);
+                }
+            } else {
+                console.log(`No DEEPSEEK_API_KEY found, skipping article generation`);
+            }
+            
+            // Generate HTML with article
+            const html = generateHTML(template, decision, article);
+            
+            // Write HTML file
+            const htmlFile = file.replace('.json', '.html');
+            const htmlPath = path.join(decisionsDir, htmlFile);
+            fs.writeFileSync(htmlPath, html);
+            
+            console.log(`Generated: ${htmlFile}`);
+        } catch (error) {
+            console.error(`Error processing ${file}:`, error.message);
         }
-        
-        // Generate HTML
-        const html = generateHTML(template, decision);
-        
-        // Write HTML file
-        const htmlFile = file.replace('.json', '.html');
-        const htmlPath = path.join(decisionsDir, htmlFile);
-        fs.writeFileSync(htmlPath, html);
-        
-        console.log(`Generated: ${htmlFile}`);
-    } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
     }
-});
+    
+    console.log('Page generation complete!');
+}
 
-console.log('Page generation complete!');
+// Run the async main function
+processDecisions().catch(error => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+});
 
 /**
  * Generate HTML from template and decision data
+ * @param {string} template - HTML template
+ * @param {Object} decision - Decision data
+ * @param {string|null} article - Optional markdown article content
  */
-function generateHTML(template, decision) {
+function generateHTML(template, decision, article = null) {
     const winner = decision.results[0];
     const publishDate = new Date(decision.publishedAt).toLocaleDateString('en-US', {
         year: 'numeric',
@@ -87,6 +120,15 @@ function generateHTML(template, decision) {
         .replace(/{{WINNER_SCORE}}/g, winner.totalScore.toFixed(2))
         .replace(/{{WINNER_PERCENTAGE}}/g, winner.percentage.toFixed(1))
         .replace(/{{CANONICAL_URL}}/g, `https://optimind.space/decisions/${decision.slug}.html`);
+    
+    // Generate article content (convert markdown to HTML)
+    let articleHTML = '';
+    if (article) {
+        articleHTML = marked.parse(article);
+    } else {
+        articleHTML = `<p class="article-placeholder">Detailed analysis coming soon. Below you'll find the complete decision data and comparison.</p>`;
+    }
+    html = html.replace('{{ARTICLE_CONTENT}}', articleHTML);
     
     // Generate criteria list
     const criteriaHTML = decision.criteria
