@@ -26,7 +26,9 @@
         .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; }
         .logo img { width: 32px; height: 32px; }
         .btn-primary { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 7rem 0 3rem; text-align: center; background: white; }
+        .hero { padding: 7rem 0 3rem; text-align: center; background: white url('/images/hero-white-background.png') center/cover no-repeat; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.85); z-index: 0; }
+        .hero .container { position: relative; z-index: 1; }
         .hero h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 1rem; }
         .hero p { color: var(--text-dark); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
         .guides-section { padding: 2rem 0 3rem; }
@@ -46,7 +48,7 @@
         footer p { margin: 0.5rem 0; opacity: 0.8; font-size: 0.9rem; }
         .breadcrumb { padding: 6rem 0 1rem; font-size: 0.9rem; color: var(--text-dark); }
         .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .cta-banner { background: linear-gradient(135deg, #275DAD 0%, #1a4580 100%); padding: 3rem 2rem; margin: 3rem 0 2rem; border-radius: 16px; box-shadow: 0 8px 25px rgba(39, 93, 173, 0.25); text-align: center; color: white; }
+        .cta-banner { background: linear-gradient(135deg, rgba(39, 93, 173, 0.85) 0%, rgba(26, 69, 128, 0.85) 100%), url('/images/hero-blue-background.png') center/cover no-repeat; padding: 3rem 2rem; margin: 3rem 0 2rem; border-radius: 16px; box-shadow: 0 8px 25px rgba(39, 93, 173, 0.25); text-align: center; color: white; position: relative; }
         .cta-banner h2 { font-size: 2rem; color: white; margin-bottom: 1rem; font-weight: 700; }
         .cta-banner p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 2rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
         .cta-banner .cta-button { display: inline-block; background: white; color: #275DAD; padding: 1rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
