@@ -471,6 +471,14 @@ input, select, textarea {
     font-size: 0.9rem;
 }
 
+.nav-item-view-all {
+    color: var(--primary);
+    font-weight: 500;
+    border-top: 1px solid var(--border-color);
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-md);
+}
+
 .nav-item:hover {
     background: var(--bg-hover);
     color: var(--text-primary);

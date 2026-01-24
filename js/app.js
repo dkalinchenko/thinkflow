@@ -875,6 +875,33 @@ function renderTemplatesList() {
     
     console.log('✅ Templates rendered to DOM');
     console.log('✅ window.app.applyTemplate available:', typeof window.app?.applyTemplate === 'function');
+    
+    // Also populate sidebar product templates
+    renderSidebarProductTemplates();
+}
+
+function renderSidebarProductTemplates() {
+    if (!elements.productTemplateList) return;
+    
+    // Get all product comparison templates
+    const productTemplates = templates.filter(t => t.isProductComparison);
+    
+    // Show featured templates (first 8) with a "View All" option
+    const featuredTemplates = productTemplates.slice(0, 8);
+    
+    elements.productTemplateList.innerHTML = featuredTemplates.map(t => `
+        <li class="nav-item" data-template="${t.id}">
+            <span class="nav-icon">${t.icon}</span>
+            <span>${t.name.replace(' Comparison', '')}</span>
+        </li>
+    `).join('') + `
+        <li class="nav-item nav-item-view-all" onclick="openModal('templates')">
+            <span class="nav-icon">📋</span>
+            <span>View All Templates...</span>
+        </li>
+    `;
+    
+    console.log('✅ Sidebar product templates rendered:', featuredTemplates.length);
 }
 
 function renderCurrentDecision() {
