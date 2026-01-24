@@ -1,0 +1,407 @@
+{
+  "id": "aa30c3ae-0fac-4adc-996a-9d875714d6cf",
+  "slug": "new-coffee-maker-comparison",
+  "title": "New Coffee Maker Comparison",
+  "description": "Find your perfect coffee brewing system",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Coffee Quality",
+      "weight": 2,
+      "description": "Brew temperature, extraction, taste"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Convenience",
+      "weight": 1.7,
+      "description": "Ease of use, programmable features"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Capacity",
+      "weight": 1.5,
+      "description": "Cup/carafe size, servings per brew"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Speed",
+      "weight": 1.4,
+      "description": "Brew time for full pot"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Cleaning",
+      "weight": 1.3,
+      "description": "Maintenance ease, dishwasher safe parts"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs features and durability"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "9cfd03e5-6163-4eae-938e-1f3a5c71bad0",
+      "name": "Breville Barista Express Impress",
+      "description": "Semi-automatic espresso machine with built-in conical burr grinder and automatic dosing for consistent results.",
+      "pros": [
+        "Exceptional espresso quality with minimal effort",
+        "Built-in grinder ensures fresh beans",
+        "Quick heat-up time (3 seconds)",
+        "Intuitive guided workflow"
+      ],
+      "cons": [
+        "Premium price point",
+        "Steep learning curve for beginners",
+        "Requires regular cleaning and maintenance"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 899,
+      "rating": 4.7,
+      "reviewCount": 1250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "67 oz water tank, 0.5 lb bean hopper",
+        "brew_type": "Espresso",
+        "features": "ThermoJet heating system, 15-bar Italian pump, automatic tamper, steam wand, PID temperature control",
+        "dimensions": "15.7\"W x 15.6\"D x 15.9\"H",
+        "grinder": "Yes, integrated conical burr grinder"
+      }
+    },
+    {
+      "id": "85e7735a-e931-4eba-8cf6-dd2635b9f909",
+      "name": "Ninja DualBrew Pro Specialty Coffee System",
+      "description": "Versatile coffee maker that brews both single-serve pods and full carafes with multiple specialty brew styles.",
+      "pros": [
+        "Extremely versatile with multiple brew types",
+        "Fast brewing and heat-up",
+        "Good value for features offered",
+        "Compact design saves counter space"
+      ],
+      "cons": [
+        "Plastic construction feels less premium",
+        "Specialty brews can be confusing initially",
+        "Carafe can be prone to dripping"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 229,
+      "rating": 4.6,
+      "reviewCount": 4200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "60 oz glass carafe, 14 oz travel mug compatible",
+        "brew_type": "Drip, single-serve, specialty brews",
+        "features": "9 brew styles (Classic, Rich, Over Ice, Cold Brew, Specialty), fold-away frother, thermal carafe, pod adapter",
+        "dimensions": "11.8\"W x 15.2\"D x 13.4\"H",
+        "grinder": "No"
+      }
+    },
+    {
+      "id": "96abceca-d500-48da-8ddf-8cbb1e83347e",
+      "name": "Technivorm Moccamaster KBGV Select",
+      "description": "High-quality Dutch drip coffee maker certified by the Specialty Coffee Association for optimal extraction.",
+      "pros": [
+        "Consistently excellent coffee quality",
+        "Durable construction with 5-year warranty",
+        "Fast brewing (4-6 minutes)",
+        "Easy to clean and maintain"
+      ],
+      "cons": [
+        "No programmable timer",
+        "Higher price than basic drip machines",
+        "Limited features compared to smart models"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 359,
+      "rating": 4.8,
+      "reviewCount": 3100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "40 oz (1.25 L) glass carafe",
+        "brew_type": "Automatic drip",
+        "features": "Copper boiling element, 9-hole showerhead, brew pause, manual basket stop, thermal carafe option",
+        "dimensions": "9.8\"W x 7.9\"D x 14.6\"H",
+        "grinder": "No"
+      }
+    },
+    {
+      "id": "ef9ee758-3780-4103-83a2-7d0f0a2ce8c0",
+      "name": "Cuisinart Grind & Brew Thermal 12-Cup Automatic Coffee Maker",
+      "description": "Programmable coffee maker with built-in burr grinder and double-walled thermal carafe to keep coffee hot.",
+      "pros": [
+        "Freshly ground beans improve flavor",
+        "Thermal carafe keeps coffee hot for hours",
+        "Good value with grinder included",
+        "Reliable performance"
+      ],
+      "cons": [
+        "Grinder can be noisy",
+        "Bulkier than standard drip machines",
+        "Some users report inconsistent grind size"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 199,
+      "rating": 4.4,
+      "reviewCount": 5800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "12 cups (60 oz), 8 oz bean hopper",
+        "brew_type": "Automatic drip",
+        "features": "24-hour programmable timer, auto-shutoff, grind-off option, charcoal water filter, strength control",
+        "dimensions": "10.5\"W x 16\"D x 15.5\"H",
+        "grinder": "Yes, integrated burr grinder"
+      }
+    }
+  ],
+  "scores": {
+    "9cfd03e5-6163-4eae-938e-1f3a5c71bad0": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Breville Barista Express Impress delivers exceptional coffee quality with precise brew temperature control, excellent extraction from its 54mm portafilter, and rich, balanced taste. The integrated conical burr grinder and automatic dosing ensure consistent results that rival professional machines."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "This machine offers good convenience with automatic dosing and intuitive controls, though it requires some user skill for proper tamping and milk steaming. Programmable features are limited compared to fully automatic machines, maintaining its semi-automatic nature."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Capacity is limited with single and double shot options only, making it unsuitable for brewing multiple cups quickly. The machine is designed for individual espresso-based drinks rather than serving groups, with no carafe option available."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Brew time is average for an espresso machine, taking about 30-60 seconds per shot once heated. The machine requires warm-up time and manual preparation, making it slower than pod systems or batch brewers for multiple servings."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Maintenance requires regular cleaning of the grinder, group head, and steam wand, with some parts being dishwasher safe. The machine has a cleaning alert system but demands more attention than simpler coffee makers, particularly for descaling."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Offers good value considering its built-in grinder and espresso capabilities at a mid-range price point. While not the cheapest option, it provides professional-grade features that justify the cost for serious home baristas."
+      }
+    },
+    "85e7735a-e931-4eba-8cf6-dd2635b9f909": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The Ninja DualBrew Pro offers multiple specialty brew styles (Classic, Rich, Over Ice, Specialty) with adjustable brew strength and temperature control up to 205°F, producing above-average coffee quality. However, it doesn't match the precision temperature control or extraction consistency of dedicated high-end espresso machines or pour-over setups."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Exceptionally convenient with single-serve pod compatibility (K-Cup and Nespresso capsules) plus full carafe brewing, programmable auto-start, and intuitive controls. The dual functionality eliminates the need for multiple machines while maintaining one-touch simplicity for different brewing needs."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Offers standard capacity with single-serve options and a 10-cup thermal carafe, which is adequate for most households. However, the carafe size is smaller than some dedicated drip machines (12+ cups), and the thermal carafe doesn't keep coffee hot as long as glass carafes on warming plates."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Brew time is slower than average, particularly for full pots (approximately 8-10 minutes for 10 cups). Single-serve brewing is reasonably quick, but the machine prioritizes extraction quality over speed, resulting in noticeable wait times compared to basic drip machines."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Maintenance is cumbersome with multiple components requiring regular cleaning (pod holder, carafe, water reservoir, brew basket). Many parts are dishwasher safe, but the descaling process is frequent and complex, and coffee grounds often accumulate in hard-to-reach areas."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Excellent value considering the dual brewing capabilities and specialty features at a mid-range price point. While not the cheapest option, it replaces two machines (single-serve and carafe) and offers versatility that justifies the cost for users wanting multiple brewing methods."
+      }
+    },
+    "96abceca-d500-48da-8ddf-8cbb1e83347e": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Technivorm Moccamaster consistently brews at the optimal 196-205°F range, achieving SCA certification for perfect extraction. Its copper heating element and precise showerhead produce exceptionally balanced, full-flavored coffee with no bitterness or under-extraction."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "This is a manual drip machine with no programmable features—you must start each brew manually. While operation is straightforward, it lacks modern conveniences like auto-start, brew strength settings, or keep-warm programming found in competitors."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The KBGV Select brews up to 10 cups (1.25 liters), suitable for small households or offices. The thermal carafe maintains temperature well, though some users might desire a larger capacity option for entertaining."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Brews a full pot in approximately 6 minutes—respectable but not exceptional. The fixed flow rate prioritizes extraction quality over speed, making it slower than some high-speed drip machines but faster than manual pour-over methods."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "The carafe, filter basket, and lid are dishwasher safe, but the heating element area requires careful manual cleaning. Mineral buildup in the water tank needs regular descaling, and the fixed showerhead isn't removable for deep cleaning."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "At a premium price point, you're paying for exceptional build quality, commercial-grade components, and a 5-year warranty. While expensive upfront, its legendary durability (often lasting 15+ years) makes it a worthwhile investment for coffee purists."
+      }
+    },
+    "ef9ee758-3780-4103-83a2-7d0f0a2ce8c0": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The built-in burr grinder ensures fresh grounds, and the thermal carafe prevents overheating. However, brew temperature may not reach optimal 195-205°F consistently, slightly affecting extraction compared to premium models."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Fully programmable with auto-start and built-in grinder eliminates separate grinding steps. The thermal carafe keeps coffee hot for hours without a warming plate, offering true set-and-forget convenience."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "12-cup capacity is standard but the thermal carafe design reduces maximum fill compared to glass carafes. Suitable for medium households but may require multiple brews for larger gatherings."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Built-in grinding adds significant time to brew cycle. Full pot takes 10+ minutes including grinding, slower than pre-ground coffee makers. Not ideal for quick morning routines."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Burr grinder requires regular cleaning to prevent oil buildup and stale flavors. Multiple components need manual cleaning; fewer dishwasher-safe parts than simpler models. Maintenance is more demanding."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Combines grinder and thermal carafe at mid-range price, eliminating need for separate grinder. Good long-term value despite higher upfront cost, though durability concerns with complex mechanisms may affect lifespan."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "9cfd03e5-6163-4eae-938e-1f3a5c71bad0",
+      "name": "Breville Barista Express Impress",
+      "description": "Semi-automatic espresso machine with built-in conical burr grinder and automatic dosing for consistent results.",
+      "totalScore": 33.9,
+      "maxPossible": 94,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 3,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Coffee Quality",
+        "Convenience",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Capacity"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "96abceca-d500-48da-8ddf-8cbb1e83347e",
+      "name": "Technivorm Moccamaster KBGV Select",
+      "description": "High-quality Dutch drip coffee maker certified by the Specialty Coffee Association for optimal extraction.",
+      "totalScore": 33.5,
+      "maxPossible": 94,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 2,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Coffee Quality",
+        "Capacity",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Convenience"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "85e7735a-e931-4eba-8cf6-dd2635b9f909",
+      "name": "Ninja DualBrew Pro Specialty Coffee System",
+      "description": "Versatile coffee maker that brews both single-serve pods and full carafes with multiple specialty brew styles.",
+      "totalScore": 32.4,
+      "maxPossible": 94,
+      "percentage": 34,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Convenience",
+        "Coffee Quality",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Speed",
+        "Cleaning"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "ef9ee758-3780-4103-83a2-7d0f0a2ce8c0",
+      "name": "Cuisinart Grind & Brew Thermal 12-Cup Automatic Coffee Maker",
+      "description": "Programmable coffee maker with built-in burr grinder and double-walled thermal carafe to keep coffee hot.",
+      "totalScore": 32.4,
+      "maxPossible": 94,
+      "percentage": 34,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Convenience",
+        "Coffee Quality",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Speed",
+        "Cleaning"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:35.461Z",
+  "metadata": {
+    "seoTitle": "New Coffee Maker Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Breville Barista Express Impress (36.0%)",
+    "winnerName": "Breville Barista Express Impress",
+    "winnerScore": 33.9,
+    "winnerPercentage": 36
+  },
+  "insights": {
+    "recommendation": "I recommend the Breville Barista Express Impress as it offers the highest weighted score with excellent coffee quality and convenience. The narrow margin over the Technivorm Moccamaster suggests both are strong contenders, but Breville's slightly better performance across weighted criteria makes it the optimal choice.",
+    "decision_drivers": [
+      "Coffee Quality",
+      "Convenience",
+      "Capacity"
+    ],
+    "trade_offs": {
+      "Breville Barista Express Impress": "Higher coffee quality and convenience but potentially more complex cleaning and maintenance compared to simpler drip machines",
+      "Technivorm Moccamaster KBGV Select": "Excellent coffee quality and durability but may sacrifice some convenience features and speed found in more automated systems",
+      "Ninja DualBrew Pro Specialty Coffee System": "Versatility across brew types but may compromise on pure coffee quality compared to dedicated espresso or drip systems"
+    },
+    "risks": [
+      "Higher complexity may lead to more maintenance issues",
+      "Potential learning curve for optimal espresso preparation",
+      "Higher initial investment with more components that could fail"
+    ],
+    "sensitivity": "This decision appears moderately sensitive. The top two alternatives are separated by only 0.4 points (1.2% difference), so small changes in weights for Coffee Quality, Convenience, or Capacity could easily change the ranking between Breville and Technivorm.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "While the quantitative analysis is clear, the extremely close scores between top alternatives (33.9 vs 33.5) suggest personal preferences not captured in weights could reasonably sway the decision. The 34-36% score range indicates all four alternatives are competitive, making the 'best' choice highly dependent on individual priorities."
+    }
+  }
+}
