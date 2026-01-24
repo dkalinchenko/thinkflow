@@ -1,5 +1,39 @@
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
+import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import { join } from 'path';
+
+// Plugin to copy decisions folder to dist
+function copyDecisionsPlugin() {
+    return {
+        name: 'copy-decisions',
+        closeBundle() {
+            const decisionsDir = './decisions';
+            const distDecisionsDir = './dist/decisions';
+            
+            // Create dist/decisions directory if it doesn't exist
+            if (!existsSync(distDecisionsDir)) {
+                mkdirSync(distDecisionsDir, { recursive: true });
+            }
+            
+            // Copy all files from decisions to dist/decisions
+            if (existsSync(decisionsDir)) {
+                const files = readdirSync(decisionsDir);
+                files.forEach(file => {
+                    const srcPath = join(decisionsDir, file);
+                    const destPath = join(distDecisionsDir, file);
+                    try {
+                        copyFileSync(srcPath, destPath);
+                        console.log(`Copied: ${file} to dist/decisions`);
+                    } catch (err) {
+                        console.error(`Failed to copy ${file}:`, err.message);
+                    }
+                });
+                console.log(`✓ Copied ${files.length} file(s) to dist/decisions`);
+            }
+        }
+    };
+}
 
 export default defineConfig({
     root: '.',
@@ -25,7 +59,8 @@ export default defineConfig({
     plugins: [
         legacy({
             targets: ['defaults', 'not IE 11']
-        })
+        }),
+        copyDecisionsPlugin()
     ],
     server: {
         port: 3000,
