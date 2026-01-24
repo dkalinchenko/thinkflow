@@ -1,0 +1,403 @@
+{
+  "id": "e79c561a-d3df-45a9-a1a6-78054e5349be",
+  "slug": "new-vacuum-cleaner-comparison",
+  "title": "New Vacuum Cleaner Comparison",
+  "description": "Compare vacuums for your cleaning needs",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Suction Power",
+      "weight": 2,
+      "description": "Cleaning effectiveness on different surfaces"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Filtration",
+      "weight": 1.7,
+      "description": "HEPA filter, allergen capture"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Versatility",
+      "weight": 1.6,
+      "description": "Attachments, carpet/hardwood, pet hair"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Battery Life",
+      "weight": 1.5,
+      "description": "Runtime for cordless models"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Weight & Maneuverability",
+      "weight": 1.4,
+      "description": "Ease of use, stairs capability"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs performance and features"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "1b6b5b9c-f23d-41c9-9ff5-871adc83c54a",
+      "name": "Dyson V15 Detect Cordless Vacuum Cleaner",
+      "description": "High-end cordless stick vacuum with laser dust detection and advanced filtration system for deep cleaning.",
+      "pros": [
+        "Laser dust detection reveals hidden debris",
+        "Powerful suction for deep cleaning",
+        "HEPA filtration captures allergens",
+        "Intelligent suction adjustment"
+      ],
+      "cons": [
+        "Very expensive",
+        "Battery life decreases on max power"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 749,
+      "rating": 4.7,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "suction_power": "230 AW",
+        "filter": "Whole-machine HEPA filtration",
+        "battery": "Up to 60 minutes runtime",
+        "weight": "6.8 lbs",
+        "type": "Cordless stick vacuum"
+      }
+    },
+    {
+      "id": "0b7ddf30-ca20-427d-b264-19682eb01a12",
+      "name": "Shark Vertex Pro Cordless Vacuum with DuoClean PowerFins",
+      "description": "Powerful cordless vacuum with self-cleaning brushroll and LED headlights for versatile floor cleaning.",
+      "pros": [
+        "Excellent value for performance",
+        "Self-cleaning brushroll prevents hair wrap",
+        "Great for both hard floors and carpets",
+        "LED headlights illuminate dust"
+      ],
+      "cons": [
+        "Heavier than some competitors",
+        "Accessories storage could be better"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 449,
+      "rating": 4.6,
+      "reviewCount": 9800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "suction_power": "Not specified (high torque)",
+        "filter": "Anti-Allergen Complete Seal Technology",
+        "battery": "Up to 60 minutes runtime",
+        "weight": "8.6 lbs",
+        "type": "Cordless stick vacuum"
+      }
+    },
+    {
+      "id": "348edba3-3ad6-432e-b753-074b20407b0d",
+      "name": "iRobot Roomba j7+ Self-Emptying Robot Vacuum",
+      "description": "Smart robot vacuum with obstacle avoidance and self-emptying base for hands-free cleaning.",
+      "pros": [
+        "Self-emptying base holds 60 days of dirt",
+        "PrecisionVision Navigation avoids obstacles",
+        "Smart mapping and scheduling",
+        "Quiet operation"
+      ],
+      "cons": [
+        "Struggles with thick carpets",
+        "Expensive initial investment",
+        "Requires maintenance of brushes and sensors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 799,
+      "rating": 4.4,
+      "reviewCount": 7500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "suction_power": "10x power lift suction",
+        "filter": "High-efficiency filter",
+        "battery": "Up to 120 minutes runtime",
+        "weight": "7.3 lbs",
+        "type": "Robot vacuum"
+      }
+    },
+    {
+      "id": "33e1177c-6caf-429f-9c57-bf77a82e8cef",
+      "name": "Bissell CleanView Swivel Pet Upright Vacuum",
+      "description": "Affordable upright vacuum specifically designed for pet owners with specialized pet tools.",
+      "pros": [
+        "Excellent pet hair removal",
+        "Very affordable price",
+        "Comes with specialized pet tools",
+        "Large capacity dirt tank"
+      ],
+      "cons": [
+        "Heavy and bulky",
+        "Corded design limits mobility",
+        "Louder than premium models"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 169,
+      "rating": 4.3,
+      "reviewCount": 32000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "suction_power": "Multi-cyclonic suction",
+        "filter": "Washable filter system",
+        "battery": "Corded (no battery)",
+        "weight": "16.5 lbs",
+        "type": "Upright vacuum"
+      }
+    }
+  ],
+  "scores": {
+    "1b6b5b9c-f23d-41c9-9ff5-871adc83c54a": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Dyson V15 Detect delivers exceptional suction power with its Hyperdymium motor, effectively cleaning carpets, hard floors, and embedded debris. Its laser dust detection reveals microscopic particles, ensuring thorough cleaning performance across all surfaces."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Features a fully sealed HEPA filtration system that captures 99.97% of particles as small as 0.3 microns, including allergens and bacteria. The advanced filtration prevents expelled air from reintroducing contaminants, making it excellent for allergy sufferers."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Comes with multiple attachments including a laser fluffy head, hair screw tool, and combination tool for various surfaces and pet hair. While versatile, some specialized attachments require separate purchase, slightly limiting out-of-box flexibility."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Offers approximately 60 minutes of runtime in eco mode, but only 20-30 minutes in max power mode. This may be insufficient for larger homes without recharging, requiring strategic cleaning sessions or mid-job charging."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "At 6.8 pounds, it's relatively lightweight for its power class and features excellent balance for easy maneuvering and stair use. However, the wand design can feel top-heavy during extended use compared to some competitors."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Priced at a premium ($700+), it represents significant investment for cleaning technology. While performance is excellent, the high cost and battery limitations make it poor value for budget-conscious consumers or those with large homes."
+      }
+    },
+    "0b7ddf30-ca20-427d-b264-19682eb01a12": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Shark Vertex Pro delivers exceptional suction with its DuoClean PowerFins technology, effectively cleaning carpets, hard floors, and embedded debris. Its self-cleaning brushroll prevents hair wrap, maintaining consistent performance across all surfaces."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "While it includes a HEPA filter that captures allergens, some users report fine dust leakage during emptying. It performs adequately for most households but falls short of premium sealed-system filtration found in higher-end models."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Excellent for pet hair with specialized attachments and transitions well between carpet and hardwood. The LED headlights are useful, though some users find the accessory selection more limited compared to full-sized corded vacuums."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Runtime is limited to about 30 minutes on high power, requiring frequent recharging for larger homes. Battery degradation over time further reduces effective cleaning sessions, making it unsuitable for extended cleaning tasks."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Lightweight and well-balanced design makes it easy to carry upstairs and maneuver around furniture. The swivel steering is responsive, though the wand can feel slightly top-heavy when using attachments."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced at a premium for cordless convenience but delivers strong cleaning performance. However, the limited battery life and average filtration reduce overall value compared to some competitors at similar price points."
+      }
+    },
+    "348edba3-3ad6-432e-b753-074b20407b0d": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Effective on hard floors and low-pile carpets but struggles with deep-pile carpets and embedded debris compared to high-power upright vacuums. Robot vacuums generally have lower suction than traditional models."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Features a high-efficiency filter that captures 99% of allergens, mold, and pollen. While not officially HEPA-certified, it provides excellent filtration for most allergy sufferers."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Limited to floor cleaning with no attachments for upholstery, stairs, or above-floor surfaces. Excellent on hard floors and low-pile carpets but cannot handle stairs or tight corners effectively."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Provides approximately 90 minutes of runtime and automatically returns to base to recharge and resume cleaning. Smart navigation optimizes cleaning patterns to maximize coverage within battery limits."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Fully autonomous operation with excellent obstacle avoidance and navigation. Cannot handle stairs but requires zero user effort for daily floor cleaning once scheduled."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Premium price point for convenience-focused cleaning. Excellent for maintenance cleaning but limited compared to traditional vacuums at similar price points that offer more complete cleaning capabilities."
+      }
+    },
+    "33e1177c-6caf-429f-9c57-bf77a82e8cef": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Provides adequate suction for most household cleaning tasks, particularly effective on carpets and pet hair. However, it may struggle with deep embedded debris compared to higher-end models and loses some effectiveness on high-pile carpets."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "Includes a multi-level filtration system but lacks a true HEPA filter, which limits allergen capture for sensitive users. Fine dust and pet dander may not be fully contained, making it less suitable for severe allergy sufferers."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Excellent for pet owners with specialized tools like the pet hair corner tool and turbo brush. Performs well on both carpets and hard floors, though some attachments feel less durable than premium models."
+      },
+      "criterion-3": {
+        "value": 1,
+        "explanation": "This is a corded model, so it has no battery runtime. It requires constant access to a power outlet, limiting mobility and convenience compared to cordless alternatives."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Swivel steering provides good maneuverability on flat surfaces, but the upright design and moderate weight make it cumbersome on stairs. Carrying it between floors requires noticeable effort."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Offers strong performance for pet hair cleaning at an affordable price point. While lacking premium features like HEPA filtration or cordless convenience, it delivers reliable core functionality for budget-conscious pet owners."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "1b6b5b9c-f23d-41c9-9ff5-871adc83c54a",
+      "name": "Dyson V15 Detect Cordless Vacuum Cleaner",
+      "description": "High-end cordless stick vacuum with laser dust detection and advanced filtration system for deep cleaning.",
+      "totalScore": 38,
+      "maxPossible": 97,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Suction Power",
+        "Filtration",
+        "Versatility"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "0b7ddf30-ca20-427d-b264-19682eb01a12",
+      "name": "Shark Vertex Pro Cordless Vacuum with DuoClean PowerFins",
+      "description": "Powerful cordless vacuum with self-cleaning brushroll and LED headlights for versatile floor cleaning.",
+      "totalScore": 34.6,
+      "maxPossible": 97,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Suction Power",
+        "Versatility",
+        "Weight & Maneuverability"
+      ],
+      "weaknesses": [
+        "Battery Life"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "348edba3-3ad6-432e-b753-074b20407b0d",
+      "name": "iRobot Roomba j7+ Self-Emptying Robot Vacuum",
+      "description": "Smart robot vacuum with obstacle avoidance and self-emptying base for hands-free cleaning.",
+      "totalScore": 33.5,
+      "maxPossible": 97,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Weight & Maneuverability",
+        "Filtration",
+        "Battery Life"
+      ],
+      "weaknesses": [
+        "Versatility"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "33e1177c-6caf-429f-9c57-bf77a82e8cef",
+      "name": "Bissell CleanView Swivel Pet Upright Vacuum",
+      "description": "Affordable upright vacuum specifically designed for pet owners with specialized pet tools.",
+      "totalScore": 27.5,
+      "maxPossible": 97,
+      "percentage": 28,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 2,
+        "criterion-2": 4,
+        "criterion-3": 1,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Versatility",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Battery Life",
+        "Filtration"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:40:55.185Z",
+  "metadata": {
+    "seoTitle": "New Vacuum Cleaner Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Dyson V15 Detect Cordless Vacuum Cleaner (39.0%)",
+    "winnerName": "Dyson V15 Detect Cordless Vacuum Cleaner",
+    "winnerScore": 38,
+    "winnerPercentage": 39
+  },
+  "insights": {
+    "recommendation": "I recommend the Dyson V15 Detect Cordless Vacuum Cleaner as it achieved the highest weighted score (38 points) by performing well across all criteria, particularly excelling in high-weighted categories like Suction Power and Filtration. This makes it the most balanced and capable option for general cleaning needs.",
+    "decision_drivers": [
+      "Suction Power (weight: 2)",
+      "Filtration (weight: 1.7)",
+      "Versatility (weight: 1.6)"
+    ],
+    "trade_offs": {
+      "Dyson V15 Detect Cordless Vacuum Cleaner": "Higher performance comes with a premium price, potentially sacrificing some value for money compared to alternatives like Bissell.",
+      "Shark Vertex Pro Cordless Vacuum with DuoClean PowerFins": "Strong overall performance but slightly trails Dyson in key areas like suction and filtration, though it may offer better value.",
+      "iRobot Roomba j7+ Self-Emptying Robot Vacuum": "Offers convenience and automation but sacrifices manual control, versatility for above-floor cleaning, and likely raw suction power compared to cordless stick vacuums."
+    },
+    "risks": [
+      "High cost may not justify marginal performance gains over close competitors like Shark.",
+      "Cordless models depend on battery life, which degrades over time and may limit cleaning duration for large spaces.",
+      "Potential over-reliance on brand premium; actual durability and long-term reliability are uncertain."
+    ],
+    "sensitivity": "Moderately sensitive. Small weight changes, especially in closely weighted criteria (e.g., Battery Life at 1.5 vs. Value for Money at 1.5), could affect rankings, but Dyson's lead is substantial enough that minor adjustments likely wouldn't change the top recommendation.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The analysis is based on clear criteria and weights, and Dyson has a meaningful lead. However, without detailed scoring per criterion for each alternative or information on user-specific needs (e.g., pet hair, allergies, home size), there's some uncertainty about whether the top choice aligns perfectly with all individual preferences."
+    }
+  }
+}
