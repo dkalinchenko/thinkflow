@@ -1,0 +1,405 @@
+{
+  "id": "a3fc88ad-f152-49cb-9915-1365ce71c7cd",
+  "slug": "new-camera-comparison",
+  "title": "New Camera Comparison",
+  "description": "Compare mirrorless and DSLR cameras",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Image Quality",
+      "weight": 2,
+      "description": "Sensor, resolution, dynamic range"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Autofocus",
+      "weight": 1.8,
+      "description": "Speed, accuracy, subject tracking"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Video Capability",
+      "weight": 1.5,
+      "description": "4K, frame rates, stabilization"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Lens Ecosystem",
+      "weight": 1.3,
+      "description": "Available lenses and compatibility"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Ergonomics",
+      "weight": 1.2,
+      "description": "Handling, controls, build"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs capability"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "5929000b-7439-4ecd-b7e5-f80359a7662e",
+      "name": "Sony Alpha 7 IV Full-frame Mirrorless Camera",
+      "description": "A versatile full-frame hybrid camera with 33MP resolution, excellent autofocus, and 4K 60p video capabilities.",
+      "pros": [
+        "Outstanding hybrid performance for photos and video",
+        "Excellent real-time autofocus tracking",
+        "High-resolution 33MP sensor with great dynamic range",
+        "Robust build quality and ergonomics"
+      ],
+      "cons": [
+        "4K 60p has 1.5x crop",
+        "Menu system can be complex for beginners",
+        "Battery life could be better for video"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2499,
+      "rating": 4.7,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "sensor": "Full-frame 33MP Exmor R CMOS",
+        "resolution": "33 megapixels",
+        "iso": "100-51200 (expandable to 50-204800)",
+        "autofocus": "759-point phase-detection with Real-time Eye AF",
+        "video": "4K 60p 10-bit 4:2:2",
+        "stabilization": "5-axis in-body image stabilization (5.5 stops)"
+      }
+    },
+    {
+      "id": "48364d90-5a60-4b6c-94d9-e3a06942e6fb",
+      "name": "Canon EOS R6 Mark II Mirrorless Camera",
+      "description": "A high-performance full-frame camera with 24MP sensor, 40fps continuous shooting, and advanced video features.",
+      "pros": [
+        "Extremely fast 40fps electronic shutter shooting",
+        "Excellent low-light performance",
+        "Superb autofocus with subject detection",
+        "Great video capabilities with oversampled 4K"
+      ],
+      "cons": [
+        "24MP may be limiting for some photographers",
+        "Overheating possible in 4K 60p recording",
+        "High price for the resolution"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 2499,
+      "rating": 4.8,
+      "reviewCount": 1420,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "sensor": "Full-frame 24.2MP CMOS",
+        "resolution": "24.2 megapixels",
+        "iso": "100-102400 (expandable to 50-204800)",
+        "autofocus": "Dual Pixel CMOS AF II with deep learning",
+        "video": "6K RAW external, 4K 60p oversampled",
+        "stabilization": "In-body stabilization up to 8 stops with compatible lenses"
+      }
+    },
+    {
+      "id": "011941d9-0005-4f90-a975-f3009053dfd3",
+      "name": "Fujifilm X-T5 Mirrorless Camera",
+      "description": "A retro-styled APS-C camera with 40MP sensor, 6.2K video, and classic film simulation modes.",
+      "pros": [
+        "Excellent 40MP APS-C sensor with great detail",
+        "Beautiful retro design with physical controls",
+        "Outstanding film simulation modes",
+        "Great value for the features"
+      ],
+      "cons": [
+        "Battery life could be better",
+        "Autofocus not as advanced as Sony/Canon",
+        "Somewhat bulky for an APS-C camera"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1699,
+      "rating": 4.6,
+      "reviewCount": 2100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "sensor": "APS-C 40.2MP X-Trans CMOS 5 HR",
+        "resolution": "40.2 megapixels",
+        "iso": "125-12800 (expandable to 64-51200)",
+        "autofocus": "Intelligent Hybrid AF with subject detection",
+        "video": "6.2K 30p, 4K 60p 10-bit 4:2:2",
+        "stabilization": "5-axis in-body stabilization (7 stops)"
+      }
+    },
+    {
+      "id": "e3450daa-dcf8-4247-b513-d411d4b0b556",
+      "name": "Nikon Z8 Mirrorless Camera",
+      "description": "A professional-grade full-frame camera with 45.7MP sensor, 8K video, and exceptional performance.",
+      "pros": [
+        "Professional-grade performance in a compact body",
+        "Excellent 45.7MP stacked sensor with fast readout",
+        "Outstanding 8K and 4K 120p video capabilities",
+        "Robust build quality and weather sealing"
+      ],
+      "cons": [
+        "Very expensive",
+        "Battery life limited compared to DSLRs",
+        "Generates significant heat during extended 8K recording"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 3999,
+      "rating": 4.9,
+      "reviewCount": 980,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "sensor": "Full-frame 45.7MP stacked CMOS",
+        "resolution": "45.7 megapixels",
+        "iso": "64-25600 (expandable to 32-102400)",
+        "autofocus": "493-point with 3D tracking and subject detection",
+        "video": "8K 30p, 4K 120p N-RAW",
+        "stabilization": "5-axis in-body image stabilization (6 stops)"
+      }
+    }
+  ],
+  "scores": {
+    "5929000b-7439-4ecd-b7e5-f80359a7662e": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 33MP full-frame sensor delivers exceptional resolution and dynamic range, rivaling higher-resolution cameras while maintaining excellent low-light performance. This sensor represents the current sweet spot for hybrid photography needs."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Sony's Real-time Tracking and Eye AF are industry-leading, offering remarkable speed and accuracy for both humans and animals. The system maintains reliable subject tracking even in challenging lighting conditions."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "4K 60p with 10-bit 4:2:2 recording provides professional video quality, though there's a slight crop at 60p. The in-body stabilization is effective but not class-leading compared to some competitors."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Sony's E-mount offers the most comprehensive full-frame mirrorless lens selection available, with excellent third-party support. The system compatibility ensures access to lenses for every photographic need."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "While improved from previous models, the grip and button layout still feel cramped for larger hands. The menu system remains complex despite updates, requiring significant learning time."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "At its premium price point, it offers excellent features but faces strong competition from more affordable alternatives. The cost positions it as a professional investment rather than consumer-friendly."
+      }
+    },
+    "48364d90-5a60-4b6c-94d9-e3a06942e6fb": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 24MP full-frame sensor delivers excellent dynamic range and low-light performance, though resolution is modest compared to some competitors. Image quality is superb for most professional applications but not class-leading in resolution."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Canon's Dual Pixel CMOS AF II system is exceptional with near-instantaneous acquisition, deep learning-based subject tracking, and reliable eye/face detection even in challenging conditions. This represents state-of-the-art autofocus performance."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Outstanding video features including uncropped 4K/60p, 6K oversampled 4K/30p, 10-bit 4:2:2 internal recording, and excellent in-body stabilization. The R6 Mark II competes with dedicated cinema cameras in many respects."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Access to Canon's excellent RF lens lineup with adapter support for EF lenses provides extensive options. However, native RF lenses are relatively new and premium options can be expensive compared to established DSLR systems."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Excellent handling with comfortable grip, intuitive controls, and weather-sealed magnesium alloy construction. Some users may find the single card slot limiting for professional work, and the electronic viewfinder has minor lag compared to optical viewfinders."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "At its premium price point, it offers outstanding performance but faces stiff competition. The camera delivers excellent capabilities but requires significant investment in RF lenses, making the total system cost substantial."
+      }
+    },
+    "011941d9-0005-4f90-a975-f3009053dfd3": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 40MP APS-C sensor delivers exceptional resolution and dynamic range, rivaling many full-frame cameras. Fujifilm's renowned film simulations provide unique color science that many photographers prefer over standard color profiles."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "While improved from previous models, the autofocus system still lags behind competitors like Sony and Canon in subject tracking reliability. It performs adequately for most photography but struggles with fast-moving subjects in challenging conditions."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "6.2K video capability is impressive for this class, with good 4K performance and frame rate options. However, rolling shutter can be noticeable in fast pans, and the stabilization system is decent but not class-leading."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Fujifilm's X-mount offers an excellent selection of high-quality prime and zoom lenses, particularly strong in compact primes. The system lacks some specialized professional lenses found in full-frame systems, but covers most needs exceptionally well."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "The retro-styled physical dials provide intuitive, tactile control that many photographers love. Build quality is excellent with weather sealing, though the smaller APS-C body may not suit those with very large hands."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At its price point, the X-T5 competes directly with full-frame alternatives that offer better autofocus and low-light performance. While feature-rich, it represents questionable value compared to similarly priced cameras with larger sensors."
+      }
+    },
+    "e3450daa-dcf8-4247-b513-d411d4b0b556": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 45.7MP full-frame stacked sensor delivers exceptional resolution, outstanding dynamic range, and excellent low-light performance. It competes with medium format cameras in detail rendering while maintaining excellent color science."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Nikon's advanced subject detection system tracks people, animals, and vehicles with remarkable accuracy and speed. The 3D tracking and low-light AF performance are industry-leading, making it reliable for professional action photography."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "8K video recording at 30fps and 4K at 120fps with full-sensor readout provides exceptional video quality. Professional features like N-Log, ProRes RAW recording, and excellent in-body stabilization make it a top-tier video camera."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "While Nikon's Z-mount lenses are optically excellent, the ecosystem is still developing compared to established systems. Native lens selection is growing but limited compared to DSLR F-mount options, though adapters provide good compatibility."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Excellent build quality with weather sealing and comfortable grip, though slightly smaller than traditional pro DSLRs. Control layout is intuitive with dual processors, but some photographers may miss the optical viewfinder experience."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At its premium price point, it's expensive for most enthusiasts and competes directly with more established professional systems. While feature-packed, the cost places it in a niche market where alternatives offer similar capabilities at lower prices."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "5929000b-7439-4ecd-b7e5-f80359a7662e",
+      "name": "Sony Alpha 7 IV Full-frame Mirrorless Camera",
+      "description": "A versatile full-frame hybrid camera with 33MP resolution, excellent autofocus, and 4K 60p video capabilities.",
+      "totalScore": 39.6,
+      "maxPossible": 93,
+      "percentage": 43,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Image Quality",
+        "Autofocus",
+        "Lens Ecosystem"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "48364d90-5a60-4b6c-94d9-e3a06942e6fb",
+      "name": "Canon EOS R6 Mark II Mirrorless Camera",
+      "description": "A high-performance full-frame camera with 24MP sensor, 40fps continuous shooting, and advanced video features.",
+      "totalScore": 39,
+      "maxPossible": 93,
+      "percentage": 42,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 5,
+        "criterion-3": 4,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Autofocus",
+        "Video Capability",
+        "Image Quality"
+      ],
+      "weaknesses": [],
+      "rank": 2
+    },
+    {
+      "id": "e3450daa-dcf8-4247-b513-d411d4b0b556",
+      "name": "Nikon Z8 Mirrorless Camera",
+      "description": "A professional-grade full-frame camera with 45.7MP sensor, 8K video, and exceptional performance.",
+      "totalScore": 38.2,
+      "maxPossible": 93,
+      "percentage": 41,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 5,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Image Quality",
+        "Autofocus",
+        "Video Capability"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "011941d9-0005-4f90-a975-f3009053dfd3",
+      "name": "Fujifilm X-T5 Mirrorless Camera",
+      "description": "A retro-styled APS-C camera with 40MP sensor, 6.2K video, and classic film simulation modes.",
+      "totalScore": 35.6,
+      "maxPossible": 93,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Image Quality",
+        "Ergonomics",
+        "Video Capability"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:11:29.757Z",
+  "metadata": {
+    "seoTitle": "New Camera Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Sony Alpha 7 IV Full-frame Mirrorless Camera (43.0%)",
+    "winnerName": "Sony Alpha 7 IV Full-frame Mirrorless Camera",
+    "winnerScore": 39.6,
+    "winnerPercentage": 43
+  },
+  "insights": {
+    "recommendation": "I recommend the Sony Alpha 7 IV due to its highest weighted score (39.6 points), particularly excelling in Image Quality and Autofocus which are the most heavily weighted criteria. It offers the best balance of performance across all key factors for a full-frame mirrorless system.",
+    "decision_drivers": [
+      "Image Quality (weight: 2)",
+      "Autofocus (weight: 1.8)",
+      "Video Capability (weight: 1.5)"
+    ],
+    "trade_offs": {
+      "Sony Alpha 7 IV": "Highest overall performance but potentially at a premium price point compared to some alternatives",
+      "Canon EOS R6 Mark II": "Very close performance to Sony (only 0.6 points difference) with potentially better ergonomics for Canon users, but slightly lower in key weighted criteria",
+      "Nikon Z8": "Strong performance but slightly behind top two in weighted score, may offer different lens ecosystem advantages"
+    },
+    "risks": [
+      "Sony ecosystem lock-in with proprietary lens mount",
+      "Potential price premium over competitors",
+      "Rapid technological advancement in mirrorless could make this model obsolete faster"
+    ],
+    "sensitivity": "Moderately sensitive - small changes in weights for Image Quality or Autofocus could potentially change the ranking between Sony and Canon given their close scores (39.6 vs 39.0).",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The scores are close between top alternatives (Sony 39.6, Canon 39.0, Nikon 38.2), suggesting personal preferences or unquantified factors could reasonably sway the decision. However, the weighting methodology appears sound and results are logically consistent."
+    }
+  }
+}
