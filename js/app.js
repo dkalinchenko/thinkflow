@@ -216,6 +216,7 @@ async function init() {
     // Render initial UI
     renderDecisionList();
     renderTemplatesList();
+    renderWelcomeProductGrid();
     
     // Register service worker
     registerServiceWorker();
@@ -895,13 +896,39 @@ function renderSidebarProductTemplates() {
             <span>${t.name.replace(' Comparison', '')}</span>
         </li>
     `).join('') + `
-        <li class="nav-item nav-item-view-all" onclick="openModal('templates')">
+        <li class="nav-item nav-item-view-all" onclick="window.app.openModal('templates')">
             <span class="nav-icon">📋</span>
             <span>View All Templates...</span>
         </li>
     `;
     
     console.log('✅ Sidebar product templates rendered:', featuredTemplates.length);
+}
+
+function renderWelcomeProductGrid() {
+    const productGrid = document.querySelector('.product-grid-welcome');
+    if (!productGrid) return;
+    
+    // Get all product comparison templates
+    const productTemplates = templates.filter(t => t.isProductComparison);
+    
+    // Generate HTML for all product templates
+    productGrid.innerHTML = productTemplates.map(t => {
+        const displayName = t.name.replace(' Comparison', '');
+        return `
+            <button class="product-card" 
+                    data-template="${t.id}" 
+                    onclick="window.app && window.app.applyTemplate('${t.id}')" 
+                    style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" 
+                    onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">${t.icon}</div>
+                <div style="font-weight: 600; color: #5B616A;">${displayName}</div>
+            </button>
+        `;
+    }).join('');
+    
+    console.log('✅ Welcome product grid rendered:', productTemplates.length, 'templates');
 }
 
 function renderCurrentDecision() {
@@ -2999,7 +3026,8 @@ window.app = {
     setScore,
     acceptAISuggestion,
     editPriceConstraint,
-    showWelcomeView
+    showWelcomeView,
+    openModal
 };
 
 // ========================================
