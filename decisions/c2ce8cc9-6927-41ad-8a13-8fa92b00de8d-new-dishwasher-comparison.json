@@ -1,0 +1,403 @@
+{
+  "id": "c2ce8cc9-6927-41ad-8a13-8fa92b00de8d",
+  "slug": "new-dishwasher-comparison",
+  "title": "New Dishwasher Comparison",
+  "description": "Find a reliable and efficient dishwasher",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Cleaning Performance",
+      "weight": 2,
+      "description": "Wash quality, dried dishes"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Noise Level",
+      "weight": 1.7,
+      "description": "Decibel rating during operation"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Energy Efficiency",
+      "weight": 1.5,
+      "description": "Water and electricity usage per cycle"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Capacity & Racks",
+      "weight": 1.6,
+      "description": "Place settings, rack flexibility"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Cycle Options",
+      "weight": 1.3,
+      "description": "Wash programs, sanitize, quick wash"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to features"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "1e13d7f9-6941-4ebc-98e2-d23519d300a4",
+      "name": "Bosch 800 Series SHPM88Z75N",
+      "description": "A premium built-in dishwasher with Bosch's signature quiet operation, advanced cleaning features, and excellent drying performance.",
+      "pros": [
+        "Extremely quiet operation (CrystalDry technology for excellent drying)",
+        "Flexible loading with adjustable racks and third rack",
+        "Excellent cleaning performance on all cycles",
+        "Reliable and durable with stainless steel tub"
+      ],
+      "cons": [
+        "Premium price point",
+        "Longer cycle times on some settings",
+        "No built-in water softener"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1399,
+      "rating": 4.7,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "16 place settings",
+        "noise_level": "42 dBA (Extra Quiet)",
+        "energy_rating": "ENERGY STAR Most Efficient 2024",
+        "dimensions": "33.875\" H x 23.5625\" W x 23.5\" D",
+        "racks": "3 racks (including third-level silverware basket), adjustable tines, fold-down tines"
+      }
+    },
+    {
+      "id": "ce268f85-081b-4b2b-b511-e15162e68928",
+      "name": "KitchenAid KDPM604KPS",
+      "description": "A high-end dishwasher with powerful cleaning technology, a third rack, and advanced drying features, known for its sturdy build and quiet operation.",
+      "pros": [
+        "Powerful ProWash cycle with soil sensor",
+        "Excellent drying with heated dry and fan assist",
+        "Durable stainless steel construction and tub",
+        "Flexible loading with adjustable upper rack"
+      ],
+      "cons": [
+        "Can be slightly louder than some Bosch models",
+        "Control panel can be less intuitive",
+        "Some users report occasional water spots"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1249,
+      "rating": 4.6,
+      "reviewCount": 1420,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "16 place settings",
+        "noise_level": "44 dBA (Quiet)",
+        "energy_rating": "ENERGY STAR Certified",
+        "dimensions": "34.5\" H x 23.75\" W x 24.5\" D",
+        "racks": "3 racks (ProWash fold-down tines, FreeFlex third rack)"
+      }
+    },
+    {
+      "id": "99ea7c1d-62d2-4137-a858-834e92f69332",
+      "name": "LG LDFN4542S",
+      "description": "A smart front-control dishwasher featuring LG's QuadWash and TrueSteam technology, with Wi-Fi connectivity and a sleek design.",
+      "pros": [
+        "Excellent cleaning with QuadWash (four spray arms)",
+        "TrueSteam technology helps sanitize and reduce spots",
+        "SmartThinQ app control for monitoring and diagnostics",
+        "Relatively quick cycles available"
+      ],
+      "cons": [
+        "Drying performance can be inconsistent without steam",
+        "Smaller capacity than some competitors",
+        "Smart features require stable Wi-Fi"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 999,
+      "rating": 4.5,
+      "reviewCount": 2100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "14 place settings",
+        "noise_level": "44 dBA (Quiet)",
+        "energy_rating": "ENERGY STAR Certified",
+        "dimensions": "34.5\" H x 23.75\" W x 24.5\" D",
+        "racks": "2 racks (plus top rack silverware basket, EasyRack Plus system)"
+      }
+    },
+    {
+      "id": "25bb1f36-cde6-44c0-be77-4faf7fe6f243",
+      "name": "GE Profile PDT715SYNFS",
+      "description": "A feature-rich smart dishwasher with advanced soil sensors, a third rack, and bottle wash jets, offering strong performance at a mid-range price.",
+      "pros": [
+        "Excellent value for features and performance",
+        "Powerful cleaning with bottle wash jets for hard-to-clean items",
+        "Smart dispenser automatically adjusts detergent",
+        "Wi-Fi connected for remote control and alerts"
+      ],
+      "cons": [
+        "Noticeably louder than premium Bosch/KitchenAid models",
+        "Plastic tub interior (though durable)",
+        "Third rack can limit space for taller items below"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 899,
+      "rating": 4.4,
+      "reviewCount": 1750,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "16 place settings",
+        "noise_level": "47 dBA",
+        "energy_rating": "ENERGY STAR Certified",
+        "dimensions": "34.5\" H x 23.75\" W x 24.5\" D",
+        "racks": "3 racks (including UltraWash third rack, adjustable upper rack)"
+      }
+    }
+  ],
+  "scores": {
+    "1e13d7f9-6941-4ebc-98e2-d23519d300a4": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "Exceptional wash quality with Bosch's PrecisionWash system and AquaStop technology. CrystalDry drying system provides completely dry dishes, including plastics, which is rare in dishwashers."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Extremely quiet at 39 dBA, among the quietest on the market. Bosch's sound insulation and EcoSilence Drive motor make it virtually inaudible during operation."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Excellent energy efficiency with Energy Star certification and efficient water usage. However, some competing models offer slightly better efficiency ratings and faster eco cycles."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Standard 16-place setting capacity with flexible rack adjustments. Rack design is functional but lacks the innovative loading flexibility of some competitors' premium models."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Comprehensive selection including Auto, Heavy, Normal, Eco, Quick, Rinse, Sanitize, and CrystalDry. Missing some specialized cycles like steam cleaning found in competing premium models."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Premium pricing places it at the high end of the market. While feature-rich and reliable, budget-conscious buyers may find better value in mid-range models with similar core performance."
+      }
+    },
+    "ce268f85-081b-4b2b-b511-e15162e68928": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "KitchenAid's ProWash cycle and powerful spray arms deliver exceptional cleaning results, even with heavily soiled dishes. The advanced drying system ensures dishes come out completely dry without manual towel drying."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "At 44 dBA, this dishwasher operates very quietly, suitable for open-concept homes. While not the absolute quietest on the market, it's significantly quieter than average dishwashers."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Meets Energy Star standards but uses more water and energy than some competitors' eco-modes. The powerful cleaning cycles come at the cost of higher resource consumption compared to budget-efficient models."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The third rack provides excellent flexibility for utensils and small items, while the adjustable tines and fold-down features accommodate large pots and pans. Capacity is maximized without sacrificing loading convenience."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Offers comprehensive wash programs including sanitize, quick wash, and heavy-duty cycles. Missing some specialized cycles found on competing premium models, but covers all essential needs effectively."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "As a high-end model, it carries a premium price that may not justify the marginal improvements over mid-range alternatives. The excellent performance comes at a significant cost premium that many consumers won't recoup."
+      }
+    },
+    "99ea7c1d-62d2-4137-a858-834e92f69332": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "QuadWash technology with four spray arms provides thorough coverage, while TrueSteam helps eliminate residue and improves drying. This combination delivers consistently clean, dry dishes that meet high standards."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "At 44-49 dB, it's moderately quiet but not among the quietest models available. While acceptable for most homes, it may be noticeable in open-plan spaces during operation."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Energy Star certified with efficient water usage per cycle, though some competitors achieve slightly better efficiency ratings. The smart features can optimize usage but add standby power consumption."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Standard 14-place setting capacity with adjustable racks and fold-down tines offer good flexibility. However, some users report that the third rack reduces usable space in the lower racks."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Excellent variety including sanitize, express wash, heavy duty, and smart cycles. Wi-Fi connectivity enables remote control and cycle customization, providing exceptional program flexibility."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Premium pricing relative to basic dishwashers with similar cleaning performance. The smart features add cost that may not justify the price increase for users who don't need connectivity."
+      }
+    },
+    "25bb1f36-cde6-44c0-be77-4faf7fe6f243": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "GE Profile's advanced soil sensors and bottle wash jets deliver exceptional cleaning results, consistently removing tough food residues. Dishes come out thoroughly dried thanks to the heated dry system, meeting high performance standards."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "At 44-46 decibels, this dishwasher operates at an average noise level for its class. While not disruptive, it's noticeably louder than premium ultra-quiet models that operate below 40 decibels."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The dishwasher offers good energy efficiency with soil-sensing technology that optimizes water usage, but it's not the most efficient model available. Some competitors offer better energy ratings at similar price points."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The third rack and bottle wash jets provide outstanding flexibility and capacity, accommodating more items than standard dishwashers. Rack adjustments are versatile, making loading awkward items significantly easier."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Offers comprehensive cycle options including sanitize, quick wash, and smart cycles, though some premium competitors provide more specialized or customizable programs. The selection covers most household needs effectively."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "While feature-rich, the mid-range price is relatively high for the overall package. Several competitors offer similar performance and features at lower price points, making this less competitive on pure value."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "1e13d7f9-6941-4ebc-98e2-d23519d300a4",
+      "name": "Bosch 800 Series SHPM88Z75N",
+      "description": "A premium built-in dishwasher with Bosch's signature quiet operation, advanced cleaning features, and excellent drying performance.",
+      "totalScore": 39,
+      "maxPossible": 96,
+      "percentage": 41,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Cleaning Performance",
+        "Noise Level",
+        "Energy Efficiency"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "ce268f85-081b-4b2b-b511-e15162e68928",
+      "name": "KitchenAid KDPM604KPS",
+      "description": "A high-end dishwasher with powerful cleaning technology, a third rack, and advanced drying features, known for its sturdy build and quiet operation.",
+      "totalScore": 37.5,
+      "maxPossible": 96,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Cleaning Performance",
+        "Capacity & Racks",
+        "Noise Level"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "25bb1f36-cde6-44c0-be77-4faf7fe6f243",
+      "name": "GE Profile PDT715SYNFS",
+      "description": "A feature-rich smart dishwasher with advanced soil sensors, a third rack, and bottle wash jets, offering strong performance at a mid-range price.",
+      "totalScore": 37.3,
+      "maxPossible": 96,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Cleaning Performance",
+        "Capacity & Racks",
+        "Energy Efficiency"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "99ea7c1d-62d2-4137-a858-834e92f69332",
+      "name": "LG LDFN4542S",
+      "description": "A smart front-control dishwasher featuring LG's QuadWash and TrueSteam technology, with Wi-Fi connectivity and a sleek design.",
+      "totalScore": 37,
+      "maxPossible": 96,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Cleaning Performance",
+        "Cycle Options",
+        "Energy Efficiency"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:42:38.079Z",
+  "metadata": {
+    "seoTitle": "New Dishwasher Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Bosch 800 Series SHPM88Z75N (41.0%)",
+    "winnerName": "Bosch 800 Series SHPM88Z75N",
+    "winnerScore": 39,
+    "winnerPercentage": 41
+  },
+  "insights": {
+    "recommendation": "I recommend the Bosch 800 Series SHPM88Z75N as it achieved the highest weighted score (39 points, 41%) by excelling across all criteria, particularly in high-weighted areas like Cleaning Performance and Noise Level. Its balanced performance makes it the most reliable and efficient choice for the stated needs.",
+    "decision_drivers": [
+      "Cleaning Performance (weight: 2)",
+      "Noise Level (weight: 1.7)",
+      "Capacity & Racks (weight: 1.6)"
+    ],
+    "trade_offs": {
+      "Bosch 800 Series SHPM88Z75N": "May have a higher upfront cost compared to some alternatives, but offers superior cleaning and quiet operation.",
+      "KitchenAid KDPM604KPS": "Slightly lower overall score than Bosch, but could offer better value or specific cycle options that appeal to certain users.",
+      "GE Profile PDT715SYNFS": "Very close to KitchenAid in score, potentially trading a minor performance edge for better energy efficiency or price."
+    },
+    "risks": [
+      "Potential for higher initial purchase price impacting 'Value for Money' despite high score.",
+      "Bosch-specific reliability or service network concerns if not thoroughly researched.",
+      "Possible over-specification if user's actual needs are less demanding than the criteria weights suggest."
+    ],
+    "sensitivity": "Moderately sensitive. The top four alternatives are very close in weighted score (range of 2 points, all around 39%). Small changes in weights for key criteria like Cleaning Performance or Noise Level could easily change the ranking, especially between the top 2-3 models.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The scoring methodology is clear and the Bosch has a clear, albeit small, lead. However, confidence is tempered by the close scores among the top alternatives, indicating that personal preference on specific attributes could reasonably justify choosing a different model. More detailed data on performance within each criterion would increase confidence."
+    }
+  }
+}
