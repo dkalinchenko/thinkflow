@@ -1,0 +1,405 @@
+{
+  "id": "89ab84a0-786b-4e65-86f1-3cabb697e9fa",
+  "slug": "new-elliptical-machine-comparison",
+  "title": "New Elliptical Machine Comparison",
+  "description": "Compare ellipticals for low-impact cardio",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Stride Length",
+      "weight": 2,
+      "description": "Natural movement, adjustability"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Resistance",
+      "weight": 1.8,
+      "description": "Levels, smoothness, magnetic vs friction"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Build Quality",
+      "weight": 1.7,
+      "description": "Stability, weight capacity, durability"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Features",
+      "weight": 1.5,
+      "description": "Programs, incline, console, connectivity"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Joint Impact",
+      "weight": 1.6,
+      "description": "Low-impact design, smooth motion"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs quality and longevity"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "a3709a38-b95e-4229-aaf1-9ebcfe96bafd",
+      "name": "Bowflex Max Trainer M9",
+      "description": "High-intensity cardio machine combining elliptical and stair climber motions with advanced resistance technology and interactive coaching.",
+      "pros": [
+        "Extremely efficient calorie burn in short workouts",
+        "Smooth and quiet magnetic resistance",
+        "Excellent build quality and stability",
+        "Interactive JRNY coaching with adaptive workouts"
+      ],
+      "cons": [
+        "Very expensive",
+        "Heavy assembly required",
+        "Limited stride adjustment"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1999,
+      "rating": 4.6,
+      "reviewCount": 1870,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "stride_length": "Fixed (hybrid motion)",
+        "resistance_levels": "20 magnetic resistance levels",
+        "weight_capacity": 300,
+        "incline": "No",
+        "programs": "16 workout programs + JRNY app integration"
+      }
+    },
+    {
+      "id": "67656fe8-9b88-483c-90d9-9288ffbaff90",
+      "name": "Sole Fitness E35 Elliptical",
+      "description": "Commercial-grade home elliptical with heavy-duty construction, adjustable stride, and advanced console features for serious training.",
+      "pros": [
+        "Powerful motorized incline for varied workouts",
+        "Heavy 30lb flywheel for smooth motion",
+        "Excellent for tall users with long stride",
+        "Quiet operation suitable for apartments"
+      ],
+      "cons": [
+        "Large footprint requires significant space",
+        "Console interface feels dated",
+        "Assembly is complex and time-consuming"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1699,
+      "rating": 4.5,
+      "reviewCount": 2450,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "stride_length": "20-22 inches (adjustable)",
+        "resistance_levels": "20 levels",
+        "weight_capacity": 400,
+        "incline": "20 levels motorized incline",
+        "programs": "10 preset programs + 2 custom + 2 heart rate"
+      }
+    },
+    {
+      "id": "4159b58e-ae63-4106-abda-7bb1b3cb89b1",
+      "name": "ProForm Carbon EL",
+      "description": "Smart elliptical with iFit compatibility, adjustable stride, and space-saving design featuring Silent Magnetic Resistance technology.",
+      "pros": [
+        "Excellent value with iFit integration",
+        "Space-saving front-drive design",
+        "Very quiet during operation",
+        "Easy assembly compared to competitors"
+      ],
+      "cons": [
+        "iFit subscription needed for full features",
+        "Stride length may be short for tall users",
+        "Plastic components feel less premium"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 999,
+      "rating": 4.3,
+      "reviewCount": 3120,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "stride_length": "18-inch fixed",
+        "resistance_levels": "24 digital resistance levels",
+        "weight_capacity": 325,
+        "incline": "No",
+        "programs": "32 iFit-enabled programs (subscription required)"
+      }
+    },
+    {
+      "id": "3dea0447-7568-46cb-bb39-5cbe4b41e993",
+      "name": "NordicTrack FS10i Freestride Trainer",
+      "description": "Innovative elliptical with variable stride technology that automatically adjusts from 0-32 inches, combined with iFit smart training.",
+      "pros": [
+        "Revolutionary variable stride mimics running, stair climbing, and elliptical",
+        "Automatic adjustments during iFit workouts",
+        "Excellent for full-body engagement",
+        "Smooth and natural motion feel"
+      ],
+      "cons": [
+        "Very high price point",
+        "iFit subscription is essentially required",
+        "Complex machine with more potential maintenance points"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1799,
+      "rating": 4.4,
+      "reviewCount": 1560,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "stride_length": "0-32 inches (auto-adjusting)",
+        "resistance_levels": "26 digital resistance levels",
+        "weight_capacity": 350,
+        "incline": "10% motorized decline to 20% incline",
+        "programs": "iFit interactive coaching with auto-adjust"
+      }
+    }
+  ],
+  "scores": {
+    "a3709a38-b95e-4229-aaf1-9ebcfe96bafd": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The Max Trainer uses a unique 14-inch vertical stride pattern rather than traditional elliptical motion. While this provides intense climbing simulation, it lacks the natural elliptical feel and adjustability of stride length found on dedicated ellipticals."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Features 20 levels of magnetic resistance that transition smoothly between intensities. The resistance system is responsive and quiet, though not as extensive as some premium ellipticals offering 25+ levels."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Solid construction with 350 lb weight capacity and stable footprint. Bowflex generally delivers durable home fitness equipment, though some users report minor plastic components that feel less premium than commercial-grade machines."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional feature set with 12 workout programs, Bluetooth connectivity, JRNY interactive coaching subscription, and comprehensive console metrics. The combination of coaching technology and varied programming stands out in this category."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "While marketed as low-impact, the steep climbing motion creates significant quad and knee strain compared to traditional ellipticals. The vertical stride pattern is more joint-intensive than smooth elliptical gliding motions."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced at a premium for its feature set, but the specialized hybrid design may not suit all users seeking traditional elliptical motion. Better value for those specifically wanting climbing simulation rather than pure elliptical low-impact cardio."
+      }
+    },
+    "67656fe8-9b88-483c-90d9-9288ffbaff90": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The adjustable stride length (18-24 inches) accommodates different user heights and provides a natural, comfortable motion. This commercial-grade adjustability is exceptional for home ellipticals and reduces strain."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Magnetic resistance system offers 20 levels with smooth transitions, though some users report minor noise at higher levels. The system is reliable but not the absolute quietest available."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Heavy-duty steel construction provides outstanding stability with a 400 lb capacity. Commercial-grade components ensure exceptional durability for long-term home use."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Console offers solid programs and metrics, but lacks modern connectivity (Bluetooth/app integration) found in competitors. Incline adjustment is manual rather than powered."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Excellent low-impact design with smooth elliptical motion that minimizes stress on knees, hips, and back. The motion path is exceptionally fluid for joint protection."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Premium pricing places it significantly above budget options, while lacking modern smart features. Durability justifies cost for serious users, but represents poor value for casual exercisers."
+      }
+    },
+    "4159b58e-ae63-4106-abda-7bb1b3cb89b1": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The adjustable stride length (up to 20 inches) offers good customization for different users, promoting a natural movement. However, it may not match the smoothness or range of higher-end commercial models."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Silent Magnetic Resistance provides quiet operation and decent smoothness across its levels. The range and torque may be limited compared to more robust magnetic systems, placing it as average for home use."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "As a budget-friendly, space-saving model, stability and durability are compromised with a lighter frame and lower weight capacity. It may feel less solid during intense workouts compared to premium ellipticals."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "iFit compatibility, console programs, and connectivity are strong selling points for a smart elliptical at this price. The lack of power incline or advanced ergonomic adjustments keeps it from a top score."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Excellent low-impact design with smooth, fluid motion that minimizes stress on knees, hips, and back. The elliptical path is well-engineered to provide effective cardio with minimal joint strain."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Offers good features like iFit and adjustable stride for its price point, making it a reasonable entry-level option. However, trade-offs in build quality and longevity prevent it from being a standout value."
+      }
+    },
+    "3dea0447-7568-46cb-bb39-5cbe4b41e993": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The variable stride technology (0-32 inches) is exceptional and unique, allowing users to simulate walking, jogging, or running with a truly natural feel. This adjustability far exceeds fixed-stride ellipticals and adapts automatically during iFit workouts."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Magnetic resistance is smooth and quiet, with 26 digital levels offering good range. While very good, it may not match the absolute top-end feel of some premium commercial-grade machines, but it's excellent for home use."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Solid for a home machine with a 350 lb capacity, but some users report minor creaking over time and it lacks the overbuilt feel of true commercial units. It's stable during use but not exceptionally heavy-duty."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding feature set with automatic incline/decline, iFit integration (live and on-demand coaching), interactive Google Maps workouts, and a large touchscreen console. The automatic stride adjustment during workouts is a game-changing innovation."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Provides excellent low-impact exercise with smooth motion that's easy on joints. The variable stride allows users to find their most comfortable range, though the very longest strides might feel slightly less natural to some."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At a premium price point (often $2000+), it's expensive, and the mandatory iFit subscription adds significant ongoing cost. While innovative, the total cost of ownership is high compared to many capable ellipticals."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "67656fe8-9b88-483c-90d9-9288ffbaff90",
+      "name": "Sole Fitness E35 Elliptical",
+      "description": "Commercial-grade home elliptical with heavy-duty construction, adjustable stride, and advanced console features for serious training.",
+      "totalScore": 41.2,
+      "maxPossible": 101,
+      "percentage": 41,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 5,
+        "criterion-3": 3,
+        "criterion-4": 5,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Stride Length",
+        "Build Quality",
+        "Joint Impact"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "3dea0447-7568-46cb-bb39-5cbe4b41e993",
+      "name": "NordicTrack FS10i Freestride Trainer",
+      "description": "Innovative elliptical with variable stride technology that automatically adjusts from 0-32 inches, combined with iFit smart training.",
+      "totalScore": 39.2,
+      "maxPossible": 101,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Stride Length",
+        "Features",
+        "Resistance"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "4159b58e-ae63-4106-abda-7bb1b3cb89b1",
+      "name": "ProForm Carbon EL",
+      "description": "Smart elliptical with iFit compatibility, adjustable stride, and space-saving design featuring Silent Magnetic Resistance technology.",
+      "totalScore": 35.3,
+      "maxPossible": 101,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Joint Impact",
+        "Stride Length",
+        "Features"
+      ],
+      "weaknesses": [
+        "Build Quality"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "a3709a38-b95e-4229-aaf1-9ebcfe96bafd",
+      "name": "Bowflex Max Trainer M9",
+      "description": "High-intensity cardio machine combining elliptical and stair climber motions with advanced resistance technology and interactive coaching.",
+      "totalScore": 35.2,
+      "maxPossible": 101,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Features",
+        "Resistance",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Joint Impact"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:44:01.729Z",
+  "metadata": {
+    "seoTitle": "New Elliptical Machine Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Sole Fitness E35 Elliptical (41.0%)",
+    "winnerName": "Sole Fitness E35 Elliptical",
+    "winnerScore": 41.2,
+    "winnerPercentage": 41
+  },
+  "insights": {
+    "recommendation": "I recommend the Sole Fitness E35 Elliptical because it achieved the highest weighted score (41.2 points) by performing well across all criteria, particularly excelling in the highest-weighted categories. It offers the best balance of stride length, build quality, and joint impact protection for low-impact cardio needs.",
+    "decision_drivers": [
+      "Stride Length (weight: 2)",
+      "Resistance (weight: 1.8)",
+      "Build Quality (weight: 1.7)"
+    ],
+    "trade_offs": {
+      "Sole Fitness E35 Elliptical": "Higher cost but superior build quality and joint protection",
+      "NordicTrack FS10i Freestride Trainer": "More features and versatility but potentially lower durability",
+      "ProForm Carbon EL": "Better value for money but compromises on stride length and build quality"
+    },
+    "risks": [
+      "Higher initial investment compared to lower-ranked options",
+      "Potential maintenance costs for premium features",
+      "May have larger footprint than some alternatives"
+    ],
+    "sensitivity": "Moderately sensitive. Small changes in weights for Stride Length or Build Quality could potentially alter the ranking between the top two alternatives, but the Sole E35's consistent performance across criteria provides some stability.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The decision appears sound based on the provided weighted scoring, but confidence is limited to Medium because we lack information about how scores were calculated for each criterion, the scoring scale used, and whether all relevant alternatives were considered."
+    }
+  }
+}
