@@ -1,0 +1,404 @@
+{
+  "id": "71822611-d287-4b49-8716-12f1139654a7",
+  "slug": "new-home-gym-equipment",
+  "title": "New Home Gym Equipment",
+  "description": "Compare weight sets and strength equipment",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Weight Range",
+      "weight": 2,
+      "description": "Min/max weight, adjustment increments"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Build Quality",
+      "weight": 1.9,
+      "description": "Durability, safety, weight capacity"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Space Efficiency",
+      "weight": 1.7,
+      "description": "Footprint, storage, compactness"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Versatility",
+      "weight": 1.6,
+      "description": "Exercise variety, attachments"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Ease of Use",
+      "weight": 1.4,
+      "description": "Weight changes, setup, adjustments"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price per weight range and features"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "ac673fa2-be5a-4d8b-9135-cd09952bb3ef",
+      "name": "Bowflex PR3000 Home Gym",
+      "description": "All-in-one strength training system with over 50 exercises and 210 lbs of resistance using power rods instead of traditional weights.",
+      "pros": [
+        "Compact design for home use",
+        "No weight plates needed - uses resistance rods",
+        "Over 50 different exercises possible",
+        "Smooth cable pulley system"
+      ],
+      "cons": [
+        "Resistance feels different than traditional weights",
+        "Lat pulldown seat can be uncomfortable for some users",
+        "Assembly takes 3-4 hours"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 899,
+      "rating": 4.3,
+      "reviewCount": 2870,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "weight_range": "Up to 210 lbs resistance",
+        "adjustment_type": "Power Rod resistance system with quick-change cables",
+        "dimensions": "90\" H x 38\" W x 83\" D",
+        "material": "Steel frame with vinyl upholstery",
+        "warranty": "7-year frame warranty, 1-year parts warranty"
+      }
+    },
+    {
+      "id": "3999d73f-8159-42e9-87bb-b9eef5b26549",
+      "name": "NordicTrack Fusion CST Home Gym",
+      "description": "Smart connected home gym with 30 lbs of resistance, 200+ digital workouts, and interactive training features.",
+      "pros": [
+        "iFIT compatibility with live trainer workouts",
+        "Space-saving foldable design",
+        "Smooth magnetic resistance system",
+        "Built-in tablet holder and speakers"
+      ],
+      "cons": [
+        "Requires iFIT subscription for full functionality",
+        "30 lbs maximum resistance may be limiting for advanced users",
+        "Higher price point with subscription model"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1299,
+      "rating": 4.1,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "weight_range": "30 lbs resistance (digital adjustment)",
+        "adjustment_type": "Digital resistance control with 25 levels",
+        "dimensions": "72\" H x 56\" W x 84\" D",
+        "material": "Commercial-grade steel with premium padding",
+        "warranty": "10-year frame warranty, 2-year parts, 1-year labor"
+      }
+    },
+    {
+      "id": "93c5fdb3-6d93-446d-a249-36c62aefe625",
+      "name": "Marcy Smith Cage System MWM-990",
+      "description": "Professional-grade multi-functional home gym with 150 lbs weight stack, Smith machine, and cable crossover system.",
+      "pros": [
+        "True weight stack feels like commercial gym equipment",
+        "Smith machine with safety catches for solo training",
+        "High-low pulley system for versatile exercises",
+        "Sturdy construction handles heavy use"
+      ],
+      "cons": [
+        "Very large footprint requires dedicated space",
+        "Assembly is complex and time-consuming",
+        "Weight stack may need upgrading for advanced lifters"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 849,
+      "rating": 4.4,
+      "reviewCount": 2150,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "weight_range": "150 lbs weight stack + Olympic bar compatibility",
+        "adjustment_type": "Weight stack with selector pin, adjustable pulley heights",
+        "dimensions": "83\" H x 72\" W x 80\" D",
+        "material": "2\" x 2\" heavy-duty steel tubing",
+        "warranty": "2-year limited warranty"
+      }
+    },
+    {
+      "id": "57d233cb-fa12-4b97-9ce0-158cee9d8c7b",
+      "name": "Total Gym XLS",
+      "description": "Bodyweight resistance training system with glide board technology, offering over 80 exercises using your own body weight.",
+      "pros": [
+        "Low-impact exercises are joint-friendly",
+        "Folds vertically for compact storage",
+        "No electricity required",
+        "Excellent for full-body workouts and rehabilitation"
+      ],
+      "cons": [
+        "Limited resistance compared to weight-based systems",
+        "Incline adjustments can be awkward to change",
+        "Primarily bodyweight exercises only"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 799,
+      "rating": 4.5,
+      "reviewCount": 4250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "weight_range": "Up to 400 lbs user weight capacity",
+        "adjustment_type": "6 resistance levels via incline adjustment",
+        "dimensions": "90\" L x 19\" W x 43\" H (when in use)",
+        "material": "Steel frame with padded glideboard",
+        "warranty": "Lifetime frame warranty, 6-month parts warranty"
+      }
+    }
+  ],
+  "scores": {
+    "ac673fa2-be5a-4d8b-9135-cd09952bb3ef": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The 210 lb maximum resistance is adequate for most intermediate lifters but limited for advanced strength training. Power rods provide smooth resistance but lack the granular adjustability of plate-loaded systems."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Bowflex equipment is generally well-constructed with durable materials and good safety features. However, power rods can wear over time and may require replacement, unlike traditional weight stacks."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Exceptional space utilization - the compact footprint and integrated design replace multiple machines. No separate weight storage needed, making it ideal for home gyms with limited space."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding exercise variety with over 50 possible exercises covering all major muscle groups. The lat pulldown, leg extension, and bench press stations provide comprehensive training options."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Quick-change resistance system is simpler than loading plates, and cable adjustments are straightforward. Some users may find the initial assembly challenging and certain exercise transitions require practice."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced higher than basic rack/bench/plate combos offering similar weight capacity. The premium pays for space efficiency and versatility, but the 210 lb resistance ceiling limits long-term value for serious strength athletes."
+      }
+    },
+    "3999d73f-8159-42e9-87bb-b9eef5b26549": {
+      "criterion-0": {
+        "value": 2,
+        "explanation": "30 lbs maximum resistance is significantly below typical home gym standards, limiting progression for intermediate/advanced users. The fixed weight range lacks adjustment increments, offering minimal flexibility compared to plate-loaded or selectorized systems."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Decent construction for light-to-moderate use but not designed for heavy lifting. Weight capacity is limited by the 30 lb resistance system, making it unsuitable for serious strength training where durability under heavy loads matters."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Compact footprint compared to full multi-station gyms, with integrated storage for accessories. However, it's still a dedicated piece of equipment requiring permanent floor space, not truly foldable or wall-mountable."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Good exercise variety through 200+ digital workouts and interactive features targeting different muscle groups. Limited by the fixed resistance system which restricts exercise customization compared to free weights or cable machines."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Excellent user experience with digital guidance, automatic adjustments, and minimal setup. No manual weight changes required, making it exceptionally accessible for beginners and those prioritizing convenience."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Poor value when considering weight capacity—high price for only 30 lbs of resistance. Digital features add cost but don't compensate for the fundamental limitation in strength training capability compared to basic weight sets at similar prices."
+      }
+    },
+    "93c5fdb3-6d93-446d-a249-36c62aefe625": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The 150 lb weight stack is adequate for beginners but limited for advanced strength training. Incremental adjustments via selector pin are standard but lack micro-loading options."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Professional-grade steel construction with 2,000 lb capacity provides solid durability and safety. Commercial-grade components ensure longevity, though some users report minor cable wear over time."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Large footprint (approximately 7' x 8') requires significant dedicated space. Integrated design saves floor area compared to separate machines but lacks foldability or compact storage features."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional exercise variety combining Smith machine, cable crossover, lat pulldown, leg developer, and multiple attachment points. Allows comprehensive full-body training in one unit."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Weight changes via selector pin are straightforward but require reaching. Initial assembly is complex (4+ hours). Smith bar track adjustments are smooth but cable height changes can be cumbersome."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Excellent value considering commercial-grade construction and multiple integrated systems. Higher initial cost than basic racks but replaces 4-5 separate machines, offering long-term savings."
+      }
+    },
+    "57d233cb-fa12-4b97-9ce0-158cee9d8c7b": {
+      "criterion-0": {
+        "value": 2,
+        "explanation": "The Total Gym XLS uses bodyweight resistance rather than traditional weight plates, limiting maximum resistance to approximately 60% of user's body weight. This creates significant limitations for advanced strength training compared to traditional weight sets with 500+ lb capacities."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "The glide board system is generally durable with smooth operation, and the frame supports users up to 400 lbs. While not as robust as commercial gym equipment, it offers good home-use durability with proper maintenance."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Outstanding space efficiency - folds vertically to approximately 19\" x 53\" footprint when not in use. Requires minimal floor space compared to traditional multi-station gyms or separate weight benches and racks."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Offers excellent exercise variety with over 80 possible exercises targeting all major muscle groups. Includes attachments for pull-ups, leg presses, and various grips, though some specialized movements require additional accessories."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Exceptionally easy to use - resistance adjustments require only changing the incline angle via a simple pin system. No weight plates to load/unload, making transitions between exercises and users very quick."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced mid-range for home gym equipment. Offers good value for beginners and those prioritizing space/convenience, but limited resistance makes it poor value for advanced lifters needing heavy weight capacity."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "ac673fa2-be5a-4d8b-9135-cd09952bb3ef",
+      "name": "Bowflex PR3000 Home Gym",
+      "description": "All-in-one strength training system with over 50 exercises and 210 lbs of resistance using power rods instead of traditional weights.",
+      "totalScore": 40.2,
+      "maxPossible": 101,
+      "percentage": 40,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 5,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Space Efficiency",
+        "Versatility",
+        "Build Quality"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "57d233cb-fa12-4b97-9ce0-158cee9d8c7b",
+      "name": "Total Gym XLS",
+      "description": "Bodyweight resistance training system with glide board technology, offering over 80 exercises using your own body weight.",
+      "totalScore": 38,
+      "maxPossible": 101,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 2,
+        "criterion-1": 4,
+        "criterion-2": 5,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Space Efficiency",
+        "Ease of Use",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Weight Range"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "93c5fdb3-6d93-446d-a249-36c62aefe625",
+      "name": "Marcy Smith Cage System MWM-990",
+      "description": "Professional-grade multi-functional home gym with 150 lbs weight stack, Smith machine, and cable crossover system.",
+      "totalScore": 35.2,
+      "maxPossible": 101,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Versatility",
+        "Build Quality",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Space Efficiency"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "3999d73f-8159-42e9-87bb-b9eef5b26549",
+      "name": "NordicTrack Fusion CST Home Gym",
+      "description": "Smart connected home gym with 30 lbs of resistance, 200+ digital workouts, and interactive training features.",
+      "totalScore": 32.9,
+      "maxPossible": 101,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 2,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Ease of Use",
+        "Space Efficiency",
+        "Versatility"
+      ],
+      "weaknesses": [
+        "Weight Range",
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:24:40.243Z",
+  "metadata": {
+    "seoTitle": "New Home Gym Equipment - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Bowflex PR3000 Home Gym (40.0%)",
+    "winnerName": "Bowflex PR3000 Home Gym",
+    "winnerScore": 40.2,
+    "winnerPercentage": 40
+  },
+  "insights": {
+    "recommendation": "I recommend the Bowflex PR3000 Home Gym as it achieved the highest weighted score (40.2 points) by performing well across all criteria, particularly excelling in Weight Range and Build Quality. This suggests it offers the best overall balance of features for a home gym setup.",
+    "decision_drivers": [
+      "Weight Range",
+      "Build Quality",
+      "Space Efficiency"
+    ],
+    "trade_offs": {
+      "Bowflex PR3000 Home Gym": "Highest overall performance but likely at a higher price point (lower Value for Money relative to its score).",
+      "Total Gym XLS": "Strong in Space Efficiency and Ease of Use, but may compromise on Weight Range and absolute strength-building capacity compared to the Bowflex.",
+      "Marcy Smith Cage System MWM-990": "Likely offers superior Weight Range and Build Quality (like a traditional rack), but trades off significantly in Space Efficiency and possibly Ease of Use."
+    },
+    "risks": [
+      "The Bowflex's integrated design may have higher long-term maintenance costs or repair complexity compared to simpler systems.",
+      "Its versatility might come with a steeper learning curve, reducing initial ease of use.",
+      "Being the top scorer, it is likely the most expensive, posing a budget risk."
+    ],
+    "sensitivity": "The decision appears moderately sensitive. The top two alternatives are close (40.2 vs. 38 points). Small increases in the weight for 'Value for Money' or 'Ease of Use' could benefit the Total Gym XLS, while increases in 'Weight Range' or 'Build Quality' would solidify the Bowflex's lead.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The scoring model is clear and the top alternative has a meaningful lead, but the absence of raw criterion scores for each alternative limits the ability to fully assess the score differentials and validate the trade-offs. Confidence would be higher with that underlying data."
+    }
+  }
+}
