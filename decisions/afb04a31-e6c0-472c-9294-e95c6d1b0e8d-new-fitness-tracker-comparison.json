@@ -1,0 +1,382 @@
+{
+  "id": "afb04a31-e6c0-472c-9294-e95c6d1b0e8d",
+  "slug": "new-fitness-tracker-comparison",
+  "title": "New Fitness Tracker Comparison",
+  "description": "Compare fitness trackers and smart bands",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Tracking Accuracy",
+      "weight": 2,
+      "description": "Heart rate, steps, sleep, calories"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Battery Life",
+      "weight": 1.8,
+      "description": "Days of use per charge"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Features",
+      "weight": 1.6,
+      "description": "GPS, SpO2, stress, workout modes"
+    },
+    {
+      "id": "criterion-3",
+      "name": "App Quality",
+      "weight": 1.5,
+      "description": "Data insights, goal setting, social features"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Comfort & Design",
+      "weight": 1.4,
+      "description": "Wearability, style, water resistance"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs features and accuracy"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "30323fa2-c3f5-484e-af1f-9b4f81714ddd",
+      "name": "Fitbit Charge 6",
+      "description": "Advanced fitness tracker with Google integration, built-in GPS, and comprehensive health metrics including ECG and stress management.",
+      "pros": [
+        "Excellent Google integration with Maps, Wallet, and YouTube Music",
+        "Accurate heart rate and GPS tracking",
+        "Comprehensive health metrics with 40+ exercise modes",
+        "Bright AMOLED display with always-on option"
+      ],
+      "cons": [
+        "Requires Fitbit Premium subscription for full insights",
+        "Occasional syncing issues with smartphones",
+        "Limited third-party app support compared to smartwatches"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 159,
+      "rating": 4.3,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "battery_life": "Up to 7 days",
+        "sensors": "Optical heart rate, ECG, SpO2, skin temperature, accelerometer, gyroscope",
+        "gps": "Built-in GPS + GLONASS",
+        "water_resistance": "5 ATM (50 meters)",
+        "compatibility": "Android 10+, iOS 15+"
+      }
+    },
+    {
+      "id": "330478cb-96b2-404c-919a-420c1ba39683",
+      "name": "Garmin Vivosmart 5",
+      "description": "Slim fitness tracker with advanced sleep monitoring, Body Battery energy tracking, and all-day stress tracking in a discreet design.",
+      "pros": [
+        "Excellent sleep tracking with detailed insights",
+        "Body Battery energy monitoring is highly accurate",
+        "Very comfortable and slim design for 24/7 wear",
+        "Reliable heart rate monitoring during activities"
+      ],
+      "cons": [
+        "No built-in GPS requires phone for distance tracking",
+        "Small display can be difficult to read in sunlight",
+        "Limited smart notifications compared to competitors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 149,
+      "rating": 4.4,
+      "reviewCount": 8900,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "battery_life": "Up to 7 days",
+        "sensors": "Elevate Gen 4 optical heart rate, Pulse Ox, accelerometer",
+        "gps": "Connected GPS (uses phone)",
+        "water_resistance": "5 ATM (50 meters)",
+        "compatibility": "Android 6.0+, iOS 13+"
+      }
+    },
+    {
+      "id": "07dfe3a4-fe39-4277-92a8-b486d7a7047b",
+      "name": "Amazfit Band 7",
+      "description": "Budget-friendly fitness tracker with 1.47\" AMOLED display, SpO2 monitoring, and 120+ sports modes offering excellent value.",
+      "pros": [
+        "Exceptional battery life for the price",
+        "Bright, crisp AMOLED display with always-on option",
+        "Excellent value with comprehensive fitness tracking",
+        "Lightweight and comfortable for sleep tracking"
+      ],
+      "cons": [
+        "Zepp app can be confusing to navigate",
+        "Heart rate accuracy varies during intense exercise",
+        "Limited third-party app integration"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 49,
+      "rating": 4.2,
+      "reviewCount": 21500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "battery_life": "Up to 18 days (typical use)",
+        "sensors": "BioTracker PPG optical heart rate, SpO2, accelerometer",
+        "gps": "Connected GPS (uses phone)",
+        "water_resistance": "5 ATM (50 meters)",
+        "compatibility": "Android 7.0+, iOS 12+"
+      }
+    },
+    {
+      "id": "2ab4bee2-6dc2-46f3-9b5e-dfe9f443c41d",
+      "name": "Whoop 4.0",
+      "description": "Subscription-based fitness tracker focused on recovery, strain, and sleep optimization with no screen, designed for serious athletes.",
+      "pros": [
+        "Unmatched recovery and strain analysis for athletes",
+        "No screen eliminates distractions and improves battery",
+        "Comfortable 24/7 wear with various band options",
+        "Excellent sleep tracking with detailed stage analysis"
+      ],
+      "cons": [
+        "Requires $30/month subscription for full functionality",
+        "No display means checking phone for all data",
+        "Expensive initial cost plus ongoing subscription"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 239,
+      "rating": 4.1,
+      "reviewCount": 4200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "battery_life": "Up to 5 days (with removable battery pack)",
+        "sensors": "5-LED photoplethysmography (PPG), 3-axis accelerometer, gyroscope, magnetometer, skin temperature",
+        "gps": "Connected GPS (uses phone)",
+        "water_resistance": "10 ATM (100 meters)",
+        "compatibility": "Android 8.0+, iOS 13+"
+      }
+    }
+  ],
+  "scores": {
+    "30323fa2-c3f5-484e-af1f-9b4f81714ddd": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Fitbit's heart rate and sleep tracking are generally reliable, though some users report occasional inaccuracies during high-intensity interval training. Step counting is accurate, but calorie estimates can vary based on individual metabolism factors."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "The advertised 7-day battery life is only achievable with minimal GPS use and screen activity. With regular GPS workouts and notifications enabled, most users need to charge every 3-4 days, which is average for this category."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Exceptional feature set including built-in GPS, ECG, SpO2 monitoring, stress tracking, and 40+ exercise modes. Google integration provides voice assistant and Google Maps/Wallet functionality, making this one of the most comprehensive fitness trackers available."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Fitbit app offers excellent data visualization, detailed sleep analysis, and robust goal setting. However, recent Google integration has introduced some bugs, and the social features are less developed than competitors like Strava."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "The slim profile is comfortable for all-day wear and sleep tracking, but the display is relatively small and difficult to read in bright sunlight. Water resistance is good for swimming, but the band material can cause irritation for some users."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At its premium price point, the Charge 6 faces stiff competition from more affordable alternatives with similar features. The mandatory Fitbit Premium subscription for full data insights significantly increases the total cost of ownership."
+      }
+    },
+    "330478cb-96b2-404c-919a-420c1ba39683": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Heart rate and step tracking are generally reliable for daily use, but sleep monitoring can be inconsistent and calorie estimates lack precision compared to more advanced sensors. It's acceptable for casual fitness tracking but not for rigorous data analysis."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Lasts up to 7 days on a single charge, which is above average for fitness trackers with continuous heart rate monitoring. However, enabling SpO2 or GPS features significantly reduces this duration, placing it below top performers in the category."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Lacks built-in GPS (requires phone connection), has limited workout modes compared to competitors, and SpO2 monitoring is basic. Body Battery and stress tracking are useful but don't compensate for missing core features expected at this price point."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Garmin Connect provides excellent data visualization, meaningful insights, and comprehensive goal setting. Social features are functional but less engaging than dedicated community platforms, making it strong for individual analysis rather than social motivation."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "Exceptionally slim and lightweight design with comfortable silicone band, making it ideal for 24/7 wear including sleep. Discreet appearance suits both casual and formal settings, with reliable water resistance for swimming and daily activities."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Priced similarly to competitors with more advanced features like built-in GPS and better sensors. The premium cost isn't justified given the feature limitations and average tracking accuracy, making it a poor value proposition compared to alternatives."
+      }
+    },
+    "07dfe3a4-fe39-4277-92a8-b486d7a7047b": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Heart rate and step tracking are generally reliable for daily use, but can show inconsistencies during high-intensity workouts or complex movements. Sleep tracking provides basic stages but lacks the precision of medical-grade devices."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Offers up to 18 days of typical use on a single charge, which is impressive for an AMOLED display device. Heavy GPS use reduces this significantly, but overall endurance is above average for the category."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Excellent breadth with 120+ sports modes, SpO2 monitoring, and stress tracking. Lacks built-in GPS (relies on phone GPS), which is a notable limitation for runners wanting standalone tracking."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Zepp app provides comprehensive data presentation and basic goal setting, but insights are somewhat generic. Social features are limited compared to Fitbit or Apple ecosystems, with minimal community engagement tools."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Lightweight and comfortable for 24/7 wear with good water resistance (5 ATM). The 1.47\" AMOLED display is bright and clear, though the plastic build feels less premium than metal competitors."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "Exceptional value proposition offering premium features like AMOLED display and SpO2 monitoring at a budget price point. The combination of features, battery life, and display quality significantly outperforms most competitors in this price range."
+      }
+    },
+    "2ab4bee2-6dc2-46f3-9b5e-dfe9f443c41d": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "Whoop 4.0 excels in physiological tracking with exceptional heart rate accuracy during high-intensity activities and industry-leading sleep stage detection. However, it doesn't track steps by design, focusing instead on strain and recovery metrics."
+      },
+      "criterion-1": {
+        "value": 2,
+        "explanation": "Battery lasts only 4-5 days per charge, which is below average for fitness trackers. The device requires frequent charging, though the battery pack allows charging while wearing."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Strong in recovery metrics, sleep analysis, and strain tracking but lacks built-in GPS (requires phone connection) and has limited workout modes compared to competitors. Includes SpO2 and stress monitoring."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional app with deep data insights, personalized recommendations, and excellent recovery/strain analysis. However, lacks social features and gamification elements found in other platforms."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Extremely lightweight and comfortable for 24/7 wear with various band materials. Screenless design minimizes distractions but limits at-a-glance information. IP68 water resistance suitable for swimming."
+      },
+      "criterion-5": {
+        "value": 1,
+        "explanation": "Requires a $30/month subscription on top of device cost, making it extremely expensive long-term. Only justified for serious athletes who will fully utilize the advanced recovery analytics."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "07dfe3a4-fe39-4277-92a8-b486d7a7047b",
+      "name": "Amazfit Band 7",
+      "description": "Budget-friendly fitness tracker with 1.47\" AMOLED display, SpO2 monitoring, and 120+ sports modes offering excellent value.",
+      "totalScore": 37.2,
+      "maxPossible": 98,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 4,
+        "criterion-3": 3,
+        "criterion-4": 4,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Value for Money",
+        "Battery Life",
+        "Features"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "30323fa2-c3f5-484e-af1f-9b4f81714ddd",
+      "name": "Fitbit Charge 6",
+      "description": "Advanced fitness tracker with Google integration, built-in GPS, and comprehensive health metrics including ECG and stress management.",
+      "totalScore": 34.6,
+      "maxPossible": 98,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Features",
+        "Tracking Accuracy",
+        "App Quality"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "2ab4bee2-6dc2-46f3-9b5e-dfe9f443c41d",
+      "name": "Whoop 4.0",
+      "description": "Subscription-based fitness tracker focused on recovery, strain, and sleep optimization with no screen, designed for serious athletes.",
+      "totalScore": 33,
+      "maxPossible": 98,
+      "percentage": 34,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 2,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 1
+      },
+      "strengths": [
+        "Tracking Accuracy",
+        "App Quality",
+        "Comfort & Design"
+      ],
+      "weaknesses": [
+        "Value for Money",
+        "Battery Life"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "330478cb-96b2-404c-919a-420c1ba39683",
+      "name": "Garmin Vivosmart 5",
+      "description": "Slim fitness tracker with advanced sleep monitoring, Body Battery energy tracking, and all-day stress tracking in a discreet design.",
+      "totalScore": 32.4,
+      "maxPossible": 98,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Comfort & Design",
+        "Battery Life",
+        "App Quality"
+      ],
+      "weaknesses": [
+        "Features",
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:44:17.104Z",
+  "metadata": {
+    "seoTitle": "New Fitness Tracker Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Amazfit Band 7 (38.0%)",
+    "winnerName": "Amazfit Band 7",
+    "winnerScore": 37.2,
+    "winnerPercentage": 38
+  }
+}
