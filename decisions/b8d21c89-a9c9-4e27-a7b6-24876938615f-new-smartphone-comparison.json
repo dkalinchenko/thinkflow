@@ -1,0 +1,411 @@
+{
+  "id": "b8d21c89-a9c9-4e27-a7b6-24876938615f",
+  "slug": "new-smartphone-comparison",
+  "title": "New Smartphone Comparison",
+  "description": "Find the best smartphone for your needs",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Camera Quality",
+      "weight": 2,
+      "description": "Photo and video capabilities"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Performance",
+      "weight": 1.8,
+      "description": "Speed, multitasking, gaming"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Battery Life",
+      "weight": 1.7,
+      "description": "Daily usage between charges"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Display",
+      "weight": 1.5,
+      "description": "Screen quality, size, refresh rate"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs features"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Software & Updates",
+      "weight": 1,
+      "description": "OS experience, update support"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "f9c89b3f-31bb-4716-9c7d-f7670c85985c",
+      "name": "Apple iPhone 15 Pro Max",
+      "description": "Apple's flagship smartphone featuring a titanium design, powerful A17 Pro chip, and advanced camera system with 5x optical zoom.",
+      "pros": [
+        "Excellent camera with 5x optical zoom",
+        "Powerful A17 Pro chip for gaming",
+        "Premium titanium build",
+        "USB-C connectivity"
+      ],
+      "cons": [
+        "Very expensive",
+        "Heavy and large for some users",
+        "Limited customization compared to Android"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1199,
+      "rating": 4.7,
+      "reviewCount": 18500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, 2796x1290",
+        "processor": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": "256GB/512GB/1TB",
+        "camera": "48MP main + 12MP ultra-wide + 12MP 5x telephoto",
+        "battery": "4422 mAh",
+        "5g": "Yes"
+      }
+    },
+    {
+      "id": "7337fbaf-d40d-49ea-857c-153ed07a2716",
+      "name": "Samsung Galaxy S24 Ultra",
+      "description": "Samsung's top-tier Android phone with AI features, S Pen support, and a versatile quad-camera system.",
+      "pros": [
+        "Outstanding display quality",
+        "Versatile camera system with 200MP sensor",
+        "Built-in S Pen for productivity",
+        "Strong AI features"
+      ],
+      "cons": [
+        "Bulky and heavy design",
+        "Very high price point",
+        "Some AI features require subscription"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1299,
+      "rating": 4.6,
+      "reviewCount": 14200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "display": "6.8-inch Dynamic AMOLED 2X, 3120x1440, 120Hz",
+        "processor": "Qualcomm Snapdragon 8 Gen 3",
+        "ram": "12GB",
+        "storage": "256GB/512GB/1TB",
+        "camera": "200MP main + 12MP ultra-wide + 10MP 5x telephoto + 50MP 5x telephoto",
+        "battery": "5000 mAh",
+        "5g": "Yes"
+      }
+    },
+    {
+      "id": "346ac2a5-dc97-44ef-9c1d-3f471932cf94",
+      "name": "Google Pixel 8 Pro",
+      "description": "Google's premium smartphone featuring advanced AI capabilities, excellent computational photography, and 7 years of software updates.",
+      "pros": [
+        "Best-in-class computational photography",
+        "7 years of OS updates",
+        "Excellent AI and software features",
+        "Smooth 120Hz display"
+      ],
+      "cons": [
+        "Tensor G3 chip less powerful than competitors",
+        "Battery life could be better",
+        "Limited availability in some regions"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 999,
+      "rating": 4.5,
+      "reviewCount": 9800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "display": "6.7-inch LTPO OLED, 2992x1344, 120Hz",
+        "processor": "Google Tensor G3",
+        "ram": "12GB",
+        "storage": "128GB/256GB/512GB/1TB",
+        "camera": "50MP main + 48MP ultra-wide + 48MP telephoto",
+        "battery": "5050 mAh",
+        "5g": "Yes"
+      }
+    },
+    {
+      "id": "d4a682b9-b138-4986-aca1-774d41976f18",
+      "name": "OnePlus 12",
+      "description": "Flagship killer with top-tier specs, fast charging, and Hasselblad-tuned cameras at a competitive price.",
+      "pros": [
+        "Excellent value for money",
+        "Very fast 100W charging",
+        "Large, high-quality display",
+        "Good battery life"
+      ],
+      "cons": [
+        "Camera not as good as top competitors",
+        "Software updates slower than Google/Samsung",
+        "No official IP rating in some markets"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 799,
+      "rating": 4.4,
+      "reviewCount": 6500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "display": "6.82-inch LTPO AMOLED, 3168x1440, 120Hz",
+        "processor": "Qualcomm Snapdragon 8 Gen 3",
+        "ram": "12GB/16GB",
+        "storage": "256GB/512GB",
+        "camera": "50MP main + 48MP ultra-wide + 64MP 3x telephoto",
+        "battery": "5400 mAh",
+        "5g": "Yes"
+      }
+    }
+  ],
+  "scores": {
+    "f9c89b3f-31bb-4716-9c7d-f7670c85985c": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The iPhone 15 Pro Max features an exceptional camera system with a 48MP main sensor, improved low-light performance, and a unique 5x tetraprism optical zoom. Computational photography and ProRAW/ProRes capabilities make it one of the best smartphone cameras available, though some Android competitors offer more versatile telephoto ranges."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "The A17 Pro chip delivers outstanding performance with industry-leading CPU/GPU capabilities and hardware-accelerated ray tracing. It handles intensive multitasking, gaming, and professional workflows effortlessly, maintaining a significant performance advantage over most Android flagships."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Battery life is very good for daily usage, typically lasting a full day with moderate to heavy use. However, some Android competitors with larger batteries offer longer endurance, and intensive tasks like gaming or video recording can drain the battery more quickly than some rivals."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "The 6.7-inch Super Retina XDR display offers excellent color accuracy, brightness, and ProMotion adaptive refresh rate. While the screen quality is top-tier, some Android flagships offer higher peak brightness, more advanced LTPO implementations, and slightly better viewing angles."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "At its premium price point, the iPhone 15 Pro Max offers limited value compared to competitors. Many Android flagships provide similar or better features (camera versatility, charging speed, display technology) at significantly lower prices, making this a luxury purchase rather than a value proposition."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "iOS provides a polished, consistent experience with excellent optimization for Apple hardware. Apple's update commitment is unmatched—typically 5-7 years of major iOS updates—far exceeding Android manufacturers' support timelines and ensuring long-term device viability."
+      }
+    },
+    "7337fbaf-d40d-49ea-857c-153ed07a2716": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The quad-camera system with 200MP main sensor, 5x optical zoom, and advanced AI processing delivers exceptional photo and video quality in all conditions. It's among the best smartphone cameras available, with professional-grade versatility."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "With the latest Snapdragon 8 Gen 3 chipset and ample RAM, it handles intensive multitasking, gaming, and AI tasks effortlessly. Performance is top-tier with no noticeable lag or thermal throttling in normal use."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The 5,000mAh battery provides solid all-day battery life for most users, but heavy usage with the high-refresh display and AI features can drain it faster. Charging speed is good but not class-leading."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "The 6.8-inch Dynamic AMOLED 2X display with 120Hz refresh rate offers exceptional brightness, color accuracy, and smoothness. It's one of the best smartphone displays available, ideal for media consumption and S Pen use."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "At its premium price point, it's significantly more expensive than many capable alternatives. While feature-packed, the cost is hard to justify unless you specifically need the S Pen or maximum camera versatility."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Samsung's One UI offers extensive customization but includes some bloatware. While update commitment has improved (7 years of updates promised), actual update rollout can be slower than Google's Pixel devices."
+      }
+    },
+    "346ac2a5-dc97-44ef-9c1d-3f471932cf94": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The Pixel 8 Pro's computational photography is industry-leading, with exceptional low-light performance, realistic colors, and innovative AI editing tools. Video capabilities are strong though not quite at the absolute top tier of competitors."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Google's Tensor G3 chip provides smooth everyday performance and excellent AI processing, but falls behind flagship Snapdragon/Apple chips in sustained gaming and heavy multitasking. Thermal management can be a limitation under prolonged load."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Battery endurance is a known weakness, often requiring a midday top-up for power users. While efficiency improvements exist, it consistently trails competitors in battery life tests and real-world usage scenarios."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "The 6.7-inch LTPO OLED display is excellent with vibrant colors, smooth 120Hz refresh rate, and great brightness. It's not the absolute brightest in direct sunlight compared to some rivals, but overall quality is very high."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "At launch price, it's expensive for its hardware specifications compared to alternatives. The value proposition improves significantly during sales, where it becomes more competitive given its unique software and camera strengths."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "Unmatched in the Android ecosystem with 7 years of OS and security updates, providing exceptional long-term value. The clean Pixel software experience with timely feature drops and AI integrations is a major strength."
+      }
+    },
+    "d4a682b9-b138-4986-aca1-774d41976f18": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The Hasselblad-tuned cameras deliver excellent photo quality with natural color science and good dynamic range, particularly in daylight. However, low-light performance and video stabilization may not match the absolute best flagships like iPhone or Galaxy S series."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "With the latest Snapdragon 8 Gen 3 chipset and ample RAM, the OnePlus 12 offers exceptional speed, seamless multitasking, and top-tier gaming performance. It competes directly with the most expensive flagships in raw processing power."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "The large 5400mAh battery combined with efficient chipset delivers outstanding endurance, easily lasting a full day of heavy use. The 100W fast charging (80W in US) provides incredibly quick top-ups, though wireless charging is slower than some competitors."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "The 6.82-inch LTPO AMOLED screen offers excellent brightness, vibrant colors, and smooth 120Hz refresh rate. While it's among the best displays available, some users may find it too large, and peak brightness in direct sunlight slightly trails Samsung's best panels."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "This is where the OnePlus 12 truly excels, offering flagship-level specs and performance at a significantly lower price than competitors like Samsung Galaxy S24 Ultra or iPhone 15 Pro Max. The feature-to-price ratio is exceptional."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "OxygenOS provides a clean, fast experience but has become more ColorOS-like with recent updates. OnePlus promises 4 years of OS updates and 5 years of security patches, which is decent but falls short of Google and Samsung's 7-year commitments."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "d4a682b9-b138-4986-aca1-774d41976f18",
+      "name": "OnePlus 12",
+      "description": "Flagship killer with top-tier specs, fast charging, and Hasselblad-tuned cameras at a competitive price.",
+      "totalScore": 42,
+      "maxPossible": 95,
+      "percentage": 44,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 5,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Performance",
+        "Battery Life",
+        "Value for Money"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "f9c89b3f-31bb-4716-9c7d-f7670c85985c",
+      "name": "Apple iPhone 15 Pro Max",
+      "description": "Apple's flagship smartphone featuring a titanium design, powerful A17 Pro chip, and advanced camera system with 5x optical zoom.",
+      "totalScore": 39.8,
+      "maxPossible": 95,
+      "percentage": 42,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 2,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Camera Quality",
+        "Performance",
+        "Software & Updates"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "7337fbaf-d40d-49ea-857c-153ed07a2716",
+      "name": "Samsung Galaxy S24 Ultra",
+      "description": "Samsung's top-tier Android phone with AI features, S Pen support, and a versatile quad-camera system.",
+      "totalScore": 39.3,
+      "maxPossible": 95,
+      "percentage": 41,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Camera Quality",
+        "Performance",
+        "Display"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "346ac2a5-dc97-44ef-9c1d-3f471932cf94",
+      "name": "Google Pixel 8 Pro",
+      "description": "Google's premium smartphone featuring advanced AI capabilities, excellent computational photography, and 7 years of software updates.",
+      "totalScore": 34.3,
+      "maxPossible": 95,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Camera Quality",
+        "Software & Updates",
+        "Display"
+      ],
+      "weaknesses": [
+        "Battery Life"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T20:05:16.883Z",
+  "metadata": {
+    "seoTitle": "New Smartphone Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: OnePlus 12 (44.0%)",
+    "winnerName": "OnePlus 12",
+    "winnerScore": 42,
+    "winnerPercentage": 44
+  },
+  "insights": {
+    "recommendation": "I recommend the OnePlus 12 because it offers the best overall value with strong performance across all weighted criteria, particularly excelling in camera quality and battery life which are the highest-weighted factors. It provides premium features at a more competitive price point than the Apple and Samsung alternatives.",
+    "decision_drivers": [
+      "Camera Quality (weight: 2)",
+      "Performance (weight: 1.8)",
+      "Battery Life (weight: 1.7)"
+    ],
+    "trade_offs": {
+      "OnePlus 12": "May have slightly less brand prestige and ecosystem integration compared to Apple and Samsung, though offers better value",
+      "Apple iPhone 15 Pro Max": "Higher cost for similar performance, but offers superior ecosystem integration and software support",
+      "Samsung Galaxy S24 Ultra": "Similar performance to OnePlus at higher price point, but with more established brand and accessory ecosystem"
+    },
+    "risks": [
+      "OnePlus may have less consistent software update support compared to Apple and Google",
+      "Potential quality control issues with less established service network in some regions",
+      "Resale value may be lower than Apple or Samsung devices"
+    ],
+    "sensitivity": "Moderately sensitive. Small changes in Camera Quality or Performance weights could affect rankings, but OnePlus maintains a sufficient lead (2.2 points) that minor weight adjustments likely wouldn't change the top recommendation.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The weighted scoring shows clear differentiation between alternatives, but the analysis lacks specific scoring details for each criterion per alternative. Without seeing the underlying scoring methodology and raw scores, there's uncertainty about how the weighted totals were calculated."
+    }
+  }
+}
