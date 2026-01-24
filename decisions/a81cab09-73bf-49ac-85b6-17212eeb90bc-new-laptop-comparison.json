@@ -1,0 +1,391 @@
+{
+  "id": "a81cab09-73bf-49ac-85b6-17212eeb90bc",
+  "slug": "new-laptop-comparison",
+  "title": "New Laptop Comparison",
+  "description": "Compare laptops to find your perfect machine",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Performance",
+      "weight": 2,
+      "description": "CPU, RAM, and processing power for your tasks"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Display Quality",
+      "weight": 1.5,
+      "description": "Resolution, color accuracy, brightness"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Battery Life",
+      "weight": 1.8,
+      "description": "Hours of real-world usage between charges"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Build Quality",
+      "weight": 1.2,
+      "description": "Materials, durability, premium feel"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to features and performance"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Portability",
+      "weight": 1,
+      "description": "Weight and size for travel"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "03da367c-0d7e-4538-8b69-c1d133ae5daf",
+      "name": "Apple MacBook Air 13-inch (M3 chip, 2024)",
+      "description": "Ultra-thin and light laptop with Apple's M3 chip, offering excellent performance and all-day battery life in a fanless design.",
+      "pros": [
+        "Exceptional battery life",
+        "Silent fanless design",
+        "Bright and color-accurate display",
+        "Premium build quality"
+      ],
+      "cons": [
+        "Limited ports (only 2 Thunderbolt/USB 4)",
+        "8GB RAM may be limiting for some users",
+        "Non-upgradeable storage"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1099,
+      "rating": 4.7,
+      "reviewCount": 2850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "processor": "Apple M3 (8-core CPU, 10-core GPU)",
+        "ram": "8GB Unified Memory",
+        "storage": "256GB SSD",
+        "display": "13.6-inch Liquid Retina (2560x1664), 500 nits",
+        "battery": "Up to 18 hours",
+        "weight": "2.7 pounds (1.24 kg)",
+        "graphics": "Integrated 10-core GPU"
+      }
+    },
+    {
+      "id": "21ca52cf-01bc-47e9-a3ed-9c71e694c15a",
+      "name": "Dell XPS 13 Plus (9320, 13th Gen Intel)",
+      "description": "Premium ultrabook with minimalist design, innovative capacitive function row, and powerful Intel processors for productivity and creative work.",
+      "pros": [
+        "Stunning edge-to-edge keyboard design",
+        "Excellent build quality",
+        "Bright and vibrant display",
+        "Responsive haptic touchpad"
+      ],
+      "cons": [
+        "Limited port selection",
+        "Battery life could be better",
+        "No headphone jack on some configurations"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1299,
+      "rating": 4.3,
+      "reviewCount": 1870,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "processor": "Intel Core i7-1360P (12 cores, 16 threads)",
+        "ram": "16GB LPDDR5",
+        "storage": "512GB NVMe SSD",
+        "display": "13.4-inch FHD+ (1920x1200) InfinityEdge, 500 nits",
+        "battery": "Up to 12 hours",
+        "weight": "2.71 pounds (1.23 kg)",
+        "graphics": "Intel Iris Xe Graphics"
+      }
+    },
+    {
+      "id": "99d9cd2a-1468-4042-a4c3-bdf7dfc71cce",
+      "name": "Lenovo Yoga 9i Gen 9 (14-inch, 2024)",
+      "description": "Versatile 2-in-1 convertible laptop with premium soundbar hinge, OLED display option, and powerful Intel Ultra processors.",
+      "pros": [
+        "Beautiful OLED display with 90Hz refresh",
+        "Excellent 360-degree hinge with integrated soundbar",
+        "Good performance for creative tasks",
+        "Includes digital pen"
+      ],
+      "cons": [
+        "Battery life average with OLED display",
+        "Can get warm under heavy load",
+        "Slightly heavier than some competitors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1399,
+      "rating": 4.5,
+      "reviewCount": 1560,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "processor": "Intel Core Ultra 7 155H (16 cores, 22 threads)",
+        "ram": "16GB LPDDR5x",
+        "storage": "1TB PCIe Gen4 SSD",
+        "display": "14-inch 2.8K (2880x1800) OLED, 90Hz, 400 nits",
+        "battery": "Up to 10 hours",
+        "weight": "3.09 pounds (1.4 kg)",
+        "graphics": "Intel Arc Graphics"
+      }
+    },
+    {
+      "id": "d5e2dfcf-377c-48f9-a39b-d84c41c8221b",
+      "name": "ASUS ROG Zephyrus G14 (2024, GA403)",
+      "description": "Powerful gaming laptop in a compact 14-inch form factor with AMD Ryzen AI processors and NVIDIA RTX graphics for gaming and content creation.",
+      "pros": [
+        "Excellent gaming performance in compact size",
+        "Stunning OLED display with high refresh rate",
+        "Good port selection including USB4",
+        "Anime Matrix LED lid customization"
+      ],
+      "cons": [
+        "Battery life limited during gaming",
+        "Can get loud under heavy load",
+        "Webcam quality is average"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1499,
+      "rating": 4.4,
+      "reviewCount": 2100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "processor": "AMD Ryzen 9 8945HS (8 cores, 16 threads)",
+        "ram": "16GB DDR5",
+        "storage": "1TB PCIe 4.0 SSD",
+        "display": "14-inch 3K (2880x1800) OLED, 120Hz, 100% DCI-P3",
+        "battery": "Up to 8 hours (light use)",
+        "weight": "3.31 pounds (1.5 kg)",
+        "graphics": "NVIDIA GeForce RTX 4060 (8GB GDDR6)"
+      }
+    }
+  ],
+  "scores": {
+    "03da367c-0d7e-4538-8b69-c1d133ae5daf": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The M3 chip delivers exceptional performance for everyday tasks and creative work with excellent energy efficiency. The fanless design maintains quiet operation without thermal throttling under typical loads."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "The Liquid Retina display offers excellent color accuracy and brightness (500 nits), though it lacks the ProMotion technology and extreme brightness of higher-end models. Resolution and pixel density are very good for this class."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Consistently achieves 15+ hours of real-world usage, making it one of the best in its category. The efficiency of Apple Silicon enables exceptional battery life that reliably lasts through a full workday and beyond."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Unibody aluminum construction feels premium and durable with excellent fit and finish. The design is both elegant and robust, though the thin profile requires careful handling to avoid dents."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Premium pricing with limited configuration options and expensive upgrades (RAM, storage). While performance is excellent, the base model's 8GB RAM may limit longevity for some users at this price point."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "At 2.7 pounds and 0.44 inches thick, it's exceptionally lightweight and slim for easy daily carrying. The compact 13-inch form factor fits comfortably in most bags without sacrificing screen real estate."
+      }
+    },
+    "21ca52cf-01bc-47e9-a3ed-9c71e694c15a": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The 13th Gen Intel processors deliver exceptional performance for productivity and creative tasks, with ample RAM configurations available. This is a top-tier ultrabook CPU that handles demanding workloads smoothly."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "The XPS 13 Plus offers stunning OLED or high-resolution IPS options with excellent color accuracy and brightness. Dell's premium displays are consistently among the best in the ultrabook category."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Battery life is a known weakness, typically lasting 6-8 hours in real-world use due to the power-hungry components and high-resolution display. This falls short of competing ultrabooks in its class."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional build with premium materials like machined aluminum and Gorilla Glass. The minimalist design feels solid and durable, representing Dell's flagship craftsmanship."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Significant price premium compared to competitors with similar specifications. You're paying primarily for design and brand prestige rather than raw performance per dollar."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Excellent weight and thin profile make it highly portable, though the reduced port selection (only USB-C) requires adapters for travel. The compact form factor is ideal for mobility."
+      }
+    },
+    "99d9cd2a-1468-4042-a4c3-bdf7dfc71cce": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Intel Ultra processors provide strong performance for productivity and creative tasks, though not quite matching dedicated gaming/workstation laptops. RAM configurations up to 32GB ensure smooth multitasking."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "OLED display option offers exceptional contrast, vibrant colors, and deep blacks. High resolution and excellent color accuracy make this one of the best laptop displays available."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "OLED display significantly reduces battery life compared to LCD options. Real-world usage typically yields 5-7 hours, which is below average for premium laptops in this category."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Premium aluminum construction with unique soundbar hinge design. Excellent fit and finish that feels durable and luxurious, matching or exceeding other premium laptops."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Premium pricing reflects high-end features, but you pay a significant premium for the convertible design and OLED display. Comparable performance can be found at lower prices in traditional clamshell laptops."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "At around 3 pounds and slim profile, it's highly portable for daily carry. The 14-inch size strikes a good balance between screen real estate and travel convenience."
+      }
+    },
+    "d5e2dfcf-377c-48f9-a39b-d84c41c8221b": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The AMD Ryzen AI processors combined with NVIDIA RTX graphics deliver exceptional performance for both gaming and content creation tasks. This configuration handles demanding applications and modern games with ease, placing it at the top tier for its class."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Typically features high refresh rate QHD+ panels with good color accuracy and brightness suitable for gaming and creative work. While excellent, some professional-grade monitors still surpass it in color gamut coverage and calibration out-of-the-box."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Despite efficiency improvements, the powerful components significantly drain battery during intensive use. Real-world usage often yields 4-6 hours, which is below average for general productivity and limits true portability without a charger."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Features premium materials like magnesium alloy with solid construction and minimal flex. The compact design is well-executed, though some competitors offer more luxurious finishes or slightly better keyboard/trackpad experiences."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Priced at a premium for its performance-to-size ratio, making it expensive compared to larger gaming laptops with similar specs. You pay extra for the compact form factor rather than raw component value."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "Outstanding for a gaming laptop—remarkably compact and lightweight at around 3.6 lbs and 0.7 inches thick. This makes it exceptionally easy to carry daily, significantly better than most gaming-focused alternatives."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "03da367c-0d7e-4538-8b69-c1d133ae5daf",
+      "name": "Apple MacBook Air 13-inch (M3 chip, 2024)",
+      "description": "Ultra-thin and light laptop with Apple's M3 chip, offering excellent performance and all-day battery life in a fanless design.",
+      "totalScore": 39,
+      "maxPossible": 90,
+      "percentage": 43,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 5,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Performance",
+        "Battery Life",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "21ca52cf-01bc-47e9-a3ed-9c71e694c15a",
+      "name": "Dell XPS 13 Plus (9320, 13th Gen Intel)",
+      "description": "Premium ultrabook with minimalist design, innovative capacitive function row, and powerful Intel processors for productivity and creative work.",
+      "totalScore": 34.1,
+      "maxPossible": 90,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 2,
+        "criterion-3": 5,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Performance",
+        "Display Quality",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Battery Life",
+        "Value for Money"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "d5e2dfcf-377c-48f9-a39b-d84c41c8221b",
+      "name": "ASUS ROG Zephyrus G14 (2024, GA403)",
+      "description": "Powerful gaming laptop in a compact 14-inch form factor with AMD Ryzen AI processors and NVIDIA RTX graphics for gaming and content creation.",
+      "totalScore": 33.9,
+      "maxPossible": 90,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Performance",
+        "Portability",
+        "Display Quality"
+      ],
+      "weaknesses": [
+        "Battery Life"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "99d9cd2a-1468-4042-a4c3-bdf7dfc71cce",
+      "name": "Lenovo Yoga 9i Gen 9 (14-inch, 2024)",
+      "description": "Versatile 2-in-1 convertible laptop with premium soundbar hinge, OLED display option, and powerful Intel Ultra processors.",
+      "totalScore": 33.6,
+      "maxPossible": 90,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 2,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Display Quality",
+        "Build Quality",
+        "Performance"
+      ],
+      "weaknesses": [
+        "Battery Life"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-24T17:15:58.237Z",
+  "metadata": {
+    "seoTitle": "New Laptop Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Apple MacBook Air 13-inch (M3 chip, 2024) (43.0%)",
+    "winnerName": "Apple MacBook Air 13-inch (M3 chip, 2024)",
+    "winnerScore": 39,
+    "winnerPercentage": 43
+  }
+}
