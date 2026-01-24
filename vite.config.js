@@ -3,20 +3,19 @@ import legacy from '@vitejs/plugin-legacy';
 import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join } from 'path';
 
-// Plugin to copy decisions folder to dist
-function copyDecisionsPlugin() {
+// Plugin to copy decisions and guides folders to dist
+function copyPublicDirsPlugin() {
     return {
-        name: 'copy-decisions',
+        name: 'copy-public-dirs',
         closeBundle() {
+            // Copy decisions folder
             const decisionsDir = './decisions';
             const distDecisionsDir = './dist/decisions';
             
-            // Create dist/decisions directory if it doesn't exist
             if (!existsSync(distDecisionsDir)) {
                 mkdirSync(distDecisionsDir, { recursive: true });
             }
             
-            // Copy all files from decisions to dist/decisions
             if (existsSync(decisionsDir)) {
                 const files = readdirSync(decisionsDir);
                 files.forEach(file => {
@@ -30,6 +29,29 @@ function copyDecisionsPlugin() {
                     }
                 });
                 console.log(`✓ Copied ${files.length} file(s) to dist/decisions`);
+            }
+            
+            // Copy guides folder
+            const guidesDir = './guides';
+            const distGuidesDir = './dist/guides';
+            
+            if (!existsSync(distGuidesDir)) {
+                mkdirSync(distGuidesDir, { recursive: true });
+            }
+            
+            if (existsSync(guidesDir)) {
+                const files = readdirSync(guidesDir);
+                files.forEach(file => {
+                    const srcPath = join(guidesDir, file);
+                    const destPath = join(distGuidesDir, file);
+                    try {
+                        copyFileSync(srcPath, destPath);
+                        console.log(`Copied: ${file} to dist/guides`);
+                    } catch (err) {
+                        console.error(`Failed to copy ${file}:`, err.message);
+                    }
+                });
+                console.log(`✓ Copied ${files.length} file(s) to dist/guides`);
             }
         }
     };
@@ -60,7 +82,7 @@ export default defineConfig({
         legacy({
             targets: ['defaults', 'not IE 11']
         }),
-        copyDecisionsPlugin()
+        copyPublicDirsPlugin()
     ],
     server: {
         port: 3000,
