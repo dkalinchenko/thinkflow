@@ -29,6 +29,9 @@
     
     <title>OptiMind - AI Product Comparison Tool | Compare Laptops, Phones & More</title>
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -95,7 +98,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="/images/icons/puzzle.png">
+    <link rel="icon" type="image/png" href="/images/optimind_logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,17 +122,12 @@
         <div id="app">
             <!-- Header -->
         <header class="app-header">
-            <div class="header-left">
+            <div class="header-left" style="height: 100%; display: flex; align-items: center;">
                 <button class="btn-icon sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar" data-tooltip="Toggle sidebar">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
+                    <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
                 </button>
-            <a href="#" class="logo" onclick="window.app.showWelcomeView(); return false;" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <img src="/images/icons/puzzle.png" alt="OptiMind Logo" width="32" height="32" style="object-fit: contain;" class="logo-icon" />
-                <span class="logo-text">OptiMind</span>
+            <a href="#" class="logo" onclick="window.app.showWelcomeView(); return false;" style="height: 100%; display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                <img src="/images/optimind_logo.png" alt="OptiMind Logo" style="width: 165.258px; height: 90.0703px; object-fit: contain;" class="logo-icon" />
             </a>
             </div>
             <div class="header-center">
@@ -149,19 +147,13 @@
             <aside class="sidebar" id="sidebar">
                 <div class="sidebar-header">
                     <button class="btn btn-primary btn-new-decision" id="newDecisionBtn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>
+                        <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
                         New Decision
                     </button>
                 </div>
                 
                 <div class="sidebar-search">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
+                    <i data-lucide="search" style="width: 16px; height: 16px;"></i>
                     <input type="text" placeholder="Search decisions..." id="decisionSearch">
                 </div>
 
@@ -211,11 +203,7 @@
 
                 <div class="sidebar-footer">
                     <button class="btn btn-ghost btn-sm" id="exportAllBtn">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
+                        <i data-lucide="download" style="width: 14px; height: 14px;"></i>
                         Export All
                     </button>
                 </div>
@@ -228,18 +216,11 @@
                     <div class="welcome-container">
                         <div class="welcome-actions">
                             <button class="btn btn-primary btn-lg" id="welcomeProductBtn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
+                                <i data-lucide="shopping-cart" style="width: 20px; height: 20px;"></i>
                                 Compare Products
                             </button>
                             <button class="btn btn-secondary btn-lg" id="welcomeNewBtn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
+                                <i data-lucide="plus" style="width: 20px; height: 20px;"></i>
                                 Custom Decision
                             </button>
                         </div>
@@ -307,17 +288,12 @@
 
                             <div class="action-buttons-row">
                                 <button class="btn btn-secondary btn-add-item" id="addCriterionBtn">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg>
+                                    <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
                                     Add Manually
                                 </button>
                                 <span class="action-separator">or</span>
                                 <button class="btn btn-ai" id="generateCriteriaBtn">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                    </svg>
+                                    <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
                                     Generate with AI
                                 </button>
                             </div>
@@ -328,11 +304,7 @@
 
                             <details class="guide-box">
                                 <summary class="guide-header">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg>
+                                    <i data-lucide="help-circle" style="width: 16px; height: 16px;"></i>
                                     What are criteria?
                                 </summary>
                                 <div class="guide-content">
@@ -347,10 +319,7 @@
                                 <div></div>
                                 <button class="btn btn-primary" id="toCriteriaNext" disabled>
                                     Continue to Alternatives
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                                 </button>
                             </div>
                         </div>
@@ -367,17 +336,12 @@
 
                             <div class="action-buttons-row">
                                 <button class="btn btn-secondary btn-add-item" id="addAlternativeBtn">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg>
+                                    <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
                                     Add Manually
                                 </button>
                                 <span class="action-separator">or</span>
                                 <button class="btn btn-ai" id="generateAlternativesBtn">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                    </svg>
+                                    <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
                                     Generate with AI
                                 </button>
                             </div>
@@ -388,11 +352,7 @@
 
                             <details class="guide-box">
                                 <summary class="guide-header">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg>
+                                    <i data-lucide="help-circle" style="width: 16px; height: 16px;"></i>
                                     What are alternatives?
                                 </summary>
                                 <div class="guide-content">
@@ -405,18 +365,12 @@
 
                             <div class="step-navigation">
                                 <button class="btn btn-ghost" id="toAlternativesPrev">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
                                     Back to Criteria
                                 </button>
                                 <button class="btn btn-primary" id="toAlternativesNext" disabled>
                                     Continue to Evaluation
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                                 </button>
                             </div>
                         </div>
@@ -430,26 +384,15 @@
                                 </div>
                                 <div class="step-header-actions">
                                     <button class="btn btn-ai" id="aiEvaluateAllBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                        </svg>
+                                        <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
                                         Use AI to evaluate alternatives on the criteria
                                     </button>
                                     <div class="view-toggle">
                                         <button class="view-btn active" data-view="matrix" title="Matrix View">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="3" y="3" width="7" height="7"></rect>
-                                                <rect x="14" y="3" width="7" height="7"></rect>
-                                                <rect x="14" y="14" width="7" height="7"></rect>
-                                                <rect x="3" y="14" width="7" height="7"></rect>
-                                            </svg>
+                                            <i data-lucide="layout-grid" style="width: 16px; height: 16px;"></i>
                                         </button>
                                         <button class="view-btn" data-view="cards" title="Card View">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                                            </svg>
+                                            <i data-lucide="layout" style="width: 16px; height: 16px;"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -457,11 +400,7 @@
 
                             <details class="guide-box">
                                 <summary class="guide-header">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg>
+                                    <i data-lucide="help-circle" style="width: 16px; height: 16px;"></i>
                                     How to evaluate?
                                 </summary>
                                 <div class="guide-content">
@@ -500,18 +439,12 @@
 
                             <div class="step-navigation">
                                 <button class="btn btn-ghost" id="toEvaluationPrev">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
                                     Back to Alternatives
                                 </button>
                                 <button class="btn btn-primary" id="toEvaluationNext">
                                     See Results
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                                 </button>
                             </div>
                         </div>
@@ -525,33 +458,19 @@
                                 </div>
                                 <div class="step-header-actions">
                                     <button class="btn btn-ai" id="getAiInsightsBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                        </svg>
+                                        <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
                                         Get AI Insights
                                     </button>
                                     <button class="btn btn-secondary" id="shareDecisionBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <circle cx="18" cy="5" r="3"></circle>
-                                            <circle cx="6" cy="12" r="3"></circle>
-                                            <circle cx="18" cy="19" r="3"></circle>
-                                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                                        </svg>
+                                        <i data-lucide="share-2" style="width: 16px; height: 16px;"></i>
                                         Share
                                     </button>
                                     <button class="btn btn-secondary" id="exportDecisionBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                            <polyline points="7 10 12 15 17 10"></polyline>
-                                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                                        </svg>
+                                        <i data-lucide="download" style="width: 16px; height: 16px;"></i>
                                         Export
                                     </button>
                                     <button class="btn btn-primary" id="publishDecisionBtn">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M12 19V5M5 12l7-7 7 7"></path>
-                                        </svg>
+                                        <i data-lucide="upload" style="width: 16px; height: 16px;"></i>
                                         Publish
                                     </button>
                                 </div>
@@ -597,9 +516,7 @@
                                     <!-- AI Insights Panel -->
                                     <div class="result-card full-width ai-insights-card" id="aiInsightsCard" style="display: none;">
                                         <h4>
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                            </svg>
+                                            <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
                                             AI Insights
                                         </h4>
                                         <div class="ai-insights-content" id="aiInsightsContent">
@@ -611,17 +528,11 @@
 
                             <div class="step-navigation">
                                 <button class="btn btn-ghost" id="toResultsPrev">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                    <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
                                     Back to Evaluation
                                 </button>
                                 <button class="btn btn-primary" id="newDecisionFromResults">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg>
+                                    <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
                                     Start New Decision
                                 </button>
                             </div>
@@ -850,5 +761,37 @@
     
     <!-- Application Scripts -->
     <script type="module" src="js/app.js?v=9"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        // Initialize Lucide icons after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+                
+                // Reinitialize icons whenever dynamic content is added (with debounce to prevent infinite loops)
+                let iconTimeout;
+                const observer = new MutationObserver((mutations) => {
+                    // Only reinitialize if we detect new i[data-lucide] elements
+                    const hasNewIcons = mutations.some(mutation => 
+                        Array.from(mutation.addedNodes).some(node => 
+                            node.nodeType === 1 && (
+                                node.hasAttribute?.('data-lucide') || 
+                                node.querySelector?.('[data-lucide]')
+                            )
+                        )
+                    );
+                    
+                    if (hasNewIcons) {
+                        clearTimeout(iconTimeout);
+                        iconTimeout = setTimeout(() => {
+                            lucide.createIcons();
+                        }, 100);
+                    }
+                });
+                observer.observe(document.body, { childList: true, subtree: true });
+            }
+        });
+    </script>
 </body>
 </html>

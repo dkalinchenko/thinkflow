@@ -15,16 +15,16 @@
     <meta name="description" content="Expert product comparisons powered by AI analysis and weighted decision matrices. Data-driven guides to help you choose the best option for your needs."/>
     <meta name="keywords" content="product comparison,decision guide,buying guide,product review,best products,comparison guide"/>
     <link rel="canonical" href="https://optimind.space/guides/"/>
-    <link rel="icon" type="image/png" href="/images/icons/puzzle.png"/>
+    <link rel="icon" type="image/png" href="/images/optimind_logo.png"/>
     <link rel="stylesheet" href="/_next/static/css/a919680227c60a63.css"/>
     <style>
         :root { --primary: #275DAD; --text-dark: #5B616A; --bg-light: #FCF7F8; }
         body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 100; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
-        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; }
-        .logo img { width: 32px; height: 32px; }
+        header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 100; height: 72px; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; height: 100%; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem; height: 100%; }
+        .logo img { width: 165.258px !important; height: 90.0703px !important; object-fit: contain !important; }
         .btn-primary { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
         .hero { padding: 7rem 0 3rem; text-align: center; background: white url('/images/hero-white-background.png') center/cover no-repeat; position: relative; }
         .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.85); z-index: 0; }
@@ -62,20 +62,19 @@
             .cta-banner p { font-size: 1rem; }
             .cta-banner .cta-button { padding: 0.875rem 2rem; font-size: 1rem; }
             .logo span { display: none; }
+            header { height: 60px !important; }
             .header-inner .btn-primary { display: none; }
-            .header-inner { padding: 0.5rem 1rem !important; }
-            .logo { padding-top: 0 !important; padding-bottom: 0 !important; }
-            .logo img { width: 24px !important; height: 24px !important; }
+            .header-inner { padding: 0 0.75rem !important; }
+            .logo img { width: 88px !important; height: 48px !important; }
             .guide-card .meta { flex-direction: column; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">
-                <img src="/images/icons/puzzle.png" alt="OptiMind"/>
-                <span>OptiMind</span>
+        <div class="container header-inner" style="height: 100%;">
+            <a href="/" class="logo" style="height: 100%; display: flex; align-items: center;">
+                <img src="/images/optimind_logo.png" alt="OptiMind" style="width: 165.258px; height: 90.0703px; object-fit: contain;"/>
             </a>
             <a href="/app.html" class="btn-primary">Launch App</a>
         </div>
