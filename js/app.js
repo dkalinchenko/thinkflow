@@ -922,7 +922,9 @@ function renderWelcomeProductGrid() {
                     style="padding: 1.5rem; border: 1px solid #CED3DC; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s ease; text-align: center;" 
                     onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">${t.icon}</div>
+                <div class="flex h-[60px] w-[60px] items-center justify-center rounded-lg mx-auto mb-3">
+                    <i data-lucide="${t.lucideIcon}" style="width: 32px; height: 32px; color: #275DAD; stroke-width: 1.5;"></i>
+                </div>
                 <div style="font-weight: 600; color: #5B616A;">${displayName}</div>
             </button>
         `;

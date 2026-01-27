@@ -13,6 +13,7 @@ export const templates = [
         description: 'Compare laptops to find your perfect machine',
         category: 'Electronics',
         icon: '💻',
+        lucideIcon: 'laptop',
         isProductComparison: true,
         productCategory: 'laptop',
         criteria: [
@@ -36,6 +37,7 @@ export const templates = [
         description: 'Find the best smartphone for your needs',
         category: 'Electronics',
         icon: '📱',
+        lucideIcon: 'smartphone',
         isProductComparison: true,
         productCategory: 'smartphone',
         criteria: [
@@ -59,6 +61,7 @@ export const templates = [
         description: 'Compare wireless headphones and earbuds',
         category: 'Electronics',
         icon: '🎧',
+        lucideIcon: 'headphones',
         isProductComparison: true,
         productCategory: 'headphones',
         criteria: [
@@ -82,6 +85,7 @@ export const templates = [
         description: 'Compare mirrorless and DSLR cameras',
         category: 'Electronics',
         icon: '📷',
+        lucideIcon: 'camera',
         isProductComparison: true,
         productCategory: 'camera',
         criteria: [
@@ -105,6 +109,7 @@ export const templates = [
         description: 'Find the right tablet for work or play',
         category: 'Electronics',
         icon: '📲',
+        lucideIcon: 'tablet',
         isProductComparison: true,
         productCategory: 'tablet',
         criteria: [
@@ -128,6 +133,7 @@ export const templates = [
         description: 'Compare smartwatches and fitness trackers',
         category: 'Electronics',
         icon: '⌚',
+        lucideIcon: 'watch',
         isProductComparison: true,
         productCategory: 'smartwatch',
         criteria: [
@@ -155,6 +161,7 @@ export const templates = [
         description: 'Find the perfect fridge for your kitchen',
         category: 'Home Appliances',
         icon: '🧊',
+        lucideIcon: 'refrigerator',
         isProductComparison: true,
         productCategory: 'refrigerator',
         criteria: [
@@ -178,6 +185,7 @@ export const templates = [
         description: 'Compare washers for your laundry needs',
         category: 'Home Appliances',
         icon: '🧺',
+        lucideIcon: 'washing-machine',
         isProductComparison: true,
         productCategory: 'washing machine',
         criteria: [
@@ -201,6 +209,7 @@ export const templates = [
         description: 'Find a reliable and efficient dishwasher',
         category: 'Home Appliances',
         icon: '🍽️',
+        lucideIcon: 'circle-dot',
         isProductComparison: true,
         productCategory: 'dishwasher',
         criteria: [
@@ -224,6 +233,7 @@ export const templates = [
         description: 'Compare vacuums for your cleaning needs',
         category: 'Home Appliances',
         icon: '🧹',
+        lucideIcon: 'wind',
         isProductComparison: true,
         productCategory: 'vacuum cleaner',
         criteria: [
@@ -247,6 +257,7 @@ export const templates = [
         description: 'Find the best air purifier for your space',
         category: 'Home Appliances',
         icon: '💨',
+        lucideIcon: 'air-vent',
         isProductComparison: true,
         productCategory: 'air purifier',
         criteria: [
@@ -270,6 +281,7 @@ export const templates = [
         description: 'Find your perfect coffee brewing system',
         category: 'Home Appliances',
         icon: '☕',
+        lucideIcon: 'coffee',
         isProductComparison: true,
         productCategory: 'coffee maker',
         criteria: [
@@ -297,6 +309,7 @@ export const templates = [
         description: 'Compare treadmills for home fitness',
         category: 'Fitness Equipment',
         icon: '🏃',
+        lucideIcon: 'footprints',
         isProductComparison: true,
         productCategory: 'treadmill',
         criteria: [
@@ -320,6 +333,7 @@ export const templates = [
         description: 'Find the right stationary bike for home',
         category: 'Fitness Equipment',
         icon: '🚴',
+        lucideIcon: 'bike',
         isProductComparison: true,
         productCategory: 'exercise bike',
         criteria: [
@@ -343,6 +357,7 @@ export const templates = [
         description: 'Compare ellipticals for low-impact cardio',
         category: 'Fitness Equipment',
         icon: '⛷️',
+        lucideIcon: 'circle-ellipsis',
         isProductComparison: true,
         productCategory: 'elliptical',
         criteria: [
@@ -366,6 +381,7 @@ export const templates = [
         description: 'Compare rowing machines for full-body workouts',
         category: 'Fitness Equipment',
         icon: '🚣',
+        lucideIcon: 'waves',
         isProductComparison: true,
         productCategory: 'rowing machine',
         criteria: [
@@ -389,6 +405,7 @@ export const templates = [
         description: 'Compare fitness trackers and smart bands',
         category: 'Fitness Equipment',
         icon: '⌚',
+        lucideIcon: 'activity',
         isProductComparison: true,
         productCategory: 'fitness tracker',
         criteria: [
@@ -412,6 +429,7 @@ export const templates = [
         description: 'Find the perfect yoga mat for your practice',
         category: 'Fitness Equipment',
         icon: '🧘',
+        lucideIcon: 'square',
         isProductComparison: true,
         productCategory: 'yoga mat',
         criteria: [
@@ -435,6 +453,7 @@ export const templates = [
         description: 'Compare weight sets and strength equipment',
         category: 'Fitness Equipment',
         icon: '🏋️',
+        lucideIcon: 'dumbbell',
         isProductComparison: true,
         productCategory: 'home gym',
         criteria: [
@@ -462,6 +481,7 @@ export const templates = [
         description: 'Compare action cameras for adventure recording',
         category: 'Electronics',
         icon: '📹',
+        lucideIcon: 'video',
         isProductComparison: true,
         productCategory: 'action camera',
         criteria: [
@@ -485,6 +505,7 @@ export const templates = [
         description: 'Compare mirrorless cameras for photography',
         category: 'Electronics',
         icon: '📸',
+        lucideIcon: 'camera',
         isProductComparison: true,
         productCategory: 'mirrorless camera',
         criteria: [
@@ -508,6 +529,7 @@ export const templates = [
         description: 'Compare camera drones for aerial photography',
         category: 'Electronics',
         icon: '🚁',
+        lucideIcon: 'plane',
         isProductComparison: true,
         productCategory: 'drone camera',
         criteria: [
@@ -531,6 +553,7 @@ export const templates = [
         description: 'Compare gaming consoles for home entertainment',
         category: 'Electronics',
         icon: '🎮',
+        lucideIcon: 'gamepad-2',
         isProductComparison: true,
         productCategory: 'gaming console',
         criteria: [
@@ -554,6 +577,7 @@ export const templates = [
         description: 'Compare gaming headsets for immersive play',
         category: 'Electronics',
         icon: '🎧',
+        lucideIcon: 'headphones',
         isProductComparison: true,
         productCategory: 'gaming headset',
         criteria: [
@@ -577,6 +601,7 @@ export const templates = [
         description: 'Compare gaming laptops for portable performance',
         category: 'Electronics',
         icon: '💻',
+        lucideIcon: 'laptop',
         isProductComparison: true,
         productCategory: 'gaming laptop',
         criteria: [
@@ -601,6 +626,7 @@ export const templates = [
         description: 'Compare gaming monitors for competitive play',
         category: 'Electronics',
         icon: '🖥️',
+        lucideIcon: 'monitor',
         isProductComparison: true,
         productCategory: 'gaming monitor',
         criteria: [
@@ -624,6 +650,7 @@ export const templates = [
         description: 'Compare mechanical keyboards for typing and gaming',
         category: 'Electronics',
         icon: '⌨️',
+        lucideIcon: 'keyboard',
         isProductComparison: true,
         productCategory: 'mechanical keyboard',
         criteria: [
@@ -647,6 +674,7 @@ export const templates = [
         description: 'Compare true wireless earbuds for on-the-go',
         category: 'Electronics',
         icon: '🎧',
+        lucideIcon: 'headphones',
         isProductComparison: true,
         productCategory: 'wireless earbuds',
         criteria: [
@@ -670,6 +698,7 @@ export const templates = [
         description: 'Compare portable speakers for outdoor audio',
         category: 'Electronics',
         icon: '🔊',
+        lucideIcon: 'speaker',
         isProductComparison: true,
         productCategory: 'portable bluetooth speaker',
         criteria: [
@@ -693,6 +722,7 @@ export const templates = [
         description: 'Compare soundbars for home theater audio',
         category: 'Electronics',
         icon: '🔊',
+        lucideIcon: 'speaker',
         isProductComparison: true,
         productCategory: 'soundbar',
         criteria: [
@@ -716,6 +746,7 @@ export const templates = [
         description: 'Compare external storage for backups and data',
         category: 'Electronics',
         icon: '💾',
+        lucideIcon: 'hard-drive',
         isProductComparison: true,
         productCategory: 'external hard drive',
         criteria: [
@@ -739,6 +770,7 @@ export const templates = [
         description: 'Compare portable chargers for mobile devices',
         category: 'Electronics',
         icon: '🔋',
+        lucideIcon: 'battery-charging',
         isProductComparison: true,
         productCategory: 'power bank',
         criteria: [
@@ -762,6 +794,7 @@ export const templates = [
         description: 'Compare WiFi routers for home networking',
         category: 'Electronics',
         icon: '📡',
+        lucideIcon: 'wifi',
         isProductComparison: true,
         productCategory: 'wireless router',
         criteria: [
@@ -785,6 +818,7 @@ export const templates = [
         description: 'Compare mesh networks for whole-home coverage',
         category: 'Electronics',
         icon: '📡',
+        lucideIcon: 'wifi',
         isProductComparison: true,
         productCategory: 'mesh wifi',
         criteria: [
@@ -812,6 +846,7 @@ export const templates = [
         description: 'Compare air fryers for healthier cooking',
         category: 'Home Appliances',
         icon: '🍟',
+        lucideIcon: 'flame',
         isProductComparison: true,
         productCategory: 'air fryer',
         criteria: [
@@ -835,6 +870,7 @@ export const templates = [
         description: 'Compare blenders for smoothies and food prep',
         category: 'Home Appliances',
         icon: '🥤',
+        lucideIcon: 'cup-soda',
         isProductComparison: true,
         productCategory: 'blender',
         criteria: [
@@ -858,6 +894,7 @@ export const templates = [
         description: 'Compare espresso machines for home baristas',
         category: 'Home Appliances',
         icon: '☕',
+        lucideIcon: 'coffee',
         isProductComparison: true,
         productCategory: 'espresso machine',
         criteria: [
@@ -881,6 +918,7 @@ export const templates = [
         description: 'Compare pressure cookers and multi-cookers',
         category: 'Home Appliances',
         icon: '🍲',
+        lucideIcon: 'cooking-pot',
         isProductComparison: true,
         productCategory: 'instant pot',
         criteria: [
@@ -904,6 +942,7 @@ export const templates = [
         description: 'Compare water filtration systems for home',
         category: 'Home Appliances',
         icon: '💧',
+        lucideIcon: 'droplet',
         isProductComparison: true,
         productCategory: 'water filter',
         criteria: [
@@ -927,6 +966,7 @@ export const templates = [
         description: 'Compare humidifiers for indoor air quality',
         category: 'Home Appliances',
         icon: '💨',
+        lucideIcon: 'droplets',
         isProductComparison: true,
         productCategory: 'humidifier',
         criteria: [
@@ -950,6 +990,7 @@ export const templates = [
         description: 'Compare robot vacuums for automated cleaning',
         category: 'Home Appliances',
         icon: '🤖',
+        lucideIcon: 'bot',
         isProductComparison: true,
         productCategory: 'robot vacuum',
         criteria: [
@@ -973,6 +1014,7 @@ export const templates = [
         description: 'Compare cordless stick vacuums for convenience',
         category: 'Home Appliances',
         icon: '🧹',
+        lucideIcon: 'wind',
         isProductComparison: true,
         productCategory: 'cordless vacuum',
         criteria: [
@@ -996,6 +1038,7 @@ export const templates = [
         description: 'Compare printers for home and office use',
         category: 'Electronics',
         icon: '🖨️',
+        lucideIcon: 'printer',
         isProductComparison: true,
         productCategory: 'printer',
         criteria: [
@@ -1019,6 +1062,7 @@ export const templates = [
         description: 'Compare smart thermostats for energy savings',
         category: 'Home Appliances',
         icon: '🌡️',
+        lucideIcon: 'thermometer',
         isProductComparison: true,
         productCategory: 'smart thermostat',
         criteria: [
@@ -1042,6 +1086,7 @@ export const templates = [
         description: 'Compare smart locks for keyless entry',
         category: 'Home Appliances',
         icon: '🔐',
+        lucideIcon: 'lock',
         isProductComparison: true,
         productCategory: 'smart lock',
         criteria: [
@@ -1065,6 +1110,7 @@ export const templates = [
         description: 'Compare smart video doorbells for security',
         category: 'Home Appliances',
         icon: '🚪',
+        lucideIcon: 'doorbell',
         isProductComparison: true,
         productCategory: 'video doorbell',
         criteria: [
@@ -1092,6 +1138,7 @@ export const templates = [
         description: 'Compare adjustable dumbbells for home workouts',
         category: 'Fitness Equipment',
         icon: '🏋️',
+        lucideIcon: 'dumbbell',
         isProductComparison: true,
         productCategory: 'adjustable dumbbell',
         criteria: [
@@ -1115,6 +1162,7 @@ export const templates = [
         description: 'Compare home blood pressure monitors',
         category: 'Health & Wellness',
         icon: '🩺',
+        lucideIcon: 'heart-pulse',
         isProductComparison: true,
         productCategory: 'blood pressure monitor',
         criteria: [
@@ -1138,6 +1186,7 @@ export const templates = [
         description: 'Compare protein supplements for fitness goals',
         category: 'Health & Wellness',
         icon: '💪',
+        lucideIcon: 'package',
         isProductComparison: true,
         productCategory: 'protein powder',
         criteria: [
@@ -1161,6 +1210,7 @@ export const templates = [
         description: 'Compare running shoes for your stride',
         category: 'Fitness Equipment',
         icon: '👟',
+        lucideIcon: 'footprints',
         isProductComparison: true,
         productCategory: 'running shoe',
         criteria: [
@@ -1184,6 +1234,7 @@ export const templates = [
         description: 'Compare adjustable standing desks for ergonomics',
         category: 'Office',
         icon: '🖥️',
+        lucideIcon: 'monitor-up',
         isProductComparison: true,
         productCategory: 'standing desk',
         criteria: [
@@ -1207,6 +1258,7 @@ export const templates = [
         description: 'Compare office chairs for comfort and support',
         category: 'Office',
         icon: '🪑',
+        lucideIcon: 'armchair',
         isProductComparison: true,
         productCategory: 'ergonomic office chair',
         criteria: [
@@ -1230,6 +1282,7 @@ export const templates = [
         description: 'Compare desks for home office setup',
         category: 'Office',
         icon: '🖥️',
+        lucideIcon: 'rectangle-horizontal',
         isProductComparison: true,
         productCategory: 'office desk',
         criteria: [
@@ -1253,6 +1306,7 @@ export const templates = [
         description: 'Compare sewing machines for home projects',
         category: 'Home & Crafts',
         icon: '🧵',
+        lucideIcon: 'scissors',
         isProductComparison: true,
         productCategory: 'sewing machine',
         criteria: [
@@ -1280,6 +1334,7 @@ export const templates = [
         description: 'Compare car seats for infant and child safety',
         category: 'Baby & Kids',
         icon: '👶',
+        lucideIcon: 'baby',
         isProductComparison: true,
         productCategory: 'baby car seat',
         criteria: [
@@ -1303,6 +1358,7 @@ export const templates = [
         description: 'Compare baby monitors for peace of mind',
         category: 'Baby & Kids',
         icon: '👶',
+        lucideIcon: 'baby',
         isProductComparison: true,
         productCategory: 'baby monitor',
         criteria: [
@@ -1326,6 +1382,7 @@ export const templates = [
         description: 'Compare strollers for mobility and convenience',
         category: 'Baby & Kids',
         icon: '🚼',
+        lucideIcon: 'baby',
         isProductComparison: true,
         productCategory: 'baby stroller',
         criteria: [
@@ -1349,6 +1406,7 @@ export const templates = [
         description: 'Compare board games for family fun',
         category: 'Baby & Kids',
         icon: '🎲',
+        lucideIcon: 'dice-5',
         isProductComparison: true,
         productCategory: 'board game',
         criteria: [
@@ -1372,6 +1430,7 @@ export const templates = [
         description: 'Compare automatic feeders for cats and dogs',
         category: 'Pet Supplies',
         icon: '🐾',
+        lucideIcon: 'paw-print',
         isProductComparison: true,
         productCategory: 'automatic pet feeder',
         criteria: [
@@ -1395,6 +1454,7 @@ export const templates = [
         description: 'Compare dog beds for comfort and durability',
         category: 'Pet Supplies',
         icon: '🐕',
+        lucideIcon: 'paw-print',
         isProductComparison: true,
         productCategory: 'dog bed',
         criteria: [
@@ -1418,6 +1478,7 @@ export const templates = [
         description: 'Compare dog food brands for nutrition',
         category: 'Pet Supplies',
         icon: '🐕',
+        lucideIcon: 'paw-print',
         isProductComparison: true,
         productCategory: 'dog food',
         criteria: [
@@ -1445,6 +1506,7 @@ export const templates = [
         description: 'Compare automotive batteries for reliability',
         category: 'Automotive',
         icon: '🔋',
+        lucideIcon: 'battery',
         isProductComparison: true,
         productCategory: 'car battery',
         criteria: [
@@ -1468,6 +1530,7 @@ export const templates = [
         description: 'Compare dashboard cameras for driving safety',
         category: 'Automotive',
         icon: '📹',
+        lucideIcon: 'video',
         isProductComparison: true,
         productCategory: 'car dash cam',
         criteria: [
@@ -1491,6 +1554,7 @@ export const templates = [
         description: 'Compare floor mats for vehicle protection',
         category: 'Automotive',
         icon: '🚗',
+        lucideIcon: 'car',
         isProductComparison: true,
         productCategory: 'car floor mat',
         criteria: [
@@ -1514,6 +1578,7 @@ export const templates = [
         description: 'Compare portable jump starters for emergencies',
         category: 'Automotive',
         icon: '🔋',
+        lucideIcon: 'zap',
         isProductComparison: true,
         productCategory: 'car jump starter',
         criteria: [
@@ -1537,6 +1602,7 @@ export const templates = [
         description: 'Compare phone mounts for safe driving',
         category: 'Automotive',
         icon: '📱',
+        lucideIcon: 'smartphone',
         isProductComparison: true,
         productCategory: 'car phone mount',
         criteria: [
@@ -1560,6 +1626,7 @@ export const templates = [
         description: 'Compare diagnostic scanners for car troubleshooting',
         category: 'Automotive',
         icon: '🔧',
+        lucideIcon: 'wrench',
         isProductComparison: true,
         productCategory: 'obd-ii scanner',
         criteria: [
@@ -1583,6 +1650,7 @@ export const templates = [
         description: 'Compare portable air compressors for tires',
         category: 'Automotive',
         icon: '🚗',
+        lucideIcon: 'gauge',
         isProductComparison: true,
         productCategory: 'portable tire inflator',
         criteria: [
@@ -1606,6 +1674,7 @@ export const templates = [
         description: 'Compare automatic litter boxes for convenience',
         category: 'Pet Supplies',
         icon: '🐈',
+        lucideIcon: 'paw-print',
         isProductComparison: true,
         productCategory: 'cat litter box',
         criteria: [
@@ -1633,6 +1702,7 @@ export const templates = [
         description: 'Compare electric toothbrushes for oral health',
         category: 'Personal Care',
         icon: '🪥',
+        lucideIcon: 'scan-line',
         isProductComparison: true,
         productCategory: 'electric toothbrush',
         criteria: [
@@ -1656,6 +1726,7 @@ export const templates = [
         description: 'Compare electric razors for men\'s grooming',
         category: 'Personal Care',
         icon: '🪒',
+        lucideIcon: 'scissors',
         isProductComparison: true,
         productCategory: 'electric shaver',
         criteria: [
@@ -1679,6 +1750,7 @@ export const templates = [
         description: 'Compare hair dryers for styling and speed',
         category: 'Personal Care',
         icon: '💨',
+        lucideIcon: 'wind',
         isProductComparison: true,
         productCategory: 'hair dryer',
         criteria: [
@@ -1702,6 +1774,7 @@ export const templates = [
         description: 'Compare flat irons for sleek styling',
         category: 'Personal Care',
         icon: '💇',
+        lucideIcon: 'minus',
         isProductComparison: true,
         productCategory: 'hair straightener',
         criteria: [
@@ -1725,6 +1798,7 @@ export const templates = [
         description: 'Compare curling irons for waves and curls',
         category: 'Personal Care',
         icon: '💇',
+        lucideIcon: 'waves',
         isProductComparison: true,
         productCategory: 'curling iron',
         criteria: [
@@ -1752,6 +1826,7 @@ export const templates = [
         description: 'Compare camping tents for outdoor adventures',
         category: 'Outdoor & Camping',
         icon: '⛺',
+        lucideIcon: 'tent-tree',
         isProductComparison: true,
         productCategory: 'tent',
         criteria: [
@@ -1776,6 +1851,7 @@ export const templates = [
         description: 'Compare grills for outdoor cooking',
         category: 'Outdoor & Camping',
         icon: '🔥',
+        lucideIcon: 'flame',
         isProductComparison: true,
         productCategory: 'grill',
         criteria: [
@@ -1799,6 +1875,7 @@ export const templates = [
         description: 'Compare mattresses for sleep quality',
         category: 'Furniture & Home',
         icon: '🛏️',
+        lucideIcon: 'bed',
         isProductComparison: true,
         productCategory: 'mattress',
         criteria: [
@@ -1823,6 +1900,7 @@ export const templates = [
         description: 'Compare patio furniture sets for outdoor living',
         category: 'Furniture & Home',
         icon: '🪑',
+        lucideIcon: 'armchair',
         isProductComparison: true,
         productCategory: 'outdoor patio furniture',
         criteria: [
@@ -1847,6 +1925,7 @@ export const templates = [
         description: 'Compare portable power stations for emergencies',
         category: 'Power & Tools',
         icon: '🔋',
+        lucideIcon: 'battery-charging',
         isProductComparison: true,
         productCategory: 'backup power station',
         criteria: [
@@ -1870,6 +1949,7 @@ export const templates = [
         description: 'Compare generators for backup power',
         category: 'Power & Tools',
         icon: '⚡',
+        lucideIcon: 'zap',
         isProductComparison: true,
         productCategory: 'generator',
         criteria: [
@@ -1894,6 +1974,7 @@ export const templates = [
         description: 'Compare cordless drills for DIY and projects',
         category: 'Power & Tools',
         icon: '🔧',
+        lucideIcon: 'drill',
         isProductComparison: true,
         productCategory: 'cordless drill',
         criteria: [
@@ -1917,6 +1998,7 @@ export const templates = [
         description: 'Compare streaming devices for TV entertainment',
         category: 'Electronics',
         icon: '📺',
+        lucideIcon: 'tv',
         isProductComparison: true,
         productCategory: 'streaming media player',
         criteria: [
@@ -1940,6 +2022,7 @@ export const templates = [
         description: 'Compare USB microphones for podcasting and streaming',
         category: 'Electronics',
         icon: '🎙️',
+        lucideIcon: 'mic',
         isProductComparison: true,
         productCategory: 'microphone',
         criteria: [
@@ -1963,6 +2046,7 @@ export const templates = [
         description: 'Compare digital pianos for learning and performance',
         category: 'Musical Instruments',
         icon: '🎹',
+        lucideIcon: 'piano',
         isProductComparison: true,
         productCategory: 'digital piano',
         criteria: [
@@ -1987,6 +2071,7 @@ export const templates = [
         description: 'Compare security camera systems for home protection',
         category: 'Home Security',
         icon: '📹',
+        lucideIcon: 'video',
         isProductComparison: true,
         productCategory: 'home security camera',
         criteria: [
@@ -2011,6 +2096,7 @@ export const templates = [
         description: 'Compare smart scales for health tracking',
         category: 'Health & Wellness',
         icon: '⚖️',
+        lucideIcon: 'weight',
         isProductComparison: true,
         productCategory: 'smart scale',
         criteria: [
@@ -2034,6 +2120,7 @@ export const templates = [
         description: 'Compare smart TVs for home entertainment',
         category: 'Electronics',
         icon: '📺',
+        lucideIcon: 'tv',
         isProductComparison: true,
         productCategory: 'smart tv',
         criteria: [
