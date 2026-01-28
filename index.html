@@ -1,4 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><!-- Cache bust: 2026-01-28-v2 --><!-- Google tag (gtag.js) -->
+<!DOCTYPE html><html lang="en"><head><!-- Cache bust: 2026-01-28-v3 -->
+<script>
+  // Auto-reload once if cached version is detected
+  (function() {
+    var currentVersion = '2026-01-28-v3';
+    var storedVersion = localStorage.getItem('pageVersion');
+    if (storedVersion && storedVersion !== currentVersion) {
+      localStorage.setItem('pageVersion', currentVersion);
+      window.location.reload(true);
+    } else if (!storedVersion) {
+      localStorage.setItem('pageVersion', currentVersion);
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPC2C97LL4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
