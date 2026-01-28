@@ -1,0 +1,384 @@
+{
+  "id": "d6f5d9d0-78bc-479f-b536-af46e5e5a228",
+  "slug": "new-yoga-mat-comparison",
+  "title": "New Yoga Mat Comparison",
+  "description": "Find the perfect yoga mat for your practice",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Grip & Traction",
+      "weight": 2,
+      "description": "Slip resistance, wet and dry performance"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Cushioning",
+      "weight": 1.8,
+      "description": "Thickness, joint protection, comfort"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Material Quality",
+      "weight": 1.7,
+      "description": "Durability, eco-friendly, non-toxic"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Size & Portability",
+      "weight": 1.4,
+      "description": "Dimensions, weight, easy to carry"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Maintenance",
+      "weight": 1.3,
+      "description": "Easy to clean, odor resistance"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs durability and quality"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "1873db0e-e26d-4e45-a99c-326c37f4b51a",
+      "name": "Manduka PRO Yoga Mat",
+      "description": "Premium 6mm thick yoga mat made from eco-friendly PVC-free material, known for its durability and excellent grip.",
+      "pros": [
+        "Extremely durable and long-lasting",
+        "Excellent grip even when wet",
+        "Lifetime warranty",
+        "Provides great cushioning for joints"
+      ],
+      "cons": [
+        "Heavier than most mats",
+        "Requires breaking in period",
+        "Premium price point"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 120,
+      "rating": 4.7,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "thickness": "6mm",
+        "material": "PVC-free, eco-friendly polyurethane top layer",
+        "dimensions": "71\" x 26\"",
+        "weight": "7.5 lbs",
+        "texture": "Closed-cell, non-slip surface with micro-texture"
+      }
+    },
+    {
+      "id": "fbed1f3a-bb0f-49b7-8a6f-19b46830c306",
+      "name": "Liforme Yoga Mat with AlignForMe System",
+      "description": "Innovative yoga mat featuring alignment markers to help perfect poses, made from eco-friendly natural rubber.",
+      "pros": [
+        "Alignment system helps with pose accuracy",
+        "Exceptional grip in all conditions",
+        "Eco-friendly materials",
+        "Extra length and width"
+      ],
+      "cons": [
+        "Most expensive option",
+        "Heavier than average",
+        "Requires careful cleaning"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 140,
+      "rating": 4.8,
+      "reviewCount": 6200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "thickness": "4.2mm",
+        "material": "Biodegradable natural rubber base, polyurethane top layer",
+        "dimensions": "72.8\" x 26.8\"",
+        "weight": "5.5 lbs",
+        "texture": "GripForMe surface with alignment markers"
+      }
+    },
+    {
+      "id": "bb5de515-9d21-4474-87e9-e95da2955009",
+      "name": "Gaiam Premium Print Yoga Mat",
+      "description": "Popular budget-friendly yoga mat with vibrant designs, offering good cushioning and slip resistance.",
+      "pros": [
+        "Excellent value for money",
+        "Wide variety of designs available",
+        "Good cushioning for beginners",
+        "Easy to clean and maintain"
+      ],
+      "cons": [
+        "May wear out faster than premium mats",
+        "Can be slippery when sweaty",
+        "PVC material not eco-friendly"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 35,
+      "rating": 4.5,
+      "reviewCount": 45000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "thickness": "6mm",
+        "material": "PVC",
+        "dimensions": "68\" x 24\"",
+        "weight": "4 lbs",
+        "texture": "Textured non-slip surface"
+      }
+    },
+    {
+      "id": "6232eac1-7500-4b0a-b42f-933833c96c57",
+      "name": "JadeYoga Harmony Mat",
+      "description": "Eco-friendly yoga mat made from natural rubber with open-cell construction for superior grip and traction.",
+      "pros": [
+        "Excellent grip even during hot yoga",
+        "Eco-friendly and biodegradable",
+        "Plants a tree for every mat sold",
+        "Good cushioning without being too soft"
+      ],
+      "cons": [
+        "Not suitable for those with latex allergies",
+        "Requires airing out after use",
+        "Can absorb moisture and odors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 85,
+      "rating": 4.6,
+      "reviewCount": 9200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "thickness": "5mm",
+        "material": "Natural rubber (sustainably harvested)",
+        "dimensions": "68\" x 24\"",
+        "weight": "5 lbs",
+        "texture": "Open-cell textured surface"
+      }
+    }
+  ],
+  "scores": {
+    "1873db0e-e26d-4e45-a99c-326c37f4b51a": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The Manduka PRO offers excellent dry grip that improves with use, but initial performance can be slippery until broken in. Wet grip is above average but not the absolute best on the market."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "The 6mm thickness provides exceptional joint protection and comfort for all yoga styles. This is one of the most cushioned premium mats available, ideal for sensitive joints and longer practices."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Made from eco-friendly PVC-free material with outstanding durability that lasts for years. The non-toxic construction and lifetime warranty demonstrate exceptional material quality."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "At 6mm thick and weighing approximately 7.5 lbs, this mat is heavy and bulky to transport. While the standard dimensions are adequate, portability is a significant limitation for those who travel to classes."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Easy to clean with mild soap and water, but the closed-cell surface can develop odor if not properly dried. Requires more careful maintenance than some simpler mats."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "High initial price is justified by exceptional durability and lifetime warranty, making it cost-effective long-term. However, the premium price may be prohibitive for casual practitioners."
+      }
+    },
+    "fbed1f3a-bb0f-49b7-8a6f-19b46830c306": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The AlignForMe system's textured surface and natural rubber base provide exceptional slip resistance in both wet and dry conditions, outperforming most standard mats."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "At 4.2mm thickness, it offers adequate joint protection for most practices but lacks the plush cushioning of thicker mats, which may be insufficient for sensitive joints."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Made from biodegradable natural rubber with non-toxic materials, it excels in eco-friendliness and durability, though natural rubber may degrade faster with sun exposure."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Weighing approximately 2.5kg and measuring 185cm x 68cm, it's heavier and bulkier than many travel mats, making it less convenient for frequent transport."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Easy to clean with mild soap and water, and the natural rubber resists odor well, but requires thorough drying to prevent moisture retention."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At a premium price point, it offers excellent features for alignment and eco-materials, but the cost is high relative to durability given natural rubber's faster wear compared to synthetic alternatives."
+      }
+    },
+    "bb5de515-9d21-4474-87e9-e95da2955009": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "Provides decent slip resistance for basic practices, but performance can degrade with sweat or vigorous flows. Not designed for hot yoga or high-intensity sessions where superior grip is essential."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Offers good cushioning for most users with adequate thickness for joint protection during standard poses. Comfort is above average for the price point, though not as plush as premium mats."
+      },
+      "criterion-2": {
+        "value": 2,
+        "explanation": "Made from standard PVC or TPE materials with limited durability over time; may show wear, flaking, or compression. Not particularly eco-friendly or non-toxic compared to natural rubber or cork alternatives."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Standard dimensions suitable for most practices, lightweight and easy to roll/carry. Balances usability with convenience well, though not ultra-compact for frequent travel."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Easy to wipe clean with mild soap, but may retain odors if not dried thoroughly. Material can stain over time and requires regular care to maintain appearance."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Excellent value for casual or beginner yogis seeking affordability and visual appeal. However, lower durability means it may need replacement sooner than premium mats, affecting long-term value."
+      }
+    },
+    "6232eac1-7500-4b0a-b42f-933833c96c57": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "Natural rubber open-cell construction provides exceptional grip in both wet and dry conditions, with superior traction that prevents slipping even during intense hot yoga sessions."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Standard 5mm thickness offers adequate joint protection for most practices, but lacks the plush cushioning of thicker mats and may feel firm for sensitive joints during longer holds."
+      },
+      "criterion-2": {
+        "value": 5,
+        "explanation": "Made from sustainably harvested natural rubber with no PVC or synthetic materials, offering excellent durability while being fully biodegradable and non-toxic."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Standard 68\" x 24\" dimensions work for most users, but the natural rubber material is heavier than synthetic alternatives and can be cumbersome to carry regularly."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Open-cell construction absorbs moisture and sweat, requiring more frequent cleaning and air drying to prevent odor buildup compared to closed-cell mats."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Premium price reflects exceptional eco-credentials and grip performance, though maintenance requirements and weight may limit value for casual users seeking convenience."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "1873db0e-e26d-4e45-a99c-326c37f4b51a",
+      "name": "Manduka PRO Yoga Mat",
+      "description": "Premium 6mm thick yoga mat made from eco-friendly PVC-free material, known for its durability and excellent grip.",
+      "totalScore": 38.2,
+      "maxPossible": 97,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 5,
+        "criterion-3": 2,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Cushioning",
+        "Material Quality",
+        "Grip & Traction"
+      ],
+      "weaknesses": [
+        "Size & Portability"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "6232eac1-7500-4b0a-b42f-933833c96c57",
+      "name": "JadeYoga Harmony Mat",
+      "description": "Eco-friendly yoga mat made from natural rubber with open-cell construction for superior grip and traction.",
+      "totalScore": 35.3,
+      "maxPossible": 97,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 2,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Grip & Traction",
+        "Material Quality",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Size & Portability",
+        "Maintenance"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "fbed1f3a-bb0f-49b7-8a6f-19b46830c306",
+      "name": "Liforme Yoga Mat with AlignForMe System",
+      "description": "Innovative yoga mat featuring alignment markers to help perfect poses, made from eco-friendly natural rubber.",
+      "totalScore": 34.9,
+      "maxPossible": 97,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 3,
+        "criterion-2": 5,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Grip & Traction",
+        "Material Quality",
+        "Maintenance"
+      ],
+      "weaknesses": [
+        "Size & Portability",
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "bb5de515-9d21-4474-87e9-e95da2955009",
+      "name": "Gaiam Premium Print Yoga Mat",
+      "description": "Popular budget-friendly yoga mat with vibrant designs, offering good cushioning and slip resistance.",
+      "totalScore": 32.1,
+      "maxPossible": 97,
+      "percentage": 33,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 4,
+        "criterion-2": 2,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Cushioning",
+        "Size & Portability",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Material Quality"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-28T17:02:36.107Z",
+  "metadata": {
+    "seoTitle": "New Yoga Mat Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Manduka PRO Yoga Mat (39.0%)",
+    "winnerName": "Manduka PRO Yoga Mat",
+    "winnerScore": 38.2,
+    "winnerPercentage": 39
+  }
+}
