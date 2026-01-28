@@ -1110,7 +1110,7 @@ export const templates = [
         description: 'Compare smart video doorbells for security',
         category: 'Home Appliances',
         icon: '🚪',
-        lucideIcon: 'doorbell',
+        lucideIcon: 'bell-electric',
         isProductComparison: true,
         productCategory: 'video doorbell',
         criteria: [
