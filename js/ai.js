@@ -84,6 +84,11 @@ class AIService {
         // Check cache first
         const cacheKey = await hashString(prompt + this.provider);
         const cached = await AICacheDB.get(cacheKey);
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ai.js:86',message:'Cache check',data:{cacheKeyPrefix:cacheKey.substring(0,20),hasCached:!!cached,skipCache:!!options.skipCache,willUseCache:!!(cached&&!options.skipCache)},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-C'})}).catch(()=>{});
+        // #endregion
+        
         if (cached && !options.skipCache) {
             return cached;
         }
@@ -449,11 +454,28 @@ export const AI = {
      * Generate alternative suggestions
      */
     async suggestAlternatives(decision, count = 5) {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ai.js:451',message:'suggestAlternatives entry',data:{alternativesCount:decision?.alternatives?.length||0,alternativesNames:decision?.alternatives?.map(a=>a.name)||[],decisionId:decision?.id},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-A'})}).catch(()=>{});
+        // #endregion
+        
         const prompt = AIPrompts.generateAlternatives(decision, count);
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ai.js:454',message:'Prompt generated',data:{promptLength:prompt.length,hasExistingSection:prompt.includes('EXISTING ALTERNATIVES'),promptSnippet:prompt.substring(prompt.indexOf('EXISTING')-50,prompt.indexOf('EXISTING')+200)||'no existing'},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-E'})}).catch(()=>{});
+        // #endregion
         
         // Skip cache if there are existing alternatives to ensure fresh suggestions
         const skipCache = (decision?.alternatives?.length || 0) > 0;
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ai.js:456',message:'Before aiService.call',data:{skipCache:skipCache,alternativesLength:decision?.alternatives?.length||0},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-B'})}).catch(()=>{});
+        // #endregion
+        
         const response = await aiService.call(prompt, { skipCache });
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ai.js:457',message:'After aiService.call',data:{responseLength:response?.length||0,responseSnippet:response?.substring(0,150)||''},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-E'})}).catch(()=>{});
+        // #endregion
         
         return aiService.parseJSON(response);
     },

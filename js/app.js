@@ -2083,12 +2083,21 @@ async function acceptAISuggestion(index) {
         });
         renderCriteria();
     } else {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:2085',message:'Before addAlternative',data:{suggestionName:suggestion.name,currentAltsCount:StateManager.getState().currentDecision?.alternatives?.length||0},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-D'})}).catch(()=>{});
+        // #endregion
+        
         await StateManager.addAlternative({
             name: suggestion.name,
             description: suggestion.description,
             pros: suggestion.pros,
             cons: suggestion.cons
         });
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/9fc22cc4-2263-49d7-9ab1-a47f8deed9c6',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:2091',message:'After addAlternative',data:{currentAltsCount:StateManager.getState().currentDecision?.alternatives?.length||0,currentAltsNames:StateManager.getState().currentDecision?.alternatives?.map(a=>a.name)||[]},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1-D'})}).catch(()=>{});
+        // #endregion
+        
         renderAlternatives();
     }
     
