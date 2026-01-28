@@ -1998,6 +1998,7 @@ async function generateAlternatives() {
         return;
     }
     
+    // Get fresh state to ensure we have the latest alternatives
     const state = StateManager.getState();
     const decision = state.currentDecision;
     
@@ -2016,7 +2017,11 @@ async function generateAlternatives() {
     currentAIContext.type = 'alternatives';
     
     try {
-        const suggestions = await AI.suggestAlternatives(decision);
+        // Get fresh state again right before AI call to ensure latest alternatives
+        const freshState = StateManager.getState();
+        const freshDecision = freshState.currentDecision;
+        
+        const suggestions = await AI.suggestAlternatives(freshDecision);
         currentAIContext.suggestions = suggestions;
         
         // Hide loading modal and show results

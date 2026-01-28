@@ -299,17 +299,21 @@ Return ONLY a JSON array with no additional text: [{"name": "...", "description"
      * Generate alternatives for a decision
      */
     generateAlternatives(decision, count = 5) {
+        const existingAlternatives = decision.alternatives?.length 
+            ? `\n\nEXISTING ALTERNATIVES (DO NOT SUGGEST THESE AGAIN):\n${decision.alternatives.map((a, i) => `${i + 1}. ${a.name}${a.description ? ` - ${a.description}` : ''}`).join('\n')}\n\nYour ${count} NEW suggestions MUST be completely different from the existing alternatives listed above.`
+            : '';
+        
         return `You are a decision-making advisor. Based on this decision:
 
 Title: ${decision.title}
 Description: ${decision.description || 'No description provided'}
-Evaluation Criteria: ${decision.criteria?.map(c => `${c.name} (weight: ${c.weight})`).join(', ') || 'Not yet defined'}
+Evaluation Criteria: ${decision.criteria?.map(c => `${c.name} (weight: ${c.weight})`).join(', ') || 'Not yet defined'}${existingAlternatives}
 
-Suggest ${count} viable alternatives/options that:
+Suggest ${count} NEW viable alternatives/options that:
 1. Are realistic and feasible
 2. Provide genuine variety (different trade-offs)
 3. Can be evaluated against the stated criteria
-${decision.alternatives?.length ? `4. Are different from existing alternatives: ${decision.alternatives.map(a => a.name).join(', ')}` : ''}
+4. ${decision.alternatives?.length ? `Are COMPLETELY DIFFERENT from the ${decision.alternatives.length} existing alternatives listed above` : 'Cover a diverse range of options'}
 
 For each alternative, provide:
 - name: Clear, specific name
@@ -446,7 +450,11 @@ export const AI = {
      */
     async suggestAlternatives(decision, count = 5) {
         const prompt = AIPrompts.generateAlternatives(decision, count);
-        const response = await aiService.call(prompt);
+        
+        // Skip cache if there are existing alternatives to ensure fresh suggestions
+        const skipCache = (decision?.alternatives?.length || 0) > 0;
+        const response = await aiService.call(prompt, { skipCache });
+        
         return aiService.parseJSON(response);
     },
     
