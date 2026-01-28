@@ -1,0 +1,387 @@
+{
+  "id": "7ad7349a-7583-4301-9242-0722d6963dd8",
+  "slug": "new-power-bank-comparison",
+  "title": "New Power Bank Comparison",
+  "description": "Compare portable chargers for mobile devices",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Capacity",
+      "weight": 2,
+      "description": "mAh rating, device charges per bank"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Charging Speed",
+      "weight": 1.8,
+      "description": "Fast charging, PD, QC support"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Port Selection",
+      "weight": 1.6,
+      "description": "USB-C, USB-A, wireless charging"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Portability",
+      "weight": 1.5,
+      "description": "Size, weight, pocketability"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Build Quality",
+      "weight": 1.4,
+      "description": "Durability, safety features"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price relative to capacity and speed"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "efe11611-c8c9-4ffb-a517-3dfd04451ea5",
+      "name": "Anker 737 Power Bank (PowerCore 24K)",
+      "description": "High-capacity 24,000mAh power bank with 140W output, featuring GaNPrime technology and a digital display for real-time power monitoring.",
+      "pros": [
+        "Extremely fast charging for laptops and phones",
+        "Digital display shows remaining power and input/output wattage",
+        "High build quality with Anker's reliable reputation",
+        "Can charge three devices simultaneously"
+      ],
+      "cons": [
+        "Relatively heavy and bulky",
+        "Premium price point",
+        "No built-in charging cable"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 129.99,
+      "rating": 4.6,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "24000mAh / 86.4Wh",
+        "output_ports": "2x USB-C, 1x USB-A",
+        "fast_charging": "140W total output, supports Power Delivery 3.1",
+        "input_charging": "100W via USB-C",
+        "weight": "1.21 lbs (550g)",
+        "dimensions": "5.94 x 2.97 x 1.26 inches"
+      }
+    },
+    {
+      "id": "4be288cd-1e41-4d87-afbb-7ae712146c37",
+      "name": "INIU 65W 25000mAh Power Bank",
+      "description": "Massive capacity power bank with 65W high-speed charging, compatible with laptops, phones, and tablets, featuring triple output ports.",
+      "pros": [
+        "Excellent value for money with high capacity",
+        "Fast 65W charging suitable for most laptops",
+        "Includes a USB-C to USB-C cable in the box",
+        "Clear LED power indicator"
+      ],
+      "cons": [
+        "Takes longer to recharge fully due to 45W input",
+        "Plastic casing feels less premium",
+        "Slightly heavier than some competitors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 59.99,
+      "rating": 4.5,
+      "reviewCount": 12000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "25000mAh / 92.5Wh",
+        "output_ports": "2x USB-C, 1x USB-A",
+        "fast_charging": "65W total output, supports PD 3.0, QC 4.0",
+        "input_charging": "45W via USB-C",
+        "weight": "1.3 lbs (590g)",
+        "dimensions": "6.3 x 3.0 x 0.9 inches"
+      }
+    },
+    {
+      "id": "8c85e96d-3c72-4e17-8ea0-23c3c45083d0",
+      "name": "Shargeek Storm2 Slim 100W Power Bank",
+      "description": "Sleek, transparent design power bank with 100W output, featuring a vibrant display and support for multiple fast charging protocols.",
+      "pros": [
+        "Unique transparent design with colorful display showing real-time data",
+        "Very fast 100W input and output",
+        "Supports wide range of charging protocols",
+        "Slimmer profile than many high-power banks"
+      ],
+      "cons": [
+        "Higher price for the capacity",
+        "Display can be distracting in dark environments",
+        "Scratches may be visible on transparent shell"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 149.99,
+      "rating": 4.4,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "20000mAh / 74Wh",
+        "output_ports": "2x USB-C, 1x USB-A",
+        "fast_charging": "100W total output, supports PD 3.0, PPS, QC 4.0",
+        "input_charging": "100W via USB-C",
+        "weight": "1.1 lbs (500g)",
+        "dimensions": "6.1 x 2.9 x 0.8 inches"
+      }
+    },
+    {
+      "id": "8f811505-2364-400b-a49c-d1c198075f9f",
+      "name": "Baseus 65W 20000mAh Power Bank",
+      "description": "Compact and portable 65W power bank with foldable plug design, eliminating the need for separate charging cables.",
+      "pros": [
+        "Built-in foldable AC plug for convenient recharging",
+        "Very portable for its capacity and power",
+        "Good balance of price, capacity, and charging speed",
+        "Widely available with strong customer support"
+      ],
+      "cons": [
+        "Foldable plug mechanism may feel less durable over time",
+        "65W output may not be enough for highest-power laptops",
+        "Plastic construction feels lightweight"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 49.99,
+      "rating": 4.5,
+      "reviewCount": 18000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "capacity": "20000mAh / 74Wh",
+        "output_ports": "2x USB-C, 1x USB-A",
+        "fast_charging": "65W total output, supports PD 3.0, QC 3.0",
+        "input_charging": "65W via built-in foldable plug or USB-C",
+        "weight": "0.95 lbs (430g)",
+        "dimensions": "5.9 x 2.8 x 1.2 inches"
+      }
+    }
+  ],
+  "scores": {
+    "efe11611-c8c9-4ffb-a517-3dfd04451ea5": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "At 24,000mAh, this is among the highest capacities available for consumer power banks, capable of charging most smartphones 4-5 times or a laptop 1-2 times. The digital display provides accurate remaining capacity information, which is exceptional."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "140W output is outstanding for a portable charger, enabling rapid charging of laptops and multiple devices simultaneously. GaNPrime technology and support for PD 3.1/QC protocols make this one of the fastest power banks on the market."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Offers two USB-C ports and one USB-A port, providing good versatility for modern and legacy devices. Lacks wireless charging capability, which some competitors include at this price point."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "At 24,000mAh and with high-power components, this power bank is quite heavy (about 1.5 lbs/680g) and bulky. It's not pocket-friendly and is better suited for backpacks or travel bags rather than daily casual carry."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Anker's reputation for quality is evident with good materials, safety certifications, and reliable performance. The digital display adds functionality, though some users report it can be prone to scratching."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced at a premium compared to basic power banks, it offers excellent performance for those needing high-speed, high-capacity charging. However, the cost may be excessive for users who don't require 140W output or 24,000mAh capacity."
+      }
+    },
+    "4be288cd-1e41-4d87-afbb-7ae712146c37": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "25000mAh is among the highest capacities available for consumer power banks, capable of charging most smartphones 4-6 times or a laptop 1-2 times. This represents top-tier capacity in the portable charger market."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "65W PD charging is excellent for laptops and fast phone charging, supporting most modern devices. While not the absolute fastest available (some reach 100W+), it handles demanding scenarios well with good compatibility."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Triple output ports provide decent flexibility for charging multiple devices simultaneously. However, the lack of wireless charging and limited port variety (only USB-C and USB-A) keeps it from being exceptional."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "At 25000mAh, this power bank is large and heavy (typically 1-1.5 lbs), making it unsuitable for pockets or minimal carry. It's designed for capacity over portability, requiring a bag or dedicated space."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "INIU generally offers reliable construction with standard safety features like overcharge protection and temperature control. While durable, it may not match premium brands in extreme durability testing."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Offers strong value given the high capacity and 65W charging at a competitive price point. However, some alternatives with similar specs might offer slightly better pricing or additional features."
+      }
+    },
+    "8c85e96d-3c72-4e17-8ea0-23c3c45083d0": {
+      "criterion-0": {
+        "value": 3,
+        "explanation": "The 10,000mAh capacity is standard for premium power banks, providing about 2-3 full charges for most smartphones. While adequate, it's not exceptional compared to competitors offering 20,000mAh+ at similar price points."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "100W output is outstanding for a portable charger, enabling rapid charging for laptops and multiple devices simultaneously. Support for multiple fast charging protocols (PD 3.0, QC 4.0+, PPS) makes it exceptionally versatile across devices."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Two USB-C ports and one USB-A port provide good connectivity options for multiple devices. The lack of wireless charging is a minor limitation that prevents a perfect score, though wired options are comprehensive."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "While marketed as 'Slim,' the transparent design and display add bulk and weight compared to minimalist alternatives. It's less pocketable than similarly priced power banks prioritizing compactness over aesthetics."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "The transparent design with visible circuitry suggests premium construction, and it includes standard safety features like overcharge protection. However, the exposed components may be more vulnerable to impact damage than fully enclosed designs."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "At a premium price point, you're paying significantly for the unique design and display rather than raw capacity. Competitors offer higher capacity or similar speed at lower prices, making this a niche product for design-conscious users."
+      }
+    },
+    "8f811505-2364-400b-a49c-d1c198075f9f": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "20000mAh provides 4-5 full charges for most smartphones, which is above average for portable power banks. It's not the highest capacity available but offers a good balance between power and portability."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "65W output with PD and QC support is exceptional for a power bank this size. It can fast-charge laptops, tablets, and phones simultaneously, making it one of the fastest options in its class."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Typically includes USB-C and USB-A ports, but lacks wireless charging capability. The foldable plug is convenient but doesn't fully compensate for the absence of wireless functionality."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "While marketed as compact, 20000mAh power banks are inherently bulky and heavy. It's not truly pocketable and will add noticeable weight to a bag, limiting its convenience for daily carry."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Baseus generally offers good construction with safety features like overcharge protection and temperature control. The foldable plug design is durable but adds potential mechanical failure points."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced competitively for its 65W capability, but similar capacity options exist at lower prices with slower charging. The premium for 65W speed may not justify the cost for users who don't need laptop charging."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "efe11611-c8c9-4ffb-a517-3dfd04451ea5",
+      "name": "Anker 737 Power Bank (PowerCore 24K)",
+      "description": "High-capacity 24,000mAh power bank with 140W output, featuring GaNPrime technology and a digital display for real-time power monitoring.",
+      "totalScore": 38.5,
+      "maxPossible": 98,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Capacity",
+        "Charging Speed",
+        "Port Selection"
+      ],
+      "weaknesses": [
+        "Portability"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "4be288cd-1e41-4d87-afbb-7ae712146c37",
+      "name": "INIU 65W 25000mAh Power Bank",
+      "description": "Massive capacity power bank with 65W high-speed charging, compatible with laptops, phones, and tablets, featuring triple output ports.",
+      "totalScore": 36.6,
+      "maxPossible": 98,
+      "percentage": 37,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Capacity",
+        "Charging Speed",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Portability"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "8f811505-2364-400b-a49c-d1c198075f9f",
+      "name": "Baseus 65W 20000mAh Power Bank",
+      "description": "Compact and portable 65W power bank with foldable plug design, eliminating the need for separate charging cables.",
+      "totalScore": 34.9,
+      "maxPossible": 98,
+      "percentage": 36,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Charging Speed",
+        "Capacity",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Portability"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "8c85e96d-3c72-4e17-8ea0-23c3c45083d0",
+      "name": "Shargeek Storm2 Slim 100W Power Bank",
+      "description": "Sleek, transparent design power bank with 100W output, featuring a vibrant display and support for multiple fast charging protocols.",
+      "totalScore": 33,
+      "maxPossible": 98,
+      "percentage": 34,
+      "criteriaScores": {
+        "criterion-0": 3,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Charging Speed",
+        "Port Selection",
+        "Build Quality"
+      ],
+      "weaknesses": [
+        "Portability",
+        "Value for Money"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-01-28T03:49:45.958Z",
+  "metadata": {
+    "seoTitle": "New Power Bank Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Anker 737 Power Bank (PowerCore 24K) (39.0%)",
+    "winnerName": "Anker 737 Power Bank (PowerCore 24K)",
+    "winnerScore": 38.5,
+    "winnerPercentage": 39
+  }
+}
