@@ -26,16 +26,13 @@
     <meta name="twitter:description" content="Comprehensive comparison of top laptops using weighted decision matrix analysis">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/optimind_logo-Ct7HwTNN.png">
-    <link rel="apple-touch-icon" href="../assets/optimind_logo-Ct7HwTNN.png">
+    <link rel="icon" type="image/png" href="/images/optimind_logo.png">
+    <link rel="apple-touch-icon" href="/images/optimind_logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- Styles -->
     <style>
@@ -63,10 +60,9 @@
         
         /* Header */
         .site-header {
-            background: linear-gradient(to bottom, rgba(252, 247, 248, 0.95), rgba(252, 247, 248, 0.9));
-            backdrop-filter: blur(10px);
-            padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: white;
+            padding: 0 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -80,14 +76,17 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            padding: 0 2rem;
-            position: relative;
         }
         
         .logo {
             display: flex;
             align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
             text-decoration: none;
+            height: 100%;
         }
         
         .logo:hover {
@@ -95,76 +94,14 @@
         }
         
         .logo img {
-            width: 165.258px;
-            height: 90.0703px;
-            object-fit: contain;
-        }
-        
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
+            width: 165.258px !important;
+            height: 90.0703px !important;
+            object-fit: contain !important;
         }
         
         .header-nav a {
-            color: #5B616A;
+            margin-left: 1.5rem;
             font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .header-nav a:hover {
-            color: #275DAD;
-            transform: scale(1.05);
-            text-decoration: none;
-        }
-        
-        .header-nav a.active {
-            color: #275DAD;
-        }
-        
-        .btn-launch {
-            background: #275DAD;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-launch:hover {
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            text-decoration: none;
-        }
-        
-        #navbarToggler {
-            display: none;
-            position: absolute;
-            right: 2rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 12px;
-        }
-        
-        #navbarToggler:focus {
-            outline: 2px solid #275DAD;
-        }
-        
-        #navbarToggler span {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: black;
-            margin: 6px 0;
-            transition: all 0.3s;
-        }
-        
-        .mobile-nav {
-            display: none;
         }
         
         /* Main Content */
@@ -531,54 +468,8 @@
             }
             
             .logo img {
-                height: 32px;
-                width: auto;
-            }
-            
-            .header-nav {
-                display: none;
-            }
-            
-            .btn-launch {
-                display: none;
-            }
-            
-            #navbarToggler {
-                display: block;
-            }
-            
-            .mobile-nav {
-                display: block;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: rgba(252, 247, 248, 0.98);
-                backdrop-filter: blur(10px);
-                padding: 1rem;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-            
-            .mobile-nav.active {
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .mobile-nav a {
-                display: block;
-                padding: 0.75rem 1rem;
-                color: #5B616A;
-                font-weight: 500;
-                text-decoration: none;
-            }
-            
-            .mobile-nav a:hover {
-                background: rgba(39, 93, 173, 0.1);
-                color: #275DAD;
-                text-decoration: none;
+                width: 88px !important;
+                height: 48px !important;
             }
             
             .decision-header h1 {
@@ -672,30 +563,15 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <img src="../assets/optimind_logo-Ct7HwTNN.png" alt="OptiMind Logo">
+        <div class="header-content" style="height: 100%;">
+            <a href="/" class="logo" style="height: 100%; display: flex; align-items: center;">
+                <img src="/images/optimind_logo.png" alt="OptiMind" style="width: 165.258px; height: 90.0703px; object-fit: contain;">
             </a>
-            <button id="navbarToggler" aria-label="Mobile Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <nav class="header-nav">
-                <a href="/">Home</a>
-                <a href="/#features">Features</a>
-                <a href="/#use-cases">Compare Products</a>
-                <a href="/guides/" class="active">Decision Guides</a>
+                <a href="/">Create Decision</a>
+                <a href="/guides/">Decision Guides</a>
             </nav>
-            <a href="/app.html" class="btn-launch">Launch App</a>
         </div>
-        <nav class="mobile-nav" id="mobileNav">
-            <a href="/">Home</a>
-            <a href="/#features">Features</a>
-            <a href="/#use-cases">Compare Products</a>
-            <a href="/guides/" class="active">Decision Guides</a>
-            <a href="/app.html">Launch App</a>
-        </nav>
     </header>
     
     <main class="decision-page">
@@ -710,7 +586,68 @@
             
             <!-- AI-Generated Analysis Article -->
             <section class="decision-article">
-<p class="article-placeholder">Detailed analysis coming soon. Below you'll find the complete decision data and comparison.</p>
+<h2>Executive Summary</h2>
+<p>Choosing the right high-performance laptop is a critical decision that impacts productivity, creativity, and mobility. This comparison evaluates three leading contenders in the premium laptop segment: the Apple MacBook Pro, the Dell XPS 15, and the Lenovo ThinkPad. The decision hinges on balancing raw processing power against battery longevity and overall value, with each model representing a distinct philosophy in engineering and user experience.</p>
+<p>After a detailed evaluation using a weighted scoring system across three key criteria—Performance, Battery Life, and Price—the Apple MacBook Pro emerges as the overall winner. It secured the top ranking with a score of 8.75 out of 10, achieving an impressive 87.5% of the total possible points. The MacBook Pro’s victory is anchored in its exceptional synergy of performance and energy efficiency, delivered by its proprietary Apple silicon.</p>
+<p>The Dell XPS 15 and Lenovo ThinkPad follow closely, demonstrating that there is no single &quot;bad&quot; choice among these premium machines. The final scores reveal a tight race: the Dell XPS 15 earned 8.25 points (82.5%), while the Lenovo ThinkPad scored 7.95 points (79.5%). The ultimate choice depends on whether a user prioritizes maximum raw power and upgradeability, the best value within a budget, or the most seamless integration of performance and battery life.</p>
+<h2>Methodology</h2>
+<p>This comparison employs a transparent, weighted decision-matrix methodology. Each laptop was evaluated against three predefined criteria: Performance (weight: 2.0), Battery Life (weight: 1.5), and Price (weight: 1.8). These weights reflect the relative importance of each factor for a typical user seeking a high-performance, portable workstation. Scores were assigned for each criterion, multiplied by the respective weight, and summed to produce a total score out of 10. This quantitative approach provides an objective framework to supplement qualitative assessments of each device&#39;s strengths and weaknesses.</p>
+<h2>Criteria Deep-Dive: What Matters Most in a Premium Laptop</h2>
+<p>Understanding the evaluation criteria is essential to interpreting the results and finding the best laptop for specific needs.</p>
+<ul>
+<li><p><strong>Performance (Weight: 2.0)</strong>: This criterion assesses the laptop&#39;s processing power, speed, and ability to handle demanding tasks smoothly. For professionals, creators, and power users, this translates to faster video rendering, smoother multitasking with dozens of browser tabs and applications, and quicker compilation of code. A high performance score indicates a machine that won&#39;t bottleneck productivity under heavy loads.</p>
+</li>
+<li><p><strong>Battery Life (Weight: 1.5)</strong>: True portability is meaningless without reliable battery life. This metric evaluates how many hours of real-world use—such as web browsing, document editing, and media playback—a laptop can provide on a single charge. Superior battery life offers freedom from outlets, enhances productivity on the go, and is a key indicator of a platform&#39;s overall power efficiency.</p>
+</li>
+<li><p><strong>Price (Weight: 1.8)</strong>: Cost is a decisive factor for nearly every purchase. This criterion evaluates the laptop&#39;s value proposition, considering its feature set, build quality, and performance relative to its asking price. A higher score in this category doesn&#39;t always mean the cheapest option, but rather the best balance of cost and delivered capability.</p>
+</li>
+</ul>
+<h2>Head-to-Head Laptop Comparison</h2>
+<h3>MacBook Pro (Apple M3, 16GB RAM)</h3>
+<p><strong>Final Score: 8.75 / 10 (🥇 Winner)</strong></p>
+<p>The Apple MacBook Pro, equipped with the M3 chip and 16GB of unified memory, represents the pinnacle of Apple&#39;s vertical integration. It isn&#39;t just about hardware specs; it&#39;s about the holistic system performance and user experience enabled by controlling both the silicon and the operating system.</p>
+<ul>
+<li><strong>Strengths</strong>: The MacBook Pro’s greatest advantage is its exceptional performance-per-watt. The Apple M3 chip delivers processing power that rivals or exceeds traditional x86 chips while consuming significantly less energy. This directly fuels its class-leading battery life, allowing it to run for extended periods without compromising speed. The integration between macOS and the custom silicon ensures smooth, responsive performance in both native and optimized applications.</li>
+<li><strong>Weaknesses</strong>: The primary trade-off is a closed ecosystem. RAM and storage are soldered and cannot be upgraded after purchase, requiring buyers to make definitive configuration choices upfront. Furthermore, the price for entry into this ecosystem is high, and compatibility with certain specialized Windows-only software can be a hurdle for some professionals.</li>
+<li><strong>Score Analysis</strong>: The MacBook Pro likely achieved top marks by excelling in both <strong>Performance</strong> and <strong>Battery Life</strong>, the two most heavily weighted criteria. Its efficient architecture allows it to post strong performance numbers while maximizing battery runtime, a combination that is difficult for competitors to match. Its <strong>Price</strong> score may be lower, reflecting its premium cost, but its dominance in the other categories secured the overall victory.</li>
+</ul>
+<p><a href="https://www.amazon.com/s?k=MacBook+Pro+M3+16GB+RAM&tag=optimind09-20">Check Price on Amazon</a></p>
+<h3>Dell XPS 15 (Intel i7, 32GB RAM)</h3>
+<p><strong>Final Score: 8.25 / 10 (🥈 Second Place)</strong></p>
+<p>The Dell XPS 15 is a Windows powerhouse, famously known for its &quot;infinity-edge&quot; display and premium design. Configured with an Intel i7 processor and a substantial 32GB of RAM, it targets users who need maximum multi-threaded performance and future-proof specifications in a sleek package.</p>
+<ul>
+<li><strong>Strengths</strong>: With double the RAM of its competitors in this comparison (32GB), the XPS 15 is built for heavy multitasking and memory-intensive workflows like large data set analysis, high-resolution photo editing, or virtual machine operation. Its Intel platform offers broad software compatibility and potential for greater peak CPU performance in sustained, plugged-in workloads. The build quality and display are consistently praised.</li>
+<li><strong>Weaknesses</strong>: The trade-off for this raw power and generous RAM is typically lower battery life compared to Apple Silicon machines. High-performance Intel chips can be power-hungry, especially when pushed. Furthermore, the configuration with 32GB of RAM places the XPS 15 at a higher price point, impacting its value score.</li>
+<li><strong>Score Analysis</strong>: The Dell XPS 15’s high <strong>Performance</strong> score, buoyed by its significant RAM advantage, is its key asset. However, this likely comes at the expense of its <strong>Battery Life</strong> score. Its <strong>Price</strong> score may also be moderated by its cost, especially when compared to the similarly performing but more efficient MacBook Pro. It is the best choice for users whose workflows demand maximum, sustained CPU and RAM performance above all else.</li>
+</ul>
+<p><a href="https://www.amazon.com/s?k=Dell+XPS+15+Intel+i7+32GB+RAM&tag=optimind09-20">Check Price on Amazon</a></p>
+<h3>Lenovo ThinkPad (AMD Ryzen 7, 16GB RAM)</h3>
+<p><strong>Final Score: 7.95 / 10 (🥉 Third Place)</strong></p>
+<p>The Lenovo ThinkPad, powered by an AMD Ryzen 7 processor and 16GB of RAM, is the embodiment of the classic business workhorse. It emphasizes durability, a legendary keyboard, and strong overall value within the premium segment.</p>
+<ul>
+<li><strong>Strengths</strong>: AMD Ryzen 7 processors are renowned for offering excellent multi-core performance at a competitive price, often challenging Intel&#39;s offerings. This gives the ThinkPad a compelling performance-per-dollar argument. The platform is also generally more power-efficient than comparable Intel systems, which benefits battery life. ThinkPads are built to last, with MIL-SPEC durability and superior serviceability.</li>
+<li><strong>Weaknesses</strong>: While performance and value are strong, the ThinkPad may not reach the absolute peak performance tiers of the highest-spec XPS 15 or the single-core efficiency of the M3 MacBook Pro in certain tasks. Its design is more functional than flashy, and it may not appeal to users prioritizing aesthetics. Brand perception, while strong in enterprise, sometimes trails Apple and Dell in the consumer premium space.</li>
+<li><strong>Score Analysis</strong>: The Lenovo ThinkPad’s strength lies in its balance. It likely scored very well in <strong>Price</strong>, offering a robust feature set for the cost. Its <strong>Performance</strong> score from the Ryzen 7 chip is competitive, and its <strong>Battery Life</strong> is respectable. It finished a close third not because of major flaws, but because it faced two exceptionally strong competitors that edged it out in their respective specialty areas.</li>
+</ul>
+<p><a href="https://www.amazon.com/s?k=Lenovo+ThinkPad+AMD+Ryzen+7+16GB+RAM&tag=optimind09-20">Check Price on Amazon</a></p>
+<h2>Verdict &amp; Recommendations</h2>
+<p>The MacBook Pro with the M3 chip stands as the recommended choice for most users seeking a premium laptop. Its victory is rooted in delivering the best balance of the most important factors: top-tier application performance combined with industry-leading battery efficiency. For students, creative professionals, developers, and general power users who value a seamless, all-day computing experience without constant anxiety over finding a power outlet, the MacBook Pro is the optimal tool.</p>
+<p>However, the narrow margin of victory indicates that context is crucial. Specific user needs can easily alter the final decision.</p>
+<ul>
+<li><p><strong>Choose the Dell XPS 15 if</strong>: Your primary work involves sustained, processor- and memory-intensive tasks like 3D rendering, complex financial modeling, or software development with multiple containers/VMs. The 32GB of RAM is a significant, tangible advantage for these use cases, and the need for ultimate Windows compatibility or upgrade potential outweighs the desire for maximum unplugged runtime.</p>
+</li>
+<li><p><strong>Choose the Lenovo ThinkPad if</strong>: Value, durability, and a no-nonsense work environment are top priorities. The AMD Ryzen 7 model offers tremendous capability for its price, making it an intelligent choice for budget-conscious professionals, IT departments, or anyone who prioritizes the legendary ThinkPad keyboard and proven reliability over aesthetic flair. It is the best-value proposition for robust, all-around business computing.</p>
+</li>
+</ul>
+<p>Ultimately, all three laptops are excellent. The MacBook Pro wins the overall comparison by mastering the art of balanced excellence, but the Dell XPS 15 and Lenovo ThinkPad serve as powerful reminders that the &quot;best&quot; laptop is ultimately the one that best aligns with an individual&#39;s specific workflow, ecosystem preferences, and budget.</p>
+<h2>Where to Buy</h2>
+<p>For the latest pricing, configuration options, and customer reviews, you can check each laptop on Amazon:</p>
+<ul>
+<li><a href="https://www.amazon.com/s?k=MacBook+Pro+M3+16GB+RAM&tag=optimind09-20"><strong>Apple MacBook Pro (M3, 16GB RAM)</strong> on Amazon</a></li>
+<li><a href="https://www.amazon.com/s?k=Dell+XPS+15+Intel+i7+32GB+RAM&tag=optimind09-20"><strong>Dell XPS 15 (Intel i7, 32GB RAM)</strong> on Amazon</a></li>
+<li><a href="https://www.amazon.com/s?k=Lenovo+ThinkPad+AMD+Ryzen+7+16GB+RAM&tag=optimind09-20"><strong>Lenovo ThinkPad (AMD Ryzen 7, 16GB RAM)</strong> on Amazon</a></li>
+</ul>
+
             </section>
             
             <!-- Decision Data Section -->
@@ -818,24 +755,5 @@
             <a href="/">Create New Decision</a>
         </p>
     </footer>
-    
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbarToggler = document.getElementById('navbarToggler');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            if (navbarToggler && mobileNav) {
-                navbarToggler.addEventListener('click', function() {
-                    mobileNav.classList.toggle('active');
-                });
-            }
-            
-            // Initialize Lucide icons if available
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
 </body>
 </html>

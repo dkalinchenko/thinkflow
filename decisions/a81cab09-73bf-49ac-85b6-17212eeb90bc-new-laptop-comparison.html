@@ -26,16 +26,13 @@
     <meta name="twitter:description" content="Compare 4 options across 6 criteria. Winner: Apple MacBook Air 13-inch (M3 chip, 2024) (43.0%)">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/optimind_logo-Ct7HwTNN.png">
-    <link rel="apple-touch-icon" href="../assets/optimind_logo-Ct7HwTNN.png">
+    <link rel="icon" type="image/png" href="/images/optimind_logo.png">
+    <link rel="apple-touch-icon" href="/images/optimind_logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- Styles -->
     <style>
@@ -63,10 +60,9 @@
         
         /* Header */
         .site-header {
-            background: linear-gradient(to bottom, rgba(252, 247, 248, 0.95), rgba(252, 247, 248, 0.9));
-            backdrop-filter: blur(10px);
-            padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: white;
+            padding: 0 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -80,14 +76,17 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            padding: 0 2rem;
-            position: relative;
         }
         
         .logo {
             display: flex;
             align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
             text-decoration: none;
+            height: 100%;
         }
         
         .logo:hover {
@@ -95,76 +94,14 @@
         }
         
         .logo img {
-            width: 165.258px;
-            height: 90.0703px;
-            object-fit: contain;
-        }
-        
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
+            width: 165.258px !important;
+            height: 90.0703px !important;
+            object-fit: contain !important;
         }
         
         .header-nav a {
-            color: #5B616A;
+            margin-left: 1.5rem;
             font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .header-nav a:hover {
-            color: #275DAD;
-            transform: scale(1.05);
-            text-decoration: none;
-        }
-        
-        .header-nav a.active {
-            color: #275DAD;
-        }
-        
-        .btn-launch {
-            background: #275DAD;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-launch:hover {
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            text-decoration: none;
-        }
-        
-        #navbarToggler {
-            display: none;
-            position: absolute;
-            right: 2rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 12px;
-        }
-        
-        #navbarToggler:focus {
-            outline: 2px solid #275DAD;
-        }
-        
-        #navbarToggler span {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: black;
-            margin: 6px 0;
-            transition: all 0.3s;
-        }
-        
-        .mobile-nav {
-            display: none;
         }
         
         /* Main Content */
@@ -531,54 +468,8 @@
             }
             
             .logo img {
-                height: 32px;
-                width: auto;
-            }
-            
-            .header-nav {
-                display: none;
-            }
-            
-            .btn-launch {
-                display: none;
-            }
-            
-            #navbarToggler {
-                display: block;
-            }
-            
-            .mobile-nav {
-                display: block;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: rgba(252, 247, 248, 0.98);
-                backdrop-filter: blur(10px);
-                padding: 1rem;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-            
-            .mobile-nav.active {
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .mobile-nav a {
-                display: block;
-                padding: 0.75rem 1rem;
-                color: #5B616A;
-                font-weight: 500;
-                text-decoration: none;
-            }
-            
-            .mobile-nav a:hover {
-                background: rgba(39, 93, 173, 0.1);
-                color: #275DAD;
-                text-decoration: none;
+                width: 88px !important;
+                height: 48px !important;
             }
             
             .decision-header h1 {
@@ -681,30 +572,15 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <img src="../assets/optimind_logo-Ct7HwTNN.png" alt="OptiMind Logo">
+        <div class="header-content" style="height: 100%;">
+            <a href="/" class="logo" style="height: 100%; display: flex; align-items: center;">
+                <img src="/images/optimind_logo.png" alt="OptiMind" style="width: 165.258px; height: 90.0703px; object-fit: contain;">
             </a>
-            <button id="navbarToggler" aria-label="Mobile Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <nav class="header-nav">
-                <a href="/">Home</a>
-                <a href="/#features">Features</a>
-                <a href="/#use-cases">Compare Products</a>
-                <a href="/guides/" class="active">Decision Guides</a>
+                <a href="/">Create Decision</a>
+                <a href="/guides/">Decision Guides</a>
             </nav>
-            <a href="/app.html" class="btn-launch">Launch App</a>
         </div>
-        <nav class="mobile-nav" id="mobileNav">
-            <a href="/">Home</a>
-            <a href="/#features">Features</a>
-            <a href="/#use-cases">Compare Products</a>
-            <a href="/guides/" class="active">Decision Guides</a>
-            <a href="/app.html">Launch App</a>
-        </nav>
     </header>
     
     <main class="decision-page">
@@ -719,7 +595,55 @@
             
             <!-- AI-Generated Analysis Article -->
             <section class="decision-article">
-<p class="article-placeholder">Detailed analysis coming soon. Below you'll find the complete decision data and comparison.</p>
+<p>Choosing the right laptop requires balancing competing priorities: performance, portability, battery life, and budget. This comparison evaluates four leading premium laptops—the Apple MacBook Air M3, Dell XPS 13 Plus, Lenovo Yoga 9i, and ASUS ROG Zephyrus G14—to identify the best machine for most users. Through a weighted analysis of critical criteria, a clear winner emerges, though the ideal choice ultimately depends on specific needs and workflows. The Apple MacBook Air 13-inch (M3, 2024) secured the top spot, primarily due to its unparalleled combination of exceptional battery life, silent fanless performance, and superior portability. However, for users with specialized needs in gaming, creative work requiring a convertible design, or absolute peak display quality, the alternatives present compelling cases.</p>
+<h3>Methodology: How the Laptops Were Evaluated</h3>
+<p>The laptops were evaluated using a weighted scoring system across six key criteria, reflecting their relative importance for a general-use premium laptop. Performance (weight: 2) and Battery Life (weight: 1.8) carried the highest importance, followed by Display Quality and Value for Money (both weight: 1.5). Build Quality (weight: 1.2) and Portability (weight: 1) were also considered. Each laptop was scored from 1 to 5 on each criterion. The raw score was then multiplied by the criterion&#39;s weight to calculate a weighted score, and the total weighted scores determined the final ranking. This method ensures the analysis reflects real-world priorities, not just technical specifications.</p>
+<h3>Understanding the Evaluation Criteria</h3>
+<p>The value of a laptop is more than the sum of its parts. These criteria were chosen to assess how well each machine functions in real-world scenarios.</p>
+<ul>
+<li><strong>Performance (Weight: 2):</strong> This measures the system&#39;s ability to handle tasks smoothly, from everyday web browsing and office applications to more demanding photo editing, coding, or light video work. It considers the CPU, available RAM, and overall system responsiveness.</li>
+<li><strong>Display Quality (Weight: 1.5):</strong> A laptop&#39;s screen is its primary interface. This criterion evaluates resolution for sharpness, color accuracy for creative work and media consumption, and brightness for usability in various lighting conditions.</li>
+<li><strong>Battery Life (Weight: 1.8):</strong> True portability is defeated by a short battery. This score reflects real-world usage hours between charges, assessing how well the laptop&#39;s components are optimized for efficiency.</li>
+<li><strong>Build Quality (Weight: 1.2):</strong> This encompasses the materials used (aluminum, magnesium alloy, etc.), structural rigidity, durability, and the overall premium feel of the device. A well-built laptop should feel solid and withstand the rigors of travel.</li>
+<li><strong>Value for Money (Weight: 1.5):</strong> This assesses whether the laptop&#39;s price is justified by its features, performance, and build relative to competitors. It highlights where consumers get the most for their investment.</li>
+<li><strong>Portability (Weight: 1):</strong> For users on the move, weight and dimensions are crucial. This criterion scores how easy the laptop is to carry daily in a bag or backpack.</li>
+</ul>
+<h3>Head-to-Head Laptop Analysis</h3>
+<h4>Apple MacBook Air 13-inch (M3 chip, 2024)</h4>
+<p>The MacBook Air represents a pinnacle of balanced, efficient design. Its fanless Apple M3 chip delivers a <strong>Performance</strong> score of 5/5, handling most productivity and creative tasks with ease while remaining completely silent. While its <strong>Display Quality</strong> (4/5) is excellent with 500 nits brightness, it doesn&#39;t feature the higher refresh rates or extreme brightness of more specialized panels. Where it truly dominates is in <strong>Battery Life</strong> (5/5), consistently achieving over 15 hours of use, and <strong>Portability</strong> (5/5), thanks to its 2.7-pound, 0.44-inch thin chassis. Its <strong>Build Quality</strong> (5/5) is uncompromising, with a unibody aluminum enclosure. The primary trade-off is <strong>Value for Money</strong> (2/5); the base model starts at $1099 with 8GB of non-upgradeable RAM, which may limit its longevity for power users.</p>
+<p><strong>Best for:</strong> Students, professionals, and everyday users who prioritize all-day battery life, a silent and reliable experience, and maximum portability above all else.<br><strong>Compromise:</strong> Limited port selection and expensive upgrades for storage and memory.</p>
+<p><a href="https://www.amazon.com/s?k=Apple+MacBook+Air+13-inch+M3+chip+2024&tag=optimind09-20">Check Price and Reviews on Amazon</a></p>
+<h4>Dell XPS 13 Plus (9320, 13th Gen Intel)</h4>
+<p>The Dell XPS 13 Plus is a design-forward ultrabook that pushes boundaries with its edge-to-edge keyboard and capacitive function row. It earns top marks in <strong>Performance</strong> (5/5) with its powerful Intel processors and in <strong>Display Quality</strong> (5/5) with stunning OLED options. Its <strong>Build Quality</strong> (5/5) is exceptional, featuring premium materials and a minimalist aesthetic. While highly <strong>Portable</strong> (4/5), it suffers from a significant Achilles&#39; heel: <strong>Battery Life</strong> (2/5). Typically lasting 6-8 hours, it falls far behind the MacBook Air, necessitating a charger for full-day mobility. This, combined with its high starting price and limited ports, results in a low <strong>Value for Money</strong> (2/5) score, as users pay a premium for its distinctive design.</p>
+<p><strong>Best for:</strong> Users who desire a cutting-edge, minimalist design and the absolute best display in a Windows ultrabook, and who are usually near a power outlet.<br><strong>Compromise:</strong> Subpar battery life and a high price for the feature set.</p>
+<p><a href="https://www.amazon.com/s?k=Dell+XPS+13+Plus+9320+13th+Gen+Intel&tag=optimind09-20">Check Price and Reviews on Amazon</a></p>
+<h4>Lenovo Yoga 9i Gen 9 (14-inch, 2024)</h4>
+<p>The Lenovo Yoga 9i is a versatile powerhouse, distinguished by its 2-in-1 convertible design and unique soundbar hinge that doubles as a premium speaker. It offers strong <strong>Performance</strong> (4/5) from Intel Ultra processors and arguably the best <strong>Display Quality</strong> (5/5) of the group with its vibrant, high-refresh-rate OLED panel. Its <strong>Build Quality</strong> (5/5) is luxurious and solid. However, that beautiful OLED screen is the main culprit for its poor <strong>Battery Life</strong> (2/5), which often dips to 5-7 hours. The convertible mechanics also add a slight weight penalty, though it remains <strong>Portable</strong> (4/5). The <strong>Value for Money</strong> (3/5) is middling; it&#39;s a premium package, but users pay extra for the convertible form factor.</p>
+<p><strong>Best for:</strong> Creative professionals and users who want a single device that excels as both a laptop and a tablet for note-taking or media consumption, featuring a best-in-class display and audio.<br><strong>Compromise:</strong> Below-average battery life and a higher price point for the convertible functionality.</p>
+<p><a href="https://www.amazon.com/s?k=Lenovo+Yoga+9i+Gen+9+14-inch+2024&tag=optimind09-20">Check Price and Reviews on Amazon</a></p>
+<h4>ASUS ROG Zephyrus G14 (2024, GA403)</h4>
+<p>The ASUS ROG Zephyrus G14 defies categorization by packing gaming-grade hardware into an ultraportable frame. It delivers unmatched <strong>Performance</strong> (5/5) in this comparison, with its AMD Ryzen AI and NVIDIA RTX graphics handling demanding games and creative applications. Its display is excellent for gaming and creative work (4/5), and its <strong>Portability</strong> (5/5) is remarkable for its power class at around 3.6 pounds. <strong>Build Quality</strong> (4/5) is very good with magnesium alloy. The trade-offs are inherent to its mission: <strong>Battery Life</strong> (2/5) is short during intensive use, and the fans can get loud under load. <strong>Value for Money</strong> (3/5) is relative; it&#39;s expensive compared to larger gaming laptops, but you pay for the engineering feat of its compact size.</p>
+<p><strong>Best for:</strong> Gamers, streamers, and content creators who need maximum power in a genuinely portable package for work and play.<br><strong>Compromise:</strong> Limited battery life during heavy tasks, potential fan noise, and a premium price for the compact performance.</p>
+<p><a href="https://www.amazon.com/s?k=ASUS+ROG+Zephyrus+G14+2024+GA403&tag=optimind09-20">Check Price and Reviews on Amazon</a></p>
+<h3>Final Verdict and Recommendations</h3>
+<p>The Apple MacBook Air 13-inch (M3, 2024) emerges as the overall winner because it best satisfies the most heavily weighted criteria for a general audience. Its exceptional battery life and portability, combined with strong, silent performance and premium build, create a highly reliable and convenient daily driver. For the majority of users who need a laptop to last a full workday, travel lightly, and perform consistently without fuss, the MacBook Air is the optimal choice.</p>
+<p>However, the &quot;best&quot; laptop is context-dependent. The final recommendation hinges on the user&#39;s primary activity:</p>
+<ul>
+<li><strong>Choose the Apple MacBook Air if:</strong> All-day battery life, silent operation, and easy portability are your top priorities. It&#39;s the quintessential laptop for students, mobile professionals, and anyone who values simplicity and reliability.</li>
+<li><strong>Choose the ASUS ROG Zephyrus G14 if:</strong> You are a gamer or power user who needs desktop-level performance in a portable form factor. It&#39;s the clear choice when performance heavily outweighs battery life concerns.</li>
+<li><strong>Choose the Lenovo Yoga 9i if:</strong> You value versatility and media quality above all, using your device for drawing, note-taking, and consuming media on a stunning OLED display with great audio.</li>
+<li><strong>Choose the Dell XPS 13 Plus if:</strong> You prioritize cutting-edge design and the best possible display in a Windows ultrabook, and you are typically in environments where battery life is less critical.</li>
+</ul>
+<p>Each laptop excels in a specific niche, but the MacBook Air’s mastery of the fundamentals—battery, portability, and balanced performance—makes it the most universally recommendable premium laptop in this comparison.</p>
+<h3>Where to Buy These Laptops</h3>
+<p>For detailed specifications, current pricing, and customer reviews, visit Amazon through the links below:</p>
+<ul>
+<li><a href="https://www.amazon.com/s?k=Apple+MacBook+Air+13-inch+M3+chip+2024&tag=optimind09-20">Apple MacBook Air 13-inch (M3 chip, 2024) on Amazon</a></li>
+<li><a href="https://www.amazon.com/s?k=Dell+XPS+13+Plus+9320+13th+Gen+Intel&tag=optimind09-20">Dell XPS 13 Plus (9320, 13th Gen Intel) on Amazon</a></li>
+<li><a href="https://www.amazon.com/s?k=Lenovo+Yoga+9i+Gen+9+14-inch+2024&tag=optimind09-20">Lenovo Yoga 9i Gen 9 (14-inch, 2024) on Amazon</a></li>
+<li><a href="https://www.amazon.com/s?k=ASUS+ROG+Zephyrus+G14+2024+GA403&tag=optimind09-20">ASUS ROG Zephyrus G14 (2024, GA403) on Amazon</a></li>
+</ul>
+
             </section>
             
             <!-- Decision Data Section -->
@@ -855,24 +779,5 @@
             <a href="/">Create New Decision</a>
         </p>
     </footer>
-    
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbarToggler = document.getElementById('navbarToggler');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            if (navbarToggler && mobileNav) {
-                navbarToggler.addEventListener('click', function() {
-                    mobileNav.classList.toggle('active');
-                });
-            }
-            
-            // Initialize Lucide icons if available
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
 </body>
 </html>
