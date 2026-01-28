@@ -62,7 +62,7 @@
     --transition-slow: 0.4s ease;
     
     /* Layout */
-    --header-height: 60px;
+    --header-height: 72px;
     --sidebar-width: 280px;
 }
 
@@ -127,6 +127,12 @@ button {
     cursor: pointer;
 }
 
+button.product-card *,
+button.template-card *,
+button.category-card * {
+    pointer-events: none;
+}
+
 input, select, textarea {
     font-family: inherit;
     font-size: inherit;
@@ -157,7 +163,7 @@ input, select, textarea {
     top: 0;
     left: 0;
     right: 0;
-    height: var(--header-height);
+    height: 72px;
     background: linear-gradient(to bottom, rgba(252, 247, 248, 0.95), rgba(252, 247, 248, 0.9));
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -173,6 +179,7 @@ input, select, textarea {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
+    height: 100%;
 }
 
 .header-center {
@@ -190,6 +197,13 @@ input, select, textarea {
     color: #5B616A;
     text-decoration: none;
     transition: opacity 0.2s;
+    height: 100%;
+}
+
+.logo img {
+    width: 165.258px !important;
+    height: 90.0703px !important;
+    object-fit: contain !important;
 }
 
 .logo:hover {
@@ -203,7 +217,9 @@ input, select, textarea {
 }
 
 .logo-icon {
-    font-size: 1.5rem;
+    width: 165.258px !important;
+    height: 90.0703px !important;
+    object-fit: contain !important;
 }
 
 .logo-ai {
@@ -489,6 +505,13 @@ input, select, textarea {
     color: var(--accent-primary);
 }
 
+.nav-item i,
+.nav-item svg,
+.nav-item [data-lucide],
+.nav-item .nav-icon {
+    pointer-events: none;
+}
+
 .nav-icon {
     font-size: 1rem;
 }
@@ -651,6 +674,12 @@ input, select, textarea {
     border-color: var(--accent-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.template-link-btn i,
+.template-link-btn svg,
+.template-link-btn [data-lucide] {
+    pointer-events: none;
 }
 
 /* ========================================
@@ -1781,6 +1810,14 @@ input, select, textarea {
     transform: translateY(-2px);
 }
 
+.template-card i,
+.template-card svg,
+.template-card [data-lucide],
+.template-card .flex,
+.template-card div {
+    pointer-events: none;
+}
+
 .template-icon {
     font-size: 2rem;
     margin-bottom: var(--spacing-md);
@@ -2019,6 +2056,12 @@ input, select, textarea {
 @media (max-width: 480px) {
     .app-header {
         padding: 0 var(--spacing-md);
+        height: 60px;
+    }
+    
+    .logo img, .logo-icon {
+        width: 88px !important;
+        height: 48px !important;
     }
 
     /* Logo text hidden only on very small mobile screens */
@@ -2116,6 +2159,21 @@ input, select, textarea {
     background: var(--accent-primary-subtle);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.category-card i,
+.category-card svg,
+.category-card [data-lucide],
+.category-card .flex {
+    pointer-events: none;
+}
+
+.product-card i,
+.product-card svg,
+.product-card [data-lucide],
+.product-card .flex,
+.product-card div {
+    pointer-events: none;
 }
 
 .category-icon {
