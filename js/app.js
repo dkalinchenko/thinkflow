@@ -2087,21 +2087,12 @@ async function acceptAISuggestion(index) {
         });
         renderCriteria();
     } else {
-        // #region agent log
-        console.log('[DEBUG-H1-D] Before addAlternative', {suggestionName:suggestion.name,currentAltsCount:StateManager.getState().currentDecision?.alternatives?.length||0});
-        // #endregion
-        
         await StateManager.addAlternative({
             name: suggestion.name,
             description: suggestion.description,
             pros: suggestion.pros,
             cons: suggestion.cons
         });
-        
-        // #region agent log
-        console.log('[DEBUG-H1-D-after] After addAlternative', {currentAltsCount:StateManager.getState().currentDecision?.alternatives?.length||0,currentAltsNames:StateManager.getState().currentDecision?.alternatives?.map(a=>a.name)||[]});
-        // #endregion
-        
         renderAlternatives();
     }
     

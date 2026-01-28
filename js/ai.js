@@ -84,11 +84,6 @@ class AIService {
         // Check cache first
         const cacheKey = await hashString(prompt + this.provider);
         const cached = await AICacheDB.get(cacheKey);
-        
-        // #region agent log
-        console.log('[DEBUG-H1-C] Cache check', {cacheKeyPrefix:cacheKey.substring(0,20),hasCached:!!cached,skipCache:!!options.skipCache,willUseCache:!!(cached&&!options.skipCache)});
-        // #endregion
-        
         if (cached && !options.skipCache) {
             return cached;
         }
@@ -454,28 +449,11 @@ export const AI = {
      * Generate alternative suggestions
      */
     async suggestAlternatives(decision, count = 5) {
-        // #region agent log
-        console.log('[DEBUG-H1-A] suggestAlternatives entry', {alternativesCount:decision?.alternatives?.length||0,alternativesNames:decision?.alternatives?.map(a=>a.name)||[],decisionId:decision?.id});
-        // #endregion
-        
         const prompt = AIPrompts.generateAlternatives(decision, count);
-        
-        // #region agent log
-        console.log('[DEBUG-H1-E] Prompt generated', {promptLength:prompt.length,hasExistingSection:prompt.includes('EXISTING ALTERNATIVES'),promptSnippet:prompt.substring(Math.max(0,prompt.indexOf('EXISTING')-50),prompt.indexOf('EXISTING')+200)||'no existing'});
-        // #endregion
         
         // Skip cache if there are existing alternatives to ensure fresh suggestions
         const skipCache = (decision?.alternatives?.length || 0) > 0;
-        
-        // #region agent log
-        console.log('[DEBUG-H1-B] Before aiService.call', {skipCache:skipCache,alternativesLength:decision?.alternatives?.length||0});
-        // #endregion
-        
         const response = await aiService.call(prompt, { skipCache });
-        
-        // #region agent log
-        console.log('[DEBUG-H1-E-response] After aiService.call', {responseLength:response?.length||0,responseSnippet:response?.substring(0,150)||''});
-        // #endregion
         
         return aiService.parseJSON(response);
     },
