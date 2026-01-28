@@ -738,11 +738,15 @@ async function aiResearchProducts() {
         // Lazy load amazon-research module
         const { researchProducts } = await loadAmazonResearchModule();
         
+        // Get existing alternatives to avoid duplicates
+        const existingAlternatives = decision.alternatives || [];
+        
         // Research products using AI
         const products = await researchProducts(category, {
             maxProducts: 4,
             priceRange: priceRange,
-            specificQuery: decisionTitle.includes('Comparison') ? null : decisionTitle
+            specificQuery: decisionTitle.includes('Comparison') ? null : decisionTitle,
+            existingProducts: existingAlternatives
         });
         
         hideAILoadingModal();

@@ -1704,7 +1704,8 @@ export async function researchProducts(category, options = {}) {
     const { 
         maxProducts = 5, 
         priceRange = null,
-        specificQuery = null 
+        specificQuery = null,
+        existingProducts = []
     } = options;
     
     const config = getCategoryConfig(category);
@@ -1724,7 +1725,7 @@ export async function researchProducts(category, options = {}) {
     
     // Build the combined prompt with system instructions
     const systemPrompt = getResearchSystemPrompt();
-    const userPrompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields);
+    const userPrompt = buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, config?.specFields, existingProducts);
     const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
     
     try {
@@ -1771,10 +1772,19 @@ IMPORTANT: Always respond with valid JSON. Do not include any text before or aft
 /**
  * Build research prompt for AI
  */
-function buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, specFields) {
+function buildResearchPrompt(categoryName, searchContext, maxProducts, priceRange, specFields, existingProducts = []) {
     let prompt = `Research and provide detailed information about ${maxProducts} top ${categoryName} products based on: "${searchContext}"
 
 `;
+
+    // Add existing products to avoid duplicates
+    if (existingProducts && existingProducts.length > 0) {
+        prompt += `\nEXISTING PRODUCTS (DO NOT SUGGEST THESE AGAIN):\n`;
+        existingProducts.forEach((product, i) => {
+            prompt += `${i + 1}. ${product.name}${product.description ? ` - ${product.description}` : ''}\n`;
+        });
+        prompt += `\nYour ${maxProducts} NEW suggestions MUST be completely different products from the ${existingProducts.length} existing products listed above.\n\n`;
+    }
 
     if (priceRange) {
         prompt += `IMPORTANT PRICE CONSTRAINT:\n`;
@@ -1840,7 +1850,11 @@ Respond with a JSON array of products. Example format:
         prompt += `CRITICAL REMINDER: All ${maxProducts} products MUST be within the specified price range. Do not include any products outside the price constraints.\n\n`;
     }
 
-    prompt += `Provide exactly ${maxProducts} products, ranked by overall quality and popularity`;
+    if (existingProducts && existingProducts.length > 0) {
+        prompt += `CRITICAL REMINDER: All ${maxProducts} products MUST be COMPLETELY DIFFERENT from the ${existingProducts.length} existing products listed above. Do not suggest any products that are already in the comparison.\n\n`;
+    }
+
+    prompt += `Provide exactly ${maxProducts} NEW products, ranked by overall quality and popularity`;
     
     if (priceRange) {
         prompt += ` within the specified price range`;
