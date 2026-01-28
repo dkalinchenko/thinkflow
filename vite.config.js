@@ -1,7 +1,35 @@
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
+
+// Helper function to recursively copy directories
+function copyDirRecursive(src, dest) {
+    if (!existsSync(dest)) {
+        mkdirSync(dest, { recursive: true });
+    }
+    
+    const entries = readdirSync(src);
+    let fileCount = 0;
+    
+    entries.forEach(entry => {
+        const srcPath = join(src, entry);
+        const destPath = join(dest, entry);
+        
+        if (statSync(srcPath).isDirectory()) {
+            fileCount += copyDirRecursive(srcPath, destPath);
+        } else {
+            try {
+                copyFileSync(srcPath, destPath);
+                fileCount++;
+            } catch (err) {
+                console.error(`Failed to copy ${srcPath}:`, err.message);
+            }
+        }
+    });
+    
+    return fileCount;
+}
 
 // Plugin to copy decisions and guides folders to dist
 function copyPublicDirsPlugin() {
@@ -52,6 +80,15 @@ function copyPublicDirsPlugin() {
                     }
                 });
                 console.log(`✓ Copied ${files.length} file(s) to dist/guides`);
+            }
+            
+            // Copy images folder recursively
+            const imagesDir = './images';
+            const distImagesDir = './dist/images';
+            
+            if (existsSync(imagesDir)) {
+                const fileCount = copyDirRecursive(imagesDir, distImagesDir);
+                console.log(`✓ Copied ${fileCount} file(s) to dist/images (including subdirectories)`);
             }
         }
     };
