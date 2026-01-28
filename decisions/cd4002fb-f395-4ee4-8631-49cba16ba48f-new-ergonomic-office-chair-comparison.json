@@ -1,0 +1,724 @@
+{
+  "id": "cd4002fb-f395-4ee4-8631-49cba16ba48f",
+  "slug": "new-ergonomic-office-chair-comparison",
+  "title": "New Ergonomic Office Chair Comparison",
+  "description": "Compare office chairs for comfort and support",
+  "criteria": [
+    {
+      "id": "criterion-0",
+      "name": "Lumbar Support",
+      "weight": 2,
+      "description": "Adjustable lower back support, comfort"
+    },
+    {
+      "id": "criterion-1",
+      "name": "Adjustability",
+      "weight": 1.9,
+      "description": "Seat height, armrests, tilt, headrest"
+    },
+    {
+      "id": "criterion-2",
+      "name": "Comfort & Cushioning",
+      "weight": 1.8,
+      "description": "Seat padding, breathable materials"
+    },
+    {
+      "id": "criterion-3",
+      "name": "Build Quality",
+      "weight": 1.7,
+      "description": "Materials, durability, weight capacity, warranty"
+    },
+    {
+      "id": "criterion-4",
+      "name": "Recline Function",
+      "weight": 1.5,
+      "description": "Tilt range, tension control, locking"
+    },
+    {
+      "id": "criterion-5",
+      "name": "Value for Money",
+      "weight": 1.5,
+      "description": "Price vs features and longevity"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "530e3254-291c-4cdd-beed-c1d2c7c880d4",
+      "name": "Herman Miller Aeron Chair Remastered",
+      "description": "Iconic ergonomic office chair with advanced PostureFit SL lumbar support and breathable mesh material for all-day comfort.",
+      "pros": [
+        "Exceptional breathability and comfort for long sessions",
+        "Superior build quality with 12-year warranty",
+        "Highly customizable fit for various body types",
+        "Excellent long-term durability"
+      ],
+      "cons": [
+        "Extremely expensive",
+        "Mesh seat may feel too firm for some users",
+        "Assembly can be challenging"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1595,
+      "rating": 4.7,
+      "reviewCount": 4200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Adjustable PostureFit SL",
+        "adjustments": "8-way (seat height/depth, tilt tension/limit/forward, armrest height/width/pivot)",
+        "weight_capacity": 350,
+        "material": "Pellicle mesh (seat/back), polymer frame",
+        "warranty_years": 12,
+        "armrest_type": "Fully adjustable (height, width, pivot)"
+      }
+    },
+    {
+      "id": "039e4d07-92bc-45a3-8aec-7b9537c97c6c",
+      "name": "Steelcase Gesture Chair with Headrest",
+      "description": "Innovative ergonomic chair designed to support modern sitting postures with synchronized movement and LiveBack technology.",
+      "pros": [
+        "Excellent support for varied sitting positions (including reclining)",
+        "Industry-leading 4D armrests that move with you",
+        "High weight capacity and durable construction",
+        "Comfortable cushioning with multiple fabric options"
+      ],
+      "cons": [
+        "Premium price point",
+        "Heavier than comparable chairs",
+        "Headrest adds significant cost"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 1349,
+      "rating": 4.6,
+      "reviewCount": 3800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Adjustable LiveBack lumbar",
+        "adjustments": "7-way (seat height/depth, back recline/tension, armrest 4D)",
+        "weight_capacity": 400,
+        "material": "Upholstered fabric or leather, steel frame",
+        "warranty_years": 12,
+        "armrest_type": "4D adjustable (height, width, depth, pivot)"
+      }
+    },
+    {
+      "id": "dfd9ddfc-e21f-45da-90c7-6e3ec5b2a9a8",
+      "name": "Secretlab Titan Evo 2024",
+      "description": "Gaming-inspired ergonomic chair with magnetic memory foam head pillow, 4-way lumbar support, and premium cold-cure foam.",
+      "pros": [
+        "Excellent value for premium features",
+        "Superior comfort with cold-cure foam and magnetic pillows",
+        "Wide range of size options (S, R, XL)",
+        "Sturdy construction with metal base"
+      ],
+      "cons": [
+        "Firm seat may not suit all preferences",
+        "Gaming aesthetic not ideal for all offices",
+        "Shorter warranty than premium office brands"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 649,
+      "rating": 4.5,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "4-way adjustable magnetic lumbar system",
+        "adjustments": "5-way (seat height, recline 85-165°, tilt tension, armrest 4D)",
+        "weight_capacity": 395,
+        "material": "Prime 2.0 PU leather or SoftWeave fabric",
+        "warranty_years": 5,
+        "armrest_type": "4D adjustable (height, width, depth, pivot)"
+      }
+    },
+    {
+      "id": "837f2572-1113-4bc8-a4b1-e03e0ac64190",
+      "name": "Autonomous ErgoChair Pro",
+      "description": "Affordable high-performance ergonomic chair with dynamic lumbar support, breathable mesh back, and multiple adjustment points.",
+      "pros": [
+        "Excellent price-to-feature ratio",
+        "Comprehensive adjustability for budget category",
+        "Breathable mesh back keeps you cool",
+        "Easy assembly with clear instructions"
+      ],
+      "cons": [
+        "Shorter warranty period",
+        "Some users report squeaking over time",
+        "Armrest padding could be thicker"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 499,
+      "rating": 4.3,
+      "reviewCount": 8600,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Dynamic adjustable lumbar",
+        "adjustments": "7-way (seat height/angle, back recline/tension, armrest 4D)",
+        "weight_capacity": 300,
+        "material": "Breathable mesh back, foam seat, aluminum base",
+        "warranty_years": 2,
+        "armrest_type": "4D adjustable (height, width, depth, pivot)"
+      }
+    },
+    {
+      "id": "c62b7263-8d39-46d0-abe2-7cf6a41f7b94",
+      "name": "HON Ignition 2.0 Task Chair",
+      "description": "Premium ergonomic office chair with intuitive self-adjusting lumbar support and breathable mesh back designed for all-day comfort.",
+      "pros": [
+        "Excellent dynamic lumbar support that automatically adjusts",
+        "Highly adjustable with intuitive controls",
+        "Durable construction with 12-year warranty",
+        "Breathable mesh keeps you cool"
+      ],
+      "cons": [
+        "Armrest padding could be thicker",
+        "Assembly instructions can be confusing"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 399,
+      "rating": 4.4,
+      "reviewCount": 2870,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Self-adjusting dynamic lumbar",
+        "adjustments": "Seat depth, height, tilt tension, back recline, armrests (4D)",
+        "weight_capacity": 350,
+        "material": "Mesh back, foam seat, nylon base",
+        "warranty_years": 12,
+        "armrest_type": "4D adjustable (height, width, depth, pivot)"
+      }
+    },
+    {
+      "id": "59da5a0b-4b4b-4945-9511-2e4edb1860d2",
+      "name": "SIDIZ T50 Home Office Chair",
+      "description": "Modern ergonomic chair with synchronized tilt mechanism and adjustable headrest, designed for hybrid work environments.",
+      "pros": [
+        "Excellent memory foam seat cushion",
+        "Smooth synchronized tilt mechanism",
+        "Adjustable headrest for neck support",
+        "Modern aesthetic fits home offices"
+      ],
+      "cons": [
+        "Weight capacity lower than some competitors",
+        "Lumbar cushion could be more substantial"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 349,
+      "rating": 4.3,
+      "reviewCount": 1850,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Height-adjustable lumbar cushion",
+        "adjustments": "Seat height, depth, tilt lock, tilt tension, headrest height/angle",
+        "weight_capacity": 275,
+        "material": "Mesh back, memory foam seat, aluminum base",
+        "warranty_years": 10,
+        "armrest_type": "3D adjustable (height, width, pivot)"
+      }
+    },
+    {
+      "id": "03b0f0e8-8d29-4871-86fa-5b572eddd9a3",
+      "name": "Branch Ergonomic Chair",
+      "description": "Minimalist ergonomic chair with waterfall seat edge and adjustable lumbar support, designed for modern workspaces.",
+      "pros": [
+        "Clean, minimalist design",
+        "Comfortable waterfall seat edge reduces pressure",
+        "Easy to assemble (under 15 minutes)",
+        "Good value for price point"
+      ],
+      "cons": [
+        "Limited armrest adjustments",
+        "Less recline range than premium chairs"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 329,
+      "rating": 4.2,
+      "reviewCount": 1420,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Height-adjustable lumbar pad",
+        "adjustments": "Seat height, tilt tension, tilt lock, back recline",
+        "weight_capacity": 300,
+        "material": "Mesh back, foam seat, steel frame",
+        "warranty_years": 7,
+        "armrest_type": "2D adjustable (height, pivot)"
+      }
+    },
+    {
+      "id": "db052b05-0c17-4baf-87af-5c01a7e1bb06",
+      "name": "Flash Furniture Hercules Series Big and Tall Chair",
+      "description": "Heavy-duty ergonomic chair designed for big and tall users with extra-wide seat and reinforced construction.",
+      "pros": [
+        "Exceptional 500 lb weight capacity",
+        "Extra-wide seat (22 inches)",
+        "Reinforced construction for durability",
+        "Affordable for heavy-duty chair"
+      ],
+      "cons": [
+        "Less refined aesthetics",
+        "Heavier and harder to move",
+        "Limited color options"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 289,
+      "rating": 4.1,
+      "reviewCount": 3250,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lumbar_support": "Adjustable height and depth lumbar",
+        "adjustments": "Seat height, tilt tension, tilt lock, back angle",
+        "weight_capacity": 500,
+        "material": "Mesh back, padded seat, reinforced steel frame",
+        "warranty_years": 5,
+        "armrest_type": "Height-adjustable padded"
+      }
+    }
+  ],
+  "scores": {
+    "530e3254-291c-4cdd-beed-c1d2c7c880d4": {
+      "criterion-0": {
+        "value": 5,
+        "explanation": "The PostureFit SL system provides exceptional, targeted lower back support that adapts to the user's spine. It's widely regarded as one of the best lumbar support systems available, offering both comfort and proper ergonomic alignment for extended sitting."
+      },
+      "criterion-1": {
+        "value": 4,
+        "explanation": "Excellent adjustability for seat height, armrests (height, width, pivot), and tilt with multiple tension settings. The main limitation is that a headrest is not standard and requires a third-party add-on, which is a notable omission at this price point."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "The breathable mesh material is excellent for temperature regulation, but the firm, suspended seat can be uncomfortable for some users over long periods. It lacks traditional cushioning, which is a significant trade-off for those preferring a plush seat."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Exceptional build quality with high-grade materials, robust construction, and a 12-year warranty that is among the best in the industry. It has a proven track record of durability and a high weight capacity, representing a long-term investment."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Features a smooth, highly adjustable recline with excellent tilt range and separate tension control. The forward tilt option is a bonus. It loses a star because the tilt limiter controls can be less intuitive than some competing systems."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "While built to last, the premium price is extremely high, placing it out of reach for most budgets. The value proposition is weak unless the chair is used for very long hours daily over many years, making it a niche purchase."
+      }
+    },
+    "039e4d07-92bc-45a3-8aec-7b9537c97c6c": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The LiveBack technology provides dynamic support that adapts to spinal movement, and the adjustable lumbar support offers good customization. However, some users find it less aggressive than dedicated lumbar systems in other premium chairs."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Exceptionally comprehensive with 3D armrests that pivot to support various postures, seat depth adjustment, synchronized recline, and optional headrest with multiple positions. The Gesture is specifically engineered to support modern sitting behaviors like leaning forward or using mobile devices."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "High-quality foam provides good initial comfort and the breathable materials aid temperature regulation. The seat cushion maintains support well over time, though some users with longer sitting sessions may desire slightly plusher padding."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding construction with premium materials, robust mechanisms, and a 400 lb weight capacity. Steelcase offers a comprehensive 12-year warranty covering all parts, labor, and mechanisms, reflecting exceptional confidence in durability."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "The synchronized recline with tension control is exceptionally smooth and intuitive, providing excellent support throughout the full range. Multiple lock positions and the ability to recline while maintaining armrest height are standout features."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "At a premium price point (typically $1,200+), it represents significant investment. While build quality and adjustability are exceptional, the cost places it in competition with other high-end chairs where some may find better value elsewhere."
+      }
+    },
+    "dfd9ddfc-e21f-45da-90c7-6e3ec5b2a9a8": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The 4-way lumbar support system provides excellent customization and firm support, though some users may find it too aggressive compared to more subtle ergonomic chairs. The adjustability is comprehensive but requires manual tuning rather than dynamic adaptation."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Exceptional range of adjustments including multi-dimensional armrests, seat height, tilt, and magnetic head pillow positioning. The chair accommodates a wide variety of body types and preferences with intuitive controls."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Premium cold-cure foam offers initial comfort but may feel too firm for extended sitting sessions. The synthetic leather and fabric options provide decent breathability, but the gaming-focused design prioritizes support over plush comfort."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "Outstanding construction with high-grade materials, robust metal frame, and 397 lb weight capacity. The 5-year warranty reflects exceptional durability and confidence in manufacturing standards."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Smooth tilt mechanism with adjustable tension and multiple locking positions provides excellent recline flexibility. The range is generous though not class-leading, with some chairs offering deeper recline angles."
+      },
+      "criterion-5": {
+        "value": 2,
+        "explanation": "Premium pricing positions this chair significantly above mainstream ergonomic options. While build quality is excellent, the gaming aesthetic and specific feature set may not justify the cost for users seeking pure office ergonomics."
+      }
+    },
+    "837f2572-1113-4bc8-a4b1-e03e0ac64190": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "Dynamic lumbar support provides good adjustability and comfort, though some users report it may not be as customizable as higher-end chairs. The mesh back offers decent breathability but lacks the premium feel of more expensive models."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "Excellent range of adjustments including seat height, armrests (4D), tilt, and optional headrest. Multiple adjustment points allow for personalized ergonomic positioning that rivals more expensive chairs."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Breathable mesh back is adequate but seat cushioning is average and may become uncomfortable during extended sitting sessions. Materials are functional but not luxurious compared to premium alternatives."
+      },
+      "criterion-3": {
+        "value": 2,
+        "explanation": "Materials feel budget-oriented with some reports of durability issues over time. Weight capacity is standard but warranty coverage is limited compared to industry leaders. Construction shows cost-cutting in key areas."
+      },
+      "criterion-4": {
+        "value": 4,
+        "explanation": "Good tilt range with tension control and locking positions. Smooth recline mechanism works well for most users, though some note it lacks the buttery smoothness of higher-end chair mechanisms."
+      },
+      "criterion-5": {
+        "value": 5,
+        "explanation": "Exceptional value proposition offering premium ergonomic features at a mid-range price point. The combination of adjustability and basic ergonomic support makes this a standout choice for budget-conscious buyers seeking functionality."
+      }
+    },
+    "c62b7263-8d39-46d0-abe2-7cf6a41f7b94": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The intuitive self-adjusting lumbar support is effective and comfortable for most users, adapting to different sitting positions. However, it lacks manual depth adjustment, which some users might prefer for personalized fine-tuning."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Offers standard adjustments like seat height, tilt tension, and armrest height/width. Missing a headrest option and armrest pivot adjustment, which limits customization compared to premium competitors."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "Breathable mesh back provides excellent airflow, and the contoured seat cushion offers good support for extended sitting. The seat foam could be thicker for heavier users or very long sessions."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Solid construction with quality materials typical of HON's commercial-grade chairs, backed by a good warranty. Weight capacity is standard but not exceptional for the price point."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "Tilt mechanism works smoothly with tension control, but the recline range is somewhat limited. Lacks multi-position tilt lock, offering only upright or full recline options."
+      },
+      "criterion-5": {
+        "value": 3,
+        "explanation": "Priced as a premium chair with strong ergonomic fundamentals, but missing some high-end features found at similar price points. Good durability justifies cost for daily use, though not a standout value."
+      }
+    },
+    "59da5a0b-4b4b-4945-9511-2e4edb1860d2": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The SIDIZ T50 features adjustable lumbar support that provides good lower back comfort, though it may not offer the same level of personalized contouring as some premium ergonomic chairs. It's effective for most users but lacks the advanced multi-point adjustments found in higher-end models."
+      },
+      "criterion-1": {
+        "value": 5,
+        "explanation": "This chair excels with comprehensive adjustments including seat height, 4D armrests, synchronized tilt, and adjustable headrest. The range of customization options is exceptional for its category, allowing users to fine-tune nearly every aspect of their sitting position."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "While the seat padding is adequate, some users report it could be thicker for extended sitting sessions. The breathable mesh back is a plus, but the overall cushioning feels average compared to chairs with more premium foam materials."
+      },
+      "criterion-3": {
+        "value": 4,
+        "explanation": "Solid construction with quality materials and a robust frame that supports up to 300 lbs. The 5-year warranty provides good assurance, though some plastic components may feel less premium than all-metal alternatives."
+      },
+      "criterion-4": {
+        "value": 5,
+        "explanation": "The synchronized tilt mechanism offers excellent recline range with smooth tension control and multiple locking positions. This is a standout feature that provides superior flexibility for different working postures throughout the day."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Priced competitively for its feature set, the T50 offers strong value with its extensive adjustability and quality construction. While not the cheapest option, it delivers premium ergonomic features at a mid-range price point."
+      }
+    },
+    "03b0f0e8-8d29-4871-86fa-5b572eddd9a3": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The adjustable lumbar support provides good lower back comfort, though it may lack the fine-tuned customization of higher-end chairs. The waterfall seat edge helps reduce pressure on legs, enhancing overall support."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "Basic adjustments like seat height and tilt are included, but armrests and headrest may have limited or no adjustability. Suitable for standard users but may not accommodate all body types or preferences."
+      },
+      "criterion-2": {
+        "value": 3,
+        "explanation": "Breathable materials are a plus, but cushioning may be thinner than premium chairs, potentially leading to discomfort during long sessions. Adequate for average use but not plush."
+      },
+      "criterion-3": {
+        "value": 3,
+        "explanation": "Materials are decent for the price, with moderate durability and a standard warranty. Weight capacity is likely average, making it suitable for most users but not heavy-duty or long-term intensive use."
+      },
+      "criterion-4": {
+        "value": 2,
+        "explanation": "Tilt range and tension control are basic, with limited locking positions. This restricts ergonomic flexibility and may not support dynamic sitting postures effectively."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "Offers good value for minimalist ergonomic features at a competitive price. However, trade-offs in adjustability and recline function mean it's best for users with straightforward needs."
+      }
+    },
+    "db052b05-0c17-4baf-87af-5c01a7e1bb06": {
+      "criterion-0": {
+        "value": 4,
+        "explanation": "The Hercules Series offers adjustable lumbar support that is effective for big and tall users, providing solid lower back comfort. However, it may lack the fine-tuned customization or advanced ergonomic contours found in premium chairs, keeping it from a perfect score."
+      },
+      "criterion-1": {
+        "value": 3,
+        "explanation": "It includes essential adjustments like seat height, tilt, and armrests, which are adequate for basic ergonomic needs. The adjustments are functional but may not be as smooth, extensive, or intuitive as higher-end models, particularly in armrest articulation or seat depth."
+      },
+      "criterion-2": {
+        "value": 4,
+        "explanation": "The extra-wide seat and thick padding provide good comfort and accommodate larger frames well. While the cushioning is supportive, the materials may not be as breathable or premium as mesh or high-density foam options, which can affect long-term comfort in warm environments."
+      },
+      "criterion-3": {
+        "value": 5,
+        "explanation": "This chair excels in build quality with heavy-duty reinforced construction, durable materials, and a high weight capacity (typically 500 lbs+), making it exceptionally sturdy. It often comes with a robust warranty, reflecting confidence in its longevity for big and tall users."
+      },
+      "criterion-4": {
+        "value": 3,
+        "explanation": "It offers a basic recline with tilt and tension control, which is functional for occasional leaning back. However, the recline range may be limited, and it might lack smooth multi-position locks or synchro-tilt mechanisms found in more ergonomic chairs."
+      },
+      "criterion-5": {
+        "value": 4,
+        "explanation": "For big and tall users needing a durable, supportive chair, it provides strong value with its robust build and comfort features at a mid-range price. While not the cheapest, its specialized design and durability justify the cost, though some may find adjustability or premium materials lacking compared to higher-priced alternatives."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "039e4d07-92bc-45a3-8aec-7b9537c97c6c",
+      "name": "Steelcase Gesture Chair with Headrest",
+      "description": "Innovative ergonomic chair designed to support modern sitting postures with synchronized movement and LiveBack technology.",
+      "totalScore": 45.2,
+      "maxPossible": 104,
+      "percentage": 43,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 5,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Adjustability",
+        "Build Quality",
+        "Recline Function"
+      ],
+      "weaknesses": [],
+      "rank": 1
+    },
+    {
+      "id": "59da5a0b-4b4b-4945-9511-2e4edb1860d2",
+      "name": "SIDIZ T50 Home Office Chair",
+      "description": "Modern ergonomic chair with synchronized tilt mechanism and adjustable headrest, designed for hybrid work environments.",
+      "totalScore": 43.2,
+      "maxPossible": 104,
+      "percentage": 42,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 4,
+        "criterion-4": 5,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Adjustability",
+        "Recline Function",
+        "Lumbar Support"
+      ],
+      "weaknesses": [],
+      "rank": 2
+    },
+    {
+      "id": "530e3254-291c-4cdd-beed-c1d2c7c880d4",
+      "name": "Herman Miller Aeron Chair Remastered",
+      "description": "Iconic ergonomic office chair with advanced PostureFit SL lumbar support and breathable mesh material for all-day comfort.",
+      "totalScore": 40.5,
+      "maxPossible": 104,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 5,
+        "criterion-1": 4,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Lumbar Support",
+        "Build Quality",
+        "Adjustability"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "dfd9ddfc-e21f-45da-90c7-6e3ec5b2a9a8",
+      "name": "Secretlab Titan Evo 2024",
+      "description": "Gaming-inspired ergonomic chair with magnetic memory foam head pillow, 4-way lumbar support, and premium cold-cure foam.",
+      "totalScore": 40.4,
+      "maxPossible": 104,
+      "percentage": 39,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 5,
+        "criterion-4": 4,
+        "criterion-5": 2
+      },
+      "strengths": [
+        "Adjustability",
+        "Build Quality",
+        "Lumbar Support"
+      ],
+      "weaknesses": [
+        "Value for Money"
+      ],
+      "rank": 4
+    },
+    {
+      "id": "db052b05-0c17-4baf-87af-5c01a7e1bb06",
+      "name": "Flash Furniture Hercules Series Big and Tall Chair",
+      "description": "Heavy-duty ergonomic chair designed for big and tall users with extra-wide seat and reinforced construction.",
+      "totalScore": 39.9,
+      "maxPossible": 104,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 5,
+        "criterion-4": 3,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Build Quality",
+        "Lumbar Support",
+        "Comfort & Cushioning"
+      ],
+      "weaknesses": [],
+      "rank": 5
+    },
+    {
+      "id": "837f2572-1113-4bc8-a4b1-e03e0ac64190",
+      "name": "Autonomous ErgoChair Pro",
+      "description": "Affordable high-performance ergonomic chair with dynamic lumbar support, breathable mesh back, and multiple adjustment points.",
+      "totalScore": 39.8,
+      "maxPossible": 104,
+      "percentage": 38,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 5,
+        "criterion-2": 3,
+        "criterion-3": 2,
+        "criterion-4": 4,
+        "criterion-5": 5
+      },
+      "strengths": [
+        "Adjustability",
+        "Value for Money",
+        "Lumbar Support"
+      ],
+      "weaknesses": [
+        "Build Quality"
+      ],
+      "rank": 6
+    },
+    {
+      "id": "c62b7263-8d39-46d0-abe2-7cf6a41f7b94",
+      "name": "HON Ignition 2.0 Task Chair",
+      "description": "Premium ergonomic office chair with intuitive self-adjusting lumbar support and breathable mesh back designed for all-day comfort.",
+      "totalScore": 36.7,
+      "maxPossible": 104,
+      "percentage": 35,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 4,
+        "criterion-3": 4,
+        "criterion-4": 3,
+        "criterion-5": 3
+      },
+      "strengths": [
+        "Lumbar Support",
+        "Comfort & Cushioning",
+        "Build Quality"
+      ],
+      "weaknesses": [],
+      "rank": 7
+    },
+    {
+      "id": "03b0f0e8-8d29-4871-86fa-5b572eddd9a3",
+      "name": "Branch Ergonomic Chair",
+      "description": "Minimalist ergonomic chair with waterfall seat edge and adjustable lumbar support, designed for modern workspaces.",
+      "totalScore": 33.2,
+      "maxPossible": 104,
+      "percentage": 32,
+      "criteriaScores": {
+        "criterion-0": 4,
+        "criterion-1": 3,
+        "criterion-2": 3,
+        "criterion-3": 3,
+        "criterion-4": 2,
+        "criterion-5": 4
+      },
+      "strengths": [
+        "Lumbar Support",
+        "Value for Money"
+      ],
+      "weaknesses": [
+        "Recline Function"
+      ],
+      "rank": 8
+    }
+  ],
+  "publishedAt": "2026-01-28T21:54:28.944Z",
+  "metadata": {
+    "seoTitle": "New Ergonomic Office Chair Comparison - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 8 options across 6 criteria. Winner: Steelcase Gesture Chair with Headrest (43.0%)",
+    "winnerName": "Steelcase Gesture Chair with Headrest",
+    "winnerScore": 45.2,
+    "winnerPercentage": 43
+  },
+  "insights": {
+    "recommendation": "I recommend the Steelcase Gesture Chair with Headrest because it achieved the highest weighted score (45.2 points) by performing well across all criteria, particularly excelling in the most heavily weighted categories like Lumbar Support and Adjustability. This suggests it offers the best overall balance of comfort, support, and functionality for the investment.",
+    "decision_drivers": [
+      "Lumbar Support (weight: 2)",
+      "Adjustability (weight: 1.9)",
+      "Comfort & Cushioning (weight: 1.8)"
+    ],
+    "trade_offs": {
+      "Steelcase Gesture Chair with Headrest": "Likely higher cost (implied by lower 'Value for Money' weighting) for superior ergonomic features and build quality.",
+      "SIDIZ T50 Home Office Chair": "Slightly lower performance in top-weighted criteria (Lumbar Support, Adjustability) compared to Steelcase, but potentially better value given the close score.",
+      "Herman Miller Aeron Chair Remastered": "Iconic design and proven support, but may trade off some comfort/cushioning (as suggested by its ranking) for its distinctive mesh material and posture-focused design."
+    },
+    "risks": [
+      "The Steelcase's high score may rely heavily on premium pricing not fully captured by the 'Value for Money' criterion, risking budget overruns.",
+      "Potential over-specification for users with simpler ergonomic needs, leading to underutilization of advanced features."
+    ],
+    "sensitivity": "Moderately sensitive. The top two alternatives are separated by only 2 points (45.2 vs 43.2), so small increases in weight for 'Value for Money' or 'Build Quality' could make the SIDIZ T50 competitive. However, the top criteria weights are substantial enough that the Steelcase likely maintains an advantage unless weights shift significantly.",
+    "confidence": {
+      "level": "Medium",
+      "explanation": "The analysis uses clear, weighted criteria and produces a logical ranking, but confidence is tempered because the specific scoring scale and raw performance data behind each chair's criterion scores are not provided, making it difficult to assess the magnitude of differences between alternatives."
+    }
+  }
+}
