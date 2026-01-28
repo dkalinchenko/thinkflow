@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     
     <!-- SEO Meta Tags -->
     <title>{{SEO_TITLE}}</title>
@@ -23,8 +26,8 @@
     <meta name="twitter:description" content="{{SEO_DESCRIPTION}}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/icons/puzzle.png">
-    <link rel="apple-touch-icon" href="/images/icons/puzzle.png">
+    <link rel="icon" type="image/png" href="/images/optimind_logo.png">
+    <link rel="apple-touch-icon" href="/images/optimind_logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,11 +61,12 @@
         /* Header */
         .site-header {
             background: white;
-            padding: 1rem 2rem;
+            padding: 0 2rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
+            height: 72px;
         }
         
         .header-content {
@@ -71,6 +75,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 100%;
         }
         
         .logo {
@@ -81,6 +86,7 @@
             font-weight: 700;
             color: #333;
             text-decoration: none;
+            height: 100%;
         }
         
         .logo:hover {
@@ -88,8 +94,9 @@
         }
         
         .logo img {
-            width: 32px;
-            height: 32px;
+            width: 165.258px !important;
+            height: 90.0703px !important;
+            object-fit: contain !important;
         }
         
         .header-nav a {
@@ -456,6 +463,15 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .site-header {
+                height: 60px;
+            }
+            
+            .logo img {
+                width: 88px !important;
+                height: 48px !important;
+            }
+            
             .decision-header h1 {
                 font-size: 1.75rem;
             }
@@ -497,10 +513,9 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <img src="/images/icons/puzzle.png" alt="OptiMind" width="32" height="32">
-                <span>OptiMind</span>
+        <div class="header-content" style="height: 100%;">
+            <a href="/" class="logo" style="height: 100%; display: flex; align-items: center;">
+                <img src="/images/optimind_logo.png" alt="OptiMind" style="width: 165.258px; height: 90.0703px; object-fit: contain;">
             </a>
             <nav class="header-nav">
                 <a href="/">Create Decision</a>

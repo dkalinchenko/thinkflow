@@ -8,6 +8,25 @@ const path = require('path');
 const { marked } = require('marked');
 const { generateArticle, generateSummary } = require('./ai-article-generator');
 
+// #region agent log
+const DEBUG_LOG_PATH = path.join(__dirname, '../.cursor/debug.log');
+function debugLog(location, message, data = {}) {
+    const logEntry = JSON.stringify({
+        id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        timestamp: Date.now(),
+        location,
+        message,
+        data,
+        sessionId: 'debug-session',
+        runId: process.env.RUN_ID || 'run1',
+        hypothesisId: data.hypothesisId || 'A'
+    }) + '\n';
+    try {
+        fs.appendFileSync(DEBUG_LOG_PATH, logEntry);
+    } catch (e) {}
+}
+// #endregion
+
 // Configure marked for safe HTML output
 marked.setOptions({
     gfm: true,
@@ -36,8 +55,15 @@ const template = fs.readFileSync(templatePath, 'utf8');
 // Get all JSON files in decisions directory
 const jsonFiles = fs.readdirSync(decisionsDir).filter(f => f.endsWith('.json'));
 
+// #region agent log
+debugLog('generate-pages.js:38', 'Script started', { hypothesisId: 'A', jsonFilesCount: jsonFiles.length, jsonFiles });
+// #endregion
+
 if (jsonFiles.length === 0) {
     console.log('No decision JSON files found to process');
+    // #region agent log
+    debugLog('generate-pages.js:42', 'No JSON files found, exiting', { hypothesisId: 'A' });
+    // #endregion
     process.exit(0);
 }
 
@@ -45,14 +71,27 @@ console.log(`Found ${jsonFiles.length} decision(s) to generate`);
 
 // Main async processing function
 async function processDecisions() {
+    // #region agent log
+    debugLog('generate-pages.js:47', 'processDecisions started', { hypothesisId: 'B', filesToProcess: jsonFiles.length });
+    // #endregion
     for (const file of jsonFiles) {
         try {
+            // #region agent log
+            debugLog('generate-pages.js:50', 'Processing file', { hypothesisId: 'B', file });
+            // #endregion
             const jsonPath = path.join(decisionsDir, file);
             const decision = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+            
+            // #region agent log
+            debugLog('generate-pages.js:54', 'Decision parsed', { hypothesisId: 'B', file, hasTitle: !!decision.title, hasCriteria: !!decision.criteria, hasAlternatives: !!decision.alternatives, hasResults: !!decision.results, decisionId: decision.id, decisionSlug: decision.slug });
+            // #endregion
             
             // Validate decision data
             if (!decision.title || !decision.criteria || !decision.alternatives || !decision.results) {
                 console.warn(`Skipping ${file}: missing required fields`);
+                // #region agent log
+                debugLog('generate-pages.js:57', 'Skipping file - missing fields', { hypothesisId: 'B', file });
+                // #endregion
                 continue;
             }
             
@@ -92,17 +131,36 @@ async function processDecisions() {
             // Generate HTML with article
             const html = generateHTML(template, decision, article);
             
+            // #region agent log
+            debugLog('generate-pages.js:93', 'HTML generated', { hypothesisId: 'C', file, htmlLength: html.length });
+            // #endregion
+            
             // Write HTML file
             const htmlFile = file.replace('.json', '.html');
             const htmlPath = path.join(decisionsDir, htmlFile);
+            
+            // #region agent log
+            debugLog('generate-pages.js:98', 'Before writing HTML file', { hypothesisId: 'C', htmlFile, htmlPath, fileExists: fs.existsSync(htmlPath) });
+            // #endregion
+            
             fs.writeFileSync(htmlPath, html);
+            
+            // #region agent log
+            debugLog('generate-pages.js:100', 'HTML file written', { hypothesisId: 'C', htmlFile, htmlPath, fileExistsAfter: fs.existsSync(htmlPath), fileSize: fs.existsSync(htmlPath) ? fs.statSync(htmlPath).size : 0 });
+            // #endregion
             
             console.log(`Generated: ${htmlFile}`);
         } catch (error) {
             console.error(`Error processing ${file}:`, error.message);
+            // #region agent log
+            debugLog('generate-pages.js:103', 'Error processing file', { hypothesisId: 'D', file, errorMessage: error.message, errorStack: error.stack });
+            // #endregion
         }
     }
     
+    // #region agent log
+    debugLog('generate-pages.js:106', 'Page generation complete', { hypothesisId: 'E', processedCount: jsonFiles.length });
+    // #endregion
     console.log('Page generation complete!');
 }
 
@@ -138,7 +196,7 @@ function generateHTML(template, decision, article = null) {
         .replace(/{{WINNER_NAME}}/g, escapeHtml(winner.name))
         .replace(/{{WINNER_SCORE}}/g, winner.totalScore.toFixed(2))
         .replace(/{{WINNER_PERCENTAGE}}/g, winner.percentage.toFixed(1))
-        .replace(/{{CANONICAL_URL}}/g, `https://optimind.space/decisions/${decision.slug}.html`);
+        .replace(/{{CANONICAL_URL}}/g, `https://optimind.space/decisions/${decision.id}-${decision.slug}.html`);
     
     // Generate article content (convert markdown to HTML)
     let articleHTML = '';

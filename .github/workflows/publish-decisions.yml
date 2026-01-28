@@ -26,6 +26,13 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Verify latest commit
+        run: |
+          echo "Current commit: $(git rev-parse HEAD)"
+          echo "Latest commit message: $(git log -1 --pretty=%B)"
+          echo "Files in decisions/:"
+          ls -la decisions/ || echo "decisions/ directory does not exist"
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -52,11 +59,54 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git add decisions/*.html decisions/*.json guides/index.html sitemap.xml 2>/dev/null || true
+          # Show current git status before adding
+          echo "Git status before adding files:"
+          git status --short
+          
+          # Add all HTML files in decisions directory (including untracked)
+          echo "Looking for HTML files..."
+          find decisions -name "*.html" -type f | while read file; do
+            echo "Adding: $file"
+            git add "$file"
+          done || echo "No HTML files found or already added"
+          
+          # Add all JSON files in decisions directory (including untracked)
+          echo "Looking for JSON files..."
+          find decisions -name "*.json" -type f | while read file; do
+            echo "Adding: $file"
+            git add "$file"
+          done || echo "No JSON files found or already added"
+          
+          # Add guides index if it exists
+          if [ -f guides/index.html ]; then
+            echo "Adding guides index..."
+            git add guides/index.html
+          else
+            echo "guides/index.html not found"
+          fi
+          
+          # Add sitemap if it exists
+          if [ -f sitemap.xml ]; then
+            echo "Adding sitemap..."
+            git add sitemap.xml
+          else
+            echo "sitemap.xml not found"
+          fi
+          
+          # Show git status after adding
+          echo "Git status after adding files:"
+          git status --short
+          
+          # Check if there are any staged changes
           if git diff --staged --quiet; then
             echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
           else
             echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected, will commit:"
+            git status --short
+            echo "Staged files:"
+            git diff --staged --name-only
           fi
       
       - name: Commit generated files
@@ -65,4 +115,13 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git commit -m "Auto-generated decision pages [skip ci]"
-          git push
+          echo "Pushing changes to repository..."
+          git push origin main || {
+            echo "Push failed, trying with force=false..."
+            git push origin HEAD:main || {
+              echo "Push failed. Error details:"
+              git status
+              exit 1
+            }
+          }
+          echo "Successfully pushed changes"
