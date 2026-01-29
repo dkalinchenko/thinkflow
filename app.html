@@ -663,6 +663,28 @@
                 </div>
             </div>
 
+            <!-- Publish Password Modal -->
+            <div class="modal" id="publishPasswordModal" role="dialog" aria-modal="true" aria-labelledby="publishPasswordTitle">
+                <div class="modal-backdrop" aria-hidden="true"></div>
+                <div class="modal-content modal-sm">
+                    <div class="modal-header">
+                        <h3 id="publishPasswordTitle">Publish Decision</h3>
+                        <button class="btn-icon modal-close" aria-label="Close modal" data-tooltip="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter the password to publish this decision guide:</p>
+                        <div class="form-group">
+                            <input type="password" id="publishPasswordInput" class="form-input" placeholder="Enter password" autocomplete="off">
+                            <small class="form-hint" id="publishPasswordError" style="display: none; color: var(--accent-danger);">Incorrect password. Please try again.</small>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-ghost modal-close">Cancel</button>
+                        <button class="btn btn-primary" id="publishPasswordSubmit">Publish</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Price Targeting Modal -->
             <div class="modal" id="priceTargetingModal" role="dialog" aria-modal="true" aria-labelledby="priceModalTitle">
                 <div class="modal-backdrop" aria-hidden="true"></div>
@@ -763,7 +785,7 @@
     <script src="js/vendor/sortable.min.js"></script>
     
     <!-- Application Scripts -->
-    <script type="module" src="js/app.js?v=10"></script>
+    <script type="module" src="js/app.js?v=11"></script>
     
     <!-- Initialize Lucide Icons -->
     <script>

@@ -126,6 +126,10 @@ const elements = {
     shareModal: document.getElementById('shareModal'),
     templatesModal: document.getElementById('templatesModal'),
     confirmModal: document.getElementById('confirmModal'),
+    publishPasswordModal: document.getElementById('publishPasswordModal'),
+    publishPasswordInput: document.getElementById('publishPasswordInput'),
+    publishPasswordError: document.getElementById('publishPasswordError'),
+    publishPasswordSubmit: document.getElementById('publishPasswordSubmit'),
     
     // AI Modal
     aiModalTitle: document.getElementById('aiModalTitle'),
@@ -490,6 +494,18 @@ function setupEventListeners() {
     // Share Modal
     if (elements.copyShareLink) {
         elements.copyShareLink.addEventListener('click', copyShareLink);
+    }
+    
+    // Publish Password Modal
+    if (elements.publishPasswordSubmit) {
+        elements.publishPasswordSubmit.addEventListener('click', validateAndPublishDecision);
+    }
+    if (elements.publishPasswordInput) {
+        elements.publishPasswordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                validateAndPublishDecision();
+            }
+        });
     }
     
     // Template list in sidebar
@@ -2341,9 +2357,50 @@ function copyShareLink() {
 // ========================================
 
 /**
- * Publish the current decision to make it permanent and SEO-indexable
+ * Show password modal to publish decision
  */
-async function publishDecision() {
+function publishDecision() {
+    const state = StateManager.getState();
+    const decision = state.currentDecision;
+    
+    if (!decision) return;
+    
+    // Reset password input and error
+    elements.publishPasswordInput.value = '';
+    elements.publishPasswordError.style.display = 'none';
+    
+    // Show password modal
+    openModal('publishPassword');
+    
+    // Focus password input
+    setTimeout(() => elements.publishPasswordInput.focus(), 100);
+}
+
+/**
+ * Validate password and publish the decision if correct
+ */
+async function validateAndPublishDecision() {
+    const password = elements.publishPasswordInput.value;
+    const PUBLISH_PASSWORD = 'puppies';
+    
+    // Validate password
+    if (password !== PUBLISH_PASSWORD) {
+        elements.publishPasswordError.style.display = 'block';
+        elements.publishPasswordInput.focus();
+        return;
+    }
+    
+    // Password is correct, close modal and publish
+    closeAllModals();
+    
+    // Perform actual publish
+    await performPublish();
+}
+
+/**
+ * Perform the actual publishing operation
+ */
+async function performPublish() {
     const state = StateManager.getState();
     const decision = state.currentDecision;
     
