@@ -1,0 +1,898 @@
+{
+  "id": "c5f42a91-3973-4eeb-a5c2-7b394a7deb95",
+  "slug": "menbearedtrimmer",
+  "title": "MenbearedTrimmer",
+  "description": "Decision matrix comparing Philips Norelco OneBlade Hybrid Electric Trimmer and Shaver, Wahl Lithium Ion+ Stainless Steel Trimmer for Men, Panasonic ER-GB80-S Cordless Beard Trimmer, Remington MB4045 Smart Beard Trimmer, Mangroomer Professional Back Shaver and Body Groomer, Brio Beardscape Beard Trimmer for Men, ConairMan i-Stubble Ultimate Stubble Trimmer, Hatteker Professional Beard Trimmer Cordless. Analysis shows Brio Beardscape Beard Trimmer for Men as the best choice based on weighted criteria evaluation.",
+  "criteria": [
+    {
+      "id": "8d2370f5-ff8b-4204-9df0-0f342876a2df",
+      "name": "Beard Length Precision",
+      "description": "The device must offer precise, adjustable length settings to accommodate various beard styles and user preferences.",
+      "weight": 2.5
+    },
+    {
+      "id": "76d25fbc-9f51-4855-83f1-0471c84b94bd",
+      "name": "Battery Life and Charging",
+      "description": "Sufficient runtime and convenient charging (e.g., cordless use, quick charge) are critical for daily usability and portability.",
+      "weight": 2
+    },
+    {
+      "id": "9706f0fb-cdee-4efe-87d1-47ff358ac6e0",
+      "name": "Comfort and Skin Safety",
+      "description": "The trimmer should minimize irritation, pulling, or nicks, especially for sensitive skin and detailed edging.",
+      "weight": 2
+    },
+    {
+      "id": "7bd54edc-98cf-46de-92b8-b8cec09a2d9e",
+      "name": "Ease of Cleaning and Maintenance",
+      "description": "Simple cleaning (e.g., washable heads, minimal part disassembly) ensures hygiene and long-term device performance.",
+      "weight": 1.5
+    },
+    {
+      "id": "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391",
+      "name": "Build Quality and Durability",
+      "description": "Robust construction and material quality determine resistance to wear, drops, and long-term reliability.",
+      "weight": 1.5
+    },
+    {
+      "id": "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe",
+      "name": "Beard Style Versatility",
+      "description": "The trimmer should support multiple beard styles and lengths, enabling users to achieve their desired look without needing multiple tools.",
+      "weight": 2.2
+    },
+    {
+      "id": "f244306d-ca66-4fe8-8465-a64ba60ad2fe",
+      "name": "Ergonomics and Grip",
+      "description": "A comfortable, secure grip is crucial for precise control and reducing hand fatigue during detailed trimming sessions.",
+      "weight": 1.8
+    },
+    {
+      "id": "a5891692-6049-42e2-ae54-feeec197b79c",
+      "name": "Noise and Vibration Level",
+      "description": "Lower operational noise and minimal vibration enhance the grooming experience, making it more pleasant and less disruptive.",
+      "weight": 1.3
+    },
+    {
+      "id": "4733ecf7-8000-494b-9ff8-b9010b5a5307",
+      "name": "Portability and Storage",
+      "description": "Compact design and included travel case or stand facilitate easy storage and transport for home use or travel.",
+      "weight": 1.5
+    },
+    {
+      "id": "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4",
+      "name": "Accessory Quality and Range",
+      "description": "The included combs, guards, and other attachments should be durable, easy to use, and cover a useful range of trimming needs.",
+      "weight": 1.7
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "386384c1-02b2-4b64-9a31-18a56f554680",
+      "name": "Philips Norelco OneBlade Hybrid Electric Trimmer and Shaver",
+      "description": "Versatile grooming tool that trims, edges, and shaves any length of hair with replaceable blades.",
+      "pros": [
+        "Extremely versatile for beard styling and shaving",
+        "Gentle on skin with no nicks or cuts",
+        "Works well on both long and short hair",
+        "Affordable replacement blades"
+      ],
+      "cons": [
+        "Not as close as traditional foil shavers",
+        "Battery takes long to charge",
+        "Blades wear out faster with heavy use"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 39.99,
+      "rating": 4.4,
+      "reviewCount": 85000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Dual-sided replaceable blade",
+        "battery": "Lithium-ion, 60 min runtime",
+        "chargeTime": "8 hours",
+        "wetDryUse": "Yes",
+        "attachments": "3 stubble combs (1mm, 3mm, 5mm)"
+      }
+    },
+    {
+      "id": "6cd50900-17ea-45a6-acb5-a359b280bdeb",
+      "name": "Wahl Lithium Ion+ Stainless Steel Trimmer for Men",
+      "description": "Professional-grade cordless beard trimmer with self-sharpening blades and long battery life.",
+      "pros": [
+        "Excellent battery life with quick charging",
+        "Very durable construction",
+        "Precise trimming with multiple length options",
+        "Good value for professional quality"
+      ],
+      "cons": [
+        "Bulkier than some competitors",
+        "Louder operation",
+        "No wet/dry capability"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 49.99,
+      "rating": 4.6,
+      "reviewCount": 42000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Self-sharpening stainless steel",
+        "battery": "Lithium-ion, 4-hour runtime",
+        "chargeTime": "1 hour",
+        "attachments": "8 guide combs (1.5mm to 25mm)",
+        "motor": "High-power rotary motor"
+      }
+    },
+    {
+      "id": "73f69adf-c578-4e6d-a327-2dd2556bea9f",
+      "name": "Panasonic ER-GB80-S Cordless Beard Trimmer",
+      "description": "Premium beard trimmer with 39 precision length settings and vacuum system to capture trimmed hair.",
+      "pros": [
+        "Extremely precise length adjustments",
+        "Vacuum system keeps area clean",
+        "Sharp blades for smooth trimming",
+        "Sleek design with good ergonomics"
+      ],
+      "cons": [
+        "Higher price point",
+        "Vacuum requires regular cleaning",
+        "Shorter battery life than some models"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 79.99,
+      "rating": 4.5,
+      "reviewCount": 18000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lengthSettings": "39 precision settings (0.5mm to 20mm)",
+        "bladeType": "45° sharpened stainless steel",
+        "vacuumSystem": "Built-in hair collection",
+        "battery": "Lithium-ion, 50 min runtime",
+        "display": "LCD battery indicator"
+      }
+    },
+    {
+      "id": "89e0cc2f-da26-42d6-862e-a594d85a5e8b",
+      "name": "Remington MB4045 Smart Beard Trimmer",
+      "description": "Smart beard trimmer with digital length display and lithium battery for precise grooming.",
+      "pros": [
+        "Digital display shows exact length setting",
+        "Good battery life",
+        "Affordable price for features",
+        "Includes detail trimmer for edges"
+      ],
+      "cons": [
+        "Plastic construction feels less premium",
+        "Settings can be finicky to adjust",
+        "Not waterproof"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 34.99,
+      "rating": 4.3,
+      "reviewCount": 32000,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "lengthSettings": "9 precision settings (1.5mm to 18mm)",
+        "display": "Digital length readout",
+        "bladeType": "Self-sharpening titanium-coated",
+        "battery": "Lithium, 70 min runtime",
+        "attachments": "3 guide combs, detail trimmer"
+      }
+    },
+    {
+      "id": "10fb89cd-0239-4da7-8464-3ec5b8d43f7a",
+      "name": "Mangroomer Professional Back Shaver and Body Groomer",
+      "description": "Specialized trimmer with an adjustable extension handle for hard-to-reach areas, designed specifically for back and body grooming.",
+      "pros": [
+        "Unique extension handle for back grooming",
+        "Affordable price point",
+        "Durable construction",
+        "Easy to clean"
+      ],
+      "cons": [
+        "Corded operation limits mobility",
+        "Not waterproof",
+        "Limited precision for detailed beard work"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 39.99,
+      "rating": 4.2,
+      "reviewCount": 8500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Self-sharpening stainless steel",
+        "lengthSettings": "6 adjustable settings (1/8\" to 1/2\")",
+        "battery": "Corded electric (AC adapter)",
+        "waterproof": "No",
+        "specialFeature": "Adjustable 24-inch extension handle"
+      }
+    },
+    {
+      "id": "b07cc9ac-6322-439d-acc8-de73193c5196",
+      "name": "Brio Beardscape Beard Trimmer for Men",
+      "description": "Premium titanium blade beard trimmer with powerful motor and long-lasting battery, designed for precision grooming and durability.",
+      "pros": [
+        "Extremely sharp titanium blades",
+        "Excellent battery life",
+        "Waterproof for easy cleaning",
+        "Precise length adjustments"
+      ],
+      "cons": [
+        "Premium price point",
+        "Limited availability of replacement blades",
+        "Louder than some competitors"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 119.99,
+      "rating": 4.6,
+      "reviewCount": 4200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Titanium-coated T-blade",
+        "lengthSettings": "20 precision settings (0.5mm to 10mm)",
+        "battery": "Lithium-ion (4-hour runtime)",
+        "waterproof": "IPX7 fully waterproof",
+        "motor": "7000 RPM high-torque motor"
+      }
+    },
+    {
+      "id": "fe94dcde-4bc2-4211-a487-4ae4bc5367d8",
+      "name": "ConairMan i-Stubble Ultimate Stubble Trimmer",
+      "description": "Specialized trimmer designed specifically for maintaining perfect stubble with ultra-precise length settings and digital display.",
+      "pros": [
+        "Perfect for stubble maintenance",
+        "Clear digital length display",
+        "Affordable for specialized use",
+        "Comfortable ergonomic grip"
+      ],
+      "cons": [
+        "Not versatile for longer beard styles",
+        "Battery life could be better",
+        "Water-resistant only (not fully waterproof)"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 49.99,
+      "rating": 4.3,
+      "reviewCount": 6800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Surgical steel blades",
+        "lengthSettings": "10 stubble settings (0.4mm to 5mm)",
+        "battery": "Lithium-ion (90-minute runtime)",
+        "waterproof": "Water-resistant (not fully waterproof)",
+        "specialFeature": "Digital length display"
+      }
+    },
+    {
+      "id": "90bb9e84-45fa-4fa6-b934-2ae20c50fb91",
+      "name": "Hatteker Professional Beard Trimmer Cordless",
+      "description": "Multi-functional grooming kit with multiple attachments for beard, hair, nose, and ear trimming at an affordable price.",
+      "pros": [
+        "Complete grooming kit with multiple attachments",
+        "Excellent value for money",
+        "Long battery life",
+        "Fully waterproof"
+      ],
+      "cons": [
+        "Blades may dull faster than premium models",
+        "Less precise than high-end trimmers",
+        "Build quality feels less premium"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 34.99,
+      "rating": 4.1,
+      "reviewCount": 12500,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "bladeType": "Carbon steel blades",
+        "lengthSettings": "4 beard guards (1-10mm)",
+        "battery": "Lithium-ion (120-minute runtime)",
+        "waterproof": "IPX7 fully waterproof",
+        "attachments": "5 attachments (beard, hair, nose, ear, detail)"
+      }
+    }
+  ],
+  "scores": {
+    "386384c1-02b2-4b64-9a31-18a56f554680": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 3,
+        "explanation": "The OneBlade uses a single blade system with adjustable combs for length, offering decent but not exceptional precision. It lacks the fine, incremental length settings found in dedicated beard trimmers, making it less ideal for highly specific beard length requirements."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 4,
+        "explanation": "It offers good cordless runtime (up to 60 minutes) and features a quick charge function (5 minutes for one shave). While sufficient for most users, the battery life is not class-leading compared to some competitors with 90+ minute runtimes."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 4,
+        "explanation": "The unique dual-protection blade and rounded tips are designed to reduce skin irritation and nicks, performing well for a hybrid tool. However, it may not match the supreme comfort of a dedicated foil shaver for users with extremely sensitive skin during full shaves."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 5,
+        "explanation": "This is a standout feature. The head is fully washable under running water, and the simple, single-blade design requires minimal disassembly. Maintenance is exceptionally straightforward compared to many multi-head trimmers."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 3,
+        "explanation": "The plastic body feels reasonably solid for its price point but does not inspire premium durability. It is susceptible to wear from drops. The core mechanism is reliable, but the overall construction is average."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 5,
+        "explanation": "This is the core strength of the OneBlade. It genuinely excels at trimming, edging, and shaving any length of hair, effectively replacing multiple tools. Its hybrid nature provides outstanding versatility for varied grooming routines."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 4,
+        "explanation": "The contoured, rubberized grip provides secure and comfortable handling, facilitating good control for detailed work. The design is user-friendly, though some users with larger hands might find it slightly less optimal for extended sessions."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 2,
+        "explanation": "The OneBlade is notably louder and produces more vibration than many premium rotary or foil shavers. The operational noise and buzz can be disruptive, which is a significant trade-off for its cutting versatility."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 4,
+        "explanation": "Its compact size and included travel case or protective cap make it highly portable. It stores easily and is excellent for travel, losing one star only because the case quality can vary and the device lacks a built-in stand."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 3,
+        "explanation": "The included combs (stubble, body) are functional and cover basic needs, but they are made of standard plastic and the range is limited. For specialized beard styling, users may need to purchase additional combs separately."
+      }
+    },
+    "6cd50900-17ea-45a6-acb5-a359b280bdeb": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 4,
+        "explanation": "The Wahl Lithium Ion+ offers multiple adjustable length settings with precise detents, though some professional-grade competitors offer finer incremental adjustments. The self-sharpening blades maintain consistent cutting performance over time."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 5,
+        "explanation": "Exceptional lithium-ion battery provides up to 4 hours of cordless runtime on a single charge, with quick-charge capability offering substantial use from brief charging periods. This significantly exceeds typical consumer trimmer performance."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 3,
+        "explanation": "Stainless steel blades are sharp and minimize pulling, but the trimmer can cause mild irritation on sensitive skin during detailed edging. The design is adequate but not exceptional for skin comfort compared to specialized sensitive-skin models."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 2,
+        "explanation": "While blades are detachable for cleaning, the trimmer is not fully washable and requires careful brushing and oiling. Maintenance is more involved than modern waterproof models, presenting a notable limitation."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 4,
+        "explanation": "Professional-grade stainless steel construction provides excellent durability and resistance to wear. The trimmer feels substantial and well-made, though some plastic components in the housing prevent a perfect score."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 4,
+        "explanation": "Comprehensive guard set covers a wide range of lengths from stubble to full beard, supporting most common styles. However, specialized detailing for intricate beard art requires additional accessories not included."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 3,
+        "explanation": "The contoured design provides adequate grip for general trimming, but the balance and control during precise edging could be improved. Some users report hand fatigue during extended detailed sessions."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 2,
+        "explanation": "Noticeably louder than premium quiet models with moderate vibration that can affect precision work. The operational noise is disruptive in quiet environments and represents a significant drawback."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 4,
+        "explanation": "Cordless design and included storage/travel case make transportation convenient. The compact form factor fits well in dopp kits, though the case quality is functional rather than premium."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 3,
+        "explanation": "Included guards and combs are durable plastic with clear length markings, covering basic needs adequately. However, the accessory range is standard without innovative attachments found in competing systems."
+      }
+    },
+    "73f69adf-c578-4e6d-a327-2dd2556bea9f": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 5,
+        "explanation": "The 39 precision length settings provide exceptional granularity for exact beard length control, far exceeding typical trimmers that offer 10-20 settings. This allows for precise adjustments to achieve specific beard styles and maintain consistent length across grooming sessions."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 3,
+        "explanation": "While cordless operation offers convenience, Panasonic trimmers in this category typically provide average runtime of 40-60 minutes with standard charging times. This is sufficient for most users but doesn't stand out compared to competitors offering faster charging or longer battery life."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 4,
+        "explanation": "The vacuum system helps reduce skin irritation by capturing trimmed hairs, and the precision blades are designed for smooth cutting. However, some users with extremely sensitive skin might still experience minor irritation during detailed edging work."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 5,
+        "explanation": "The vacuum system significantly simplifies cleaning by capturing most trimmed hairs, and the washable head design allows for thorough cleaning under running water. This represents a major advantage over traditional trimmers that require manual brushing and disassembly."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 4,
+        "explanation": "Panasonic typically uses quality materials and solid construction in their premium trimmers, offering good resistance to normal wear. However, the vacuum system adds complexity that might reduce long-term reliability compared to simpler, more robust designs."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 5,
+        "explanation": "With 39 length settings and typically included multiple guards, this trimmer supports an exceptionally wide range of beard styles from stubble to full beards. The precision settings enable detailed work that would normally require separate specialized tools."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 3,
+        "explanation": "While generally comfortable for standard trimming, the added bulk from the vacuum system can make detailed edging and precision work slightly more challenging. The grip is adequate but not exceptional compared to more streamlined designs."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 2,
+        "explanation": "The vacuum system adds significant operational noise compared to standard trimmers, creating a noticeably louder grooming experience. Vibration levels are also higher due to the dual motor system (trimming + vacuum), which some users find distracting."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 2,
+        "explanation": "The vacuum system makes this trimmer bulkier and heavier than standard cordless trimmers, reducing true portability. While it may include a travel case, the overall size makes it less convenient for actual travel compared to compact alternatives."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 4,
+        "explanation": "Panasonic typically includes durable, well-designed accessories that complement the 39 length settings effectively. The range covers most trimming needs, though some specialized styles might benefit from additional niche attachments not included."
+      }
+    },
+    "89e0cc2f-da26-42d6-862e-a594d85a5e8b": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 4,
+        "explanation": "The digital length display provides clear feedback for precise adjustments, though some users report minor inconsistencies between displayed and actual lengths. The adjustable settings cover most common beard lengths effectively."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 3,
+        "explanation": "Lithium battery offers decent runtime for regular use, but charging time is average and some users note battery degradation over time. Cordless operation is convenient but not exceptional compared to competitors."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 3,
+        "explanation": "Performs adequately for most users but can cause minor irritation on sensitive skin during detailed work. The blades are reasonably sharp but not the smoothest available, occasionally pulling longer hairs."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 2,
+        "explanation": "Requires frequent cleaning and disassembly is more complicated than advertised. The washable feature works but small hair particles often get trapped in mechanisms, requiring thorough maintenance."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 3,
+        "explanation": "Average construction with some plastic components that feel less premium. While functional for regular home use, it may not withstand frequent drops or heavy professional use over extended periods."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 4,
+        "explanation": "Supports a good range of beard styles from stubble to medium-length beards with included attachments. However, it struggles with very long beards or highly specialized styles requiring extreme precision."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 4,
+        "explanation": "Well-designed grip that feels secure during use and allows good control for most trimming tasks. Some users with larger hands find it slightly small, but overall comfort during sessions is above average."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 2,
+        "explanation": "Noticeably louder than premium competitors with moderate vibration that can affect precision during detailed work. The operational noise may be distracting in quiet environments or early morning use."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 4,
+        "explanation": "Compact design with included travel case makes it convenient for transport. The storage solution is practical though the case quality could be better, and the trimmer stands securely on its own."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 3,
+        "explanation": "Included combs and guards cover basic needs but feel somewhat flimsy compared to the main unit. The range is adequate for most users but lacks specialized attachments for advanced grooming techniques."
+      }
+    },
+    "10fb89cd-0239-4da7-8464-3ec5b8d43f7a": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 2,
+        "explanation": "The Mangroomer is specifically designed for body grooming, not facial beard styling. It lacks the fine, adjustable length settings needed for precise beard shaping and typically comes with limited or no beard-specific guards."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 3,
+        "explanation": "As a cordless body groomer, it offers basic convenience, but battery life and charging speed are typically average and prioritized for shorter body grooming sessions rather than extended, detailed beard work."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 4,
+        "explanation": "It is designed with skin safety in mind for body use, often featuring hypoallergenic blades or rounded tips to minimize irritation on larger body areas, though it may not be optimized for the sensitive skin of the face."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 3,
+        "explanation": "Many models are washable, which aids hygiene, but the extended handle and body-focused design can make cleaning slightly more cumbersome compared to a standard, compact beard trimmer."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 4,
+        "explanation": "Generally built robustly to handle body grooming demands. The adjustable extension handle is a key feature but could be a potential point of mechanical weakness over very long-term use."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 1,
+        "explanation": "This is a critical weakness for beard trimming. It is a specialized tool for back and body hair, not designed for the precision, styling, or length range required for facial beard styles."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 5,
+        "explanation": "Exceptional for its intended purpose. The adjustable extension handle is the core innovation, providing unmatched ergonomics for reaching the back and other difficult areas, though the grip for detailed facial work is not its focus."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 3,
+        "explanation": "Operational noise and vibration are typical for a body groomer motor. It is not specifically engineered for the low noise and minimal vibration desired in a premium facial grooming experience."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 2,
+        "explanation": "The extended handle, while foldable or detachable in some models, makes the overall package less compact and less travel-friendly than a dedicated beard trimmer designed for portability."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 2,
+        "explanation": "Accessories are focused on body grooming (e.g., wider guards for trimming). It lacks the suite of precision combs, detail trimmers, and styling guides essential for versatile beard care."
+      }
+    },
+    "b07cc9ac-6322-439d-acc8-de73193c5196": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 5,
+        "explanation": "The Brio Beardscape features 20 precision length settings from 0.4mm to 20mm, providing exceptional granularity for exact beard styling. The titanium blade maintains sharpness for consistent, accurate cuts across all settings."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 4,
+        "explanation": "Offers 4 hours of cordless runtime on a 3-hour charge, which is above average for premium trimmers. Lacks quick-charge capability, requiring full planning for extended use sessions."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 4,
+        "explanation": "The hypoallergenic titanium blade and rounded tips minimize skin irritation and pulling. However, some users report occasional nicks during detailed edging compared to specialized detail trimmers."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 3,
+        "explanation": "The blade assembly is removable and washable under running water, but requires complete drying before reassembly. The multiple moving parts make thorough cleaning more involved than simpler designs."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 5,
+        "explanation": "Exceptional construction with aircraft-grade aluminum body and titanium blades that resist corrosion and wear. Designed to withstand drops and daily use with minimal performance degradation over time."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 5,
+        "explanation": "With 20 length settings and multiple included guards, it handles everything from stubble to full beards, fades, and detailed shaping. Effectively replaces multiple specialized tools for most users."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 4,
+        "explanation": "The contoured aluminum body provides secure grip and good balance during use. Some users with larger hands find it slightly small for extended detailed work, potentially causing fatigue."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 3,
+        "explanation": "The powerful motor produces noticeable vibration and moderate operational noise. While not excessive, it's louder than some premium competitors and may be distracting in quiet environments."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 2,
+        "explanation": "The included travel case is bulky and doesn't efficiently organize multiple attachments. The trimmer itself is relatively large, making it less convenient for compact travel kits compared to slimmer models."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 4,
+        "explanation": "Includes high-quality stainless steel guards, detail trimmer, and cleaning brush that are durable and functional. However, lacks specialized attachments like nose/ear trimmers that some competitors include."
+      }
+    },
+    "fe94dcde-4bc2-4211-a487-4ae4bc5367d8": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 5,
+        "explanation": "The i-Stubble's digital display and ultra-precise length settings are specifically engineered for stubble maintenance, offering exceptional control and accuracy. This specialized focus makes it outstanding for users who prioritize exact stubble length over general beard trimming versatility."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 3,
+        "explanation": "Battery performance is adequate for regular use but not exceptional compared to premium competitors. Charging is standard USB, lacking quick-charge features that would significantly enhance convenience for frequent travelers or forgetful users."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 4,
+        "explanation": "The trimmer performs well with minimal irritation during stubble maintenance, thanks to its specialized blade design. However, for detailed edging or very sensitive skin, some users might experience slight discomfort compared to higher-end models with advanced skin-protection technology."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 2,
+        "explanation": "Cleaning requires more disassembly than washable-head competitors, making maintenance somewhat cumbersome. The specialized stubble mechanism collects fine hairs that can be difficult to remove without thorough cleaning, which is inconvenient for regular hygiene."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 3,
+        "explanation": "Construction is acceptable for the price point but uses more plastic components than premium metal-bodied trimmers. It should withstand normal use but may not survive significant drops or rough handling as well as more robust alternatives."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 2,
+        "explanation": "This is the trimmer's primary limitation—it excels at stubble but offers minimal capability for other beard styles. Users wanting to maintain longer beards or dramatically change styles will need additional tools, making it a specialized rather than versatile device."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 4,
+        "explanation": "The grip is comfortable and secure for typical stubble trimming sessions, with good weight distribution. However, the specialized shape may feel less natural during detailed work around contours compared to more universally designed handles."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 3,
+        "explanation": "Operational noise is moderate—noticeable but not excessively loud. Vibration is present but manageable for short sessions; however, it lacks the near-silent operation and minimal vibration of premium models designed for maximum comfort."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 4,
+        "explanation": "The compact design and included travel case make it excellent for transport, fitting easily in dopp kits. Storage is straightforward, though the case adds bulk compared to minimalist designs that rely on integrated stands."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 2,
+        "explanation": "Accessories are limited to stubble-specific guards, lacking the comprehensive range of combs and attachments found in versatile trimmers. The included accessories are functional but feel somewhat basic in material quality and durability."
+      }
+    },
+    "90bb9e84-45fa-4fa6-b934-2ae20c50fb91": {
+      "8d2370f5-ff8b-4204-9df0-0f342876a2df": {
+        "value": 3,
+        "explanation": "The trimmer offers adjustable settings but lacks the fine-grained precision of premium models. Users report acceptable results for basic styles, though very detailed work may require more refinement."
+      },
+      "76d25fbc-9f51-4855-83f1-0471c84b94bd": {
+        "value": 4,
+        "explanation": "Cordless operation with decent runtime for typical grooming sessions. Charging is straightforward, though some users note it doesn't match the longest-lasting competitors in its class."
+      },
+      "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": {
+        "value": 3,
+        "explanation": "Performs adequately for most users but can cause minor irritation on sensitive skin. The blades are reasonably gentle but not exceptional for detailed edging without occasional nicks."
+      },
+      "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": {
+        "value": 4,
+        "explanation": "Washable heads simplify cleaning, and disassembly is minimal. Maintenance is straightforward, though some smaller attachments may require careful handling to avoid loss."
+      },
+      "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": {
+        "value": 2,
+        "explanation": "Construction feels somewhat plasticky and less robust than higher-end models. It may not withstand frequent drops or heavy long-term use as well as more durable alternatives."
+      },
+      "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": {
+        "value": 5,
+        "explanation": "Outstanding versatility with multiple attachments for beard, hair, nose, and ear trimming. Effectively replaces several grooming tools, accommodating a wide range of styles and lengths."
+      },
+      "f244306d-ca66-4fe8-8465-a64ba60ad2fe": {
+        "value": 3,
+        "explanation": "Grip is comfortable for average-sized hands but may feel slightly bulky for precise detailing. Control is adequate, though extended use can lead to mild hand fatigue."
+      },
+      "a5891692-6049-42e2-ae54-feeec197b79c": {
+        "value": 2,
+        "explanation": "Noticeably louder and more vibratory than premium trimmers, which can be distracting. The operational noise may be bothersome in quiet environments or for noise-sensitive users."
+      },
+      "4733ecf7-8000-494b-9ff8-b9010b5a5307": {
+        "value": 4,
+        "explanation": "Compact design with a travel case enhances portability. Storage is convenient, though the case may feel crowded with all attachments included."
+      },
+      "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": {
+        "value": 4,
+        "explanation": "Includes a useful range of durable attachments that cover most trimming needs. While not premium-grade, they perform reliably and add significant value to the kit."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "b07cc9ac-6322-439d-acc8-de73193c5196",
+      "name": "Brio Beardscape Beard Trimmer for Men",
+      "description": "Premium titanium blade beard trimmer with powerful motor and long-lasting battery, designed for precision grooming and durability.",
+      "totalScore": 72.4,
+      "maxPossible": 180,
+      "percentage": 40,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 5,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 4,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 4,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 3,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 5,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 5,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 4,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 3,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 2,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 4
+      },
+      "strengths": [
+        "Beard Length Precision",
+        "Build Quality and Durability",
+        "Beard Style Versatility"
+      ],
+      "weaknesses": [
+        "Portability and Storage"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "73f69adf-c578-4e6d-a327-2dd2556bea9f",
+      "name": "Panasonic ER-GB80-S Cordless Beard Trimmer",
+      "description": "Premium beard trimmer with 39 precision length settings and vacuum system to capture trimmed hair.",
+      "totalScore": 68.8,
+      "maxPossible": 180,
+      "percentage": 38,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 5,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 3,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 4,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 5,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 4,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 5,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 3,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 2,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 2,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 4
+      },
+      "strengths": [
+        "Beard Length Precision",
+        "Ease of Cleaning and Maintenance",
+        "Beard Style Versatility"
+      ],
+      "weaknesses": [
+        "Noise and Vibration Level",
+        "Portability and Storage"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "386384c1-02b2-4b64-9a31-18a56f554680",
+      "name": "Philips Norelco OneBlade Hybrid Electric Trimmer and Shaver",
+      "description": "Versatile grooming tool that trims, edges, and shaves any length of hair with replaceable blades.",
+      "totalScore": 67.4,
+      "maxPossible": 180,
+      "percentage": 37,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 3,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 4,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 4,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 5,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 3,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 5,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 4,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 2,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 4,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 3
+      },
+      "strengths": [
+        "Ease of Cleaning and Maintenance",
+        "Beard Style Versatility",
+        "Battery Life and Charging"
+      ],
+      "weaknesses": [
+        "Noise and Vibration Level"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "6cd50900-17ea-45a6-acb5-a359b280bdeb",
+      "name": "Wahl Lithium Ion+ Stainless Steel Trimmer for Men",
+      "description": "Professional-grade cordless beard trimmer with self-sharpening blades and long battery life.",
+      "totalScore": 62.9,
+      "maxPossible": 180,
+      "percentage": 35,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 4,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 5,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 3,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 2,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 4,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 4,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 3,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 2,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 4,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 3
+      },
+      "strengths": [
+        "Battery Life and Charging",
+        "Beard Length Precision",
+        "Build Quality and Durability"
+      ],
+      "weaknesses": [
+        "Ease of Cleaning and Maintenance",
+        "Noise and Vibration Level"
+      ],
+      "rank": 4
+    },
+    {
+      "id": "90bb9e84-45fa-4fa6-b934-2ae20c50fb91",
+      "name": "Hatteker Professional Beard Trimmer Cordless",
+      "description": "Multi-functional grooming kit with multiple attachments for beard, hair, nose, and ear trimming at an affordable price.",
+      "totalScore": 62.3,
+      "maxPossible": 180,
+      "percentage": 35,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 3,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 4,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 3,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 4,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 2,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 5,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 3,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 2,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 4,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 4
+      },
+      "strengths": [
+        "Beard Style Versatility",
+        "Battery Life and Charging",
+        "Ease of Cleaning and Maintenance"
+      ],
+      "weaknesses": [
+        "Build Quality and Durability",
+        "Noise and Vibration Level"
+      ],
+      "rank": 5
+    },
+    {
+      "id": "89e0cc2f-da26-42d6-862e-a594d85a5e8b",
+      "name": "Remington MB4045 Smart Beard Trimmer",
+      "description": "Smart beard trimmer with digital length display and lithium battery for precise grooming.",
+      "totalScore": 59.2,
+      "maxPossible": 180,
+      "percentage": 33,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 4,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 3,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 3,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 2,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 3,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 4,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 4,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 2,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 4,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 3
+      },
+      "strengths": [
+        "Beard Length Precision",
+        "Beard Style Versatility",
+        "Ergonomics and Grip"
+      ],
+      "weaknesses": [
+        "Ease of Cleaning and Maintenance",
+        "Noise and Vibration Level"
+      ],
+      "rank": 6
+    },
+    {
+      "id": "fe94dcde-4bc2-4211-a487-4ae4bc5367d8",
+      "name": "ConairMan i-Stubble Ultimate Stubble Trimmer",
+      "description": "Specialized trimmer designed specifically for maintaining perfect stubble with ultra-precise length settings and digital display.",
+      "totalScore": 58.9,
+      "maxPossible": 180,
+      "percentage": 33,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 5,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 3,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 4,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 2,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 3,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 2,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 4,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 3,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 4,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 2
+      },
+      "strengths": [
+        "Beard Length Precision",
+        "Comfort and Skin Safety",
+        "Ergonomics and Grip"
+      ],
+      "weaknesses": [
+        "Ease of Cleaning and Maintenance",
+        "Beard Style Versatility",
+        "Accessory Quality and Range"
+      ],
+      "rank": 7
+    },
+    {
+      "id": "10fb89cd-0239-4da7-8464-3ec5b8d43f7a",
+      "name": "Mangroomer Professional Back Shaver and Body Groomer",
+      "description": "Specialized trimmer with an adjustable extension handle for hard-to-reach areas, designed specifically for back and body grooming.",
+      "totalScore": 51,
+      "maxPossible": 180,
+      "percentage": 28,
+      "criteriaScores": {
+        "8d2370f5-ff8b-4204-9df0-0f342876a2df": 2,
+        "76d25fbc-9f51-4855-83f1-0471c84b94bd": 3,
+        "9706f0fb-cdee-4efe-87d1-47ff358ac6e0": 4,
+        "7bd54edc-98cf-46de-92b8-b8cec09a2d9e": 3,
+        "ba6d3d88-f0ee-4ac6-aec8-e1d4ad2e2391": 4,
+        "7fb831fe-3bea-4810-9ad4-b1aaf8259ffe": 1,
+        "f244306d-ca66-4fe8-8465-a64ba60ad2fe": 5,
+        "a5891692-6049-42e2-ae54-feeec197b79c": 3,
+        "4733ecf7-8000-494b-9ff8-b9010b5a5307": 2,
+        "6ab09c97-e3fc-4b49-89a5-f3da9a2332d4": 2
+      },
+      "strengths": [
+        "Ergonomics and Grip",
+        "Comfort and Skin Safety",
+        "Build Quality and Durability"
+      ],
+      "weaknesses": [
+        "Beard Style Versatility",
+        "Beard Length Precision",
+        "Portability and Storage"
+      ],
+      "rank": 8
+    }
+  ],
+  "publishedAt": "2026-02-02T03:47:26.863Z",
+  "metadata": {
+    "seoTitle": "MenbearedTrimmer - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 8 options across 10 criteria. Winner: Brio Beardscape Beard Trimmer for Men (40.0%)",
+    "winnerName": "Brio Beardscape Beard Trimmer for Men",
+    "winnerScore": 72.4,
+    "winnerPercentage": 40
+  }
+}
