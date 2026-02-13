@@ -1,0 +1,386 @@
+{
+  "id": "15fd8d47-c056-40df-976a-87eccfcd5260",
+  "slug": "oil-based-space-heaters",
+  "title": "Oil-based Space Heaters",
+  "description": "Decision matrix comparing De'Longhi TRD40615E Full Room Radiant Heater, Pelonis NY1507-14A Oil Filled Radiator Heater, Honeywell HZ-789 EnergySmart Oil Filled Heater, Costway 1500W Oil Filled Radiator Heater. Analysis shows Honeywell HZ-789 EnergySmart Oil Filled Heater as the best choice based on weighted criteria evaluation.",
+  "criteria": [
+    {
+      "id": "60b7e118-730a-4c7e-b846-a1b1b9e958fc",
+      "name": "Heating Capacity",
+      "description": "Oil-based heaters are selected primarily for their ability to heat a specific area; insufficient capacity renders the purchase ineffective.",
+      "weight": 2.5
+    },
+    {
+      "id": "9c807a92-4df4-4dd7-a3b4-128fedb2362e",
+      "name": "Energy Efficiency",
+      "description": "These heaters run continuously; higher efficiency directly translates to lower long-term operating costs.",
+      "weight": 2
+    },
+    {
+      "id": "969e4fe9-3d90-4f75-b308-69b504fd97c9",
+      "name": "Safety Features",
+      "description": "Oil heaters contain hot surfaces and fluid; robust safety features (tip-over switch, overheat protection) are critical for preventing fires or burns.",
+      "weight": 2.5
+    },
+    {
+      "id": "e4389f08-0a52-453f-8940-59a730917045",
+      "name": "Portability and Size",
+      "description": "A key advantage of oil heaters is their ability to be moved between rooms; weight, dimensions, and handle/wheel design affect usability.",
+      "weight": 1.5
+    },
+    {
+      "id": "d9b36589-2041-4f3a-b727-b9376a0e1777",
+      "name": "Noise Level",
+      "description": "Unlike fan-forced heaters, oil radiators are valued for quiet operation; excessive noise can be disruptive in living or sleeping areas.",
+      "weight": 1
+    },
+    {
+      "id": "59bb1720-d66a-454d-bfb6-812f65e4ad86",
+      "name": "Ability to target a specific temperature",
+      "description": "",
+      "weight": 2.2
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "9b10f7b5-8fc3-462f-89db-96ab0b23f036",
+      "name": "De'Longhi TRD40615E Full Room Radiant Heater",
+      "description": "Oil-filled radiator heater with three heat settings and adjustable thermostat for efficient whole-room heating.",
+      "pros": [
+        "Silent operation with no fan noise",
+        "Maintains consistent room temperature",
+        "Energy efficient with good heat retention",
+        "Easy-to-use mechanical controls"
+      ],
+      "cons": [
+        "Slow to heat up initially",
+        "Heavy and difficult to move",
+        "No remote control or smart features"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 129.99,
+      "rating": 4.4,
+      "reviewCount": 4200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "heatingCapacity": "1500 watts",
+        "heatSettings": "3",
+        "thermostat": "Adjustable",
+        "safetyFeatures": "Overheat protection, tip-over switch",
+        "dimensions": "25.2 x 9.8 x 6.7 inches",
+        "weight": "24.2 lbs"
+      }
+    },
+    {
+      "id": "1c9ba841-0152-457a-b2bc-5949b9f0244d",
+      "name": "Pelonis NY1507-14A Oil Filled Radiator Heater",
+      "description": "Portable oil-filled heater with digital controls, programmable timer, and energy-saving ECO mode.",
+      "pros": [
+        "Digital display with precise temperature control",
+        "Energy-saving ECO mode",
+        "Built-in carry handle for portability",
+        "Quiet operation"
+      ],
+      "cons": [
+        "Plastic housing feels less durable",
+        "Display can be bright in dark rooms",
+        "Timer function can be confusing to set"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 89.99,
+      "rating": 4.3,
+      "reviewCount": 6800,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "heatingCapacity": "1500 watts",
+        "heatSettings": "3",
+        "thermostat": "Digital adjustable",
+        "timer": "Up to 10 hours",
+        "safetyFeatures": "Overheat protection, tip-over switch",
+        "dimensions": "14.2 x 11.4 x 25.2 inches"
+      }
+    },
+    {
+      "id": "e740b465-300c-46e8-82d2-db6afe068722",
+      "name": "Honeywell HZ-789 EnergySmart Oil Filled Heater",
+      "description": "Energy-efficient oil-filled radiator with programmable thermostat and multiple safety features for safe overnight use.",
+      "pros": [
+        "Excellent energy efficiency ratings",
+        "Very safe for overnight bedroom use",
+        "Durable metal construction",
+        "Easy-to-read digital display"
+      ],
+      "cons": [
+        "Heavier than similar models",
+        "Wheels could be more robust",
+        "Interface buttons feel somewhat cheap"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 109.99,
+      "rating": 4.2,
+      "reviewCount": 3200,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "heatingCapacity": "1500 watts",
+        "heatSettings": "3",
+        "thermostat": "Programmable digital",
+        "energyMode": "EnergySmart technology",
+        "safetyFeatures": "Overheat protection, tip-over switch, thermal cutoff",
+        "warranty": "3-year limited"
+      }
+    },
+    {
+      "id": "91a5a4e0-72bc-4575-84d0-91e3e46e3cc7",
+      "name": "Costway 1500W Oil Filled Radiator Heater",
+      "description": "Budget-friendly oil-filled heater with three heat settings, adjustable thermostat, and built-in cord storage.",
+      "pros": [
+        "Excellent value for money",
+        "Simple mechanical controls",
+        "Compact design fits in small spaces",
+        "Includes cord wrap for storage"
+      ],
+      "cons": [
+        "No tip-over protection",
+        "Thermostat not as precise as digital models",
+        "Takes longer to heat up than premium brands"
+      ],
+      "isProduct": true,
+      "asin": "",
+      "price": 69.99,
+      "rating": 4,
+      "reviewCount": 2100,
+      "imageUrl": "",
+      "amazonUrl": "",
+      "specs": {
+        "heatingCapacity": "1500 watts",
+        "heatSettings": "3",
+        "thermostat": "Adjustable dial",
+        "cordLength": "6 feet",
+        "safetyFeatures": "Overheat protection",
+        "dimensions": "14 x 11 x 25 inches"
+      }
+    }
+  ],
+  "scores": {
+    "9b10f7b5-8fc3-462f-89db-96ab0b23f036": {
+      "60b7e118-730a-4c7e-b846-a1b1b9e958fc": {
+        "value": 4,
+        "explanation": "As a full-room radiant heater, it provides effective whole-room heating for medium-sized spaces. However, it may struggle with very large or poorly insulated rooms, keeping it from the highest rating."
+      },
+      "9c807a92-4df4-4dd7-a3b4-128fedb2362e": {
+        "value": 3,
+        "explanation": "Oil-filled radiators are generally efficient due to heat retention, but they still consume significant electricity during continuous operation. The adjustable thermostat helps, but it's not exceptional compared to modern heat pump alternatives."
+      },
+      "969e4fe9-3d90-4f75-b308-69b504fd97c9": {
+        "value": 4,
+        "explanation": "Likely includes standard safety features like tip-over switch and overheat protection, which are essential for oil heaters. However, the hot surfaces remain a burn risk, preventing a perfect score."
+      },
+      "e4389f08-0a52-453f-8940-59a730917045": {
+        "value": 2,
+        "explanation": "Oil heaters are typically heavy and cumbersome due to the oil reservoir. Even with wheels, moving between rooms can be difficult, which undermines a key advantage of portable heating."
+      },
+      "d9b36589-2041-4f3a-b727-b9376a0e1777": {
+        "value": 5,
+        "explanation": "Oil radiators operate almost silently since they use radiant heat without fans. This is their standout feature, making them ideal for bedrooms and quiet spaces."
+      },
+      "59bb1720-d66a-454d-bfb6-812f65e4ad86": {
+        "value": 3,
+        "explanation": "The adjustable thermostat allows basic temperature targeting, but oil heaters often lack precise digital controls and may have slower response times compared to forced-air systems."
+      }
+    },
+    "1c9ba841-0152-457a-b2bc-5949b9f0244d": {
+      "60b7e118-730a-4c7e-b846-a1b1b9e958fc": {
+        "value": 3,
+        "explanation": "The Pelonis NY1507-14A provides 1500W of heating power, suitable for small to medium rooms (up to ~150 sq ft). It performs adequately for its size but lacks the power for larger spaces or rapid heating needs, placing it at an average level for portable oil heaters."
+      },
+      "9c807a92-4df4-4dd7-a3b4-128fedb2362e": {
+        "value": 4,
+        "explanation": "The ECO mode and programmable timer help optimize energy use by adjusting output and scheduling operation. However, as a resistive electric heater, its fundamental efficiency is inherently limited compared to heat pumps, though it's above average among similar oil-filled radiators."
+      },
+      "969e4fe9-3d90-4f75-b308-69b504fd97c9": {
+        "value": 4,
+        "explanation": "Includes essential protections like tip-over switch and overheat protection, and the oil remains sealed (no refilling). It lacks some advanced features like a child lock or cool-touch cabinet on all sides, but core safety is robust for typical home use."
+      },
+      "e4389f08-0a52-453f-8940-59a730917045": {
+        "value": 2,
+        "explanation": "Weighs around 17 lbs and has built-in handles, but lacks wheels or a lightweight design. This makes it somewhat cumbersome to move frequently between rooms, reducing the portability advantage that is key for this heater type."
+      },
+      "d9b36589-2041-4f3a-b727-b9376a0e1777": {
+        "value": 5,
+        "explanation": "Operates nearly silently with no fan—only occasional faint clicks from thermal expansion or the thermostat. This is an outstanding feature for bedrooms, offices, or quiet spaces where noise disruption is a concern."
+      },
+      "59bb1720-d66a-454d-bfb6-812f65e4ad86": {
+        "value": 3,
+        "explanation": "Digital controls and a thermostat allow setting a desired temperature, but accuracy and responsiveness are limited by the inherent thermal inertia of oil heaters. It maintains a roughly stable environment but not with precision."
+      }
+    },
+    "e740b465-300c-46e8-82d2-db6afe068722": {
+      "60b7e118-730a-4c7e-b846-a1b1b9e958fc": {
+        "value": 3,
+        "explanation": "Oil-filled radiators provide steady, consistent heat but have slower warm-up times and limited range compared to forced-air alternatives. The Honeywell HZ-789 is suitable for small to medium rooms but may struggle in large or poorly insulated spaces."
+      },
+      "9c807a92-4df4-4dd7-a3b4-128fedb2362e": {
+        "value": 4,
+        "explanation": "Oil-filled heaters retain heat well, allowing them to cycle on and off while maintaining temperature. The EnergySmart technology and programmable thermostat help optimize energy use, though they still consume significant electricity during operation."
+      },
+      "969e4fe9-3d90-4f75-b308-69b504fd97c9": {
+        "value": 5,
+        "explanation": "This model includes multiple critical safety features: tip-over automatic shutoff, overheat protection, and cool-touch exterior. These make it exceptionally safe for overnight or unattended use compared to many heating alternatives."
+      },
+      "e4389f08-0a52-453f-8940-59a730917045": {
+        "value": 2,
+        "explanation": "While oil heaters are inherently portable, this model's weight (typical of oil-filled designs) and lack of integrated wheels make it cumbersome to move frequently. The handle design is adequate but not optimized for easy transport."
+      },
+      "d9b36589-2041-4f3a-b727-b9376a0e1777": {
+        "value": 5,
+        "explanation": "Oil-filled radiators operate almost silently since they use convection rather than fans. The Honeywell HZ-789 produces no operational noise beyond occasional faint clicking from the thermostat, making it ideal for bedrooms and quiet spaces."
+      },
+      "59bb1720-d66a-454d-bfb6-812f65e4ad86": {
+        "value": 4,
+        "explanation": "The programmable thermostat allows precise temperature targeting and maintains consistent room temperature through automatic cycling. However, like all oil heaters, response time to temperature changes is slower than instant fan heaters."
+      }
+    },
+    "91a5a4e0-72bc-4575-84d0-91e3e46e3cc7": {
+      "60b7e118-730a-4c7e-b846-a1b1b9e958fc": {
+        "value": 3,
+        "explanation": "The 1500W output is standard for medium-sized rooms (up to 150 sq ft), but lacks the power for larger spaces. It performs adequately for its intended use but won't heat open areas or poorly insulated rooms effectively."
+      },
+      "9c807a92-4df4-4dd7-a3b4-128fedb2362e": {
+        "value": 2,
+        "explanation": "As a basic budget model, it lacks advanced efficiency features like programmable timers or eco modes. The adjustable thermostat helps somewhat, but overall efficiency is below average compared to modern oil heaters with smart controls."
+      },
+      "969e4fe9-3d90-4f75-b308-69b504fd97c9": {
+        "value": 3,
+        "explanation": "Includes basic safety features like tip-over protection and overheat protection, which meet minimum requirements. However, it lacks child locks, cool-touch surfaces, or advanced thermal cutoff systems found in higher-end models."
+      },
+      "e4389f08-0a52-453f-8940-59a730917045": {
+        "value": 4,
+        "explanation": "Built-in cord storage and relatively compact design enhance portability. While it lacks wheels (common in this price range), the handle and manageable weight make it reasonably easy to move between rooms."
+      },
+      "d9b36589-2041-4f3a-b727-b9376a0e1777": {
+        "value": 5,
+        "explanation": "Excellent silent operation typical of oil-filled radiators. No fan means zero operational noise, only occasional subtle clicks from the thermostat—ideal for bedrooms, offices, or quiet spaces."
+      },
+      "59bb1720-d66a-454d-bfb6-812f65e4ad86": {
+        "value": 2,
+        "explanation": "The adjustable thermostat provides basic temperature control but lacks precision or digital display. Temperature targeting is imprecise and inconsistent compared to models with digital thermostats or remote sensors."
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "e740b465-300c-46e8-82d2-db6afe068722",
+      "name": "Honeywell HZ-789 EnergySmart Oil Filled Heater",
+      "description": "Energy-efficient oil-filled radiator with programmable thermostat and multiple safety features for safe overnight use.",
+      "totalScore": 44.8,
+      "maxPossible": 117,
+      "percentage": 38,
+      "criteriaScores": {
+        "60b7e118-730a-4c7e-b846-a1b1b9e958fc": 3,
+        "9c807a92-4df4-4dd7-a3b4-128fedb2362e": 4,
+        "969e4fe9-3d90-4f75-b308-69b504fd97c9": 5,
+        "e4389f08-0a52-453f-8940-59a730917045": 2,
+        "d9b36589-2041-4f3a-b727-b9376a0e1777": 5,
+        "59bb1720-d66a-454d-bfb6-812f65e4ad86": 4
+      },
+      "strengths": [
+        "Safety Features",
+        "Noise Level",
+        "Energy Efficiency"
+      ],
+      "weaknesses": [
+        "Portability and Size"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "9b10f7b5-8fc3-462f-89db-96ab0b23f036",
+      "name": "De'Longhi TRD40615E Full Room Radiant Heater",
+      "description": "Oil-filled radiator heater with three heat settings and adjustable thermostat for efficient whole-room heating.",
+      "totalScore": 40.6,
+      "maxPossible": 117,
+      "percentage": 35,
+      "criteriaScores": {
+        "60b7e118-730a-4c7e-b846-a1b1b9e958fc": 4,
+        "9c807a92-4df4-4dd7-a3b4-128fedb2362e": 3,
+        "969e4fe9-3d90-4f75-b308-69b504fd97c9": 4,
+        "e4389f08-0a52-453f-8940-59a730917045": 2,
+        "d9b36589-2041-4f3a-b727-b9376a0e1777": 5,
+        "59bb1720-d66a-454d-bfb6-812f65e4ad86": 3
+      },
+      "strengths": [
+        "Noise Level",
+        "Heating Capacity",
+        "Safety Features"
+      ],
+      "weaknesses": [
+        "Portability and Size"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "1c9ba841-0152-457a-b2bc-5949b9f0244d",
+      "name": "Pelonis NY1507-14A Oil Filled Radiator Heater",
+      "description": "Portable oil-filled heater with digital controls, programmable timer, and energy-saving ECO mode.",
+      "totalScore": 40.1,
+      "maxPossible": 117,
+      "percentage": 34,
+      "criteriaScores": {
+        "60b7e118-730a-4c7e-b846-a1b1b9e958fc": 3,
+        "9c807a92-4df4-4dd7-a3b4-128fedb2362e": 4,
+        "969e4fe9-3d90-4f75-b308-69b504fd97c9": 4,
+        "e4389f08-0a52-453f-8940-59a730917045": 2,
+        "d9b36589-2041-4f3a-b727-b9376a0e1777": 5,
+        "59bb1720-d66a-454d-bfb6-812f65e4ad86": 3
+      },
+      "strengths": [
+        "Noise Level",
+        "Energy Efficiency",
+        "Safety Features"
+      ],
+      "weaknesses": [
+        "Portability and Size"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "91a5a4e0-72bc-4575-84d0-91e3e46e3cc7",
+      "name": "Costway 1500W Oil Filled Radiator Heater",
+      "description": "Budget-friendly oil-filled heater with three heat settings, adjustable thermostat, and built-in cord storage.",
+      "totalScore": 34.4,
+      "maxPossible": 117,
+      "percentage": 29,
+      "criteriaScores": {
+        "60b7e118-730a-4c7e-b846-a1b1b9e958fc": 3,
+        "9c807a92-4df4-4dd7-a3b4-128fedb2362e": 2,
+        "969e4fe9-3d90-4f75-b308-69b504fd97c9": 3,
+        "e4389f08-0a52-453f-8940-59a730917045": 4,
+        "d9b36589-2041-4f3a-b727-b9376a0e1777": 5,
+        "59bb1720-d66a-454d-bfb6-812f65e4ad86": 2
+      },
+      "strengths": [
+        "Noise Level",
+        "Portability and Size"
+      ],
+      "weaknesses": [
+        "Energy Efficiency",
+        "Ability to target a specific temperature"
+      ],
+      "rank": 4
+    }
+  ],
+  "publishedAt": "2026-02-13T01:54:54.331Z",
+  "metadata": {
+    "seoTitle": "Oil-based Space Heaters - Decision Matrix | OptiMind",
+    "seoDescription": "Compare 4 options across 6 criteria. Winner: Honeywell HZ-789 EnergySmart Oil Filled Heater (38.0%)",
+    "winnerName": "Honeywell HZ-789 EnergySmart Oil Filled Heater",
+    "winnerScore": 44.8,
+    "winnerPercentage": 38
+  }
+}
